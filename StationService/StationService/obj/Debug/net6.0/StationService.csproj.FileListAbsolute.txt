@@ -1,0 +1,7 @@
+C:\Users\Admin\Downloads\StationServiceSolution_Full_fixed\StationServiceSolutionFull\StationService\obj\Debug\net6.0\StationService.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\StationServiceSolution_Full_fixed\StationServiceSolutionFull\StationService\obj\Debug\net6.0\StationService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Downloads\StationServiceSolution_Full_fixed\StationServiceSolutionFull\StationService\obj\Debug\net6.0\StationService.AssemblyInfoInputs.cache
+C:\Users\Admin\Downloads\StationServiceSolution_Full_fixed\StationServiceSolutionFull\StationService\obj\Debug\net6.0\StationService.AssemblyInfo.cs
+C:\Users\Admin\Downloads\StationServiceSolution_Full_fixed\StationServiceSolutionFull\StationService\obj\Debug\net6.0\StationService.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\StationServiceSolution_Full_fixed\StationServiceSolutionFull\StationService\obj\Debug\net6.0\StationService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Downloads\StationServiceSolution_Full_fixed\StationServiceSolutionFull\StationService\obj\Debug\net6.0\StationService.MvcApplicationPartsAssemblyInfo.cache

@@ -1,0 +1,18 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=sqlserver,1433;Database=EVChargingDB;User Id=sa;Password=YourSecurePassword123!;Encrypt=false;TrustServerCertificate=true;"
+  },
+  "JwtSettings": {
+    "SecretKey": "your-super-secret-key-that-is-at-least-32-characters-long-for-hs256",
+    "Issuer": "EVChargingSystem",
+    "Audience": "EVChargingClients",
+    "ExpirationMinutes": 60
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

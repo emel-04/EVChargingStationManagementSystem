@@ -1,9 +1,0 @@
-body { font-family: Arial, sans-serif; padding: 20px; background:#f5f6f7; text-align:center; }
-h1 { margin-bottom:20px; }
-.card { display:inline-block; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
-input { display:block; margin:8px 0; padding:8px; width:300px; }
-.buttons { margin-top:10px; }
-button { padding:8px 12px; margin:0 6px; cursor:pointer; }
-table { width:100%; max-width:1100px; margin:20px auto; border-collapse:collapse; background:#fff; }
-th, td { border:1px solid #ddd; padding:8px; text-align:center; }
-th { background:#f0f0f0; }

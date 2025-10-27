@@ -1,0 +1,6 @@
+2025-10-27 02:40:18.525 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-27 02:44:22.251 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-27 02:51:35.088 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-27 02:57:18.076 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-27 03:18:12.420 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-27 18:43:37.005 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.

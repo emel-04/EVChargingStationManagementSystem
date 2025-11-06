@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # Override for development
+  api-gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/gateway/ApiGateway:/app
+      - /app/bin
+      - /app/obj
+
+  user-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/services/UserService:/app
+      - /app/bin
+      - /app/obj
+
+  station-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/services/StationService:/app
+      - /app/bin
+      - /app/obj
+
+  booking-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/services/BookingService:/app
+      - /app/bin
+      - /app/obj
+
+  payment-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/services/PaymentService:/app
+      - /app/bin
+      - /app/obj
+
+  notification-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/services/NotificationService:/app
+      - /app/bin
+      - /app/obj
+
+  report-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/services/ReportService:/app
+      - /app/bin
+      - /app/obj
+
+
+
+
+

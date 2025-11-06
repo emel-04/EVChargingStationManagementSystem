@@ -1,0 +1,164 @@
+version: '3.8'
+
+services:
+  # Database
+  mysql:
+    image: mysql:8.0
+    container_name: evcharging-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_DATABASE=EVChargingStation
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - evcharging-network
+
+  # API Gateway
+  api-gateway:
+    build:
+      context: .
+      dockerfile: src/gateway/ApiGateway/Dockerfile
+    container_name: evcharging-api-gateway
+    ports:
+      - "5000:80"
+      - "5001:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - user-service
+      - station-service
+      - booking-service
+      - payment-service
+      - notification-service
+      - report-service
+    networks:
+      - evcharging-network
+
+  # User Service
+  user-service:
+    build:
+      context: .
+      dockerfile: src/services/UserService/Dockerfile
+    container_name: evcharging-user-service
+    ports:
+      - "5002:80"
+      - "5003:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_User;Uid=root;Pwd=root123;CharSet=utf8mb4;
+    depends_on:
+      - mysql
+    networks:
+      - evcharging-network
+
+  # Station Service
+  station-service:
+    build:
+      context: .
+      dockerfile: src/services/StationService/Dockerfile
+    container_name: evcharging-station-service
+    ports:
+      - "5004:80"
+      - "5005:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Station;Uid=root;Pwd=root123;CharSet=utf8mb4;
+    depends_on:
+      - mysql
+    networks:
+      - evcharging-network
+
+  # Booking Service
+  booking-service:
+    build:
+      context: .
+      dockerfile: src/services/BookingService/Dockerfile
+    container_name: evcharging-booking-service
+    ports:
+      - "5006:80"
+      - "5007:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Booking;Uid=root;Pwd=root123;CharSet=utf8mb4;
+    depends_on:
+      - mysql
+    networks:
+      - evcharging-network
+
+  # Payment Service
+  payment-service:
+    build:
+      context: .
+      dockerfile: src/services/PaymentService/Dockerfile
+    container_name: evcharging-payment-service
+    ports:
+      - "5008:80"
+      - "5009:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Payment;Uid=root;Pwd=root123;CharSet=utf8mb4;
+    depends_on:
+      - mysql
+    networks:
+      - evcharging-network
+
+  # Notification Service
+  notification-service:
+    build:
+      context: .
+      dockerfile: src/services/NotificationService/Dockerfile
+    container_name: evcharging-notification-service
+    ports:
+      - "5010:80"
+      - "5011:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Notification;Uid=root;Pwd=root123;CharSet=utf8mb4;
+    depends_on:
+      - mysql
+    networks:
+      - evcharging-network
+
+  # Report Service
+  report-service:
+    build:
+      context: .
+      dockerfile: src/services/ReportService/Dockerfile
+    container_name: evcharging-report-service
+    ports:
+      - "5012:80"
+      - "5013:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Report;Uid=root;Pwd=root123;CharSet=utf8mb4;
+    depends_on:
+      - mysql
+    networks:
+      - evcharging-network
+
+  # Frontend Web Application
+  web-app:
+    build:
+      context: .
+      dockerfile: src/frontend/EVChargingStation.Web/Dockerfile
+    container_name: evcharging-web-app
+    ports:
+      - "5014:80"
+      - "5015:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ApiSettings__BaseUrl=http://api-gateway:80
+    depends_on:
+      - api-gateway
+    networks:
+      - evcharging-network
+
+volumes:
+  mysql_data:
+
+networks:
+  evcharging-network:
+    driver: bridge

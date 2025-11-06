@@ -1,0 +1,224 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Auth/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Auth/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Vehicle/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/vehicle/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    
+    {
+      "DownstreamPathTemplate": "/api/station",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "station-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/station",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/station/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "station-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/station/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+  "DownstreamPathTemplate": "/api/booking/{everything}",
+  "DownstreamScheme": "http",
+  "DownstreamHostAndPorts": [
+    {
+      "Host": "booking-service",
+      "Port": 80
+    }
+  ],
+  "UpstreamPathTemplate": "/api/booking/{everything}",
+  "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    }, 
+ {
+  "DownstreamPathTemplate": "/api/booking",
+  "DownstreamScheme": "http",
+  "DownstreamHostAndPorts": [
+    {
+      "Host": "booking-service",
+      "Port": 80
+    }
+  ],
+  "UpstreamPathTemplate": "/api/booking",
+  "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    }, 
+
+{
+  "DownstreamPathTemplate": "/api/User",
+  "DownstreamScheme": "http",
+  "DownstreamHostAndPorts": [{"Host": "user-service","Port": 80}],
+  "UpstreamPathTemplate": "/api/user",
+  "UpstreamHttpMethod": ["GET","POST"]
+},
+
+    {
+      "DownstreamPathTemplate": "/api/Payment/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/payment/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Payment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/payment",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Wallet/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/wallet/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Notification/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notification-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/notification/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Report/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "report-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/report/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "user-service",
+      "Config": [
+        {
+          "Name": "User Service API",
+          "Version": "v1",
+          "Url": "http://user-service:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "station-service",
+      "Config": [
+        {
+          "Name": "Station Service API",
+          "Version": "v1",
+          "Url": "http://station-service:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "booking-service",
+      "Config": [
+        {
+          "Name": "Booking Service API",
+          "Version": "v1",
+          "Url": "http://booking-service:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "payment-service",
+      "Config": [
+        {
+          "Name": "Payment Service API",
+          "Version": "v1",
+          "Url": "http://payment-service:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "notification-service",
+      "Config": [
+        {
+          "Name": "Notification Service API",
+          "Version": "v1",
+          "Url": "http://notification-service:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "report-service",
+      "Config": [
+        {
+          "Name": "Report Service API",
+          "Version": "v1",
+          "Url": "http://report-service:80/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://api-gateway:80"
+  }
+}

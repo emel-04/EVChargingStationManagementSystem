@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e0vfmBgyh1M=",
+  "dgSpecHash": "CWtGL7YKNFI=",
   "success": true,
-  "projectFilePath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
+  "projectFilePath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",

@@ -8091,11 +8091,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\ReportService\\ReportService.csproj",
+      "projectUniqueName": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\ReportService\\ReportService.csproj",
       "projectName": "ReportService",
-      "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\ReportService\\ReportService.csproj",
+      "projectPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\ReportService\\ReportService.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\ReportService\\obj\\",
+      "outputPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\ReportService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8116,8 +8116,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
-              "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj"
+            "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
+              "projectPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj"
             }
           }
         }

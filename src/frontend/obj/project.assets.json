@@ -2976,11 +2976,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
+      "projectUniqueName": "d:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
       "projectName": "EVChargingStation.Web",
-      "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
+      "projectPath": "d:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\frontend\\obj\\",
+      "outputPath": "d:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

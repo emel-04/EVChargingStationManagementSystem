@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj": {}
+    "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj": {}
   },
   "projects": {
-    "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj": {
+    "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj",
+        "projectUniqueName": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj",
         "projectName": "StationService",
-        "projectPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj",
+        "projectPath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\services\\StationService\\StationService.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\StationService\\obj\\",
+        "outputPath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\services\\StationService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj"
+              "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj"
               }
             }
           }
@@ -58,11 +58,31 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.8.0, )"
             },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.8.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
@@ -73,6 +93,14 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.1, )"
             }
           },
           "imports": [
@@ -98,14 +126,14 @@
         }
       }
     },
-    "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
+    "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
+        "projectUniqueName": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
+        "projectPath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\obj\\",
+        "outputPath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

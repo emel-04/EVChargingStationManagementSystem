@@ -2018,11 +2018,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
+      "projectUniqueName": "d:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "d:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
+      "projectPath": "d:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "d:\\BaiTap\\EVChargingStationManagementSystem\\src\\shared\\Shared\\obj\\",
+      "outputPath": "d:\\XDHDT\\EVChargingStationManagementSystem\\src\\shared\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

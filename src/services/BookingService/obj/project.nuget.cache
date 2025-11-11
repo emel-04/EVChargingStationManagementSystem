@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YTqcmZQ8n8o=",
+  "dgSpecHash": "rhDtE6Zc5as=",
   "success": true,
-  "projectFilePath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\services\\BookingService\\BookingService.csproj",
+  "projectFilePath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\services\\BookingService\\BookingService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",

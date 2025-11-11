@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj": {}
+    "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj": {}
   },
   "projects": {
-    "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj": {
+    "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
+        "projectUniqueName": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
         "projectName": "EVChargingStation.Web",
-        "projectPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
+        "projectPath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\frontend\\EVChargingStation.Web.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\BaiTap\\EVChargingStationManagementSystem\\src\\frontend\\obj\\",
+        "outputPath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\frontend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

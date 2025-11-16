@@ -1,0 +1,64 @@
+@model EVChargingStation.Web.Models.UserDto
+
+@{
+    ViewData["Title"] = "Danh sách người dùng";
+    var users = ViewBag.Users as List<EVChargingStation.Web.Models.UserDto> ?? new();
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">Danh sách người dùng</h2>
+    <div>
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-outline-secondary me-2">
+            <i class="fa fa-arrow-left me-1"></i>Quay lại Dashboard
+        </a>
+        <a href="@Url.Action("CreateUser", "Admin")" class="btn btn-success">
+            <i class="fa fa-plus me-1"></i>Thêm người dùng
+        </a>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Số điện thoại</th>
+            <th>Vai trò</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in users)
+        {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.FullName</td>
+                <td>@u.Email</td>
+                <td>@u.PhoneNumber</td>
+                <td>@u.Role</td>
+                <td>@(u.IsActive ? "Hoạt động" : "Không hoạt động")</td>
+                <td>
+
+
+                    <form method="post" action="@Url.Action("DeleteUser", "Admin", new { id = u.Id })"
+                          style="display:inline;"
+                          onsubmit="return confirm('Bạn có chắc muốn xóa người dùng này không?');">
+                        <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success mt-3">@TempData["Message"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger mt-3">@TempData["Error"]</div>
+}

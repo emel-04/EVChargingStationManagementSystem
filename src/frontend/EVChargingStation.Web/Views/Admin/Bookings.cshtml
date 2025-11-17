@@ -1,0 +1,208 @@
+@model List<EVChargingStation.Web.Models.BookingDto>
+
+@{
+    ViewData["Title"] = "Quản lý đặt chỗ";
+    var bookings = Model ?? new List<EVChargingStation.Web.Models.BookingDto>();
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0"><i class="fa fa-calendar-check me-2"></i>Quản lý đặt chỗ</h3>
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-outline-secondary">
+            <i class="fa fa-arrow-left me-1"></i>Quay lại Dashboard
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Mã Booking</th>
+                            <th>Người dùng</th>
+                            <th>Trạm sạc</th>
+                            <th>Thời gian bắt đầu</th>
+                            <th>Thời gian kết thúc</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model == null || !Model.Any())
+                        {
+                            <tr>
+                                <td colspan="7" class="text-center text-muted py-4">
+                                    <i class="fa fa-inbox fa-3x mb-3 d-block"></i>
+                                    <p>Chưa có đặt chỗ nào</p>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var b in Model)
+                            {
+                                <tr>
+                                    <td><strong>@b.BookingNumber</strong></td>
+                                    <td>@b.UserName</td>
+                                    <td>@b.StationName</td>
+                                    <td>@b.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>@(b.EndTime?.ToString("dd/MM/yyyy HH:mm") ?? "N/A")</td>
+                                    <td>
+                                        @switch (b.Status)
+                                        {
+                                            case 0: <span class="badge bg-warning">Chờ xác nhận</span>; break;
+                                            case 1: <span class="badge bg-info">Đã xác nhận</span>; break;
+                                            case 2: <span class="badge bg-primary">Đang sạc</span>; break;
+                                            case 3: <span class="badge bg-success">Hoàn thành</span>; break;
+                                            case 4: <span class="badge bg-danger">Đã hủy</span>; break;
+                                        }
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-warning" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#editBookingModal"
+                                                data-id="@b.Id" 
+                                                data-status="@b.Status">
+                                            <i class="fa fa-edit"></i> Sửa
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    td:nth-child(2), td:nth-child(3) {
+        font-weight: 500;
+        color: #0d6efd;
+    }
+</style>
+
+<!-- Modal tạo booking mới -->
+<div class="modal fade" id="createBookingModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="/Admin/CreateBooking">
+                @Html.AntiForgeryToken()
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa fa-plus me-2"></i>Tạo đặt chỗ mới</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Trạm sạc <span class="text-danger">*</span></label>
+                        <select name="stationId" id="selectStation" class="form-select" required>
+                            <option value="">-- Chọn trạm sạc --</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Thời gian bắt đầu <span class="text-danger">*</span></label>
+                        <input type="datetime-local" name="startTime" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Thời gian kết thúc <span class="text-danger">*</span></label>
+                        <input type="datetime-local" name="endTime" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check me-1"></i>Tạo đặt chỗ
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chỉnh sửa booking -->
+<div class="modal fade" id="editBookingModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="/Admin/EditBooking">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="id" id="editId" value="" />
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title"><i class="fa fa-edit me-2"></i>Chỉnh sửa trạng thái</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Trạng thái</label>
+                        <select name="status" class="form-select" id="editStatus">
+                            <option value="0">Chờ xác nhận</option>
+                            <option value="1">Đã xác nhận</option>
+                            <option value="2">Đang sạc</option>
+                            <option value="3">Hoàn thành</option>
+                            <option value="4">Đã hủy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save me-1"></i>Lưu thay đổi
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Load stations khi mở modal tạo booking
+    const createModal = document.getElementById("createBookingModal");
+    createModal.addEventListener("show.bs.modal", async () => {
+        await loadStations();
+    });
+
+    // Load dữ liệu vào modal edit
+    const editModal = document.getElementById("editBookingModal");
+    editModal.addEventListener("show.bs.modal", (event) => {
+        const button = event.relatedTarget;
+        const bookingId = button.dataset.id;
+        const bookingStatus = button.dataset.status;
+        
+        console.log("📝 Opening edit modal for booking ID:", bookingId, "Status:", bookingStatus);
+        
+        document.getElementById("editId").value = bookingId;
+        document.getElementById("editStatus").value = bookingStatus;
+    });
+});
+
+async function loadStations() {
+    try {
+        const response = await fetch("/Admin/GetStations");
+        if (!response.ok) throw new Error('Failed to load stations');
+        
+        const stations = await response.json();
+        const select = document.getElementById("selectStation");
+        select.innerHTML = '<option value="">-- Chọn trạm sạc --</option>';
+        
+        stations.forEach(s => {
+            select.innerHTML += `<option value="${s.id}">${s.name} - ${s.address}</option>`;
+        });
+    } catch (err) {
+        console.error("Lỗi load stations:", err);
+        alert("Không thể tải danh sách trạm sạc");
+    }
+}
+</script>
+}

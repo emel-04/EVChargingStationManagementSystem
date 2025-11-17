@@ -1,0 +1,154 @@
+@model List<EVChargingStation.Web.Models.BookingDto>
+
+@{
+    ViewData["Title"] = "Quản lý đặt chỗ";
+    var bookings = Model ?? new List<EVChargingStation.Web.Models.BookingDto>();
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3><i class="fa fa-calendar-check me-2"></i>Quản lý đặt chỗ</h3>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createBookingModal">
+            <i class="fa fa-plus me-2"></i>Tạo đặt chỗ mới
+        </button>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Mã booking</th>
+                            <th>Trạm sạc</th>
+                            <th>Thời gian bắt đầu</th>
+                            <th>Thời gian kết thúc</th>
+                            <th>Trạng thái</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (!bookings.Any())
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center text-muted py-4">
+                                    <i class="fa fa-inbox fa-3x mb-3 d-block"></i>
+                                    <p>Chưa có đặt chỗ nào</p>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var b in bookings)
+                            {
+                                <tr>
+                                    <td><strong>@b.BookingNumber</strong></td>
+                                    <td>@b.StationName</td>
+                                    <td>@b.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>@(b.EndTime?.ToString("dd/MM/yyyy HH:mm") ?? "N/A")</td>
+                                    <td>
+                                        @switch (b.Status)
+                                        {
+                                            case 0: <span class="badge bg-warning">Chờ xác nhận</span>; break;
+                                            case 1: <span class="badge bg-info">Đã xác nhận</span>; break;
+                                            case 2: <span class="badge bg-primary">Đang sạc</span>; break;
+                                            case 3: <span class="badge bg-success">Hoàn thành</span>; break;
+                                            case 4: <span class="badge bg-danger">Đã hủy</span>; break;
+                                        }
+                                    </td>
+                                    
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal tạo booking mới -->
+<div class="modal fade" id="createBookingModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="/Home/CreateBooking">
+                @Html.AntiForgeryToken()
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa fa-plus me-2"></i>Tạo đặt chỗ mới</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Trạm sạc</label>
+                        <select name="stationId" class="form-select" required id="selectStation">
+                            <option value="">-- Chọn trạm sạc --</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Thời gian bắt đầu</label>
+                        <input type="datetime-local" name="startTime" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Thời gian kết thúc</label>
+                        <input type="datetime-local" name="endTime" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa fa-check me-1"></i>Tạo đặt chỗ
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const createModal = document.getElementById("createBookingModal");
+            createModal.addEventListener("show.bs.modal", async () => {
+                await loadStations();
+            });
+        });
+
+        async function loadStations() {
+    try {
+        const response = await fetch("/Home/GetStations", {
+            method: "GET",
+            credentials: "include" // ✅ để gửi cookie session
+        });
+
+        if (!response.ok) throw new Error('Failed to load stations');
+
+        const stations = await response.json();
+        const select = document.getElementById("selectStation");
+        select.innerHTML = '<option value="">-- Chọn trạm sạc --</option>';
+
+        stations.forEach(s => {
+            select.innerHTML += `<option value="${s.id}">${s.name} - ${s.address}</option>`;
+        });
+    } catch (err) {
+        console.error("Lỗi load stations:", err);
+        alert("Không thể tải danh sách trạm sạc");
+    }
+}
+
+    </script>
+}

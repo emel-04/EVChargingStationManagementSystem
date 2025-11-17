@@ -1,0 +1,416 @@
+@model List<EVChargingStation.Web.Models.BookingDto>
+
+@{
+    ViewData["Title"] = "Quản lý Booking - Nhân viên";
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>
+            <i class="fa fa-calendar-check me-2 text-success"></i>
+            Quản lý đặt chỗ
+        </h3>
+        <div>
+            <a href="@Url.Action("Index", "Staff")" class="btn btn-outline-secondary">
+                <i class="fa fa-arrow-left me-1"></i>Về Dashboard
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            <i class="fa fa-check-circle me-1"></i>@TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <i class="fa fa-exclamation-triangle me-1"></i>@TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- Filter Section -->
+    <div class="card shadow-sm mb-3">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label">Lọc theo trạng thái</label>
+                    <select id="filterStatus" class="form-select">
+                        <option value="">Tất cả</option>
+                        <option value="0">Chờ xác nhận</option>
+                        <option value="1">Đã xác nhận</option>
+                        <option value="2">Đang sạc</option>
+                        <option value="3">Hoàn thành</option>
+                        <option value="4">Đã hủy</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Tìm kiếm</label>
+                    <input type="text" id="searchBox" class="form-control" placeholder="Mã booking, tên người dùng...">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Từ ngày</label>
+                    <input type="date" id="filterDateFrom" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Đến ngày</label>
+                    <input type="date" id="filterDateTo" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bookings Table -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle" id="bookingsTable">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Mã Booking</th>
+                            <th>Người dùng</th>
+                            <th>Trạm sạc</th>
+                            <th>Thời gian bắt đầu</th>
+                            <th>Thời gian kết thúc</th>
+                            <th>Trạng thái</th>
+                            <th>Thanh toán</th>
+                            <th class="text-center">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model == null || !Model.Any())
+                        {
+                            <tr>
+                                <td colspan="8" class="text-center text-muted py-5">
+                                    <i class="fa fa-inbox fa-4x mb-3 d-block"></i>
+                                    <h5>Chưa có đặt chỗ nào</h5>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var b in Model)
+                            {
+                                <tr>
+                                    <td><strong class="text-success">@b.BookingNumber</strong></td>
+                                    <td>
+                                        <i class="fa fa-user me-1"></i>@b.UserName
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-charging-station me-1"></i>@b.StationName
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar me-1"></i>
+                                        @b.StartTime.ToString("dd/MM/yyyy HH:mm")
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-calendar-check me-1"></i>
+                                        @(b.EndTime?.ToString("dd/MM/yyyy HH:mm") ?? "N/A")
+                                    </td>
+                                    <td>
+                                        @switch (b.Status)
+                                        {
+                                            case 0: <span class="badge bg-warning text-dark">Chờ xác nhận</span>; break;
+                                            case 1: <span class="badge bg-info">Đã xác nhận</span>; break;
+                                            case 2: <span class="badge bg-primary">Đang sạc</span>; break;
+                                            case 3: <span class="badge bg-success">Hoàn thành</span>; break;
+                                            case 4: <span class="badge bg-danger">Đã hủy</span>; break;
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (b.Status == 3 && !b.HasPayment)
+                                        {
+                                            <button class="btn btn-warning btn-sm" 
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#paymentModal" 
+                                                    data-booking-id="@b.Id"
+                                                    data-booking-number="@b.BookingNumber"
+                                                    data-station-name="@b.StationName"
+                                                    data-user-name="@b.UserName"
+                                                    title="Tạo thanh toán">
+                                                <i class="fa fa-dollar-sign me-1"></i>Tạo TT
+                                            </button>
+                                        }
+                                        else if (b.HasPayment)
+                                        {
+                                            <span class="badge bg-success">
+                                                <i class="fa fa-check-circle"></i> Đã TT
+                                            </span>
+                                        }
+                                        else if (b.Status == 3)
+                                        {
+                                            <span class="text-muted small">Chưa TT</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted small">-</span>
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-outline-success btn-sm"
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#editBookingModal"
+                                                data-id="@b.Id" 
+                                                data-status="@b.Status"
+                                                title="Chỉnh sửa trạng thái">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chỉnh sửa booking -->
+<div class="modal fade" id="editBookingModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="/Staff/EditBooking">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="id" id="editId" value="" />
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title">
+                        <i class="fa fa-edit me-2"></i>Chỉnh sửa trạng thái
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Trạng thái</label>
+                        <select name="status" class="form-select" id="editStatus">
+                            <option value="0">Chờ xác nhận</option>
+                            <option value="1">Đã xác nhận</option>
+                            <option value="2">Đang sạc</option>
+                            <option value="3">Hoàn thành</option>
+                            <option value="4">Đã hủy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa fa-save me-1"></i>Lưu thay đổi
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal tạo thanh toán -->
+<div class="modal fade" id="paymentModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form method="post" action="/Staff/CreatePayment">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="bookingId" id="paymentBookingId" />
+                
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa fa-dollar-sign me-2"></i>Tạo thanh toán
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <!-- Thông tin booking -->
+                    <div class="alert alert-info">
+                        <h6 class="alert-heading">
+                            <i class="fa fa-info-circle me-2"></i>Thông tin đặt chỗ
+                        </h6>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="mb-1"><strong>Mã booking:</strong> <span id="infoBookingNumber"></span></p>
+                                <p class="mb-1"><strong>Khách hàng:</strong> <span id="infoUserName"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-1"><strong>Trạm sạc:</strong> <span id="infoStationName"></span></p>
+                                <p class="mb-0"><strong>Trạng thái:</strong> <span class="badge bg-success">Hoàn thành</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form nhập thông tin thanh toán -->
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">
+                                <i class="fa fa-money-bill-wave me-1 text-success"></i>
+                                Số tiền thanh toán (VNĐ) <span class="text-danger">*</span>
+                            </label>
+                            <input type="number" 
+                                   class="form-control form-control-lg" 
+                                   name="amount" 
+                                   id="paymentAmount"
+                                   min="1000" 
+                                   step="1000" 
+                                   placeholder="Nhập số tiền"
+                                   required />
+                            <div class="form-text">Số tiền tối thiểu: 1.000 VNĐ</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">
+                                <i class="fa fa-credit-card me-1 text-primary"></i>
+                                Phương thức thanh toán <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-select form-select-lg" name="method" required>
+                                <option value="">-- Chọn phương thức --</option>
+                                <option value="0">💵 Tiền mặt</option>
+                                <option value="1">💳 Thẻ ngân hàng</option>
+                                <option value="2">📱 Ví điện tử</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label fw-bold">
+                                <i class="fa fa-sticky-note me-1 text-warning"></i>
+                                Ghi chú (tùy chọn)
+                            </label>
+                            <textarea class="form-control" 
+                                      name="description" 
+                                      rows="2" 
+                                      placeholder="Nhập ghi chú nếu có..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Tính toán tạm thời -->
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="mb-0 text-muted">Tổng tiền:</p>
+                            </div>
+                            <div class="col-6 text-end">
+                                <h5 class="mb-0 text-success" id="totalAmount">0 VNĐ</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fa fa-times me-1"></i>Hủy
+                    </button>
+                    <button type="submit" class="btn btn-success btn-lg">
+                        <i class="fa fa-check-circle me-1"></i>Tạo thanh toán
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Modal chỉnh sửa booking
+    const editModal = document.getElementById("editBookingModal");
+    editModal.addEventListener("show.bs.modal", (event) => {
+        const button = event.relatedTarget;
+        document.getElementById("editId").value = button.dataset.id;
+        document.getElementById("editStatus").value = button.dataset.status;
+    });
+
+    // Modal tạo thanh toán
+    const paymentModal = document.getElementById("paymentModal");
+    paymentModal.addEventListener("show.bs.modal", (event) => {
+        const button = event.relatedTarget;
+        
+        // Lấy dữ liệu từ button
+        const bookingId = button.dataset.bookingId;
+        const bookingNumber = button.dataset.bookingNumber;
+        const stationName = button.dataset.stationName;
+        const userName = button.dataset.userName;
+        
+        // Điền thông tin vào modal
+        document.getElementById("paymentBookingId").value = bookingId;
+        document.getElementById("infoBookingNumber").textContent = bookingNumber;
+        document.getElementById("infoStationName").textContent = stationName;
+        document.getElementById("infoUserName").textContent = userName;
+        
+        // Reset form
+        document.getElementById("paymentAmount").value = "";
+        document.getElementById("totalAmount").textContent = "0 VNĐ";
+    });
+
+    // Cập nhật tổng tiền khi nhập số tiền
+    const amountInput = document.getElementById("paymentAmount");
+    amountInput.addEventListener("input", function() {
+        const amount = parseFloat(this.value) || 0;
+        const formatted = amount.toLocaleString('vi-VN') + ' VNĐ';
+        document.getElementById("totalAmount").textContent = formatted;
+    });
+
+    // Filter functionality
+    const filterStatus = document.getElementById("filterStatus");
+    const searchBox = document.getElementById("searchBox");
+    const filterDateFrom = document.getElementById("filterDateFrom");
+    const filterDateTo = document.getElementById("filterDateTo");
+
+    [filterStatus, searchBox, filterDateFrom, filterDateTo].forEach(elem => {
+        elem.addEventListener("change", filterTable);
+        elem.addEventListener("keyup", filterTable);
+    });
+});
+
+function filterTable() {
+    const statusFilter = document.getElementById("filterStatus").value;
+    const searchText = document.getElementById("searchBox").value.toLowerCase();
+    const rows = document.querySelectorAll("#bookingsTable tbody tr");
+    
+    rows.forEach(row => {
+        if (row.cells.length === 1) return;
+
+        const bookingNumber = row.cells[0].textContent.toLowerCase();
+        const userName = row.cells[1].textContent.toLowerCase();
+        const statusBadge = row.cells[5].querySelector(".badge");
+
+        let showRow = true;
+
+        if (statusFilter && statusBadge) {
+            const rowStatus = statusBadge.textContent.trim();
+            const filterMap = {
+                "0": "Chờ xác nhận",
+                "1": "Đã xác nhận",
+                "2": "Đang sạc",
+                "3": "Hoàn thành",
+                "4": "Đã hủy"
+            };
+            if (rowStatus !== filterMap[statusFilter]) {
+                showRow = false;
+            }
+        }
+
+        if (searchText && !bookingNumber.includes(searchText) && !userName.includes(searchText)) {
+            showRow = false;
+        }
+
+        row.style.display = showRow ? "" : "none";
+    });
+}
+</script>
+}
+
+<style>
+.btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+}
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+.badge {
+    font-size: 0.85rem;
+    padding: 0.4em 0.8em;
+}
+.form-control-lg, .form-select-lg {
+    font-size: 1.1rem;
+}
+</style>

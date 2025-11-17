@@ -1,0 +1,155 @@
+@{
+    ViewData["Title"] = "Staff Dashboard";
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0 fw-bold" style="color: #08bcbd;">
+            <i class="fas fa-tachometer-alt me-2"></i>
+            Bảng điều khiển Nhân viên
+        </h2>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="staff-card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-calendar-check fa-3x" style="color: #08bcbd;"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Quản lý Booking</h5>
+                    <p class="text-muted">Xem và quản lý tất cả đặt chỗ sạc xe</p>
+                    <a href="@Url.Action("Bookings", "Staff")" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-1"></i>Xem danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="staff-card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-money-bill-wave fa-3x" style="color: #08bcbd;"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Quản lý Thanh toán</h5>
+                    <p class="text-muted">Xử lý thanh toán cho booking hoàn thành</p>
+                    <a href="@Url.Action("Payments", "Staff")" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-1"></i>Xem danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="staff-card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-chart-bar fa-3x" style="color: #08bcbd;"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Báo cáo doanh thu</h5>
+                    <p class="text-muted">Xem báo cáo booking và doanh thu theo tháng</p>
+                    <a href="@Url.Action("MonthlyReport", "Staff")" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-1"></i>Xem báo cáo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-6">
+            <div class="staff-card h-100 bg-light">
+                <div class="card-body">
+                    <h5 class="card-title mb-3 fw-bold" style="color: #08bcbd;">
+                        <i class="fas fa-info-circle me-2"></i>Hướng dẫn
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-check me-2" style="color: #08bcbd;"></i>
+                            Xem danh sách booking đã đặt
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check me-2" style="color: #08bcbd;"></i>
+                            Cập nhật trạng thái booking
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check me-2" style="color: #08bcbd;"></i>
+                            Tạo booking mới cho khách hàng
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check me-2" style="color: #08bcbd;"></i>
+                            Hủy booking khi cần thiết
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="staff-card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-clock me-2"></i>Thông tin ca làm việc
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="p-3">
+                                <i class="fas fa-calendar-day fa-2x mb-2" style="color: #08bcbd;"></i>
+                                <h6 class="fw-bold">Hôm nay</h6>
+                                <p class="text-muted mb-0 small" id="currentDate"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border-start border-end">
+                                <i class="fas fa-clock fa-2x mb-2" style="color: #08bcbd;"></i>
+                                <h6 class="fw-bold">Giờ hiện tại</h6>
+                                <p class="text-muted mb-0 small" id="currentTime"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3">
+                                <i class="fas fa-user-check fa-2x mb-2" style="color: #08bcbd;"></i>
+                                <h6 class="fw-bold">Trạng thái</h6>
+                                <span class="badge" style="background-color: #08bcbd;">Đang làm việc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    function updateTime() {
+        const now = new Date();
+        
+        // Format date
+        const dateOptions = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        };
+        document.getElementById('currentDate').textContent = 
+            now.toLocaleDateString('vi-VN', dateOptions);
+        
+        // Format time
+        const timeOptions = { 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit' 
+        };
+        document.getElementById('currentTime').textContent = 
+            now.toLocaleTimeString('vi-VN', timeOptions);
+    }
+
+    // Update time every second
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+}

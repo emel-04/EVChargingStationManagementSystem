@@ -1,0 +1,128 @@
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4 text-white">Tìm trạm sạc xe điện gần bạn</h1>
+                <p class="lead mb-4 text-white" style="opacity: 0.95;">Hệ thống quản lý trạm sạc xe điện thông minh, giúp bạn dễ dàng tìm kiếm và đặt chỗ sạc xe.</p>
+                <div class="d-flex gap-3">
+                    <a href="@Url.Action("Stations", "Home")" class="btn btn-light btn-lg">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        Tìm trạm sạc
+                    </a>
+                    @{
+                        var token = Context.Session?.GetString("Token");
+                    }
+                    @if (string.IsNullOrEmpty(token))
+                    {
+                        <a href="@Url.Action("Register", "Home")" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-user-plus me-2"></i>
+                            Đăng ký ngay
+                        </a>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <i class="fas fa-charging-station text-white" style="font-size: 200px; opacity: 0.3; animation: floatIcon 3s ease-in-out infinite;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @@keyframes floatIcon {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+</style>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mb-5">Tính năng nổi bật</h2>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="feature-card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-map-marked-alt fa-3x mb-3" style="color: #08bcbd;"></i>
+                    <h5 class="card-title fw-bold">Tìm kiếm thông minh</h5>
+                    <p class="card-text text-muted">Tìm trạm sạc gần nhất với bản đồ tương tác, lọc theo công suất, loại sạc và giá cả.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature-card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-calendar-check fa-3x mb-3" style="color: #08bcbd;"></i>
+                    <h5 class="card-title fw-bold">Đặt chỗ dễ dàng</h5>
+                    <p class="card-text text-muted">Đặt trước điểm sạc, quét QR code để bắt đầu sạc và theo dõi tiến trình real-time.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature-card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-credit-card fa-3x mb-3" style="color: #08bcbd;"></i>
+                    <h5 class="card-title fw-bold">Thanh toán linh hoạt</h5>
+                    <p class="card-text text-muted">Thanh toán theo kWh, thời gian hoặc gói thuê bao với ví điện tử tích hợp.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mb-5">Trạm sạc gần đây</h2>
+        </div>
+    </div>
+
+    <div class="row" id="stations-container">
+        @if (ViewBag.Stations != null && ViewBag.Stations.Count > 0)
+        {
+           @foreach (EVChargingStation.Web.Models.StationDto station in ViewBag.Stations)
+
+            {
+                    <div class="col-md-6 col-lg-4">
+                    <div class="station-card">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h6 class="mb-0 fw-bold">@station.Name</h6>
+                            <span class="badge" style="background-color: #08bcbd;">Có sẵn</span>
+                        </div>
+                        <p class="text-muted small mb-2">
+                            <i class="fas fa-map-marker-alt me-1" style="color: #08bcbd;"></i>
+                            @station.Address
+                        </p>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center">
+                <p class="text-muted">Không có trạm sạc nào được tìm thấy.</p>
+            </div>
+        }
+    </div>
+</div>
+
+@* Client fetch removed; data is loaded server-side via HomeController.Index *@
+
+
+
+

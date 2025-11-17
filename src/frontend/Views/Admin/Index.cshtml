@@ -1,0 +1,175 @@
+@using EVChargingStation.Web.Models
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0 fw-bold" style="color: #08bcbd;">
+            <i class="fas fa-tachometer-alt me-2"></i>
+            Bảng điều khiển Quản trị
+        </h2>
+    </div>
+
+    <!-- Thống kê tổng quan -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="small mb-1" style="opacity: 0.9;">Người dùng</div>
+                        <div class="h3 mb-0 fw-bold">@(ViewBag.Stats?.users ?? 0)</div>
+                    </div>
+                    <i class="fas fa-users fa-2x" style="opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="small mb-1" style="opacity: 0.9;">Trạm sạc</div>
+                        <div class="h3 mb-0 fw-bold">@(ViewBag.Stats?.stations ?? 0)</div>
+                    </div>
+                    <i class="fas fa-charging-station fa-2x" style="opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="small mb-1" style="opacity: 0.9;">Bookings</div>
+                        <div class="h3 mb-0 fw-bold">@(ViewBag.Stats?.bookings ?? 0)</div>
+                    </div>
+                    <i class="fas fa-calendar-check fa-2x" style="opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="small mb-1" style="opacity: 0.9;">Doanh thu</div>
+                        <div class="h3 mb-0 fw-bold">@(ViewBag.Stats?.revenue ?? 0)</div>
+                    </div>
+                    <i class="fas fa-dollar-sign fa-2x" style="opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quản lý chính -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="admin-card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-users fa-3x" style="color: #08bcbd;"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Quản lý người dùng</h5>
+                    <p class="text-muted small">Thêm, sửa, xóa người dùng</p>
+                    <a href="@Url.Action("Users", "Admin")" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-1"></i>Xem danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="admin-card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-charging-station fa-3x" style="color: #08bcbd;"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Quản lý trạm sạc</h5>
+                    <p class="text-muted small">Quản lý các trạm sạc</p>
+                    <a href="@Url.Action("Stations", "Admin")" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-1"></i>Xem danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="admin-card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-calendar-check fa-3x" style="color: #08bcbd;"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Quản lý Booking</h5>
+                    <p class="text-muted small">Xem và quản lý booking</p>
+                    <a href="@Url.Action("Bookings", "Admin")" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-1"></i>Xem danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="admin-card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-money-bill-wave fa-3x" style="color: #08bcbd;"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Quản lý thanh toán</h5>
+                    <p class="text-muted small">Xử lý thanh toán</p>
+                    <a href="@Url.Action("Payments", "Admin")" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-1"></i>Xem danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PHẦN BÁO CÁO -->
+    <div class="row">
+        <div class="col-12">
+            <div class="admin-card overflow-hidden">
+                <div class="card-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-8 p-4" style="background: linear-gradient(135deg, #08bcbd 0%, #07a4a5 100%);">
+                            <div class="text-white">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-chart-line fa-3x me-3"></i>
+                                    <div>
+                                        <h3 class="mb-1 fw-bold">Báo cáo & Biểu đồ thống kê</h3>
+                                        <p class="mb-0" style="opacity: 0.9;">Phân tích chi tiết về booking, doanh thu và hiệu suất trạm sạc</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap gap-3 mt-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        <span>Biểu đồ theo thời gian</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        <span>Phân tích trạng thái</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        <span>Top trạm hiệu suất cao</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        <span>Thống kê doanh thu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center justify-content-center p-4 bg-light">
+                            <div class="text-center">
+                                <i class="fas fa-chart-pie fa-4x mb-3" style="color: #08bcbd;"></i>
+                                <a href="@Url.Action("Reports", "Admin")" class="btn btn-primary btn-lg px-5">
+                                    <i class="fas fa-chart-bar me-2"></i>Xem báo cáo ngay
+                                </a>
+                                <p class="text-muted small mt-2 mb-0">Cập nhật theo thời gian thực</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

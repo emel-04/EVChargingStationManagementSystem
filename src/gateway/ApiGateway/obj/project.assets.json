@@ -2432,11 +2432,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\XDHDT\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\ApiGateway.csproj",
+      "projectUniqueName": "d:\\Năm 3\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\ApiGateway.csproj",
       "projectName": "ApiGateway",
-      "projectPath": "d:\\XDHDT\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\ApiGateway.csproj",
+      "projectPath": "d:\\Năm 3\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\ApiGateway.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "d:\\XDHDT\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\obj\\",
+      "outputPath": "d:\\Năm 3\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

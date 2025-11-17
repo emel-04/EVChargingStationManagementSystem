@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj": {}
+    "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj": {
+    "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj",
+        "projectUniqueName": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj",
         "projectName": "PaymentService",
-        "projectPath": "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\obj\\",
+        "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\PaymentService.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\PaymentService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj"
+              "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj"
               }
             }
           }
@@ -80,24 +86,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -106,26 +94,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
+    "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
+        "projectUniqueName": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\source\\EVChargingStationManagementSystem\\src\\shared\\Shared\\obj\\",
+        "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -194,26 +188,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

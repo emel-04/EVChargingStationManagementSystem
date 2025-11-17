@@ -1,0 +1,252 @@
+@model EVChargingStation.Web.Models.UserDto
+
+@{
+    ViewData["Title"] = "Tạo người dùng mới";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header pb-0">
+                    <div class="d-flex align-items-center">
+                        <h6 class="mb-0">Tạo người dùng mới</h6>
+                        <a asp-action="Users" class="btn btn-outline-secondary btn-sm ms-auto">
+                            <i class="fas fa-arrow-left me-2"></i>Quay lại
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Lỗi!</strong> @TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <form asp-action="CreateUser" method="post" id="createUserForm">
+                        @Html.AntiForgeryToken()
+
+                        <div class="row">
+                            <!-- First Name -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="firstName" class="form-label">
+                                        Họ <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="firstName" 
+                                           name="firstName"
+                                           asp-for="FirstName"
+                                           placeholder="Nguyễn Văn" 
+                                           required>
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Last Name -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="lastName" class="form-label">
+                                        Tên <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="lastName" 
+                                           name="lastName"
+                                           asp-for="LastName"
+                                           placeholder="An" 
+                                           required>
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label">
+                                        Email <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="email" 
+                                           class="form-control" 
+                                           id="email" 
+                                           name="email"
+                                           asp-for="Email"
+                                           placeholder="user@example.com" 
+                                           required>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="phoneNumber" class="form-label">
+                                        Số điện thoại
+                                    </label>
+                                    <input type="tel" 
+                                           class="form-control" 
+                                           id="phoneNumber" 
+                                           name="phoneNumber"
+                                           asp-for="PhoneNumber"
+                                           placeholder="0901234567"
+                                           pattern="[0-9]{10,11}">
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    <small class="form-text text-muted">Nhập 10-11 số</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Password -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="password" class="form-label">
+                                        Mật khẩu <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="password" 
+                                               class="form-control" 
+                                               id="password" 
+                                               name="password"
+                                               asp-for="Password"
+                                               placeholder="••••••••" 
+                                               minlength="6"
+                                               required>
+                                        <button class="btn btn-outline-secondary" 
+                                                type="button" 
+                                                id="togglePassword">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                    <small class="form-text text-muted">
+                                        Tối thiểu 6 ký tự (nên có chữ hoa, số và ký tự đặc biệt)
+                                    </small>
+                                </div>
+                            </div>
+
+                            <!-- Role -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="role" class="form-label">
+                                        Vai trò <span class="text-danger">*</span>
+                                    </label>
+                                    <select class="form-select" 
+                                            id="role" 
+                                            name="role"
+                                            asp-for="Role"
+                                            required>
+                                        <option value="">-- Chọn vai trò --</option>
+                                        <option value="1">🚗 EV Driver (Người lái xe)</option>
+                                        <option value="2">👷 CS Staff (Nhân viên trạm)</option>
+                                        <option value="3">👨‍💼 Admin (Quản trị viên)</option>
+                                    </select>
+                                    <span asp-validation-for="Role" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Is Active -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" 
+                                           type="checkbox" 
+                                           id="isActive" 
+                                           name="isActive"
+                                           asp-for="IsActive"
+                                           checked>
+                                    <label class="form-check-label" for="isActive">
+                                        Kích hoạt tài khoản ngay
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <hr>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save me-2"></i>Tạo người dùng
+                                </button>
+                                <a asp-action="Users" class="btn btn-secondary">
+                                    <i class="fas fa-times me-2"></i>Hủy
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+
+        // Form validation feedback
+        document.getElementById('createUserForm').addEventListener('submit', function(e) {
+            if (!this.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            this.classList.add('was-validated');
+        });
+
+        // Phone number formatting
+        document.getElementById('phoneNumber').addEventListener('input', function(e) {
+            // Chỉ cho phép số
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    </script>
+}
+
+<style>
+    .form-label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    
+    .text-danger {
+        font-size: 0.875rem;
+    }
+    
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #5e72e4;
+        box-shadow: 0 0 0 0.2rem rgba(94, 114, 228, 0.25);
+    }
+    
+    .was-validated .form-control:invalid,
+    .was-validated .form-select:invalid {
+        border-color: #f5365c;
+    }
+    
+    .was-validated .form-control:valid,
+    .was-validated .form-select:valid {
+        border-color: #2dce89;
+    }
+</style>

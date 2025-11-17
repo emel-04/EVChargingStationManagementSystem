@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CAynuOKcW4s=",
+  "dgSpecHash": "JMrLnGmaA50=",
   "success": true,
-  "projectFilePath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\services\\NotificationService\\NotificationService.csproj",
+  "projectFilePath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\NotificationService\\NotificationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HQKm4RcZAjE=",
+  "dgSpecHash": "oKl341cfXXc=",
   "success": true,
-  "projectFilePath": "D:\\XDHDT\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\ApiGateway.csproj",
+  "projectFilePath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\gateway\\ApiGateway\\ApiGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",

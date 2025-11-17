@@ -1,0 +1,427 @@
+@{
+    ViewData["Title"] = "Báo cáo thống kê";
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">
+            <i class="fa fa-chart-bar me-2 text-primary"></i>
+            Báo cáo thống kê & Biểu đồ
+        </h2>
+        <div>
+            <a href="@Url.Action("Index", "Admin")" class="btn btn-outline-secondary me-2">
+                <i class="fa fa-arrow-left me-1"></i>Quay lại
+            </a>
+            <button id="btnRefresh" class="btn btn-primary">
+                <i class="fa fa-sync me-1"></i>Làm mới
+            </button>
+        </div>
+    </div>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <i class="fa fa-exclamation-circle me-2"></i>@TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- Form chọn khoảng thời gian -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+                <i class="fa fa-calendar me-2"></i>Chọn khoảng thời gian
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">Từ ngày:</label>
+                    <input type="date" id="fromDate" class="form-control" 
+                           value="@ViewBag.FromDate" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">Đến ngày:</label>
+                    <input type="date" id="toDate" class="form-control" 
+                           value="@ViewBag.ToDate" />
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button id="btnLoadData" class="btn btn-primary w-100">
+                        <i class="fa fa-chart-line me-1"></i>Tải dữ liệu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loadingSpinner" class="text-center py-5" style="display: none;">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Đang tải...</span>
+        </div>
+        <p class="mt-3 text-muted">Đang tải dữ liệu...</p>
+    </div>
+
+    <!-- Tổng quan -->
+    <div id="overviewSection" style="display: none;">
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="card bg-primary text-white h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-calendar-check fa-2x mb-2"></i>
+                        <h3 class="fw-bold mb-0" id="totalBookings">0</h3>
+                        <p class="mb-0 small">Tổng số booking</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success text-white h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-dollar-sign fa-2x mb-2"></i>
+                        <h3 class="fw-bold mb-0" id="totalRevenue">0</h3>
+                        <p class="mb-0 small">Tổng doanh thu</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-info text-white h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-users fa-2x mb-2"></i>
+                        <h3 class="fw-bold mb-0" id="totalUsers">0</h3>
+                        <p class="mb-0 small">Số người dùng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-warning text-white h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-money-bill fa-2x mb-2"></i>
+                        <h3 class="fw-bold mb-0" id="totalPayments">0</h3>
+                        <p class="mb-0 small">Số giao dịch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biểu đồ -->
+        <div class="row g-4 mb-4">
+            <!-- Biểu đồ Booking & Doanh thu theo ngày -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">
+                            <i class="fa fa-chart-line me-2 text-primary"></i>
+                            Booking & Doanh thu theo ngày
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="dailyChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biểu đồ trạng thái Booking -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">
+                            <i class="fa fa-pie-chart me-2 text-success"></i>
+                            Trạng thái Booking
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biểu đồ Top trạm -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-light">
+                <h5 class="mb-0">
+                    <i class="fa fa-charging-station me-2 text-info"></i>
+                    Top 10 trạm sạc có nhiều booking nhất
+                </h5>
+            </div>
+            <div class="card-body">
+                <canvas id="stationChart" height="80"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<script>
+let dailyChart, statusChart, stationChart;
+
+// ✅ Load dữ liệu TỰ ĐỘNG khi trang load
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('📊 Trang Reports đã load, bắt đầu tải dữ liệu...');
+    loadChartData();
+});
+
+// Nút tải dữ liệu
+document.getElementById('btnLoadData').addEventListener('click', function() {
+    loadChartData();
+});
+
+document.getElementById('btnRefresh').addEventListener('click', function() {
+    loadChartData();
+});
+
+function loadChartData() {
+    const fromDate = document.getElementById('fromDate').value;
+    const toDate = document.getElementById('toDate').value;
+
+    if (!fromDate || !toDate) {
+        alert('Vui lòng chọn đầy đủ thời gian!');
+        return;
+    }
+
+    console.log('🔄 Đang tải dữ liệu từ', fromDate, 'đến', toDate);
+
+    document.getElementById('loadingSpinner').style.display = 'block';
+    document.getElementById('overviewSection').style.display = 'none';
+
+    fetch('@Url.Action("GetChartData", "Admin")?fromDate=' + fromDate + '&toDate=' + toDate)
+        .then(response => {
+            console.log('📡 Response status:', response.status);
+            return response.json();
+        })
+        .then(data => {
+            console.log('📊 Dữ liệu nhận được:', data);
+            
+            if (data.success) {
+                updateOverview(data.overview);
+                updateDailyChart(data.dailyStats);
+                updateStatusChart(data.statusStats);
+                updateStationChart(data.stationStats);
+                
+                document.getElementById('loadingSpinner').style.display = 'none';
+                document.getElementById('overviewSection').style.display = 'block';
+                
+                console.log('✅ Cập nhật biểu đồ thành công!');
+            } else {
+                alert('Lỗi: ' + data.message);
+                document.getElementById('loadingSpinner').style.display = 'none';
+            }
+        })
+        .catch(error => {
+            console.error('❌ Lỗi:', error);
+            alert('Không thể tải dữ liệu: ' + error);
+            document.getElementById('loadingSpinner').style.display = 'none';
+        });
+}
+
+function updateOverview(data) {
+    document.getElementById('totalBookings').textContent = data.totalBookings;
+    document.getElementById('totalRevenue').textContent = formatNumber(data.totalRevenue) + ' VNĐ';
+    document.getElementById('totalUsers').textContent = data.totalUsers;
+    document.getElementById('totalPayments').textContent = data.totalPayments;
+}
+
+function updateDailyChart(data) {
+    const ctx = document.getElementById('dailyChart').getContext('2d');
+    
+    if (dailyChart) {
+        dailyChart.destroy();
+    }
+
+    dailyChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: data.map(x => x.date),
+            datasets: [
+                {
+                    label: 'Số booking',
+                    data: data.map(x => x.bookings),
+                    borderColor: 'rgb(54, 162, 235)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.1)',
+                    yAxisID: 'y',
+                    tension: 0.4
+                },
+                {
+                    label: 'Doanh thu (VNĐ)',
+                    data: data.map(x => x.revenue),
+                    borderColor: 'rgb(75, 192, 192)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                    yAxisID: 'y1',
+                    tension: 0.4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            interaction: {
+                mode: 'index',
+                intersect: false
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.datasetIndex === 1) {
+                                label += formatNumber(context.parsed.y) + ' VNĐ';
+                            } else {
+                                label += context.parsed.y;
+                            }
+                            return label;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Số booking'
+                    }
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: {
+                        display: true,
+                        text: 'Doanh thu (VNĐ)'
+                    },
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                }
+            }
+        }
+    });
+}
+
+function updateStatusChart(data) {
+    const ctx = document.getElementById('statusChart').getContext('2d');
+    
+    if (statusChart) {
+        statusChart.destroy();
+    }
+
+    statusChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Chờ xác nhận', 'Đã xác nhận', 'Đang sạc', 'Hoàn thành', 'Đã hủy'],
+            datasets: [{
+                data: [data.pending, data.confirmed, data.checkedIn, data.completed, data.cancelled],
+                backgroundColor: [
+                    'rgb(255, 205, 86)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 159, 64)',
+                    'rgb(75, 192, 192)',
+                    'rgb(255, 99, 132)'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+}
+
+function updateStationChart(data) {
+    const ctx = document.getElementById('stationChart').getContext('2d');
+    
+    if (stationChart) {
+        stationChart.destroy();
+    }
+
+    stationChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.map(x => x.stationName),
+            datasets: [
+                {
+                    label: 'Số booking',
+                    data: data.map(x => x.bookings),
+                    backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                    yAxisID: 'y'
+                },
+                {
+                    label: 'Doanh thu (VNĐ)',
+                    data: data.map(x => x.revenue),
+                    backgroundColor: 'rgba(75, 192, 192, 0.8)',
+                    yAxisID: 'y1'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    position: 'top'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.datasetIndex === 1) {
+                                label += formatNumber(context.parsed.y) + ' VNĐ';
+                            } else {
+                                label += context.parsed.y;
+                            }
+                            return label;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Số booking'
+                    }
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: {
+                        display: true,
+                        text: 'Doanh thu (VNĐ)'
+                    },
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                }
+            }
+        }
+    });
+}
+
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+</script>
+}

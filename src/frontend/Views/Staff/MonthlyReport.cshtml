@@ -1,0 +1,543 @@
+@{
+    ViewData["Title"] = "Báo cáo tháng";
+}
+
+<style>
+    .report-header {
+        background: linear-gradient(135deg, #08bcbd 0%, #07a4a5 100%);
+        border-radius: 15px;
+        padding: 2rem;
+        color: white;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 15px rgba(8, 188, 189, 0.2);
+    }
+
+    .stat-card-large {
+        background: linear-gradient(135deg, #08bcbd 0%, #07a4a5 100%);
+        border-radius: 15px;
+        padding: 2rem;
+        color: white;
+        transition: all 0.3s ease;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stat-card-large::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        animation: rotate 20s linear infinite;
+    }
+
+    /* CSS animation for rotating background highlight */
+    @@-webkit-keyframes rotate {
+        from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    }
+    @@keyframes rotate {
+        from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    }
+
+    .stat-card-large:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(8, 188, 189, 0.3);
+    }
+
+    .stat-card-large .icon-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+    }
+
+    .stat-card-large .stat-value {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 1rem 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .stat-card-large .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.95;
+        position: relative;
+        z-index: 1;
+    }
+
+    .detail-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border-left: 4px solid #08bcbd;
+        height: 100%;
+    }
+
+    .detail-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 20px rgba(8, 188, 189, 0.15);
+    }
+
+    .detail-card .detail-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .detail-card.completed .detail-icon {
+        background: rgba(8, 188, 189, 0.1);
+        color: #08bcbd;
+    }
+
+    .detail-card.cancelled .detail-icon {
+        background: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+    }
+
+    .detail-card.payments .detail-icon {
+        background: rgba(8, 188, 189, 0.1);
+        color: #08bcbd;
+    }
+
+    .detail-card.average .detail-icon {
+        background: rgba(8, 188, 189, 0.1);
+        color: #08bcbd;
+    }
+
+    .detail-value {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0.5rem 0;
+    }
+
+    .detail-label {
+        color: #6c757d;
+        font-size: 0.95rem;
+    }
+
+    .progress-bar-container {
+        background: #f8f9fa;
+        border-radius: 10px;
+        height: 30px;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .progress-bar {
+        background: linear-gradient(90deg, #08bcbd 0%, #07a4a5 100%);
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: width 1s ease;
+    }
+
+    .summary-section {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        margin-top: 2rem;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .summary-row:last-child {
+        border-bottom: none;
+    }
+
+    .summary-label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .summary-value {
+        font-weight: 700;
+        color: #08bcbd;
+        font-size: 1.2rem;
+    }
+
+    .chart-container {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        margin-top: 2rem;
+    }
+
+    .chart-bar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .chart-label {
+        width: 150px;
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .chart-bar-visual {
+        flex: 1;
+        height: 40px;
+        background: #f8f9fa;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 0 1rem;
+        position: relative;
+    }
+
+    .chart-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #08bcbd 0%, #07a4a5 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        color: white;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: width 1s ease;
+    }
+
+    .chart-value {
+        width: 100px;
+        text-align: right;
+        font-weight: 700;
+        color: #08bcbd;
+    }
+</style>
+
+<div class="container-fluid py-4">
+    <!-- Header -->
+    <div class="report-header">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="mb-2 fw-bold">
+                    <i class="fas fa-chart-line me-2"></i>
+                    Báo cáo doanh thu
+                </h1>
+                <p class="mb-0 opacity-75">
+                    <i class="fas fa-info-circle me-1"></i>
+                    Xem thống kê chi tiết về bookings, doanh thu và hiệu suất
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <a href="@Url.Action("Index", "Staff")" class="btn btn-light">
+                    <i class="fas fa-arrow-left me-1"></i>Quay lại Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>@TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- Form chọn khoảng thời gian -->
+    <div class="staff-card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0 text-white">
+                <i class="fas fa-calendar-alt me-2"></i>Chọn khoảng thời gian báo cáo
+            </h5>
+        </div>
+        <div class="card-body">
+            <form action="/Staff/GenerateReport" method="post">
+                @Html.AntiForgeryToken()
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold mb-2">
+                            <i class="fas fa-calendar-check me-1" style="color: #08bcbd;"></i>Từ ngày
+                        </label>
+                        <input type="date" name="fromDate" class="form-control form-control-lg" 
+                               value="@ViewBag.FromDate" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold mb-2">
+                            <i class="fas fa-calendar-times me-1" style="color: #08bcbd;"></i>Đến ngày
+                        </label>
+                        <input type="date" name="toDate" class="form-control form-control-lg" 
+                               value="@ViewBag.ToDate" required />
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="fas fa-sync-alt me-2"></i>Tạo báo cáo
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @if (ViewBag.TotalBookings != null)
+    {
+        <!-- Thống kê chính -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="stat-card-large">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-calendar-check fa-2x"></i>
+                    </div>
+                    <div class="stat-value">@ViewBag.TotalBookings</div>
+                    <div class="stat-label">Tổng số booking</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-card-large">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-users fa-2x"></i>
+                    </div>
+                    <div class="stat-value">@ViewBag.UniqueUsers</div>
+                    <div class="stat-label">Số người dùng</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-card-large">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-dollar-sign fa-2x"></i>
+                    </div>
+                    <div class="stat-value">@String.Format("{0:N0}", ViewBag.TotalRevenue)</div>
+                    <div class="stat-label">Tổng doanh thu (VNĐ)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chi tiết thống kê -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="detail-card completed">
+                    <div class="detail-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="detail-value" style="color: #08bcbd;">@ViewBag.CompletedBookings</div>
+                    <div class="detail-label">Booking hoàn thành</div>
+                    @{
+                        var completionRate = ViewBag.TotalBookings > 0 
+                            ? (decimal)ViewBag.CompletedBookings * 100 / (decimal)ViewBag.TotalBookings 
+                            : 0;
+                    }
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: @completionRate%">
+                            @String.Format("{0:F1}%", completionRate)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="detail-card cancelled">
+                    <div class="detail-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <div class="detail-value" style="color: #dc3545;">@ViewBag.CancelledBookings</div>
+                    <div class="detail-label">Booking bị hủy</div>
+                    @{
+                        var cancellationRate = ViewBag.TotalBookings > 0 
+                            ? (decimal)ViewBag.CancelledBookings * 100 / (decimal)ViewBag.TotalBookings 
+                            : 0;
+                    }
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: @cancellationRate%; background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);">
+                            @String.Format("{0:F1}%", cancellationRate)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="detail-card payments">
+                    <div class="detail-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="detail-value" style="color: #08bcbd;">@ViewBag.TotalPayments</div>
+                    <div class="detail-label">Số giao dịch</div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="detail-card average">
+                    <div class="detail-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    @{
+                        var totalPayments = (int)ViewBag.TotalPayments;
+                        var totalRevenue = (decimal)ViewBag.TotalRevenue;
+                        var avgValue = totalPayments > 0 ? totalRevenue / totalPayments : 0;
+                    }
+                    <div class="detail-value" style="color: #08bcbd;">@String.Format("{0:N0}", avgValue)</div>
+                    <div class="detail-label">Trung bình/GD (VNĐ)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biểu đồ trực quan -->
+        <div class="chart-container">
+            <h4 class="mb-4 fw-bold" style="color: #08bcbd;">
+                <i class="fas fa-chart-bar me-2"></i>Phân tích trực quan
+            </h4>
+            
+            @{
+                var maxValue = Math.Max(ViewBag.CompletedBookings, Math.Max(ViewBag.CancelledBookings, ViewBag.TotalPayments));
+                var completedPercent = maxValue > 0 ? (decimal)ViewBag.CompletedBookings * 100 / maxValue : 0;
+                var cancelledPercent = maxValue > 0 ? (decimal)ViewBag.CancelledBookings * 100 / maxValue : 0;
+                var paymentsPercent = maxValue > 0 ? (decimal)ViewBag.TotalPayments * 100 / maxValue : 0;
+            }
+
+            <div class="chart-bar">
+                <div class="chart-label">Booking hoàn thành</div>
+                <div class="chart-bar-visual">
+                    <div class="chart-bar-fill" style="width: @completedPercent%">
+                        @ViewBag.CompletedBookings
+                    </div>
+                </div>
+                <div class="chart-value">@ViewBag.CompletedBookings</div>
+            </div>
+
+            <div class="chart-bar">
+                <div class="chart-label">Booking bị hủy</div>
+                <div class="chart-bar-visual">
+                    <div class="chart-bar-fill" style="width: @cancelledPercent%; background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);">
+                        @ViewBag.CancelledBookings
+                    </div>
+                </div>
+                <div class="chart-value" style="color: #dc3545;">@ViewBag.CancelledBookings</div>
+            </div>
+
+            <div class="chart-bar">
+                <div class="chart-label">Số giao dịch</div>
+                <div class="chart-bar-visual">
+                    <div class="chart-bar-fill" style="width: @paymentsPercent%">
+                        @ViewBag.TotalPayments
+                    </div>
+                </div>
+                <div class="chart-value">@ViewBag.TotalPayments</div>
+            </div>
+        </div>
+
+        <!-- Tóm tắt -->
+        <div class="summary-section">
+            <h4 class="mb-4 fw-bold" style="color: #08bcbd;">
+                <i class="fas fa-file-alt me-2"></i>Tóm tắt báo cáo
+            </h4>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-calendar me-2" style="color: #08bcbd;"></i>Khoảng thời gian
+                </div>
+                <div class="summary-value">@ViewBag.DisplayPeriod</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-calendar-check me-2" style="color: #08bcbd;"></i>Tổng số booking
+                </div>
+                <div class="summary-value">@ViewBag.TotalBookings</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-users me-2" style="color: #08bcbd;"></i>Số người dùng
+                </div>
+                <div class="summary-value">@ViewBag.UniqueUsers</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-dollar-sign me-2" style="color: #08bcbd;"></i>Tổng doanh thu
+                </div>
+                <div class="summary-value">@String.Format("{0:N0} VNĐ", ViewBag.TotalRevenue)</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-check-circle me-2" style="color: #08bcbd;"></i>Booking hoàn thành
+                </div>
+                <div class="summary-value">@ViewBag.CompletedBookings</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-times-circle me-2" style="color: #dc3545;"></i>Booking bị hủy
+                </div>
+                <div class="summary-value" style="color: #dc3545;">@ViewBag.CancelledBookings</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-money-bill-wave me-2" style="color: #08bcbd;"></i>Số giao dịch
+                </div>
+                <div class="summary-value">@ViewBag.TotalPayments</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">
+                    <i class="fas fa-chart-line me-2" style="color: #08bcbd;"></i>Trung bình mỗi giao dịch
+                </div>
+                <div class="summary-value">@String.Format("{0:N0} VNĐ", avgValue)</div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="staff-card">
+            <div class="card-body text-center py-5">
+                <i class="fas fa-chart-bar fa-4x mb-3" style="color: #08bcbd; opacity: 0.3;"></i>
+                <h4 class="fw-bold mb-3" style="color: #08bcbd;">Chưa có dữ liệu báo cáo</h4>
+                <p class="text-muted mb-4">
+                    Chọn khoảng thời gian và nhấn "Tạo báo cáo" để xem thống kê chi tiết
+                </p>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    // Animation cho progress bars khi load trang
+    document.addEventListener('DOMContentLoaded', function() {
+        const progressBars = document.querySelectorAll('.progress-bar');
+        progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 100);
+        });
+
+        const chartBars = document.querySelectorAll('.chart-bar-fill');
+        chartBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 300);
+        });
+    });
+</script>

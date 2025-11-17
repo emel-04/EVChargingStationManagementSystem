@@ -1,0 +1,62 @@
+ @model EVChargingStation.Web.Models.StationDto
+
+ @{
+    ViewData["Title"] = "Quản lý trạm sạc";
+    
+    var stations = ViewBag.Stations as List<EVChargingStation.Web.Models.StationDto> ?? new();
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">Quản lý trạm sạc</h2>
+    <div>
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-outline-secondary me-2">
+            <i class="fa fa-arrow-left me-1"></i>Quay lại Dashboard
+        </a>
+        <a href="@Url.Action("CreateStation", "Admin")" class="btn btn-success">
+            <i class="fa fa-plus me-1"></i>Thêm trạm mới
+        </a>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tên trạm</th>
+            <th>Địa chỉ</th>
+            <th>Công suất (kW)</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in stations)
+        {
+            <tr>
+                <td>@s.Id</td>
+                <td>@s.Name</td>
+                <td>@s.Address</td>
+                <td>@s.PowerKW</td>
+                <td>
+    
+
+                    <form method="post" action="@Url.Action("DeleteStation", "Admin", new { id = s.Id })"
+                          style="display:inline;" onsubmit="return confirm('Bạn có chắc muốn xóa trạm này không?');">
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i> Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success mt-3">@TempData["Message"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger mt-3">@TempData["Error"]</div>
+}

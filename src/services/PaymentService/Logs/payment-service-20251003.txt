@@ -1,0 +1,248 @@
+2025-10-03 11:01:09.298 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-03 11:12:39.237 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-03 11:18:25.963 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 11:18:26.135 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER DATABASE CHARACTER SET utf8mb4;
+2025-10-03 11:18:26.148 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `ChargingStation` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Name` varchar(200) CHARACTER SET utf8mb4 NOT NULL,
+    `Address` varchar(500) CHARACTER SET utf8mb4 NOT NULL,
+    `Latitude` double NOT NULL,
+    `Longitude` double NOT NULL,
+    `City` varchar(50) CHARACTER SET utf8mb4 NULL,
+    `Province` varchar(50) CHARACTER SET utf8mb4 NULL,
+    `Status` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_ChargingStation` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.159 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `User` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `FirstName` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `LastName` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `Email` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `PhoneNumber` varchar(20) CHARACTER SET utf8mb4 NULL,
+    `PasswordHash` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Role` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_User` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.185 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `ChargingPoint` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `StationId` int NOT NULL,
+    `PointNumber` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `ConnectorType` int NOT NULL,
+    `MaxPower` int NOT NULL,
+    `PricePerKwh` decimal(65,30) NOT NULL,
+    `PricePerHour` decimal(65,30) NOT NULL,
+    `Status` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_ChargingPoint` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_ChargingPoint_ChargingStation_StationId` FOREIGN KEY (`StationId`) REFERENCES `ChargingStation` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.210 +07:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Vehicle` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `LicensePlate` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `Model` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `Brand` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `BatteryCapacity` int NOT NULL,
+    `ConnectorType` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    CONSTRAINT `PK_Vehicle` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Vehicle_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `User` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.240 +07:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Wallets` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `Balance` decimal(18,2) NOT NULL,
+    `TotalDeposited` decimal(18,2) NOT NULL,
+    `TotalSpent` decimal(18,2) NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_Wallets` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Wallets_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `User` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.277 +07:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Booking` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `ChargingPointId` int NOT NULL,
+    `BookingNumber` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `StartTime` datetime(6) NOT NULL,
+    `EndTime` datetime(6) NULL,
+    `ActualStartTime` datetime(6) NULL,
+    `ActualEndTime` datetime(6) NULL,
+    `EnergyConsumed` decimal(65,30) NULL,
+    `TotalCost` decimal(65,30) NULL,
+    `Status` int NOT NULL,
+    `QRCode` longtext CHARACTER SET utf8mb4 NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_Booking` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Booking_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `ChargingPoint` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_Booking_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `User` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.314 +07:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `WalletTransactions` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `WalletId` int NOT NULL,
+    `Amount` decimal(18,2) NOT NULL,
+    `Type` int NOT NULL,
+    `Description` varchar(500) CHARACTER SET utf8mb4 NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    CONSTRAINT `PK_WalletTransactions` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_WalletTransactions_Wallets_WalletId` FOREIGN KEY (`WalletId`) REFERENCES `Wallets` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.350 +07:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Payments` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `BookingId` int NOT NULL,
+    `PaymentNumber` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `Amount` decimal(18,2) NOT NULL,
+    `Method` int NOT NULL,
+    `Status` int NOT NULL,
+    `TransactionId` varchar(500) CHARACTER SET utf8mb4 NULL,
+    `Description` varchar(1000) CHARACTER SET utf8mb4 NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `ProcessedAt` datetime(6) NULL,
+    CONSTRAINT `PK_Payments` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Payments_Booking_BookingId` FOREIGN KEY (`BookingId`) REFERENCES `Booking` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_Payments_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `User` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:18:26.368 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Booking_ChargingPointId` ON `Booking` (`ChargingPointId`);
+2025-10-03 11:18:26.382 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Booking_UserId` ON `Booking` (`UserId`);
+2025-10-03 11:18:26.395 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_ChargingPoint_StationId` ON `ChargingPoint` (`StationId`);
+2025-10-03 11:18:26.409 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Payments_BookingId` ON `Payments` (`BookingId`);
+2025-10-03 11:18:26.417 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX `IX_Payments_PaymentNumber` ON `Payments` (`PaymentNumber`);
+2025-10-03 11:18:26.430 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Payments_UserId` ON `Payments` (`UserId`);
+2025-10-03 11:18:26.445 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Vehicle_UserId` ON `Vehicle` (`UserId`);
+2025-10-03 11:18:26.460 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Wallets_UserId` ON `Wallets` (`UserId`);
+2025-10-03 11:18:26.475 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_WalletTransactions_WalletId` ON `WalletTransactions` (`WalletId`);
+2025-10-03 11:18:26.512 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:18:26.617 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 11:18:26.619 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:18:26.621 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:18:26.622 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 11:42:05.508 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 11:42:05.569 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:42:05.636 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 11:42:05.638 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:42:05.639 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:42:05.640 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 11:58:04.253 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 11:58:04.311 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:58:04.413 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 11:58:04.418 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:58:04.420 +07:00 [INF] Hosting environment: Development
+2025-10-03 11:58:04.421 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 12:07:44.818 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 12:07:44.865 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:07:44.925 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 12:07:44.928 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:07:44.929 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:07:44.930 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 12:09:47.164 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 12:09:47.228 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:09:47.301 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 12:09:47.305 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:09:47.307 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:09:47.308 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 12:18:33.323 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 12:18:33.383 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:18:33.479 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 12:18:33.482 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:18:33.483 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:18:33.485 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 12:26:53.345 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5004/swagger/index.html - null null
+2025-10-03 12:26:53.419 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5004/swagger/index.html - 200 null text/html;charset=utf-8 74.8255ms
+2025-10-03 12:26:53.439 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5004/swagger/swagger-ui.css - null null
+2025-10-03 12:26:53.439 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5004/swagger/swagger-ui-bundle.js - null null
+2025-10-03 12:26:53.439 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5004/swagger/swagger-ui-standalone-preset.js - null null
+2025-10-03 12:26:53.466 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-10-03 12:26:53.467 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-10-03 12:26:53.473 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5004/swagger/swagger-ui.css - 200 143943 text/css 33.297ms
+2025-10-03 12:26:53.475 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5004/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 35.9673ms
+2025-10-03 12:26:53.485 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-10-03 12:26:53.486 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5004/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 46.5544ms
+2025-10-03 12:26:53.621 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5004/swagger/v1/swagger.json - null null
+2025-10-03 12:26:53.630 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5004/swagger/favicon-32x32.png - null null
+2025-10-03 12:26:53.636 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-03 12:26:53.639 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5004/swagger/favicon-32x32.png - 200 628 image/png 8.5152ms
+2025-10-03 12:26:53.738 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5004/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.0823ms
+2025-10-03 12:56:16.839 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 12:56:16.886 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:56:16.950 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 12:56:16.953 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:56:16.954 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:56:16.955 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 13:27:03.198 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 13:27:03.262 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 13:27:03.355 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 13:27:03.357 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 13:27:03.359 +07:00 [INF] Hosting environment: Development
+2025-10-03 13:27:03.361 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 13:39:14.192 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 13:39:14.250 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 13:39:14.327 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 13:39:14.331 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 13:39:14.332 +07:00 [INF] Hosting environment: Development
+2025-10-03 13:39:14.334 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-03 22:20:07.968 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-03 22:20:08.015 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 22:20:08.075 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-03 22:20:08.078 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 22:20:08.079 +07:00 [INF] Hosting environment: Development
+2025-10-03 22:20:08.080 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService

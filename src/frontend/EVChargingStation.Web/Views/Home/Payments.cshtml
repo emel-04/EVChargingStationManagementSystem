@@ -1,0 +1,339 @@
+@using EVChargingStation.Web.Models
+@{
+    ViewData["Title"] = "Lịch sử thanh toán";
+    var payments = ViewBag.Payments as List<PaymentDto> ?? new List<PaymentDto>();
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="text-primary mb-0">
+            <i class="fa fa-credit-card me-2"></i>Lịch sử thanh toán
+        </h4>
+        <span class="badge bg-info">Tổng: @payments.Count giao dịch</span>
+    </div>
+
+    @if (!payments.Any())
+    {
+        <div class="alert alert-info text-center">
+            <i class="fa fa-info-circle fa-2x mb-3"></i>
+            <p class="mb-0">Bạn chưa có giao dịch thanh toán nào.</p>
+        </div>
+    }
+    else
+    {
+        <!-- Filter và Sort -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <select class="form-select form-select-sm" id="filterStatus">
+                            <option value="">Tất cả trạng thái</option>
+                            <option value="0">Chờ xử lý</option>
+                            <option value="1">Hoàn thành</option>
+                            <option value="2">Thất bại</option>
+                            <option value="3">Hoàn tiền</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select form-select-sm" id="filterMethod">
+                            <option value="">Tất cả phương thức</option>
+                            <option value="0">Tiền mặt</option>
+                            <option value="1">Thẻ ngân hàng</option>
+                            <option value="2">Ví điện tử</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select form-select-sm" id="sortBy">
+                            <option value="date-desc">Mới nhất</option>
+                            <option value="date-asc">Cũ nhất</option>
+                            <option value="amount-desc">Số tiền cao nhất</option>
+                            <option value="amount-asc">Số tiền thấp nhất</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danh sách thanh toán -->
+        <div class="list-group" id="paymentList">
+            @foreach (var payment in payments.OrderByDescending(p => p.CreatedAt))
+            {
+                <div class="list-group-item payment-item" 
+                     data-status="@payment.Status" 
+                     data-method="@payment.Method"
+                     data-date="@payment.CreatedAt.ToString("yyyy-MM-dd")"
+                     data-amount="@payment.Amount">
+                    <div class="row align-items-center">
+                        <!-- Thông tin chính -->
+                        <div class="col-md-6 mb-2 mb-md-0">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3">
+                                    <i class="fa fa-receipt fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">
+                                        Mã GD: <span class="text-primary">@payment.PaymentNumber</span>
+                                    </h6>
+                                    @if (!string.IsNullOrEmpty(payment.StationName))
+                                    {
+                                        <div class="small text-muted mb-1">
+                                            <i class="fa fa-charging-station me-1"></i>@payment.StationName
+                                        </div>
+                                    }
+                                    @if (!string.IsNullOrEmpty(payment.Description))
+                                    {
+                                        <div class="small text-muted mb-1">
+                                            <i class="fa fa-comment me-1"></i>@payment.Description
+                                        </div>
+                                    }
+                                    <div class="small text-muted">
+                                        <i class="fa fa-clock me-1"></i>
+                                        @payment.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                                    </div>
+                                    @if (payment.ProcessedAt.HasValue)
+                                    {
+                                        <div class="small text-muted">
+                                            <i class="fa fa-check-circle me-1"></i>
+                                            Xử lý: @payment.ProcessedAt.Value.ToString("dd/MM/yyyy HH:mm")
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phương thức & Trạng thái -->
+                        <div class="col-md-3 mb-2 mb-md-0">
+                            <div class="small text-muted mb-1">Phương thức</div>
+                            <div class="fw-semibold">
+                                @switch(payment.Method)
+                                {
+                                    case 0:
+                                        <i class="fa fa-money-bill me-1"></i>
+                                        break;
+                                    case 1:
+                                        <i class="fa fa-credit-card me-1"></i>
+                                        break;
+                                    case 2:
+                                        <i class="fa fa-wallet me-1"></i>
+                                        break;
+                                }
+                                @payment.MethodName
+                            </div>
+                            <div class="mt-2">
+                                <span class="badge @payment.StatusBadgeClass">
+                                    @payment.StatusName
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Số tiền -->
+                        <div class="col-md-3 text-md-end">
+                            <div class="h5 mb-1 text-success">
+                                @payment.Amount.ToString("N0") đ
+                            </div>
+                            @if (!string.IsNullOrEmpty(payment.TransactionId))
+                            {
+                                <div class="small text-muted">
+                                    TxID: @payment.TransactionId
+                                </div>
+                            }
+                            <button class="btn btn-sm btn-outline-primary mt-2" 
+                                    onclick="viewDetails(@payment.Id)">
+                                <i class="fa fa-eye me-1"></i>Chi tiết
+                            </button>
+                        </div>
+                    </div>
+
+                    @if (payment.BookingId.HasValue)
+                    {
+                        <div class="mt-2 pt-2 border-top">
+                            <small class="text-muted">
+                                <i class="fa fa-link me-1"></i>
+                                Liên kết với booking #@payment.BookingId
+                            </small>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <!-- Thống kê tổng -->
+        <div class="card mt-3">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="text-muted small">Tổng chi tiêu</div>
+                        <div class="h5 text-primary">
+                            @payments.Where(p => p.Status == 1).Sum(p => p.Amount).ToString("N0") đ
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-muted small">Hoàn thành</div>
+                        <div class="h5 text-success">
+                            @payments.Count(p => p.Status == 1)
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-muted small">Chờ xử lý</div>
+                        <div class="h5 text-warning">
+                            @payments.Count(p => p.Status == 0)
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-muted small">Thất bại</div>
+                        <div class="h5 text-danger">
+                            @payments.Count(p => p.Status == 2)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Modal Chi tiết -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chi tiết thanh toán</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="detailContent">
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Đang tải...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Filter và Sort
+        document.getElementById('filterStatus').addEventListener('change', filterPayments);
+        document.getElementById('filterMethod').addEventListener('change', filterPayments);
+        document.getElementById('sortBy').addEventListener('change', sortPayments);
+
+        function filterPayments() {
+            const status = document.getElementById('filterStatus').value;
+            const method = document.getElementById('filterMethod').value;
+            const items = document.querySelectorAll('.payment-item');
+
+            items.forEach(item => {
+                const itemStatus = item.dataset.status;
+                const itemMethod = item.dataset.method;
+                const show = (!status || itemStatus === status) && 
+                            (!method || itemMethod === method);
+                item.style.display = show ? '' : 'none';
+            });
+        }
+
+        function sortPayments() {
+            const sortBy = document.getElementById('sortBy').value;
+            const list = document.getElementById('paymentList');
+            const items = Array.from(list.querySelectorAll('.payment-item'));
+
+            items.sort((a, b) => {
+                if (sortBy === 'date-desc') {
+                    return new Date(b.dataset.date) - new Date(a.dataset.date);
+                } else if (sortBy === 'date-asc') {
+                    return new Date(a.dataset.date) - new Date(b.dataset.date);
+                } else if (sortBy === 'amount-desc') {
+                    return parseFloat(b.dataset.amount) - parseFloat(a.dataset.amount);
+                } else if (sortBy === 'amount-asc') {
+                    return parseFloat(a.dataset.amount) - parseFloat(b.dataset.amount);
+                }
+            });
+
+            items.forEach(item => list.appendChild(item));
+        }
+
+        function viewDetails(paymentId) {
+            const modal = new bootstrap.Modal(document.getElementById('detailModal'));
+            modal.show();
+            
+            // Gọi API để lấy chi tiết thanh toán
+            fetch(`/Home/GetPaymentDetail?id=${paymentId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const methodIcon = data.method === 0 ? 'fa-money-bill' : 
+                                     data.method === 1 ? 'fa-credit-card' : 'fa-wallet';
+                    const statusClass = data.status === 0 ? 'warning' : 
+                                      data.status === 1 ? 'success' : 
+                                      data.status === 2 ? 'danger' : 'info';
+                    
+                    document.getElementById('detailContent').innerHTML = `
+                        <div class="mb-3 text-center">
+                            <i class="fa fa-receipt fa-3x text-primary mb-2"></i>
+                            <h5>${data.paymentNumber}</h5>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <strong>Số tiền:</strong> 
+                            <span class="float-end text-success fs-5">${data.amount.toLocaleString()} đ</span>
+                        </div>
+                        <div class="mb-3">
+                            <strong>Phương thức:</strong> 
+                            <span class="float-end">
+                                <i class="fa ${methodIcon} me-1"></i>${data.methodName}
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <strong>Trạng thái:</strong> 
+                            <span class="float-end">
+                                <span class="badge bg-${statusClass}">${data.statusName}</span>
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <strong>Ngày tạo:</strong> 
+                            <span class="float-end">${new Date(data.createdAt).toLocaleString('vi-VN')}</span>
+                        </div>
+                        ${data.processedAt ? `
+                            <div class="mb-3">
+                                <strong>Ngày xử lý:</strong> 
+                                <span class="float-end">${new Date(data.processedAt).toLocaleString('vi-VN')}</span>
+                            </div>
+                        ` : ''}
+                        ${data.transactionId ? `
+                            <div class="mb-3">
+                                <strong>Mã giao dịch:</strong> 
+                                <span class="float-end text-muted">${data.transactionId}</span>
+                            </div>
+                        ` : ''}
+                        ${data.description ? `
+                            <div class="mb-3">
+                                <strong>Mô tả:</strong> 
+                                <div class="text-muted mt-1">${data.description}</div>
+                            </div>
+                        ` : ''}
+                        ${data.stationName ? `
+                            <div class="mb-3">
+                                <strong>Trạm sạc:</strong> 
+                                <span class="float-end">${data.stationName}</span>
+                            </div>
+                        ` : ''}
+                        ${data.bookingId ? `
+                            <div class="mb-3">
+                                <strong>Booking:</strong> 
+                                <span class="float-end">
+                                    <a href="/Home/Bookings#booking-${data.bookingId}">#${data.bookingId}</a>
+                                </span>
+                            </div>
+                        ` : ''}
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('detailContent').innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="fa fa-exclamation-triangle me-2"></i>
+                            Không thể tải chi tiết thanh toán
+                        </div>
+                    `;
+                });
+        }
+    </script>
+}

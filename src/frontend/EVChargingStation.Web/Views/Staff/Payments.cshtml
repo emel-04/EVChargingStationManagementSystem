@@ -1,0 +1,210 @@
+@model List<EVChargingStation.Web.Models.PaymentDto>
+@{
+    ViewData["Title"] = "Quản lý Thanh toán";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">
+            <i class="fa fa-dollar-sign me-2 text-success"></i>
+            Quản lý Thanh toán
+        </h2>
+        <a href="@Url.Action("Index", "Staff")" class="btn btn-outline-secondary">
+            <i class="fa fa-arrow-left me-1"></i>Quay lại Dashboard
+        </a>
+    </div>
+
+    <!-- Thông báo -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fa fa-check-circle me-2"></i>@TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fa fa-exclamation-circle me-2"></i>@TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- Bảng danh sách thanh toán -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0">
+                <i class="fa fa-list me-2"></i>Danh sách thanh toán chờ xử lý
+            </h5>
+        </div>
+        <div class="card-body">
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Mã thanh toán</th>
+                                <th>Khách hàng</th>
+                                <th>Booking</th>
+                                <th>Số tiền</th>
+                                <th>Phương thức</th>
+                                <th>Trạng thái</th>
+                                <th>Ngày tạo</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var payment in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <strong class="text-primary">@payment.PaymentNumber</strong>
+                                    </td>
+                                    <td>@payment.UserName</td>
+                                    <td>
+                                        @if (payment.BookingId.HasValue)
+                                        {
+                                            <span class="badge bg-info">Booking #@payment.BookingId</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">-</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <strong class="text-success">@payment.Amount.ToString("N0") VNĐ</strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge @(payment.Method switch {
+                                            0 => "bg-secondary",
+                                            1 => "bg-primary",
+                                            2 => "bg-warning",
+                                            _ => "bg-dark"
+                                        })">
+                                            @payment.MethodName
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge @(payment.Status switch {
+                                            0 => "bg-warning",
+                                            1 => "bg-success",
+                                            2 => "bg-danger",
+                                            3 => "bg-info",
+                                            _ => "bg-dark"
+                                        })">
+                                            @payment.StatusName
+                                        </span>
+                                    </td>
+                                    <td>@payment.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>
+                                        @if (payment.Status == 0)
+                                        {
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-success btn-sm"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#processModal"
+                                                        data-payment-id="@payment.Id"
+                                                        data-payment-number="@payment.PaymentNumber"
+                                                        data-status="1">
+                                                    <i class="fa fa-check"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#processModal"
+                                                        data-payment-id="@payment.Id"
+                                                        data-payment-number="@payment.PaymentNumber"
+                                                        data-status="2">
+                                                    <i class="fa fa-times"></i>
+                                                </button>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">Đã xử lý</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="fa fa-inbox fa-3x text-muted mb-3"></i>
+                    <p class="text-muted">Không có thanh toán nào đang chờ xử lý</p>
+                    <a href="@Url.Action("Bookings")" class="btn btn-success">
+                        <i class="fa fa-calendar-check me-1"></i>Xem danh sách Booking
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Modal xử lý thanh toán -->
+<div class="modal fade" id="processModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">
+                    <i class="fa fa-tasks me-2"></i>Xử lý thanh toán
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <form asp-action="ProcessPayment" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <input type="hidden" id="processPaymentId" name="id" />
+                    <input type="hidden" id="processStatus" name="status" />
+                    
+                    <div class="alert alert-info">
+                        <i class="fa fa-info-circle me-2"></i>
+                        <strong id="processPaymentNumber"></strong>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Mã giao dịch (tùy chọn)</label>
+                        <input type="text" class="form-control" name="transactionId" 
+                               placeholder="Nhập mã giao dịch nếu có" />
+                    </div>
+
+                    <div id="statusMessage"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-success" id="confirmProcessBtn">
+                        <i class="fa fa-check me-1"></i>Xác nhận
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    // Xử lý modal
+    $('#processModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var paymentId = button.data('payment-id');
+        var paymentNumber = button.data('payment-number');
+        var status = button.data('status');
+        
+        $('#processPaymentId').val(paymentId);
+        $('#processStatus').val(status);
+        $('#processPaymentNumber').text('Thanh toán: ' + paymentNumber);
+        
+        if (status == 1) {
+            $('#statusMessage').html('<div class="alert alert-success"><i class="fa fa-check-circle me-2"></i>Xác nhận thanh toán thành công?</div>');
+            $('#confirmProcessBtn').removeClass('btn-danger').addClass('btn-success');
+        } else {
+            $('#statusMessage').html('<div class="alert alert-danger"><i class="fa fa-times-circle me-2"></i>Đánh dấu thanh toán thất bại?</div>');
+            $('#confirmProcessBtn').removeClass('btn-success').addClass('btn-danger');
+        }
+    });
+</script>
+}

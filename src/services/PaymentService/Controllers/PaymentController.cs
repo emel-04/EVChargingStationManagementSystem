@@ -20,6 +20,16 @@ public class PaymentController : ControllerBase
         _logger = logger;
     }
 
+    // Thêm vào PaymentController.cs (Backend)
+    [HttpGet]
+    [Authorize(Roles = "Admin,CSStaff")]
+    public async Task<ActionResult<IEnumerable<Payment>>> GetAllPayments()
+    {
+        var payments = await _paymentService.GetAllPaymentsAsync();
+        return Ok(payments);
+    }
+
+
     [HttpGet("{id}")]
     public async Task<ActionResult<Payment>> GetPayment(int id)
     {
@@ -92,7 +102,7 @@ public class PaymentController : ControllerBase
     {
         // Check if user is creating payment for themselves or is admin
         var currentUserId = GetCurrentUserId();
-        if (currentUserId != request.UserId && !User.IsInRole("Admin"))
+        if (currentUserId != request.UserId && !User.IsInRole("Admin")&& !User.IsInRole("CSStaff"))
         {
             return Forbid();
         }
@@ -170,6 +180,9 @@ public class PaymentController : ControllerBase
         }
         return null;
     }
+
+    
+
 }
 
 public class CreatePaymentForBookingRequest

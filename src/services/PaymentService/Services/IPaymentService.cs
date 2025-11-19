@@ -12,6 +12,7 @@ public interface IPaymentService
     Task<Payment> CreatePaymentAsync(CreatePaymentRequest request);
     Task<Payment> ProcessPaymentAsync(int id, ProcessPaymentRequest request);
     Task<bool> RefundPaymentAsync(int id, RefundPaymentRequest request);
+    Task<IEnumerable<Payment>> GetAllPaymentsAsync();
     Task<Payment> CreatePaymentForBookingAsync(int bookingId, decimal amount, PaymentMethod method);
 }
 

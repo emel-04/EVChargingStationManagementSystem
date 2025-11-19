@@ -28,6 +28,14 @@ public class PaymentService : IPaymentService
         return await _context.Payments
             .FirstOrDefaultAsync(p => p.PaymentNumber == paymentNumber);
     }
+    // Thêm vào PaymentService.cs
+    public async Task<IEnumerable<Payment>> GetAllPaymentsAsync()
+    {
+        return await _context.Payments
+            .OrderByDescending(p => p.CreatedAt)
+            .ToListAsync();
+    }
+
 
     public async Task<IEnumerable<Payment>> GetPaymentsByUserIdAsync(int userId)
     {

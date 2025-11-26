@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EV Charging Station</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --primary:#08bcbd; }
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary) !important;
+        }
+        .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link { color: var(--primary); }
+        .btn-primary { background-color: var(--primary); border-color: var(--primary); }
+        .btn-outline-primary { color: var(--primary); border-color: var(--primary); }
+        .btn-outline-primary:hover { background-color: var(--primary); border-color: var(--primary); }
+        .text-primary { color: var(--primary) !important; }
+        .bg-primary { background-color: var(--primary) !important; }
+        .hero-section {
+            background: linear-gradient(135deg, #08bcbd 0%, #07a4a5 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        /* Mobile app-like bottom nav for driver */
+        .app-bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #e5e7eb; display: none; z-index: 1030; }
+        .app-bottom-nav .nav-link { color: #6b7280; padding: 10px 12px; text-align: center; }
+        .app-bottom-nav .nav-link.active { color: var(--primary); }
+
+        @@media (max-width: 768px) {
+            header .navbar { display:none; }
+            .app-bottom-nav { display: block; }
+            body { padding-bottom: 64px; }
+        }
+        .feature-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .station-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+        .station-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .status-available { color: #28a745; }
+        .status-occupied { color: #ffc107; }
+        .status-maintenance { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    <i class="fas fa-charging-station me-2"></i>
+                    EV Charging Station
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Home")">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Stations", "Home")">Trạm sạc</a>
+                        </li>
+                        @if (Context.Session.GetString("Token") != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Bookings", "Home")">Đặt chỗ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Payments", "Home")">Thanh toán</a>
+                            </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if (Context.Session.GetString("Token") != null)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-user me-1"></i>
+                                    @Context.Session.GetString("UserName")
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="@Url.Action("Dashboard", "Home")">Dashboard</a></li>
+                                    @if (Context.Session.GetString("Role") == "Admin")
+                                    {
+                                        <li><a class="dropdown-item" href="@Url.Action("Index", "Admin")">Admin</a></li>
+                                    }
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Logout", "Home")">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Login", "Home")">Đăng nhập</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Register", "Home")">Đăng ký</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>EV Charging Station</h5>
+                    <p>Hệ thống quản lý trạm sạc xe điện thông minh</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 EV Charging Station. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile bottom navigation for driver app UX -->
+    <nav class="app-bottom-nav d-md-none">
+        <div class="container">
+            <ul class="nav justify-content-between">
+                <li class="nav-item">
+                    <a class="nav-link @(Context.Request.Path.Value?.Contains("Home/Index")==true?"active":"")" href="@Url.Action("Index","Home")">
+                        <i class="fa fa-home d-block"></i>
+                        <span class="small">Trang chủ</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(Context.Request.Path.Value?.Contains("Stations")==true?"active":"")" href="@Url.Action("Stations","Home")">
+                        <i class="fa fa-charging-station d-block"></i>
+                        <span class="small">Trạm</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(Context.Request.Path.Value?.Contains("Bookings")==true?"active":"")" href="@Url.Action("Bookings","Home")">
+                        <i class="fa fa-calendar-check d-block"></i>
+                        <span class="small">Đặt chỗ</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(Context.Request.Path.Value?.Contains("Payments")==true?"active":"")" href="@Url.Action("Payments","Home")">
+                        <i class="fa fa-wallet d-block"></i>
+                        <span class="small">Ví</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+

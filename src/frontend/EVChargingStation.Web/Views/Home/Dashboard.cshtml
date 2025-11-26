@@ -1,0 +1,197 @@
+@using EVChargingStation.Web.Models
+@{
+    ViewData["Title"] = "Dashboard";
+    var recentBookings = ViewBag.RecentBookings as List<BookingDto> ?? new List<BookingDto>();
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2>Dashboard</h2>
+            <p class="text-muted">Chào mừng @Context.Session.GetString("UserName")!</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+        <!-- Tổng đặt chỗ -->
+        <div class="col-md-4">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Tổng đặt chỗ</h5>
+                            <h2 class="mb-0">@ViewBag.TotalBookings</h2>
+                            <small>Tất cả booking</small>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-calendar-check fa-3x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Đã sạc (Completed) -->
+        <div class="col-md-4">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Đã hoàn thành</h5>
+                            <h2 class="mb-0">@ViewBag.CompletedBookings</h2>
+                            <small>Phiên sạc hoàn tất</small>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-check-circle fa-3x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tổng chi phí -->
+        <div class="col-md-4">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Tổng chi phí</h5>
+                            <h2 class="mb-0">@String.Format("{0:N0}", ViewBag.TotalSpent)</h2>
+                            <small>VNĐ đã thanh toán</small>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-credit-card fa-3x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Đặt chỗ gần đây -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <i class="fas fa-history me-2"></i>Đặt chỗ gần đây
+                    </h5>
+                    <a href="@Url.Action("Bookings", "Home")" class="btn btn-sm btn-primary">
+                        Xem tất cả <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+                <div class="card-body">
+                    @if (recentBookings.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Mã đặt chỗ</th>
+                                        <th>Trạm sạc</th>
+                                        <th>Thời gian bắt đầu</th>
+                                        <th>Thời gian kết thúc</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var booking in recentBookings)
+                                    {
+                                        <tr>
+                                            <td><strong>@booking.BookingNumber</strong></td>
+                                            <td>
+                                                <i class="fas fa-charging-station text-success me-1"></i>
+                                                @booking.StationName
+                                            </td>
+                                            <td>@booking.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td>@(booking.EndTime?.ToString("dd/MM/yyyy HH:mm") ?? "Chưa kết thúc")</td>
+                                            <td>
+                                                @switch (booking.Status)
+                                                {
+                                                    case 0:
+                                                        <span class="badge bg-warning">Chờ xác nhận</span>
+                                                        break;
+                                                    case 1:
+                                                        <span class="badge bg-info">Đã xác nhận</span>
+                                                        break;
+                                                    case 2:
+                                                        <span class="badge bg-primary">Đang sạc</span>
+                                                        break;
+                                                    case 3:
+                                                        <span class="badge bg-success">Hoàn thành</span>
+                                                        break;
+                                                    case 4:
+                                                        <span class="badge bg-danger">Đã hủy</span>
+                                                        break;
+                                                    default:
+                                                        <span class="badge bg-secondary">Không xác định</span>
+                                                        break;
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-5">
+                            <i class="fas fa-calendar-times fa-3x text-muted mb-3"></i>
+                            <p class="text-muted">Bạn chưa có booking nào</p>
+                            <a href="@Url.Action("Stations", "Home")" class="btn btn-primary">
+                                <i class="fas fa-plus me-1"></i>Đặt chỗ ngay
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row mt-4 mb-4">
+        <div class="col-12">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">
+                        <i class="fas fa-bolt me-2 text-warning"></i>Thao tác nhanh
+                    </h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="@Url.Action("Stations", "Home")" class="btn btn-primary">
+                            <i class="fas fa-charging-station me-1"></i>Đặt chỗ mới
+                        </a>
+                        <a href="@Url.Action("Bookings", "Home")" class="btn btn-info">
+                            <i class="fas fa-list me-1"></i>Xem booking
+                        </a>
+                        <a href="@Url.Action("Payments", "Home")" class="btn btn-success">
+                            <i class="fas fa-dollar-sign me-1"></i>Lịch sử thanh toán
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .opacity-50 {
+        opacity: 0.5;
+    }
+    
+    .card {
+        transition: transform 0.2s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-2px);
+    }
+    
+    .table tbody tr {
+        transition: background-color 0.2s ease;
+    }
+    
+    .table tbody tr:hover {
+        background-color: rgba(0,123,255,0.05);
+    }
+</style>

@@ -16,24 +16,27 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-
+// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+// Database
 builder.Services.AddDbContext<BookingDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), 
         new MySqlServerVersion(new Version(8, 0, 21))));
 
+// HttpClient for User Service validation
+builder.Services.AddHttpClient<IUserValidationService, UserValidationService>();
 
+// Services
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IQRCodeService, QRCodeService>();
 
-
+// AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
-
+// JWT Authentication
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var secretKey = jwtSettings["SecretKey"];
 
@@ -56,21 +59,21 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-
+// app.UseHttpsRedirection(); // Disabled for local development
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-
+// Ensure database is created
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<BookingDbContext>();

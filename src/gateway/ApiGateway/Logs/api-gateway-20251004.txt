@@ -1,0 +1,26 @@
+2025-10-04 07:56:26.569 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-04 07:56:26.618 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 07:56:26.619 +07:00 [INF] Hosting environment: Development
+2025-10-04 07:56:26.621 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-04 07:56:47.473 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger - null null
+2025-10-04 07:56:47.506 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger - 301 0 null 34.1926ms
+2025-10-04 07:56:47.510 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2025-10-04 07:56:47.566 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 55.7964ms
+2025-10-04 07:56:47.750 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2025-10-04 07:56:47.834 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.8536ms
+2025-10-04 09:31:10.400 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-04 09:31:10.452 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 09:31:10.455 +07:00 [INF] Hosting environment: Development
+2025-10-04 09:31:10.457 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-04 14:46:50.776 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-04 14:46:50.812 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 14:46:50.814 +07:00 [INF] Hosting environment: Development
+2025-10-04 14:46:50.815 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-04 14:48:24.915 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-04 14:48:24.969 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 14:48:24.972 +07:00 [INF] Hosting environment: Development
+2025-10-04 14:48:24.973 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-04 15:27:21.380 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2025-10-04 15:27:21.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 103.4486ms
+2025-10-04 15:27:21.681 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2025-10-04 15:27:21.794 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 112.3494ms

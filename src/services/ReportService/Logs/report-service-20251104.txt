@@ -1,0 +1,176 @@
+2025-11-04 00:04:01.842 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 00:04:01.890 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 00:04:01.953 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 00:04:01.957 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 00:04:01.958 +07:00 [INF] Hosting environment: Development
+2025-11-04 00:04:01.960 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 02:48:45.027 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 02:48:45.076 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 02:48:45.140 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 02:48:45.143 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 02:48:45.144 +07:00 [INF] Hosting environment: Development
+2025-11-04 02:48:45.145 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 02:58:33.979 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 02:58:34.027 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 02:58:34.101 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 02:58:34.103 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 02:58:34.104 +07:00 [INF] Hosting environment: Development
+2025-11-04 02:58:34.105 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 03:06:42.831 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 03:06:42.885 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 03:06:42.953 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 03:06:42.955 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 03:06:42.957 +07:00 [INF] Hosting environment: Development
+2025-11-04 03:06:42.958 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 03:18:14.672 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 03:18:14.718 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 03:18:14.785 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 03:18:14.788 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 03:18:14.788 +07:00 [INF] Hosting environment: Development
+2025-11-04 03:18:14.789 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 03:49:25.867 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 03:49:25.921 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 03:49:25.986 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 03:49:25.989 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 03:49:25.990 +07:00 [INF] Hosting environment: Development
+2025-11-04 03:49:25.991 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 09:42:06.075 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 09:42:06.137 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 09:42:06.214 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 09:42:06.217 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 09:42:06.219 +07:00 [INF] Hosting environment: Development
+2025-11-04 09:42:06.220 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 10:04:05.585 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 10:04:05.642 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:04:05.722 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 10:04:05.726 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 10:04:05.727 +07:00 [INF] Hosting environment: Development
+2025-11-04 10:04:05.730 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 10:05:31.215 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 10:05:31.275 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:05:31.359 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 10:05:31.362 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 10:05:31.364 +07:00 [INF] Hosting environment: Development
+2025-11-04 10:05:31.365 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 10:10:11.580 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 10:10:11.643 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:10:11.695 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:11:13.350 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 10:11:13.418 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:11:13.500 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:12:37.786 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 10:12:37.897 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:12:37.967 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:16:40.726 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 10:16:40.793 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:16:40.848 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:20:02.711 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 10:20:02.779 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:20:02.863 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 10:20:02.866 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 10:20:02.867 +07:00 [INF] Hosting environment: Development
+2025-11-04 10:20:02.869 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 15:24:50.819 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 15:24:50.872 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 15:24:50.936 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 15:24:50.939 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 15:24:50.940 +07:00 [INF] Hosting environment: Development
+2025-11-04 15:24:50.941 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService
+2025-11-04 19:15:02.066 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-11-04 19:15:02.329 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 19:15:02.720 +07:00 [INF] Now listening on: https://localhost:5006
+2025-11-04 19:15:03.402 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 19:15:03.571 +07:00 [INF] Hosting environment: Development
+2025-11-04 19:15:03.574 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\ReportService

@@ -1,0 +1,16 @@
+2025-10-28 18:16:40.145 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-28 18:16:40.178 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:16:40.181 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:16:40.181 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-28 18:18:09.718 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-28 18:18:09.755 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:18:09.756 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:18:09.757 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-28 18:27:54.512 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-28 18:27:54.540 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:27:54.542 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:27:54.543 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-28 18:30:28.356 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-28 18:30:28.381 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:30:28.383 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:30:28.383 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway

@@ -1,0 +1,201 @@
+2025-10-30 10:02:18.344 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 10:02:19.641 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:02:19.834 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 10:02:20.358 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:02:20.782 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:02:21.342 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 10:31:42.207 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 10:31:42.268 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:31:42.359 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 10:31:42.362 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:31:42.364 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:31:42.365 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 10:40:39.253 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 10:40:39.311 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:40:39.388 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 10:40:39.392 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:40:39.394 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:40:39.396 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 10:50:01.325 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 10:50:01.411 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:50:01.508 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 10:50:01.512 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:50:01.514 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:50:01.515 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 16:14:56.719 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-30 16:16:04.650 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 16:16:04.695 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 16:16:04.753 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 16:16:04.757 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 16:16:04.758 +07:00 [INF] Hosting environment: Development
+2025-10-30 16:16:04.759 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 16:32:34.755 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 16:32:34.801 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 16:32:34.861 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 16:32:34.864 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 16:32:34.865 +07:00 [INF] Hosting environment: Development
+2025-10-30 16:32:34.866 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 20:48:57.809 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 20:48:57.860 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 20:48:57.944 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 20:48:57.947 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 20:48:57.949 +07:00 [INF] Hosting environment: Development
+2025-10-30 20:48:57.951 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 21:05:22.953 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 21:05:23.000 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:05:23.060 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 21:05:23.063 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:05:23.064 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:05:23.065 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 21:09:55.915 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 21:09:55.962 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:09:56.022 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 21:09:56.025 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:09:56.026 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:09:56.026 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 21:16:06.882 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 21:16:06.929 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:16:06.988 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 21:16:06.991 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:16:06.992 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:16:06.993 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 21:47:28.843 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 21:47:28.889 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:47:28.950 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 21:47:28.953 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:47:28.954 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:47:28.955 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 21:53:55.760 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 21:53:55.806 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:53:55.865 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 21:53:55.868 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:53:55.869 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:53:55.870 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 22:02:28.774 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 22:02:28.820 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:02:28.881 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 22:02:28.884 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:02:28.885 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:02:28.886 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 22:16:44.759 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 22:16:44.805 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:16:44.864 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 22:16:44.868 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:16:44.869 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:16:44.869 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 22:35:06.802 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 22:35:06.852 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:35:06.912 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 22:35:06.915 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:35:06.917 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:35:06.917 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 22:50:23.795 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 22:50:23.840 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:50:23.899 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 22:50:23.902 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:50:23.903 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:50:23.904 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 22:53:47.928 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 22:53:47.976 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:53:48.038 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 22:53:48.041 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:53:48.042 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:53:48.043 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 22:55:40.296 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/user/5 - null 0
+2025-10-30 22:55:41.351 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/user/5 - 404 0 null 1055.3669ms
+2025-10-30 22:55:41.357 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5003/api/user/5, Response status code: 404
+2025-10-30 22:56:20.667 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/index.html - null null
+2025-10-30 22:56:20.721 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/index.html - 200 null text/html;charset=utf-8 54.1467ms
+2025-10-30 22:56:20.757 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/swagger-ui-standalone-preset.js - null null
+2025-10-30 22:56:20.757 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/swagger-ui-bundle.js - null null
+2025-10-30 22:56:20.757 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/swagger-ui.css - null null
+2025-10-30 22:56:20.775 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-10-30 22:56:20.782 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 24.2847ms
+2025-10-30 22:56:20.783 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-10-30 22:56:20.784 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-10-30 22:56:20.793 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 35.599ms
+2025-10-30 22:56:20.791 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/swagger-ui.css - 200 143943 text/css 33.2262ms
+2025-10-30 22:56:20.948 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/v1/swagger.json - null null
+2025-10-30 22:56:20.994 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/favicon-32x32.png - null null
+2025-10-30 22:56:20.998 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-30 22:56:21.001 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/favicon-32x32.png - 200 628 image/png 6.3431ms
+2025-10-30 22:56:21.066 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.6672ms
+2025-10-30 22:58:57.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/Booking/user/3 - null null
+2025-10-30 22:58:57.227 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-30 22:58:57.233 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-30 22:58:57.234 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/Booking/user/3 - 401 0 null 24.8651ms
+2025-10-30 23:02:50.867 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-30 23:02:50.914 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 23:02:50.974 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-30 23:02:50.977 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 23:02:50.978 +07:00 [INF] Hosting environment: Development
+2025-10-30 23:02:50.979 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-30 23:03:23.242 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/user/0 - null 0
+2025-10-30 23:03:23.282 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/user/0 - 404 0 null 40.4355ms
+2025-10-30 23:03:23.288 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5003/api/user/0, Response status code: 404
+2025-10-30 23:04:04.368 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/user/5 - null 0
+2025-10-30 23:04:04.417 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/user/5 - 404 0 null 49.5526ms
+2025-10-30 23:04:04.422 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5003/api/user/5, Response status code: 404
+2025-10-30 23:07:07.742 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/api/Booking/user/5 - null null
+2025-10-30 23:07:07.751 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-30 23:07:07.755 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-30 23:07:07.756 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/api/Booking/user/5 - 401 0 null 13.7649ms
+2025-10-30 23:48:19.202 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/user/5 - null 0
+2025-10-30 23:48:19.208 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/user/5 - 404 0 null 5.8141ms
+2025-10-30 23:48:19.211 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5003/api/user/5, Response status code: 404

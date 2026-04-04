@@ -1,0 +1,216 @@
+2025-10-03 10:40:08.473 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-03 10:44:35.715 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 10:44:35.887 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER DATABASE CHARACTER SET utf8mb4;
+2025-10-03 10:44:35.898 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `ChargingStation` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Name` varchar(200) CHARACTER SET utf8mb4 NOT NULL,
+    `Address` varchar(500) CHARACTER SET utf8mb4 NOT NULL,
+    `Latitude` double NOT NULL,
+    `Longitude` double NOT NULL,
+    `City` varchar(50) CHARACTER SET utf8mb4 NULL,
+    `Province` varchar(50) CHARACTER SET utf8mb4 NULL,
+    `Status` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_ChargingStation` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:35.913 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Users` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `FirstName` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `LastName` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `Email` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `PhoneNumber` varchar(20) CHARACTER SET utf8mb4 NULL,
+    `PasswordHash` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Role` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_Users` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:35.940 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `ChargingPoint` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `StationId` int NOT NULL,
+    `PointNumber` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `ConnectorType` int NOT NULL,
+    `MaxPower` int NOT NULL,
+    `PricePerKwh` decimal(65,30) NOT NULL,
+    `PricePerHour` decimal(65,30) NOT NULL,
+    `Status` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_ChargingPoint` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_ChargingPoint_ChargingStation_StationId` FOREIGN KEY (`StationId`) REFERENCES `ChargingStation` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:35.964 +07:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Vehicles` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `LicensePlate` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `Model` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `Brand` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+    `BatteryCapacity` int NOT NULL,
+    `ConnectorType` int NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    CONSTRAINT `PK_Vehicles` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Vehicles_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:35.983 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Wallets` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `Balance` decimal(18,2) NOT NULL,
+    `TotalDeposited` decimal(18,2) NOT NULL,
+    `TotalSpent` decimal(18,2) NOT NULL,
+    `IsActive` tinyint(1) NOT NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_Wallets` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Wallets_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:36.006 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Booking` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `ChargingPointId` int NOT NULL,
+    `BookingNumber` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `StartTime` datetime(6) NOT NULL,
+    `EndTime` datetime(6) NULL,
+    `ActualStartTime` datetime(6) NULL,
+    `ActualEndTime` datetime(6) NULL,
+    `EnergyConsumed` decimal(65,30) NULL,
+    `TotalCost` decimal(65,30) NULL,
+    `Status` int NOT NULL,
+    `QRCode` longtext CHARACTER SET utf8mb4 NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `UpdatedAt` datetime(6) NULL,
+    CONSTRAINT `PK_Booking` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Booking_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `ChargingPoint` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_Booking_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:36.028 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `WalletTransactions` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `WalletId` int NOT NULL,
+    `Amount` decimal(18,2) NOT NULL,
+    `Type` int NOT NULL,
+    `Description` varchar(500) CHARACTER SET utf8mb4 NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    CONSTRAINT `PK_WalletTransactions` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_WalletTransactions_Wallets_WalletId` FOREIGN KEY (`WalletId`) REFERENCES `Wallets` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:36.047 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Payment` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `UserId` int NOT NULL,
+    `BookingId` int NOT NULL,
+    `PaymentNumber` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `Amount` decimal(65,30) NOT NULL,
+    `Method` int NOT NULL,
+    `Status` int NOT NULL,
+    `TransactionId` varchar(500) CHARACTER SET utf8mb4 NULL,
+    `Description` varchar(1000) CHARACTER SET utf8mb4 NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `ProcessedAt` datetime(6) NULL,
+    CONSTRAINT `PK_Payment` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Payment_Booking_BookingId` FOREIGN KEY (`BookingId`) REFERENCES `Booking` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_Payment_Users_UserId` FOREIGN KEY (`UserId`) REFERENCES `Users` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+2025-10-03 10:44:36.062 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Booking_ChargingPointId` ON `Booking` (`ChargingPointId`);
+2025-10-03 10:44:36.076 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Booking_UserId` ON `Booking` (`UserId`);
+2025-10-03 10:44:36.087 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_ChargingPoint_StationId` ON `ChargingPoint` (`StationId`);
+2025-10-03 10:44:36.099 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Payment_BookingId` ON `Payment` (`BookingId`);
+2025-10-03 10:44:36.111 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Payment_UserId` ON `Payment` (`UserId`);
+2025-10-03 10:44:36.121 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX `IX_Users_Email` ON `Users` (`Email`);
+2025-10-03 10:44:36.133 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_Vehicles_UserId` ON `Vehicles` (`UserId`);
+2025-10-03 10:44:36.145 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX `IX_Wallets_UserId` ON `Wallets` (`UserId`);
+2025-10-03 10:44:36.156 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX `IX_WalletTransactions_WalletId` ON `WalletTransactions` (`WalletId`);
+2025-10-03 10:44:36.190 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 10:44:36.225 +07:00 [INF] Creating key {516d17a5-24f3-489c-8da1-c93bf7a85be8} with creation date 2025-10-03 03:44:36Z, activation date 2025-10-03 03:44:36Z, and expiration date 2026-01-01 03:44:36Z.
+2025-10-03 10:44:36.236 +07:00 [INF] Writing data to file 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys\key-516d17a5-24f3-489c-8da1-c93bf7a85be8.xml'.
+2025-10-03 10:44:36.278 +07:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.DefaultAddressStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-10-03 10:47:13.064 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 10:47:13.110 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 10:47:13.171 +07:00 [INF] Now listening on: https://localhost:5001
+2025-10-03 10:47:13.174 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 10:47:13.175 +07:00 [INF] Hosting environment: Production
+2025-10-03 10:47:13.176 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 10:47:52.707 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - null null
+2025-10-03 10:47:52.740 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - 404 0 null 33.9207ms
+2025-10-03 10:47:52.750 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/, Response status code: 404
+2025-10-03 11:00:59.836 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 11:00:59.894 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:00:59.964 +07:00 [INF] Now listening on: https://localhost:5001
+2025-10-03 11:00:59.966 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:00:59.967 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:00:59.968 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 11:12:30.656 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 11:12:30.704 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:12:30.764 +07:00 [INF] Now listening on: https://localhost:5001
+2025-10-03 11:12:30.767 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:12:30.768 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:12:30.769 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 11:18:16.670 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 11:18:16.716 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:18:16.772 +07:00 [INF] Now listening on: https://localhost:5001
+2025-10-03 11:18:16.775 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:18:16.777 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:18:16.777 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 11:38:32.642 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - null null
+2025-10-03 11:38:32.678 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - 404 0 null 36.8327ms
+2025-10-03 11:38:32.691 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/, Response status code: 404

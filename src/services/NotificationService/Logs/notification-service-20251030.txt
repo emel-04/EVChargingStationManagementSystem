@@ -1,0 +1,163 @@
+2025-10-30 10:02:28.894 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 10:02:28.966 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:02:29.051 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 10:02:29.054 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:02:29.055 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:02:29.057 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 10:31:47.911 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 10:31:47.972 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:31:48.049 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 10:31:48.053 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:31:48.055 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:31:48.058 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 10:40:44.983 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 10:40:45.080 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:40:45.162 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 10:40:45.165 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:40:45.167 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:40:45.168 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 10:50:06.743 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 10:50:06.800 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 10:50:06.877 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 10:50:06.880 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:50:06.882 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:50:06.884 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 16:15:03.688 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-30 16:17:08.560 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 16:17:08.604 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 16:17:08.664 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 16:17:08.666 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 16:17:08.667 +07:00 [INF] Hosting environment: Development
+2025-10-30 16:17:08.668 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 16:32:40.769 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 16:32:40.814 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 16:32:40.872 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 16:32:40.875 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 16:32:40.876 +07:00 [INF] Hosting environment: Development
+2025-10-30 16:32:40.877 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 20:49:03.727 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 20:49:03.784 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 20:49:03.858 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 20:49:03.861 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 20:49:03.862 +07:00 [INF] Hosting environment: Development
+2025-10-30 20:49:03.863 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 21:05:29.017 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 21:05:29.064 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:05:29.126 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 21:05:29.129 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:05:29.130 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:05:29.131 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 21:10:01.784 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 21:10:01.830 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:10:01.890 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 21:10:01.893 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:10:01.894 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:10:01.895 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 21:16:12.780 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 21:16:12.826 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:16:12.886 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 21:16:12.889 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:16:12.890 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:16:12.891 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 21:47:34.864 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 21:47:34.910 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:47:34.971 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 21:47:34.973 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:47:34.974 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:47:34.975 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 21:54:01.785 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 21:54:01.831 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 21:54:01.892 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 21:54:01.895 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:54:01.896 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:54:01.897 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 22:02:34.853 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 22:02:34.899 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:02:34.962 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 22:02:34.965 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:02:34.966 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:02:34.967 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 22:16:50.812 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 22:16:50.858 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:16:50.916 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 22:16:50.920 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:16:50.921 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:16:50.922 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 22:35:12.870 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 22:35:12.915 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:35:12.974 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 22:35:12.977 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:35:12.978 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:35:12.979 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 22:50:29.813 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 22:50:29.858 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:50:29.916 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 22:50:29.919 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:50:29.920 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:50:29.921 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 22:53:53.738 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 22:53:53.783 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 22:53:53.841 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 22:53:53.843 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:53:53.844 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:53:53.845 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-30 23:02:56.944 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-30 23:02:56.989 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-30 23:02:57.048 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-30 23:02:57.051 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 23:02:57.053 +07:00 [INF] Hosting environment: Development
+2025-10-30 23:02:57.054 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\NotificationService

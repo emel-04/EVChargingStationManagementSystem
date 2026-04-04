@@ -20,7 +20,7 @@ public class Booking
     
     public DateTime? EndTime { get; set; }
      
-    public int StationId { get; set; }  
+    public int StationId { get; set; }  // 👈 thêm dòng này
 
     public DateTime? ActualStartTime { get; set; }
     
@@ -37,9 +37,10 @@ public class Booking
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     
     public DateTime? UpdatedAt { get; set; }
-
+    
+    // Navigation properties
     public virtual User User { get; set; } = null!;
-   
+    // public Station? Station { get; set; } // ← Thêm navigation property
     public virtual ChargingPoint? ChargingPoint { get; set; } = null!;
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 }

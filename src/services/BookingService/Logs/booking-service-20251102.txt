@@ -1,0 +1,1015 @@
+2025-11-02 02:59:45.010 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 02:59:45.055 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 02:59:45.073 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 02:59:45.085 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 02:59:45.102 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 02:59:45.185 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 02:59:45.188 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 02:59:45.189 +07:00 [INF] Hosting environment: Development
+2025-11-02 02:59:45.190 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 03:38:13.592 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 03:38:13.633 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 03:38:13.650 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 03:38:13.663 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 03:38:13.675 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 03:38:13.744 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 03:38:13.746 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 03:38:13.748 +07:00 [INF] Hosting environment: Development
+2025-11-02 03:38:13.749 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 03:48:27.782 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 03:48:27.826 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 03:48:27.846 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 03:48:27.860 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 03:48:27.876 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 03:48:27.955 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 03:48:27.958 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 03:48:27.959 +07:00 [INF] Hosting environment: Development
+2025-11-02 03:48:27.960 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 10:26:38.930 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 10:26:38.970 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 10:26:39.008 +07:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 10:26:39.024 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 10:26:39.037 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 10:26:39.096 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 10:26:39.099 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 10:26:39.101 +07:00 [INF] Hosting environment: Development
+2025-11-02 10:26:39.101 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 11:01:54.620 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 11:01:54.665 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 11:01:54.683 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 11:01:54.694 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 11:01:54.709 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 11:01:54.778 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 11:01:54.781 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 11:01:54.783 +07:00 [INF] Hosting environment: Development
+2025-11-02 11:01:54.784 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 11:20:36.117 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 11:20:37.139 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-02 11:20:37.143 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-02 11:20:37.147 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 401 0 null 1030.1271ms
+2025-11-02 11:22:16.742 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/index.html - null null
+2025-11-02 11:22:16.795 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/index.html - 200 null text/html;charset=utf-8 53.6642ms
+2025-11-02 11:22:16.859 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/v1/swagger.json - null null
+2025-11-02 11:22:16.974 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.0365ms
+2025-11-02 11:22:35.847 +07:00 [INF] Request starting HTTP/2 POST https://localhost:5003/api/Booking - application/json 143
+2025-11-02 11:22:35.855 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 11:22:35.872 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.Shared.Models.Booking]] CreateBooking(EVChargingStation.BookingService.Services.CreateBookingRequest) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 11:22:36.148 +07:00 [INF] Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`UserId` = @__userId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 11:22:36.168 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__chargingPointId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`ChargingPointId` = @__chargingPointId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 11:22:36.179 +07:00 [INF] QR Code generated successfully for data: BK202511020422369798
+2025-11-02 11:22:36.265 +07:00 [INF] Has changes before SaveChanges: true
+2025-11-02 11:22:36.328 +07:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (Size = 1000), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?', @p11='?' (DbType = DateTime), @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Bookings` (`ActualEndTime`, `ActualStartTime`, `BookingNumber`, `ChargingPointId`, `CreatedAt`, `EndTime`, `EnergyConsumed`, `QRCode`, `StartTime`, `Status`, `TotalCost`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+SELECT `Id`
+FROM `Bookings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-11-02 11:22:36.358 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `chargingpoint` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `chargingpoint` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-11-02 11:22:36.415 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-02 11:22:36.422 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService) in 540.6164ms
+2025-11-02 11:22:36.425 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 11:22:36.429 +07:00 [INF] Request finished HTTP/2 POST https://localhost:5003/api/Booking - 400 null text/plain; charset=utf-8 582.7172ms
+2025-11-02 11:39:13.371 +07:00 [INF] Request starting HTTP/2 POST https://localhost:5003/api/Booking - application/json 143
+2025-11-02 11:39:13.376 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 11:39:13.378 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.Shared.Models.Booking]] CreateBooking(EVChargingStation.BookingService.Services.CreateBookingRequest) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 11:39:13.435 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`UserId` = @__userId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 11:39:13.439 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__chargingPointId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`ChargingPointId` = @__chargingPointId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 11:39:13.443 +07:00 [INF] QR Code generated successfully for data: BK202511020439138621
+2025-11-02 11:39:13.445 +07:00 [INF] Has changes before SaveChanges: true
+2025-11-02 11:39:13.449 +07:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (Size = 1000), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?', @p11='?' (DbType = DateTime), @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Bookings` (`ActualEndTime`, `ActualStartTime`, `BookingNumber`, `ChargingPointId`, `CreatedAt`, `EndTime`, `EnergyConsumed`, `QRCode`, `StartTime`, `Status`, `TotalCost`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+SELECT `Id`
+FROM `Bookings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-11-02 11:39:13.456 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `chargingpoint` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `chargingpoint` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-11-02 11:39:13.511 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-02 11:39:13.519 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService) in 138.9901ms
+2025-11-02 11:39:13.523 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 11:39:13.530 +07:00 [INF] Request finished HTTP/2 POST https://localhost:5003/api/Booking - 400 null text/plain; charset=utf-8 158.5041ms
+2025-11-02 17:40:57.665 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 17:40:57.757 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 17:40:57.763 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 17:40:57.831 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 17:40:57.835 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 17:40:57.857 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 91.9703ms
+2025-11-02 17:40:57.859 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 17:40:57.861 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 195.9505ms
+2025-11-02 17:48:32.532 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking/user/5 - null 0
+2025-11-02 17:48:32.538 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-11-02 17:48:32.543 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 17:48:32.555 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 17:48:32.558 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 17:48:32.560 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 13.8882ms
+2025-11-02 17:48:32.562 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-11-02 17:48:32.563 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking/user/5 - 200 null application/json; charset=utf-8 30.695ms
+2025-11-02 18:12:10.754 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 18:12:10.794 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 18:12:10.810 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 18:12:10.820 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 18:12:10.837 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 18:12:10.899 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 18:12:10.901 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 18:12:10.902 +07:00 [INF] Hosting environment: Development
+2025-11-02 18:12:10.903 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 18:16:20.701 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 18:16:21.729 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:16:21.740 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 18:16:22.008 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 18:16:22.025 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 18:16:22.110 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 363.347ms
+2025-11-02 18:16:22.113 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:16:22.122 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 1421.1802ms
+2025-11-02 18:19:21.442 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 18:19:21.457 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:19:21.462 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 18:19:21.546 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 18:19:21.552 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 18:19:21.553 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 80.6912ms
+2025-11-02 18:19:21.555 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:19:21.557 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 115.1479ms
+2025-11-02 18:21:05.609 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 18:21:05.615 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:21:05.616 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 18:21:05.626 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 18:21:05.631 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 18:21:05.635 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 14.8054ms
+2025-11-02 18:21:05.637 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:21:05.639 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 29.8308ms
+2025-11-02 18:29:16.776 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 18:29:16.781 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:29:16.782 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 18:29:16.789 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 18:29:16.793 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 18:29:16.795 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 11.0068ms
+2025-11-02 18:29:16.797 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:29:16.798 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 22.4249ms
+2025-11-02 18:33:55.137 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 18:33:55.146 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:33:55.148 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 18:33:55.155 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 18:33:55.161 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 18:33:55.162 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 10.4406ms
+2025-11-02 18:33:55.164 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:33:55.166 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 28.9212ms
+2025-11-02 18:34:16.223 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5003/api/booking - application/json; charset=utf-8 139
+2025-11-02 18:34:16.227 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 18:34:16.236 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.Shared.Models.Booking]] CreateBooking(EVChargingStation.BookingService.Services.CreateBookingRequest) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 18:34:16.314 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`UserId` = @__userId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 18:34:16.324 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__chargingPointId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`ChargingPointId` = @__chargingPointId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 18:34:16.335 +07:00 [INF] QR Code generated successfully for data: BK202511021134162395
+2025-11-02 18:34:16.414 +07:00 [INF] Has changes before SaveChanges: true
+2025-11-02 18:34:16.474 +07:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (Size = 1000), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?', @p11='?' (DbType = DateTime), @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Bookings` (`ActualEndTime`, `ActualStartTime`, `BookingNumber`, `ChargingPointId`, `CreatedAt`, `EndTime`, `EnergyConsumed`, `QRCode`, `StartTime`, `Status`, `TotalCost`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+SELECT `Id`
+FROM `Bookings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-11-02 18:34:16.497 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `chargingpoint` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_ChargingPoint_ChargingPointId` FOREIGN KEY (`ChargingPointId`) REFERENCES `chargingpoint` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-11-02 18:34:16.553 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-11-02 18:34:16.556 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService) in 310.2422ms
+2025-11-02 18:34:16.559 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 18:34:16.560 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5003/api/booking - 400 null text/plain; charset=utf-8 337.3046ms
+2025-11-02 18:34:16.634 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 18:34:16.637 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:34:16.638 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 18:34:16.643 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 18:34:16.655 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 18:34:16.661 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 19.6862ms
+2025-11-02 18:34:16.664 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 18:34:16.665 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 31.1748ms
+2025-11-02 19:20:10.952 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 19:20:10.994 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 19:20:11.013 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 19:20:11.030 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 19:20:11.047 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 19:20:11.125 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 19:20:11.128 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 19:20:11.129 +07:00 [INF] Hosting environment: Development
+2025-11-02 19:20:11.131 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 19:20:53.376 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:20:53.461 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:20:53.476 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:20:53.698 +07:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:20:53.716 +07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+MySqlConnector.MySqlException (0x80004005): Unknown column 'b.StationId' in 'field list'
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+MySqlConnector.MySqlException (0x80004005): Unknown column 'b.StationId' in 'field list'
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-11-02 19:20:53.741 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 259.5904ms
+2025-11-02 19:20:53.747 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:20:53.751 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+MySqlConnector.MySqlException (0x80004005): Unknown column 'b.StationId' in 'field list'
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EVChargingStation.BookingService.Services.BookingService.GetAllBookingsAsync() in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Services\BookingService.cs:line 22
+   at EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings() in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Controllers\BookingController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-02 19:20:53.807 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 500 null text/plain; charset=utf-8 431.7379ms
+2025-11-02 19:21:08.399 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5003/api/booking - application/json; charset=utf-8 98
+2025-11-02 19:21:08.406 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-02 19:21:08.411 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-02 19:21:08.413 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5003/api/booking - 401 0 null 13.3895ms
+2025-11-02 19:21:08.478 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:21:08.483 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:21:08.485 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:21:08.543 +07:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:21:08.549 +07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+MySqlConnector.MySqlException (0x80004005): Unknown column 'b.StationId' in 'field list'
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+MySqlConnector.MySqlException (0x80004005): Unknown column 'b.StationId' in 'field list'
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-11-02 19:21:08.573 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 79.7688ms
+2025-11-02 19:21:08.576 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:21:08.577 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+MySqlConnector.MySqlException (0x80004005): Unknown column 'b.StationId' in 'field list'
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EVChargingStation.BookingService.Services.BookingService.GetAllBookingsAsync() in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Services\BookingService.cs:line 22
+   at EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings() in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Controllers\BookingController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-02 19:21:08.622 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 500 null text/plain; charset=utf-8 144.7845ms
+2025-11-02 19:32:52.916 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 19:32:52.953 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EVChargingStation_Booking' AND TABLE_NAME='__EFMigrationsHistory';
+2025-11-02 19:32:52.969 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2025-11-02 19:32:52.981 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-11-02 19:32:52.993 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 19:32:53.052 +07:00 [INF] Now listening on: https://localhost:5003
+2025-11-02 19:32:53.055 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 19:32:53.056 +07:00 [INF] Hosting environment: Development
+2025-11-02 19:32:53.057 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService
+2025-11-02 19:37:12.174 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:37:12.261 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:37:12.275 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:37:12.517 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:37:12.531 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:37:12.593 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 313.1939ms
+2025-11-02 19:37:12.597 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:37:12.603 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 430.1499ms
+2025-11-02 19:43:59.178 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:43:59.186 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:43:59.188 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:43:59.241 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:43:59.246 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:43:59.249 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 58.7452ms
+2025-11-02 19:43:59.251 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:43:59.253 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 75.0868ms
+2025-11-02 19:47:16.927 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:47:16.933 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:47:16.935 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:47:16.949 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:47:16.957 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:47:16.959 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 15.1308ms
+2025-11-02 19:47:16.961 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:47:16.963 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 35.3536ms
+2025-11-02 19:47:32.587 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5003/api/booking - application/json; charset=utf-8 98
+2025-11-02 19:47:32.590 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:47:32.601 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBooking(EVChargingStation.BookingService.Controllers.CreateBookingRequestDto) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:47:32.677 +07:00 [INF] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`UserId` = @__userId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 19:47:32.683 +07:00 [INF] QR Code generated successfully for data: BK202511021247323938
+2025-11-02 19:47:32.768 +07:00 [INF] Has changes before SaveChanges: true
+2025-11-02 19:47:32.826 +07:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (Size = 1000), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?', @p12='?' (DbType = DateTime), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Bookings` (`ActualEndTime`, `ActualStartTime`, `BookingNumber`, `ChargingPointId`, `CreatedAt`, `EndTime`, `EnergyConsumed`, `QRCode`, `StartTime`, `StationId`, `Status`, `TotalCost`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Bookings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-11-02 19:47:32.851 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Column 'ChargingPointId' cannot be null
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Column 'ChargingPointId' cannot be null
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-11-02 19:47:32.884 +07:00 [ERR] Error creating booking
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Column 'ChargingPointId' cannot be null
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at EVChargingStation.BookingService.Services.BookingService.CreateBookingAsync(CreateBookingRequest request) in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Services\BookingService.cs:line 104
+   at EVChargingStation.BookingService.Controllers.BookingController.CreateBooking(CreateBookingRequestDto request) in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Controllers\BookingController.cs:line 151
+2025-11-02 19:47:32.914 +07:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-02 19:47:32.918 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService) in 312.2336ms
+2025-11-02 19:47:32.920 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:47:32.921 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5003/api/booking - 400 null application/json; charset=utf-8 334.4051ms
+2025-11-02 19:47:32.984 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:47:32.987 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:47:32.989 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:47:32.998 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:47:33.002 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:47:33.004 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 7.4494ms
+2025-11-02 19:47:33.006 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:47:33.007 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 22.7632ms
+2025-11-02 19:49:48.907 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5003/api/booking - application/json; charset=utf-8 98
+2025-11-02 19:49:48.913 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:49:48.915 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBooking(EVChargingStation.BookingService.Controllers.CreateBookingRequestDto) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:49:48.922 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`UserId` = @__userId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 19:49:48.926 +07:00 [INF] QR Code generated successfully for data: BK202511021249481703
+2025-11-02 19:49:48.930 +07:00 [INF] Has changes before SaveChanges: true
+2025-11-02 19:49:48.934 +07:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (Size = 1000), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?', @p12='?' (DbType = DateTime), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Bookings` (`ActualEndTime`, `ActualStartTime`, `BookingNumber`, `ChargingPointId`, `CreatedAt`, `EndTime`, `EnergyConsumed`, `QRCode`, `StartTime`, `StationId`, `Status`, `TotalCost`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Bookings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-11-02 19:49:48.942 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `user` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `user` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-11-02 19:49:48.974 +07:00 [ERR] Error creating booking
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `user` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at EVChargingStation.BookingService.Services.BookingService.CreateBookingAsync(CreateBookingRequest request) in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Services\BookingService.cs:line 104
+   at EVChargingStation.BookingService.Controllers.BookingController.CreateBooking(CreateBookingRequestDto request) in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Controllers\BookingController.cs:line 151
+2025-11-02 19:49:49.004 +07:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-02 19:49:49.006 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService) in 87.0121ms
+2025-11-02 19:49:49.007 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:49:49.009 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5003/api/booking - 400 null application/json; charset=utf-8 101.6742ms
+2025-11-02 19:49:49.064 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:49:49.067 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:49:49.068 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:49:49.072 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:49:49.076 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:49:49.084 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 13.4426ms
+2025-11-02 19:49:49.086 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:49:49.088 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 23.865ms
+2025-11-02 19:50:44.519 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:50:44.522 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:50:44.524 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:50:44.529 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:50:44.538 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:50:44.540 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 13.7462ms
+2025-11-02 19:50:44.542 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:50:44.544 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 25.391ms
+2025-11-02 19:51:03.249 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5003/api/booking - application/json; charset=utf-8 98
+2025-11-02 19:51:03.252 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:51:03.259 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBooking(EVChargingStation.BookingService.Controllers.CreateBookingRequestDto) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:51:03.265 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`UserId` = @__userId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 19:51:03.276 +07:00 [INF] QR Code generated successfully for data: BK202511021251036533
+2025-11-02 19:51:03.278 +07:00 [INF] Has changes before SaveChanges: true
+2025-11-02 19:51:03.282 +07:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (Size = 1000), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?', @p12='?' (DbType = DateTime), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Bookings` (`ActualEndTime`, `ActualStartTime`, `BookingNumber`, `ChargingPointId`, `CreatedAt`, `EndTime`, `EnergyConsumed`, `QRCode`, `StartTime`, `StationId`, `Status`, `TotalCost`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Bookings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-11-02 19:51:03.294 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'EVChargingStation.Shared.Data.BookingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `user` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `user` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-11-02 19:51:03.329 +07:00 [ERR] Error creating booking
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`evchargingstation_booking`.`bookings`, CONSTRAINT `FK_Bookings_User_UserId` FOREIGN KEY (`UserId`) REFERENCES `user` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 350
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at EVChargingStation.BookingService.Services.BookingService.CreateBookingAsync(CreateBookingRequest request) in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Services\BookingService.cs:line 104
+   at EVChargingStation.BookingService.Controllers.BookingController.CreateBooking(CreateBookingRequestDto request) in D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\BookingService\Controllers\BookingController.cs:line 151
+2025-11-02 19:51:03.354 +07:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-02 19:51:03.358 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService) in 95.6136ms
+2025-11-02 19:51:03.362 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:51:03.364 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5003/api/booking - 400 null application/json; charset=utf-8 114.7573ms
+2025-11-02 19:51:03.417 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:51:03.421 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:51:03.423 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:51:03.435 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:51:03.445 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:51:03.449 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 15.1828ms
+2025-11-02 19:51:03.451 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:51:03.452 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 35.0214ms
+2025-11-02 19:56:11.885 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:56:11.891 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:56:11.895 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:56:11.900 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:56:11.904 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:56:11.906 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 8.4929ms
+2025-11-02 19:56:11.912 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:56:11.914 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 28.8273ms
+2025-11-02 19:56:27.822 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5003/api/booking - application/json; charset=utf-8 98
+2025-11-02 19:56:27.825 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:56:27.827 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBooking(EVChargingStation.BookingService.Controllers.CreateBookingRequestDto) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:56:27.834 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE (`b`.`UserId` = @__userId_0) AND `b`.`Status` IN (1, 2, 3)
+LIMIT 1
+2025-11-02 19:56:27.838 +07:00 [INF] QR Code generated successfully for data: BK202511021256273925
+2025-11-02 19:56:27.839 +07:00 [INF] Has changes before SaveChanges: true
+2025-11-02 19:56:27.844 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (Size = 1000), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?', @p12='?' (DbType = DateTime), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Bookings` (`ActualEndTime`, `ActualStartTime`, `BookingNumber`, `ChargingPointId`, `CreatedAt`, `EndTime`, `EnergyConsumed`, `QRCode`, `StartTime`, `StationId`, `Status`, `TotalCost`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Bookings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-11-02 19:56:27.873 +07:00 [INF] Has changes after SaveChanges: false
+2025-11-02 19:56:27.875 +07:00 [INF] Booking ID after SaveChanges: 6
+2025-11-02 19:56:27.876 +07:00 [INF] Booking created successfully: BK202511021256273925
+2025-11-02 19:56:27.878 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.Shared.Models.Booking'.
+2025-11-02 19:56:27.887 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService) in 55.7222ms
+2025-11-02 19:56:27.892 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.CreateBooking (BookingService)'
+2025-11-02 19:56:27.899 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 76.7794ms
+2025-11-02 19:56:27.955 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 19:56:27.958 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:56:27.960 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 19:56:27.965 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 19:56:27.969 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 19:56:27.971 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 8.1127ms
+2025-11-02 19:56:27.972 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 19:56:27.974 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 18.7269ms
+2025-11-02 20:48:21.811 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/booking - null 0
+2025-11-02 20:48:21.818 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 20:48:21.822 +07:00 [INF] Route matched with {action = "GetAllBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetAllBookings() on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-11-02 20:48:21.837 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`StationId`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`, `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `c`.`Id`, `c`.`ConnectorType`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`MaxPower`, `c`.`PointNumber`, `c`.`PricePerHour`, `c`.`PricePerKwh`, `c`.`StationId`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`Address`, `c0`.`City`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`Latitude`, `c0`.`Longitude`, `c0`.`Name`, `c0`.`Province`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `Bookings` AS `b`
+INNER JOIN `User` AS `u` ON `b`.`UserId` = `u`.`Id`
+INNER JOIN `ChargingPoint` AS `c` ON `b`.`ChargingPointId` = `c`.`Id`
+INNER JOIN `ChargingStation` AS `c0` ON `c`.`StationId` = `c0`.`Id`
+ORDER BY `b`.`CreatedAt` DESC
+2025-11-02 20:48:21.843 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 20:48:21.845 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService) in 17.7985ms
+2025-11-02 20:48:21.846 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetAllBookings (BookingService)'
+2025-11-02 20:48:21.848 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/booking - 200 null application/json; charset=utf-8 37.0058ms

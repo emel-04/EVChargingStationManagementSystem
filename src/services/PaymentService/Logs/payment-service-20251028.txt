@@ -1,0 +1,28 @@
+2025-10-28 18:16:33.959 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-28 18:18:00.048 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-28 18:18:00.103 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-28 18:18:00.198 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-28 18:18:00.202 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:18:00.204 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:18:00.206 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-28 18:27:46.364 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-28 18:27:46.428 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-28 18:27:46.521 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-28 18:27:46.524 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:27:46.525 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:27:46.526 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService
+2025-10-28 18:30:20.181 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Payment'
+2025-10-28 18:30:20.231 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-28 18:30:20.337 +07:00 [INF] Now listening on: https://localhost:5004
+2025-10-28 18:30:20.340 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:30:20.341 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:30:20.342 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\PaymentService

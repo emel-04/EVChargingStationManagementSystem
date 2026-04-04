@@ -1,0 +1,131 @@
+2025-10-03 11:12:45.150 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 11:12:45.286 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER DATABASE CHARACTER SET utf8mb4;
+2025-10-03 11:12:45.298 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `Reports` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Title` varchar(200) CHARACTER SET utf8mb4 NOT NULL,
+    `ReportType` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+    `FromDate` datetime(6) NOT NULL,
+    `ToDate` datetime(6) NOT NULL,
+    `StationId` varchar(50) CHARACTER SET utf8mb4 NULL,
+    `UserId` varchar(50) CHARACTER SET utf8mb4 NULL,
+    `Data` longtext CHARACTER SET utf8mb4 NULL,
+    `CreatedAt` datetime(6) NOT NULL,
+    `CreatedBy` int NOT NULL,
+    CONSTRAINT `PK_Reports` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-10-03 11:12:45.321 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:12:45.391 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 11:12:45.396 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:12:45.397 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:12:45.400 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 11:18:31.732 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 11:18:31.779 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:18:31.834 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 11:18:31.837 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:18:31.839 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:18:31.840 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 11:42:11.301 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 11:42:11.359 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:42:11.448 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 11:42:11.451 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:42:11.453 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:42:11.455 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 11:58:10.204 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 11:58:10.255 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:58:10.344 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 11:58:10.349 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:58:10.352 +07:00 [INF] Hosting environment: Development
+2025-10-03 11:58:10.355 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 12:07:51.153 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 12:07:51.200 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:07:51.274 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 12:07:51.277 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:07:51.279 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:07:51.280 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 12:09:52.760 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 12:09:52.805 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:09:52.866 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 12:09:52.869 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:09:52.871 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:09:52.872 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 12:18:38.884 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 12:18:38.929 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:18:38.996 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 12:18:38.998 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:18:39.000 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:18:39.001 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 12:29:16.290 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5006/swagger/index.html - null null
+2025-10-03 12:29:16.365 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 75.471ms
+2025-10-03 12:29:16.380 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5006/swagger/swagger-ui-standalone-preset.js - null null
+2025-10-03 12:29:16.380 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5006/swagger/swagger-ui.css - null null
+2025-10-03 12:29:16.380 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5006/swagger/swagger-ui-bundle.js - null null
+2025-10-03 12:29:16.397 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-10-03 12:29:16.398 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-10-03 12:29:16.400 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5006/swagger/swagger-ui.css - 200 143943 text/css 20.0332ms
+2025-10-03 12:29:16.402 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5006/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 21.9386ms
+2025-10-03 12:29:16.419 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-10-03 12:29:16.421 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5006/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 41.8505ms
+2025-10-03 12:29:16.539 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5006/swagger/v1/swagger.json - null null
+2025-10-03 12:29:16.543 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5006/swagger/favicon-32x32.png - null null
+2025-10-03 12:29:16.549 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-03 12:29:16.551 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5006/swagger/favicon-32x32.png - 200 628 image/png 8.8226ms
+2025-10-03 12:29:16.627 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.3088ms
+2025-10-03 12:56:22.723 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 12:56:22.773 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:56:22.838 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 12:56:22.841 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:56:22.842 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:56:22.843 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 13:27:09.414 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 13:27:09.473 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 13:27:09.580 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 13:27:09.583 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 13:27:09.585 +07:00 [INF] Hosting environment: Development
+2025-10-03 13:27:09.586 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 13:39:20.195 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 13:39:20.260 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 13:39:20.341 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 13:39:20.344 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 13:39:20.346 +07:00 [INF] Hosting environment: Development
+2025-10-03 13:39:20.347 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-03 22:20:13.875 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-03 22:20:13.921 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 22:20:13.981 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-03 22:20:13.984 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 22:20:13.986 +07:00 [INF] Hosting environment: Development
+2025-10-03 22:20:13.986 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService

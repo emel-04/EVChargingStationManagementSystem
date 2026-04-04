@@ -9,12 +9,18 @@ public class BookingService : IBookingService
     private readonly BookingDbContext _context;
     private readonly IQRCodeService _qrCodeService;
     private readonly ILogger<BookingService> _logger;
+    private readonly IUserValidationService? _userValidationService;
 
-    public BookingService(BookingDbContext context, IQRCodeService qrCodeService, ILogger<BookingService> logger)
+    public BookingService(
+        BookingDbContext context, 
+        IQRCodeService qrCodeService, 
+        ILogger<BookingService> logger,
+        IUserValidationService? userValidationService = null)
     {
         _context = context;
         _qrCodeService = qrCodeService;
         _logger = logger;
+        _userValidationService = userValidationService;
     }
 
    public async Task<IEnumerable<Booking>> GetAllBookingsAsync()
@@ -68,6 +74,17 @@ public class BookingService : IBookingService
 
    public async Task<Booking> CreateBookingAsync(CreateBookingRequest request)
 {
+    // Validate UserId exists in User Service (optional - JWT token already validates user)
+    // Uncomment the following lines if you want strict validation
+    // if (_userValidationService != null)
+    // {
+    //     var isValidUser = await _userValidationService.ValidateUserIdAsync(request.UserId);
+    //     if (!isValidUser)
+    //     {
+    //         throw new ArgumentException($"User with ID {request.UserId} does not exist in User Service");
+    //     }
+    // }
+
     // Check if user has an active booking
    // var activeBooking = await GetActiveBookingByUserIdAsync(request.UserId);
    // if (activeBooking != null)

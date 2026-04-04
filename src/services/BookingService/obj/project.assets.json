@@ -4087,11 +4087,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\BookingService\\BookingService.csproj",
+      "projectUniqueName": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\services\\BookingService\\BookingService.csproj",
       "projectName": "BookingService",
-      "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\BookingService\\BookingService.csproj",
+      "projectPath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\services\\BookingService\\BookingService.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\services\\BookingService\\obj\\",
+      "outputPath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\services\\BookingService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4112,8 +4112,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj": {
-              "projectPath": "D:\\Năm 3\\EVChargingStationManagementSystem\\src\\shared\\Shared\\Shared.csproj"
+            "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\Shared.csproj": {
+              "projectPath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\Shared.csproj"
             }
           }
         }
@@ -4213,5 +4213,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AutoMapper' 12.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

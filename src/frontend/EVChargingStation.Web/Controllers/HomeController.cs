@@ -18,6 +18,9 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    private static bool IsCompletedBookingStatus(int status) => status == 3 || status == 4;
+    private static bool IsCompletedPaymentStatus(int status) => status == 1 || status == 3;
+
     public async Task<IActionResult> Index()
     {
         try
@@ -62,8 +65,8 @@ public class HomeController : Controller
 
             // Tính toán thống kê
             ViewBag.TotalBookings = bookings.Count;
-            ViewBag.CompletedBookings = bookings.Count(b => b.Status == 3); // Status 3 = Completed
-            ViewBag.TotalSpent = payments.Where(p => p.Status == 1).Sum(p => p.Amount); // Status 1 = Completed payment
+            ViewBag.CompletedBookings = bookings.Count(b => IsCompletedBookingStatus(b.Status));
+            ViewBag.TotalSpent = payments.Where(p => IsCompletedPaymentStatus(p.Status)).Sum(p => p.Amount);
 
             // Lấy 5 booking gần nhất
             var recentBookings = bookings
@@ -350,23 +353,28 @@ public class HomeController : Controller
         if (userId == null)
             return RedirectToAction("Login");
 
-        // Gọi API lấy danh sách bookings của người dùng
-        var bookings = await _apiService.GetAsync<List<BookingDto>>($"api/booking/user/{userId}")
-                       ?? new List<BookingDto>();
-
-        // Gọi API lấy danh sách trạm sạc
-        var stations = await _apiService.GetAsync<List<StationDto>>("api/station")
-                       ?? new List<StationDto>();
-
-        // Ghép tên trạm sạc vào từng booking
-        foreach (var booking in bookings)
+        try
         {
-            var station = stations.FirstOrDefault(s => s.Id == booking.StationId);
-            booking.StationName = station?.Name ?? $"Trạm #{booking.StationId}";
-        }
+            var bookings = await _apiService.GetAsync<List<BookingDto>>($"api/booking/user/{userId}")
+                           ?? new List<BookingDto>();
 
-        // Trả model đầy đủ (có StationName) sang View
-        return View(bookings);
+            var stations = await _apiService.GetAsync<List<StationDto>>("api/station")
+                           ?? new List<StationDto>();
+
+            foreach (var booking in bookings)
+            {
+                var station = stations.FirstOrDefault(s => s.Id == booking.StationId);
+                booking.StationName = station?.Name ?? $"Trạm #{booking.StationId}";
+            }
+
+            return View(bookings);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error loading user bookings");
+            TempData["ErrorMessage"] = "Không thể tải dữ liệu booking. Vui lòng thử lại.";
+            return View(new List<BookingDto>());
+        }
     }
 
     public async Task<IActionResult> Payments()
@@ -398,15 +406,90 @@ public class HomeController : Controller
                 }
             }
 
+            // Booking đã hoàn thành nhưng chưa có payment để user thanh toán
+            var payableBookings = new List<BookingDto>();
+            if (bookings != null)
+            {
+                var paidBookingIds = (payments ?? new List<PaymentDto>())
+                    .Where(p => p.BookingId.HasValue)
+                    .Select(p => p.BookingId!.Value)
+                    .ToHashSet();
+
+                payableBookings = bookings
+                    .Where(b => IsCompletedBookingStatus(b.Status) && !paidBookingIds.Contains(b.Id))
+                    .ToList();
+
+                foreach (var booking in payableBookings)
+                {
+                    var station = stations?.FirstOrDefault(s => s.Id == booking.StationId);
+                    booking.StationName = station?.Name ?? $"Trạm #{booking.StationId}";
+                }
+            }
+
             ViewBag.Payments = payments ?? new List<PaymentDto>();
+            ViewBag.PayableBookings = payableBookings;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error loading payments");
             ViewBag.Payments = new List<PaymentDto>();
+            ViewBag.PayableBookings = new List<BookingDto>();
         }
 
         return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> CreatePaymentForBooking(int bookingId, int method = 1)
+    {
+        var userId = HttpContext.Session.GetString("UserId");
+        var token = HttpContext.Session.GetString("Token");
+
+        if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+            return RedirectToAction("Login");
+
+        try
+        {
+            var booking = await _apiService.GetAsync<BookingDto>($"api/booking/{bookingId}");
+            if (booking == null)
+            {
+                TempData["ErrorMessage"] = "Không tìm thấy booking cần thanh toán.";
+                return RedirectToAction("Payments");
+            }
+
+            if (!IsCompletedBookingStatus(booking.Status))
+            {
+                TempData["ErrorMessage"] = "Booking chưa hoàn thành nên chưa thể thanh toán.";
+                return RedirectToAction("Payments");
+            }
+
+            var amount = booking.TotalAmount ?? 0m;
+            if (amount <= 0)
+            {
+                TempData["ErrorMessage"] = "Booking chưa có số tiền hợp lệ để thanh toán.";
+                return RedirectToAction("Payments");
+            }
+
+            var paymentData = new
+            {
+                userId = int.Parse(userId),
+                bookingId = bookingId,
+                amount = amount,
+                method = method,
+                description = $"Thanh toán booking #{booking.BookingNumber}"
+            };
+
+            await _apiService.PostWithAuthAsync<object>("api/payment", paymentData, token);
+            TempData["SuccessMessage"] = "Tạo thanh toán thành công.";
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error creating payment for booking {BookingId}", bookingId);
+            TempData["ErrorMessage"] = "Không thể tạo thanh toán cho booking.";
+        }
+
+        return RedirectToAction("Payments");
     }
 
     

@@ -1,0 +1,362 @@
+2025-10-04 07:57:29.614 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 07:57:29.676 +07:00 [WRN] The WebRootPath was not found: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\wwwroot. Static files may be unavailable.
+2025-10-04 07:57:29.689 +07:00 [INF] Now listening on: http://localhost:5014
+2025-10-04 07:57:29.692 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 07:57:29.693 +07:00 [INF] Hosting environment: Production
+2025-10-04 07:57:29.694 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web
+2025-10-04 07:57:44.338 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/ - null null
+2025-10-04 07:57:44.348 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-10-04 07:57:44.364 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 07:57:44.383 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 07:57:44.401 +07:00 [INF] Start processing HTTP request GET http://localhost:5014/api/station
+2025-10-04 07:57:44.404 +07:00 [INF] Sending HTTP request GET http://localhost:5014/api/station
+2025-10-04 07:57:44.442 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/station - null null
+2025-10-04 07:57:44.451 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/station - 404 0 null 8.7968ms
+2025-10-04 07:57:44.455 +07:00 [INF] Received HTTP response headers after 46.9705ms - 404
+2025-10-04 07:57:44.457 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/api/station, Response status code: 404
+2025-10-04 07:57:44.458 +07:00 [INF] End processing HTTP request after 58.7187ms - 404
+2025-10-04 07:57:44.462 +07:00 [ERR] GET api/station failed with status "NotFound"
+2025-10-04 07:57:44.501 +07:00 [INF] Executing ViewResult, running view Index.
+2025-10-04 07:57:44.539 +07:00 [INF] Executed ViewResult - view Index executed in 38.5038ms.
+2025-10-04 07:57:44.544 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web) in 156.5816ms
+2025-10-04 07:57:44.547 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 07:57:44.551 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/ - 200 null text/html; charset=utf-8 214.8128ms
+2025-10-04 07:57:44.627 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/favicon.ico - null null
+2025-10-04 07:57:44.633 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/favicon.ico - 404 0 null 6.0309ms
+2025-10-04 07:57:44.639 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/favicon.ico, Response status code: 404
+2025-10-04 07:57:46.283 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/Home/Register - null null
+2025-10-04 07:57:46.297 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 07:57:46.305 +07:00 [INF] Route matched with {action = "Register", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 07:57:46.318 +07:00 [INF] Executing ViewResult, running view Register.
+2025-10-04 07:57:46.339 +07:00 [INF] Executed ViewResult - view Register executed in 22.1859ms.
+2025-10-04 07:57:46.346 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web) in 29.5776ms
+2025-10-04 07:57:46.352 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 07:57:46.358 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/Home/Register - 200 null text/html; charset=utf-8 75.4448ms
+2025-10-04 08:00:58.776 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/Home/Register - application/x-www-form-urlencoded 88
+2025-10-04 08:00:58.786 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 08:00:58.804 +07:00 [INF] Route matched with {action = "Register", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(System.String, System.String, System.String, System.String, System.String) on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 08:00:58.842 +07:00 [INF] Start processing HTTP request POST http://localhost:5014/api/auth/register
+2025-10-04 08:00:58.845 +07:00 [INF] Sending HTTP request POST http://localhost:5014/api/auth/register
+2025-10-04 08:00:58.850 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/auth/register - application/json; charset=utf-8 117
+2025-10-04 08:00:58.854 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/auth/register - 404 0 null 3.3726ms
+2025-10-04 08:00:58.854 +07:00 [INF] Received HTTP response headers after 6.3017ms - 404
+2025-10-04 08:00:58.857 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5014/api/auth/register, Response status code: 404
+2025-10-04 08:00:58.858 +07:00 [INF] End processing HTTP request after 16.327ms - 404
+2025-10-04 08:00:58.866 +07:00 [ERR] POST api/auth/register failed with status "NotFound"
+2025-10-04 08:00:58.869 +07:00 [INF] Executing ViewResult, running view Register.
+2025-10-04 08:00:58.875 +07:00 [INF] Executed ViewResult - view Register executed in 6.438ms.
+2025-10-04 08:00:58.880 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web) in 63.2422ms
+2025-10-04 08:00:58.884 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 08:00:58.885 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/Home/Register - 200 null text/html; charset=utf-8 109.4624ms
+2025-10-04 08:02:03.636 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 08:02:03.695 +07:00 [WRN] The WebRootPath was not found: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\wwwroot. Static files may be unavailable.
+2025-10-04 08:02:03.710 +07:00 [INF] Now listening on: http://localhost:5014
+2025-10-04 08:02:03.712 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 08:02:03.715 +07:00 [INF] Hosting environment: Production
+2025-10-04 08:02:03.717 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web
+2025-10-04 08:02:10.128 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/Home/Register - application/x-www-form-urlencoded 88
+2025-10-04 08:02:10.139 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-10-04 08:02:10.156 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 08:02:10.182 +07:00 [INF] Route matched with {action = "Register", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(System.String, System.String, System.String, System.String, System.String) on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 08:02:10.225 +07:00 [INF] Start processing HTTP request POST http://localhost:5002/api/auth/register
+2025-10-04 08:02:10.228 +07:00 [INF] Sending HTTP request POST http://localhost:5002/api/auth/register
+2025-10-04 08:02:10.273 +07:00 [ERR] Error calling POST API endpoint: api/auth/register
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at EVChargingStation.Web.Services.ApiService.PostAsync[T](String endpoint, Object data) in D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\Services\ApiService.cs:line 60
+2025-10-04 08:02:10.337 +07:00 [INF] Executing ViewResult, running view Register.
+2025-10-04 08:02:10.365 +07:00 [INF] Executed ViewResult - view Register executed in 28.5488ms.
+2025-10-04 08:02:10.372 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web) in 185.9258ms
+2025-10-04 08:02:10.375 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 08:02:10.381 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/Home/Register - 200 null text/html; charset=utf-8 254.1392ms
+2025-10-04 08:13:32.495 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/ - null null
+2025-10-04 08:13:32.501 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 08:13:32.506 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 08:13:32.513 +07:00 [INF] Start processing HTTP request GET http://localhost:5002/api/station
+2025-10-04 08:13:32.516 +07:00 [INF] Sending HTTP request GET http://localhost:5002/api/station
+2025-10-04 08:13:32.529 +07:00 [ERR] Error calling GET API endpoint: api/station
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at EVChargingStation.Web.Services.ApiService.GetAsync[T](String endpoint) in D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\Services\ApiService.cs:line 32
+2025-10-04 08:13:32.543 +07:00 [INF] Executing ViewResult, running view Index.
+2025-10-04 08:13:32.556 +07:00 [INF] Executed ViewResult - view Index executed in 14.4424ms.
+2025-10-04 08:13:32.559 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web) in 48.0335ms
+2025-10-04 08:13:32.561 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 08:13:32.563 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/ - 200 null text/html; charset=utf-8 67.8437ms
+2025-10-04 09:31:18.025 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 09:31:18.092 +07:00 [WRN] The WebRootPath was not found: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\wwwroot. Static files may be unavailable.
+2025-10-04 09:31:18.107 +07:00 [INF] Now listening on: http://localhost:5014
+2025-10-04 09:31:18.110 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 09:31:18.112 +07:00 [INF] Hosting environment: Production
+2025-10-04 09:31:18.113 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web
+2025-10-04 09:31:24.425 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/ - null null
+2025-10-04 09:31:24.439 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-10-04 09:31:24.462 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 09:31:24.495 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 09:31:24.534 +07:00 [INF] Start processing HTTP request GET http://localhost:5014/api/station
+2025-10-04 09:31:24.546 +07:00 [INF] Sending HTTP request GET http://localhost:5014/api/station
+2025-10-04 09:31:24.694 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/station - null null
+2025-10-04 09:31:24.709 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/station - 404 0 null 14.0928ms
+2025-10-04 09:31:24.714 +07:00 [INF] Received HTTP response headers after 155.2356ms - 404
+2025-10-04 09:31:24.718 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/api/station, Response status code: 404
+2025-10-04 09:31:24.719 +07:00 [INF] End processing HTTP request after 191.3367ms - 404
+2025-10-04 09:31:24.725 +07:00 [ERR] GET api/station failed with status "NotFound"
+2025-10-04 09:31:24.772 +07:00 [INF] Executing ViewResult, running view Index.
+2025-10-04 09:31:24.826 +07:00 [INF] Executed ViewResult - view Index executed in 55.6485ms.
+2025-10-04 09:31:24.830 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web) in 331.1133ms
+2025-10-04 09:31:24.835 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 09:31:24.839 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/ - 200 null text/html; charset=utf-8 416.9769ms
+2025-10-04 09:31:25.361 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/favicon.ico - null null
+2025-10-04 09:31:25.370 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/favicon.ico - 404 0 null 8.9622ms
+2025-10-04 09:31:25.377 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/favicon.ico, Response status code: 404
+2025-10-04 09:31:28.664 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/Home/Stations - null null
+2025-10-04 09:31:28.687 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Stations (EVChargingStation.Web)'
+2025-10-04 09:31:28.702 +07:00 [INF] Route matched with {action = "Stations", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Stations() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 09:31:28.720 +07:00 [INF] Executing ViewResult, running view Stations.
+2025-10-04 09:31:28.728 +07:00 [ERR] The view 'Stations' was not found. Searched locations: ["/Views/Home/Stations.cshtml","/Views/Shared/Stations.cshtml"]
+2025-10-04 09:31:28.745 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Stations (EVChargingStation.Web) in 26.796ms
+2025-10-04 09:31:28.750 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Stations (EVChargingStation.Web)'
+2025-10-04 09:31:28.758 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Stations' was not found. The following locations were searched:
+/Views/Home/Stations.cshtml
+/Views/Shared/Stations.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-10-04 09:31:28.819 +07:00 [ERR] Connection id "0HNG2TOEELKLK", Request id "0HNG2TOEELKLK:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.InvalidOperationException: The view 'Stations' was not found. The following locations were searched:
+/Views/Home/Stations.cshtml
+/Views/Shared/Stations.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-10-04 09:31:28.872 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/Home/Stations - 500 0 null 207.4673ms
+2025-10-04 09:31:28.895 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/Home/Stations, Response status code: 500
+2025-10-04 09:31:33.832 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/Home/Register - null null
+2025-10-04 09:31:33.848 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 09:31:33.858 +07:00 [INF] Route matched with {action = "Register", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 09:31:33.877 +07:00 [INF] Executing ViewResult, running view Register.
+2025-10-04 09:31:33.908 +07:00 [INF] Executed ViewResult - view Register executed in 33.8654ms.
+2025-10-04 09:31:33.918 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web) in 46.5935ms
+2025-10-04 09:31:33.931 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 09:31:33.941 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/Home/Register - 200 null text/html; charset=utf-8 108.9194ms
+2025-10-04 09:40:06.837 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/Home/Register - application/x-www-form-urlencoded 88
+2025-10-04 09:40:06.861 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 09:40:06.911 +07:00 [INF] Route matched with {action = "Register", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(System.String, System.String, System.String, System.String, System.String) on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 09:40:07.039 +07:00 [INF] Start processing HTTP request POST http://localhost:5014/api/auth/register
+2025-10-04 09:40:07.044 +07:00 [INF] Sending HTTP request POST http://localhost:5014/api/auth/register
+2025-10-04 09:40:07.061 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/auth/register - application/json; charset=utf-8 117
+2025-10-04 09:40:07.072 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/auth/register - 404 0 null 11.3149ms
+2025-10-04 09:40:07.073 +07:00 [INF] Received HTTP response headers after 24.4169ms - 404
+2025-10-04 09:40:07.086 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5014/api/auth/register, Response status code: 404
+2025-10-04 09:40:07.094 +07:00 [INF] End processing HTTP request after 55.2674ms - 404
+2025-10-04 09:40:07.112 +07:00 [ERR] POST api/auth/register failed with status "NotFound"
+2025-10-04 09:40:07.124 +07:00 [INF] Executing ViewResult, running view Register.
+2025-10-04 09:40:07.147 +07:00 [INF] Executed ViewResult - view Register executed in 23.7101ms.
+2025-10-04 09:40:07.155 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web) in 224.8356ms
+2025-10-04 09:40:07.181 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 09:40:07.190 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/Home/Register - 200 null text/html; charset=utf-8 352.9485ms
+2025-10-04 15:00:49.802 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 15:00:49.866 +07:00 [WRN] The WebRootPath was not found: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\wwwroot. Static files may be unavailable.
+2025-10-04 15:00:49.881 +07:00 [INF] Now listening on: http://localhost:5014
+2025-10-04 15:00:49.884 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 15:00:49.886 +07:00 [INF] Hosting environment: Production
+2025-10-04 15:00:49.887 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web
+2025-10-04 15:00:56.893 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/ - null null
+2025-10-04 15:00:56.909 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-10-04 15:00:56.934 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 15:00:56.965 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 15:00:56.992 +07:00 [INF] Start processing HTTP request GET http://localhost:5014/api/station
+2025-10-04 15:00:56.997 +07:00 [INF] Sending HTTP request GET http://localhost:5014/api/station
+2025-10-04 15:00:57.044 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/station - null null
+2025-10-04 15:00:57.057 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/station - 404 0 null 12.2679ms
+2025-10-04 15:00:57.061 +07:00 [INF] Received HTTP response headers after 59.1069ms - 404
+2025-10-04 15:00:57.066 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/api/station, Response status code: 404
+2025-10-04 15:00:57.067 +07:00 [INF] End processing HTTP request after 76.7768ms - 404
+2025-10-04 15:00:57.072 +07:00 [ERR] GET api/station failed with status "NotFound"
+2025-10-04 15:00:57.113 +07:00 [INF] Executing ViewResult, running view Index.
+2025-10-04 15:00:57.159 +07:00 [INF] Executed ViewResult - view Index executed in 46.9367ms.
+2025-10-04 15:00:57.163 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web) in 193.484ms
+2025-10-04 15:00:57.167 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 15:00:57.171 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/ - 200 null text/html; charset=utf-8 282.3655ms
+2025-10-04 15:00:58.382 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/favicon.ico - null null
+2025-10-04 15:00:58.391 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/favicon.ico - 404 0 null 8.5649ms
+2025-10-04 15:00:58.398 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/favicon.ico, Response status code: 404
+2025-10-04 15:01:00.613 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/Home/Stations - null null
+2025-10-04 15:01:00.627 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Stations (EVChargingStation.Web)'
+2025-10-04 15:01:00.632 +07:00 [INF] Route matched with {action = "Stations", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Stations() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 15:01:00.638 +07:00 [INF] Executing ViewResult, running view Stations.
+2025-10-04 15:01:00.641 +07:00 [ERR] The view 'Stations' was not found. Searched locations: ["/Views/Home/Stations.cshtml","/Views/Shared/Stations.cshtml"]
+2025-10-04 15:01:00.651 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Stations (EVChargingStation.Web) in 14.0499ms
+2025-10-04 15:01:00.654 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Stations (EVChargingStation.Web)'
+2025-10-04 15:01:00.658 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Stations' was not found. The following locations were searched:
+/Views/Home/Stations.cshtml
+/Views/Shared/Stations.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-10-04 15:01:00.702 +07:00 [ERR] Connection id "0HNG33GJ3ICD3", Request id "0HNG33GJ3ICD3:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.InvalidOperationException: The view 'Stations' was not found. The following locations were searched:
+/Views/Home/Stations.cshtml
+/Views/Shared/Stations.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-10-04 15:01:00.737 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/Home/Stations - 500 0 null 124.1881ms
+2025-10-04 15:01:00.745 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/Home/Stations, Response status code: 500
+2025-10-04 15:01:15.655 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/Home/Register - null null
+2025-10-04 15:01:15.664 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 15:01:15.670 +07:00 [INF] Route matched with {action = "Register", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 15:01:15.679 +07:00 [INF] Executing ViewResult, running view Register.
+2025-10-04 15:01:15.696 +07:00 [INF] Executed ViewResult - view Register executed in 17.8234ms.
+2025-10-04 15:01:15.702 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web) in 25.6482ms
+2025-10-04 15:01:15.709 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 15:01:15.712 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/Home/Register - 200 null text/html; charset=utf-8 56.7842ms
+2025-10-04 15:01:31.645 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/Home/Register - application/x-www-form-urlencoded 88
+2025-10-04 15:01:31.656 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 15:01:31.674 +07:00 [INF] Route matched with {action = "Register", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(System.String, System.String, System.String, System.String, System.String) on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 15:01:31.729 +07:00 [INF] Start processing HTTP request POST http://localhost:5014/api/auth/register
+2025-10-04 15:01:31.732 +07:00 [INF] Sending HTTP request POST http://localhost:5014/api/auth/register
+2025-10-04 15:01:31.736 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/auth/register - application/json; charset=utf-8 117
+2025-10-04 15:01:31.741 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/auth/register - 404 0 null 5.3114ms
+2025-10-04 15:01:31.742 +07:00 [INF] Received HTTP response headers after 7.6286ms - 404
+2025-10-04 15:01:31.745 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5014/api/auth/register, Response status code: 404
+2025-10-04 15:01:31.747 +07:00 [INF] End processing HTTP request after 17.21ms - 404
+2025-10-04 15:01:31.752 +07:00 [ERR] POST api/auth/register failed with status "NotFound"
+2025-10-04 15:01:31.759 +07:00 [INF] Executing ViewResult, running view Register.
+2025-10-04 15:01:31.768 +07:00 [INF] Executed ViewResult - view Register executed in 9.0644ms.
+2025-10-04 15:01:31.773 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web) in 88.4189ms
+2025-10-04 15:01:31.777 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Register (EVChargingStation.Web)'
+2025-10-04 15:01:31.779 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/Home/Register - 200 null text/html; charset=utf-8 134.0977ms
+2025-10-04 15:02:12.046 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/auth/register - null null
+2025-10-04 15:02:12.053 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/auth/register - 404 0 null 7.6328ms
+2025-10-04 15:02:12.061 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/api/auth/register, Response status code: 404
+2025-10-04 15:24:50.264 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 15:24:50.326 +07:00 [WRN] The WebRootPath was not found: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\wwwroot. Static files may be unavailable.
+2025-10-04 15:24:50.341 +07:00 [INF] Now listening on: http://localhost:5014
+2025-10-04 15:24:50.344 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 15:24:50.346 +07:00 [INF] Hosting environment: Production
+2025-10-04 15:24:50.347 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web
+2025-10-04 15:25:02.748 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/ - null null
+2025-10-04 15:25:02.760 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-10-04 15:25:02.781 +07:00 [INF] Executing endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 15:25:02.807 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller EVChargingStation.Web.Controllers.HomeController (EVChargingStation.Web).
+2025-10-04 15:25:02.826 +07:00 [INF] Start processing HTTP request GET http://localhost:5000/api/station
+2025-10-04 15:25:02.831 +07:00 [INF] Sending HTTP request GET http://localhost:5000/api/station
+2025-10-04 15:25:02.912 +07:00 [ERR] Error calling GET API endpoint: api/station
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at EVChargingStation.Web.Services.ApiService.GetAsync[T](String endpoint) in D:\HeThongQuanLyTramSac\src\frontend\EVChargingStation.Web\Services\ApiService.cs:line 32
+2025-10-04 15:25:02.975 +07:00 [INF] Executing ViewResult, running view Index.
+2025-10-04 15:25:03.022 +07:00 [INF] Executed ViewResult - view Index executed in 47.4548ms.
+2025-10-04 15:25:03.031 +07:00 [INF] Executed action EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web) in 217.639ms
+2025-10-04 15:25:03.037 +07:00 [INF] Executed endpoint 'EVChargingStation.Web.Controllers.HomeController.Index (EVChargingStation.Web)'
+2025-10-04 15:25:03.046 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/ - 200 null text/html; charset=utf-8 299.939ms

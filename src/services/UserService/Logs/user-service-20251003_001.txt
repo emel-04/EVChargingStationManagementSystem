@@ -1,0 +1,160 @@
+2025-10-03 11:28:14.331 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 11:28:14.384 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:28:14.419 +07:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.DefaultAddressStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-10-03 11:41:56.189 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 11:41:56.242 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:41:56.317 +07:00 [INF] Now listening on: https://localhost:5001
+2025-10-03 11:41:56.320 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:41:56.322 +07:00 [INF] Hosting environment: Production
+2025-10-03 11:41:56.323 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 11:55:23.314 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - null null
+2025-10-03 11:55:23.352 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - 404 0 null 38.7497ms
+2025-10-03 11:55:23.361 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/swagger, Response status code: 404
+2025-10-03 11:57:55.806 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 11:57:55.855 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 11:57:55.927 +07:00 [INF] Now listening on: https://localhost:5001
+2025-10-03 11:57:55.929 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 11:57:55.930 +07:00 [INF] Hosting environment: Development
+2025-10-03 11:57:55.932 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 11:58:26.849 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - null null
+2025-10-03 11:58:26.880 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - 301 0 null 32.0457ms
+2025-10-03 11:58:26.885 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2025-10-03 11:58:26.938 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 52.6424ms
+2025-10-03 11:58:26.955 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2025-10-03 11:58:26.955 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2025-10-03 11:58:26.955 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2025-10-03 11:58:26.980 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-10-03 11:58:26.982 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-10-03 11:58:26.983 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 200 143943 text/css 27.5769ms
+2025-10-03 11:58:26.987 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 31.8612ms
+2025-10-03 11:58:26.998 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-10-03 11:58:27.000 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 44.9928ms
+2025-10-03 11:58:27.142 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2025-10-03 11:58:27.187 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - null null
+2025-10-03 11:58:27.193 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-03 11:58:27.195 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - 200 628 image/png 7.7613ms
+2025-10-03 11:58:27.274 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 132.2609ms
+2025-10-03 11:58:50.563 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - null null
+2025-10-03 11:58:50.584 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - 404 0 null 21.1791ms
+2025-10-03 11:58:50.593 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/, Response status code: 404
+2025-10-03 12:04:22.360 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 12:04:22.407 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 12:04:22.446 +07:00 [INF] Now listening on: http://localhost:5001
+2025-10-03 12:04:22.447 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 12:04:22.448 +07:00 [INF] Hosting environment: Development
+2025-10-03 12:04:22.448 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 12:04:39.567 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/auth/register - application/json 126
+2025-10-03 12:04:39.605 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Register (UserService)'
+2025-10-03 12:04:39.622 +07:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Register(EVChargingStation.UserService.Models.RegisterRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-10-03 12:04:39.923 +07:00 [INF] Executed DbCommand (28ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__request_Email_0
+LIMIT 1
+2025-10-03 12:04:40.394 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (DbType = Boolean), @p4='?' (Size = 100), @p5='?' (Size = 255), @p6='?' (Size = 20), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Users` (`CreatedAt`, `Email`, `FirstName`, `IsActive`, `LastName`, `PasswordHash`, `PhoneNumber`, `Role`, `UpdatedAt`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-10-03 12:04:40.453 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Wallets` (`Balance`, `CreatedAt`, `IsActive`, `TotalDeposited`, `TotalSpent`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `Id`
+FROM `Wallets`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-10-03 12:04:40.479 +07:00 [INF] User registered successfully: test@example.com
+2025-10-03 12:04:40.485 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-10-03 12:04:40.539 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Register (UserService) in 915.0489ms
+2025-10-03 12:04:40.540 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Register (UserService)'
+2025-10-03 12:04:40.544 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/auth/register - 200 null application/json; charset=utf-8 977.9375ms
+2025-10-03 12:05:54.989 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/auth/register - application/json 129
+2025-10-03 12:05:54.991 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Register (UserService)'
+2025-10-03 12:05:54.991 +07:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Register(EVChargingStation.UserService.Models.RegisterRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-10-03 12:05:55.044 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__request_Email_0
+LIMIT 1
+2025-10-03 12:05:55.346 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (DbType = Boolean), @p4='?' (Size = 100), @p5='?' (Size = 255), @p6='?' (Size = 20), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Users` (`CreatedAt`, `Email`, `FirstName`, `IsActive`, `LastName`, `PasswordHash`, `PhoneNumber`, `Role`, `UpdatedAt`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-10-03 12:05:55.351 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Wallets` (`Balance`, `CreatedAt`, `IsActive`, `TotalDeposited`, `TotalSpent`, `UpdatedAt`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `Id`
+FROM `Wallets`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-10-03 12:05:55.353 +07:00 [INF] User registered successfully: test4@example.com
+2025-10-03 12:05:55.354 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-10-03 12:05:55.354 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Register (UserService) in 362.6142ms
+2025-10-03 12:05:55.354 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Register (UserService)'
+2025-10-03 12:05:55.354 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/auth/register - 200 null application/json; charset=utf-8 365.5722ms
+2025-10-03 13:39:05.655 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-10-03 13:39:05.717 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 13:39:05.812 +07:00 [INF] Now listening on: https://localhost:5001
+2025-10-03 13:39:05.815 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 13:39:05.818 +07:00 [INF] Hosting environment: Development
+2025-10-03 13:39:05.820 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\UserService
+2025-10-03 13:39:46.742 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2025-10-03 13:39:47.014 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 273.6569ms
+2025-10-03 13:39:47.211 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2025-10-03 13:39:47.503 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 291.1924ms
+2025-10-03 14:55:29.342 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2025-10-03 14:55:29.370 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 27.9023ms
+2025-10-03 14:55:29.575 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2025-10-03 14:55:29.624 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.7196ms
+2025-10-03 15:00:11.940 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2025-10-03 15:00:11.948 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 8.5163ms
+2025-10-03 15:00:12.076 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2025-10-03 15:00:12.094 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.2353ms
+2025-10-03 15:00:20.868 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - null null
+2025-10-03 15:00:20.960 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - 404 0 null 91.8061ms
+2025-10-03 15:00:20.985 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/, Response status code: 404
+2025-10-03 15:00:52.897 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2025-10-03 15:00:52.903 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 5.7057ms
+2025-10-03 15:00:53.022 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2025-10-03 15:00:53.038 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.3581ms

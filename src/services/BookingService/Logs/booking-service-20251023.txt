@@ -1,0 +1,9 @@
+2025-10-23 09:00:11.428 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-23 09:00:12.331 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-23 09:00:12.952 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-23 09:00:14.547 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-23 09:00:16.922 +07:00 [INF] Hosting environment: Development
+2025-10-23 09:00:19.946 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\BookingService

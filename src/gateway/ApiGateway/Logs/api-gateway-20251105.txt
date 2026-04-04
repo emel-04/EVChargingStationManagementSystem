@@ -1,0 +1,690 @@
+2025-11-05 14:59:09.603 +07:00 [INF] Now listening on: https://localhost:5000
+2025-11-05 14:59:09.632 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 14:59:09.634 +07:00 [INF] Hosting environment: Development
+2025-11-05 14:59:09.635 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-11-05 14:59:40.263 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 57
+2025-11-05 14:59:40.333 +07:00 [INF] requestId: 0HNGS852S47BA:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 14:59:40.337 +07:00 [INF] requestId: 0HNGS852S47BA:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 14:59:40.339 +07:00 [INF] requestId: 0HNGS852S47BA:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 14:59:40.349 +07:00 [WRN] requestId: 0HNGS852S47BA:00000001, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 14:59:42.219 +07:00 [INF] requestId: 0HNGS852S47BA:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 14:59:42.233 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1058 application/json; charset=utf-8 1970.6227ms
+2025-11-05 15:03:40.368 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 57
+2025-11-05 15:03:40.374 +07:00 [INF] requestId: 0HNGS852S47BB:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 15:03:40.375 +07:00 [INF] requestId: 0HNGS852S47BB:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 15:03:40.375 +07:00 [INF] requestId: 0HNGS852S47BB:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 15:03:40.710 +07:00 [INF] requestId: 0HNGS852S47BB:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 15:03:40.712 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1058 application/json; charset=utf-8 343.6304ms
+2025-11-05 15:10:10.422 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 57
+2025-11-05 15:10:10.428 +07:00 [INF] requestId: 0HNGS852S47BC:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 15:10:10.429 +07:00 [INF] requestId: 0HNGS852S47BC:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 15:10:10.430 +07:00 [INF] requestId: 0HNGS852S47BC:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 15:10:10.599 +07:00 [INF] requestId: 0HNGS852S47BC:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 15:10:10.601 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1058 application/json; charset=utf-8 179.4037ms
+2025-11-05 15:12:08.922 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 57
+2025-11-05 15:12:08.926 +07:00 [INF] requestId: 0HNGS852S47BD:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 15:12:08.928 +07:00 [INF] requestId: 0HNGS852S47BD:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 15:12:08.929 +07:00 [INF] requestId: 0HNGS852S47BD:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 15:12:09.087 +07:00 [INF] requestId: 0HNGS852S47BD:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 15:12:09.089 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1058 application/json; charset=utf-8 167.1692ms
+2025-11-05 15:14:19.827 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 57
+2025-11-05 15:14:19.832 +07:00 [INF] requestId: 0HNGS852S47BE:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 15:14:19.833 +07:00 [INF] requestId: 0HNGS852S47BE:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 15:14:19.834 +07:00 [INF] requestId: 0HNGS852S47BE:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 15:14:19.993 +07:00 [INF] requestId: 0HNGS852S47BE:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 15:14:19.995 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1058 application/json; charset=utf-8 168.0508ms
+2025-11-05 15:16:36.251 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 57
+2025-11-05 15:16:36.255 +07:00 [INF] requestId: 0HNGS852S47BF:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 15:16:36.257 +07:00 [INF] requestId: 0HNGS852S47BF:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 15:16:36.259 +07:00 [INF] requestId: 0HNGS852S47BF:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 15:16:36.417 +07:00 [INF] requestId: 0HNGS852S47BF:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 15:16:36.419 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1058 application/json; charset=utf-8 167.888ms
+2025-11-05 15:16:42.939 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:16:42.945 +07:00 [INF] requestId: 0HNGS852S47BF:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:16:42.947 +07:00 [INF] requestId: 0HNGS852S47BF:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:16:42.948 +07:00 [INF] requestId: 0HNGS852S47BF:00000002, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:16:42.953 +07:00 [WRN] requestId: 0HNGS852S47BF:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 15:16:44.378 +07:00 [INF] requestId: 0HNGS852S47BF:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:16:44.380 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 1440.9663ms
+2025-11-05 15:16:44.425 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:16:44.429 +07:00 [INF] requestId: 0HNGS852S47BF:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:16:44.430 +07:00 [INF] requestId: 0HNGS852S47BF:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:16:44.434 +07:00 [INF] requestId: 0HNGS852S47BF:00000003, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:16:44.435 +07:00 [WRN] requestId: 0HNGS852S47BF:00000003, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 15:16:45.842 +07:00 [INF] requestId: 0HNGS852S47BF:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:16:45.845 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 1419.3032ms
+2025-11-05 15:18:09.715 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30 - null null
+2025-11-05 15:18:09.723 +07:00 [INF] requestId: 0HNGS852S47BG:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Report/{everything}'
+2025-11-05 15:18:09.725 +07:00 [INF] requestId: 0HNGS852S47BG:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/report/revenue/export'
+2025-11-05 15:18:09.727 +07:00 [INF] requestId: 0HNGS852S47BG:00000001, previousRequestId: No PreviousRequestId, message: '/api/Report/{everything} route does not require user to be authorized'
+2025-11-05 15:18:09.730 +07:00 [WRN] requestId: 0HNGS852S47BG:00000001, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 15:18:10.753 +07:00 [WRN] requestId: 0HNGS852S47BG:00000001, previousRequestId: No PreviousRequestId, message: '403 (Forbidden) status code, request uri: https://localhost:5006/api/Report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30'
+2025-11-05 15:18:10.755 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30 - 403 0 null 1039.781ms
+2025-11-05 15:18:15.731 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:18:15.740 +07:00 [INF] requestId: 0HNGS852S47BG:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:18:15.742 +07:00 [INF] requestId: 0HNGS852S47BG:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:18:15.752 +07:00 [INF] requestId: 0HNGS852S47BG:00000002, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:18:15.837 +07:00 [INF] requestId: 0HNGS852S47BG:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:18:15.839 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 108.2394ms
+2025-11-05 15:18:15.851 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:18:15.858 +07:00 [INF] requestId: 0HNGS852S47BG:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:18:15.870 +07:00 [INF] requestId: 0HNGS852S47BG:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:18:15.874 +07:00 [INF] requestId: 0HNGS852S47BG:00000003, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:18:15.954 +07:00 [INF] requestId: 0HNGS852S47BG:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:18:15.956 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 104.4414ms
+2025-11-05 15:19:48.713 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:19:48.717 +07:00 [INF] requestId: 0HNGS852S47BH:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:19:48.718 +07:00 [INF] requestId: 0HNGS852S47BH:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:19:48.719 +07:00 [INF] requestId: 0HNGS852S47BH:00000001, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:19:48.761 +07:00 [INF] requestId: 0HNGS852S47BH:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:19:48.763 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 50.4354ms
+2025-11-05 15:19:48.776 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:19:48.779 +07:00 [INF] requestId: 0HNGS852S47BH:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:19:48.780 +07:00 [INF] requestId: 0HNGS852S47BH:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:19:48.782 +07:00 [INF] requestId: 0HNGS852S47BH:00000002, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:19:48.825 +07:00 [INF] requestId: 0HNGS852S47BH:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:19:48.827 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 50.0641ms
+2025-11-05 15:22:22.282 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:22:22.285 +07:00 [INF] requestId: 0HNGS852S47BI:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:22:22.286 +07:00 [INF] requestId: 0HNGS852S47BI:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:22:22.287 +07:00 [INF] requestId: 0HNGS852S47BI:00000001, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:22:22.327 +07:00 [INF] requestId: 0HNGS852S47BI:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:22:22.329 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 46.676ms
+2025-11-05 15:22:22.339 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:22:22.343 +07:00 [INF] requestId: 0HNGS852S47BI:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:22:22.344 +07:00 [INF] requestId: 0HNGS852S47BI:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:22:22.345 +07:00 [INF] requestId: 0HNGS852S47BI:00000002, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:22:22.385 +07:00 [INF] requestId: 0HNGS852S47BI:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:22:22.386 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 46.9824ms
+2025-11-05 15:22:30.913 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:22:30.916 +07:00 [INF] requestId: 0HNGS852S47BI:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:22:30.918 +07:00 [INF] requestId: 0HNGS852S47BI:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:22:30.920 +07:00 [INF] requestId: 0HNGS852S47BI:00000003, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:22:30.955 +07:00 [INF] requestId: 0HNGS852S47BI:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:22:30.957 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 43.4624ms
+2025-11-05 15:22:30.969 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:22:30.974 +07:00 [INF] requestId: 0HNGS852S47BI:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:22:30.985 +07:00 [INF] requestId: 0HNGS852S47BI:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:22:30.989 +07:00 [INF] requestId: 0HNGS852S47BI:00000004, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:22:31.050 +07:00 [INF] requestId: 0HNGS852S47BI:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:22:31.054 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 85.6182ms
+2025-11-05 15:33:39.859 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:33:39.862 +07:00 [INF] requestId: 0HNGS852S47BJ:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:33:39.864 +07:00 [INF] requestId: 0HNGS852S47BJ:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:33:39.870 +07:00 [INF] requestId: 0HNGS852S47BJ:00000001, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:33:39.907 +07:00 [INF] requestId: 0HNGS852S47BJ:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:33:39.909 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 50.6879ms
+2025-11-05 15:33:39.919 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 15:33:39.921 +07:00 [INF] requestId: 0HNGS852S47BJ:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 15:33:39.922 +07:00 [INF] requestId: 0HNGS852S47BJ:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 15:33:39.924 +07:00 [INF] requestId: 0HNGS852S47BJ:00000002, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 15:33:39.925 +07:00 [WRN] requestId: 0HNGS852S47BJ:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 15:33:40.016 +07:00 [INF] requestId: 0HNGS852S47BJ:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 15:33:40.018 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 99.4714ms
+2025-11-05 15:33:50.961 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:33:50.964 +07:00 [INF] requestId: 0HNGS852S47BJ:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:33:50.968 +07:00 [INF] requestId: 0HNGS852S47BJ:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:33:50.970 +07:00 [INF] requestId: 0HNGS852S47BJ:00000003, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:33:51.013 +07:00 [INF] requestId: 0HNGS852S47BJ:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:33:51.017 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 55.9546ms
+2025-11-05 15:33:51.026 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 15:33:51.030 +07:00 [INF] requestId: 0HNGS852S47BJ:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 15:33:51.038 +07:00 [INF] requestId: 0HNGS852S47BJ:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 15:33:51.040 +07:00 [INF] requestId: 0HNGS852S47BJ:00000004, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 15:33:51.042 +07:00 [WRN] requestId: 0HNGS852S47BJ:00000004, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 15:33:52.520 +07:00 [INF] requestId: 0HNGS852S47BJ:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 15:33:52.522 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 1496.0905ms
+2025-11-05 15:33:52.552 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 15:33:52.555 +07:00 [INF] requestId: 0HNGS852S47BJ:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 15:33:52.556 +07:00 [INF] requestId: 0HNGS852S47BJ:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 15:33:52.557 +07:00 [INF] requestId: 0HNGS852S47BJ:00000005, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 15:33:52.584 +07:00 [INF] requestId: 0HNGS852S47BJ:00000005, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 15:33:52.586 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 34.4455ms
+2025-11-05 15:34:21.808 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:34:21.814 +07:00 [INF] requestId: 0HNGS852S47BJ:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:34:21.817 +07:00 [INF] requestId: 0HNGS852S47BJ:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:34:21.824 +07:00 [INF] requestId: 0HNGS852S47BJ:00000006, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:34:21.854 +07:00 [INF] requestId: 0HNGS852S47BJ:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:34:21.856 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 47.4322ms
+2025-11-05 15:34:21.865 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 15:34:21.869 +07:00 [INF] requestId: 0HNGS852S47BJ:00000007, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 15:34:21.871 +07:00 [INF] requestId: 0HNGS852S47BJ:00000007, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 15:34:21.873 +07:00 [INF] requestId: 0HNGS852S47BJ:00000007, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 15:34:21.903 +07:00 [INF] requestId: 0HNGS852S47BJ:00000007, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 15:34:21.904 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 39.5615ms
+2025-11-05 15:35:24.545 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:35:24.549 +07:00 [INF] requestId: 0HNGS852S47BJ:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:35:24.552 +07:00 [INF] requestId: 0HNGS852S47BJ:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:35:24.553 +07:00 [INF] requestId: 0HNGS852S47BJ:00000008, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:35:24.592 +07:00 [INF] requestId: 0HNGS852S47BJ:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:35:24.594 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 48.9868ms
+2025-11-05 15:35:24.614 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:35:24.616 +07:00 [INF] requestId: 0HNGS852S47BJ:00000009, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:35:24.620 +07:00 [INF] requestId: 0HNGS852S47BJ:00000009, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:35:24.623 +07:00 [INF] requestId: 0HNGS852S47BJ:00000009, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:35:24.659 +07:00 [INF] requestId: 0HNGS852S47BJ:00000009, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:35:24.662 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 47.8612ms
+2025-11-05 15:35:38.021 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30 - null null
+2025-11-05 15:35:38.033 +07:00 [INF] requestId: 0HNGS852S47BK:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Report/{everything}'
+2025-11-05 15:35:38.036 +07:00 [INF] requestId: 0HNGS852S47BK:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/report/revenue/export'
+2025-11-05 15:35:38.041 +07:00 [INF] requestId: 0HNGS852S47BK:00000001, previousRequestId: No PreviousRequestId, message: '/api/Report/{everything} route does not require user to be authorized'
+2025-11-05 15:35:38.063 +07:00 [WRN] requestId: 0HNGS852S47BK:00000001, previousRequestId: No PreviousRequestId, message: '403 (Forbidden) status code, request uri: https://localhost:5006/api/Report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30'
+2025-11-05 15:35:38.065 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30 - 403 0 null 44.0238ms
+2025-11-05 15:35:55.930 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:35:55.933 +07:00 [INF] requestId: 0HNGS852S47BK:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:35:55.934 +07:00 [INF] requestId: 0HNGS852S47BK:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:35:55.936 +07:00 [INF] requestId: 0HNGS852S47BK:00000002, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:35:55.973 +07:00 [INF] requestId: 0HNGS852S47BK:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:35:55.975 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 45.0377ms
+2025-11-05 15:35:55.988 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 15:35:55.990 +07:00 [INF] requestId: 0HNGS852S47BK:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 15:35:55.996 +07:00 [INF] requestId: 0HNGS852S47BK:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 15:35:56.010 +07:00 [INF] requestId: 0HNGS852S47BK:00000003, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 15:35:56.035 +07:00 [INF] requestId: 0HNGS852S47BK:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 15:35:56.037 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 573 application/json; charset=utf-8 49.5718ms
+2025-11-05 15:38:26.143 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 53
+2025-11-05 15:38:26.146 +07:00 [INF] requestId: 0HNGS852S47BL:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 15:38:26.148 +07:00 [INF] requestId: 0HNGS852S47BL:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 15:38:26.152 +07:00 [INF] requestId: 0HNGS852S47BL:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 15:38:26.318 +07:00 [INF] requestId: 0HNGS852S47BL:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 15:38:26.321 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1051 application/json; charset=utf-8 177.979ms
+2025-11-05 15:38:35.622 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 15:38:35.627 +07:00 [INF] requestId: 0HNGS852S47BL:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 15:38:35.630 +07:00 [INF] requestId: 0HNGS852S47BL:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 15:38:35.634 +07:00 [INF] requestId: 0HNGS852S47BL:00000002, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 15:38:35.689 +07:00 [INF] requestId: 0HNGS852S47BL:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 15:38:35.691 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1278 application/json; charset=utf-8 69.0079ms
+2025-11-05 15:38:35.706 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 15:38:35.712 +07:00 [INF] requestId: 0HNGS852S47BL:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 15:38:35.723 +07:00 [INF] requestId: 0HNGS852S47BL:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 15:38:35.725 +07:00 [INF] requestId: 0HNGS852S47BL:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 15:38:35.807 +07:00 [INF] requestId: 0HNGS852S47BL:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 15:38:35.809 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 103.406ms
+2025-11-05 15:38:35.817 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 15:38:35.821 +07:00 [INF] requestId: 0HNGS852S47BL:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 15:38:35.825 +07:00 [INF] requestId: 0HNGS852S47BL:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 15:38:35.828 +07:00 [INF] requestId: 0HNGS852S47BL:00000004, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 15:38:35.858 +07:00 [INF] requestId: 0HNGS852S47BL:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 15:38:35.861 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 44.0357ms
+2025-11-05 15:38:55.139 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 15:38:55.141 +07:00 [INF] requestId: 0HNGS852S47BL:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 15:38:55.142 +07:00 [INF] requestId: 0HNGS852S47BL:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 15:38:55.144 +07:00 [INF] requestId: 0HNGS852S47BL:00000005, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 15:38:55.188 +07:00 [INF] requestId: 0HNGS852S47BL:00000005, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 15:38:55.189 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 50.735ms
+2025-11-05 15:38:56.974 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 15:38:56.977 +07:00 [INF] requestId: 0HNGS852S47BL:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 15:38:56.978 +07:00 [INF] requestId: 0HNGS852S47BL:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 15:38:56.979 +07:00 [INF] requestId: 0HNGS852S47BL:00000006, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 15:38:57.012 +07:00 [INF] requestId: 0HNGS852S47BL:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 15:38:57.014 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 39.8084ms
+2025-11-05 15:38:59.197 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/14 - null null
+2025-11-05 15:38:59.205 +07:00 [INF] requestId: 0HNGS852S47BL:00000007, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 15:38:59.212 +07:00 [INF] requestId: 0HNGS852S47BL:00000007, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/14'
+2025-11-05 15:38:59.215 +07:00 [INF] requestId: 0HNGS852S47BL:00000007, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 15:38:59.225 +07:00 [WRN] requestId: 0HNGS852S47BL:00000007, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 15:38:59.323 +07:00 [INF] requestId: 0HNGS852S47BL:00000007, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/14'
+2025-11-05 15:38:59.325 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/14 - 200 2 application/json; charset=utf-8 127.9814ms
+2025-11-05 15:38:59.333 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 15:38:59.335 +07:00 [INF] requestId: 0HNGS852S47BL:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 15:38:59.336 +07:00 [INF] requestId: 0HNGS852S47BL:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 15:38:59.338 +07:00 [INF] requestId: 0HNGS852S47BL:00000008, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 15:38:59.367 +07:00 [INF] requestId: 0HNGS852S47BL:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 15:38:59.369 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 35.8601ms
+2025-11-05 15:39:01.430 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment/user/14 - null null
+2025-11-05 15:39:01.434 +07:00 [INF] requestId: 0HNGS852S47BL:00000009, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment/{everything}'
+2025-11-05 15:39:01.438 +07:00 [INF] requestId: 0HNGS852S47BL:00000009, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment/user/14'
+2025-11-05 15:39:01.440 +07:00 [INF] requestId: 0HNGS852S47BL:00000009, previousRequestId: No PreviousRequestId, message: '/api/Payment/{everything} route does not require user to be authorized'
+2025-11-05 15:39:01.442 +07:00 [WRN] requestId: 0HNGS852S47BL:00000009, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-11-05 15:39:01.531 +07:00 [INF] requestId: 0HNGS852S47BL:00000009, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment/user/14'
+2025-11-05 15:39:01.533 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment/user/14 - 200 2 application/json; charset=utf-8 103.0051ms
+2025-11-05 15:39:01.543 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/14 - null null
+2025-11-05 15:39:01.550 +07:00 [INF] requestId: 0HNGS852S47BL:0000000A, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 15:39:01.556 +07:00 [INF] requestId: 0HNGS852S47BL:0000000A, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/14'
+2025-11-05 15:39:01.558 +07:00 [INF] requestId: 0HNGS852S47BL:0000000A, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 15:39:01.583 +07:00 [INF] requestId: 0HNGS852S47BL:0000000A, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/14'
+2025-11-05 15:39:01.584 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/14 - 200 2 application/json; charset=utf-8 41.0089ms
+2025-11-05 15:39:01.594 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 15:39:01.596 +07:00 [INF] requestId: 0HNGS852S47BL:0000000B, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 15:39:01.600 +07:00 [INF] requestId: 0HNGS852S47BL:0000000B, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 15:39:01.602 +07:00 [INF] requestId: 0HNGS852S47BL:0000000B, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 15:39:01.631 +07:00 [INF] requestId: 0HNGS852S47BL:0000000B, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 15:39:01.633 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 39.4576ms
+2025-11-05 15:39:20.219 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 15:39:20.222 +07:00 [INF] requestId: 0HNGS852S47BL:0000000C, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 15:39:20.224 +07:00 [INF] requestId: 0HNGS852S47BL:0000000C, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 15:39:20.225 +07:00 [INF] requestId: 0HNGS852S47BL:0000000C, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 15:39:20.255 +07:00 [INF] requestId: 0HNGS852S47BL:0000000C, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 15:39:20.257 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 38.1649ms
+2025-11-05 17:31:46.008 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:31:46.011 +07:00 [INF] requestId: 0HNGS852S47BM:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:31:46.015 +07:00 [INF] requestId: 0HNGS852S47BM:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:31:46.019 +07:00 [INF] requestId: 0HNGS852S47BM:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:31:46.081 +07:00 [INF] requestId: 0HNGS852S47BM:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:31:46.089 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 81.7395ms
+2025-11-05 17:32:58.453 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 66
+2025-11-05 17:32:58.456 +07:00 [INF] requestId: 0HNGS852S47BM:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 17:32:58.458 +07:00 [INF] requestId: 0HNGS852S47BM:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 17:32:58.464 +07:00 [INF] requestId: 0HNGS852S47BM:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 17:32:58.647 +07:00 [INF] requestId: 0HNGS852S47BM:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 17:32:58.649 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 195.9448ms
+2025-11-05 17:33:04.766 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:33:04.769 +07:00 [INF] requestId: 0HNGS852S47BM:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:33:04.770 +07:00 [INF] requestId: 0HNGS852S47BM:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:33:04.772 +07:00 [INF] requestId: 0HNGS852S47BM:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:33:04.812 +07:00 [INF] requestId: 0HNGS852S47BM:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:33:04.813 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 47.5571ms
+2025-11-05 17:33:19.898 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:33:19.901 +07:00 [INF] requestId: 0HNGS852S47BM:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:33:19.903 +07:00 [INF] requestId: 0HNGS852S47BM:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:33:19.909 +07:00 [INF] requestId: 0HNGS852S47BM:00000004, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:33:19.938 +07:00 [INF] requestId: 0HNGS852S47BM:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:33:19.941 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 43.6861ms
+2025-11-05 17:33:21.118 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:33:21.121 +07:00 [INF] requestId: 0HNGS852S47BM:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:33:21.123 +07:00 [INF] requestId: 0HNGS852S47BM:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:33:21.126 +07:00 [INF] requestId: 0HNGS852S47BM:00000005, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:33:21.163 +07:00 [INF] requestId: 0HNGS852S47BM:00000005, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:33:21.168 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 49.9496ms
+2025-11-05 17:33:41.098 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:33:41.101 +07:00 [INF] requestId: 0HNGS852S47BM:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:33:41.103 +07:00 [INF] requestId: 0HNGS852S47BM:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:33:41.105 +07:00 [INF] requestId: 0HNGS852S47BM:00000006, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:33:41.151 +07:00 [INF] requestId: 0HNGS852S47BM:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:33:41.153 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1278 application/json; charset=utf-8 54.882ms
+2025-11-05 17:33:41.164 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:33:41.168 +07:00 [INF] requestId: 0HNGS852S47BM:00000007, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:33:41.183 +07:00 [INF] requestId: 0HNGS852S47BM:00000007, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:33:41.188 +07:00 [INF] requestId: 0HNGS852S47BM:00000007, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:33:41.211 +07:00 [INF] requestId: 0HNGS852S47BM:00000007, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:33:41.214 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 50.2596ms
+2025-11-05 17:33:43.538 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:33:43.541 +07:00 [INF] requestId: 0HNGS852S47BM:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:33:43.543 +07:00 [INF] requestId: 0HNGS852S47BM:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:33:43.550 +07:00 [INF] requestId: 0HNGS852S47BM:00000008, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:33:43.594 +07:00 [INF] requestId: 0HNGS852S47BM:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:33:43.599 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 61.1207ms
+2025-11-05 17:34:20.394 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/booking - application/json; charset=utf-8 98
+2025-11-05 17:34:20.397 +07:00 [INF] requestId: 0HNGS852S47BN:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:34:20.402 +07:00 [INF] requestId: 0HNGS852S47BN:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:34:20.404 +07:00 [INF] requestId: 0HNGS852S47BN:00000001, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:34:20.616 +07:00 [INF] requestId: 0HNGS852S47BN:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:34:20.618 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/booking - 200 403 application/json; charset=utf-8 223.9638ms
+2025-11-05 17:34:20.663 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:34:20.665 +07:00 [INF] requestId: 0HNGS852S47BN:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:34:20.669 +07:00 [INF] requestId: 0HNGS852S47BN:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:34:20.670 +07:00 [INF] requestId: 0HNGS852S47BN:00000002, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:34:20.702 +07:00 [INF] requestId: 0HNGS852S47BN:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:34:20.704 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1680 application/json; charset=utf-8 41.2314ms
+2025-11-05 17:34:20.712 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:34:20.715 +07:00 [INF] requestId: 0HNGS852S47BN:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:34:20.720 +07:00 [INF] requestId: 0HNGS852S47BN:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:34:20.721 +07:00 [INF] requestId: 0HNGS852S47BN:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:34:20.754 +07:00 [INF] requestId: 0HNGS852S47BN:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:34:20.756 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 44.2684ms
+2025-11-05 17:34:26.728 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment/user/5 - null null
+2025-11-05 17:34:26.731 +07:00 [INF] requestId: 0HNGS852S47BN:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment/{everything}'
+2025-11-05 17:34:26.735 +07:00 [INF] requestId: 0HNGS852S47BN:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment/user/5'
+2025-11-05 17:34:26.736 +07:00 [INF] requestId: 0HNGS852S47BN:00000004, previousRequestId: No PreviousRequestId, message: '/api/Payment/{everything} route does not require user to be authorized'
+2025-11-05 17:34:26.785 +07:00 [INF] requestId: 0HNGS852S47BN:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment/user/5'
+2025-11-05 17:34:26.787 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment/user/5 - 200 573 application/json; charset=utf-8 58.7198ms
+2025-11-05 17:34:26.800 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:34:26.804 +07:00 [INF] requestId: 0HNGS852S47BN:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:34:26.805 +07:00 [INF] requestId: 0HNGS852S47BN:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:34:26.814 +07:00 [INF] requestId: 0HNGS852S47BN:00000005, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:34:26.847 +07:00 [INF] requestId: 0HNGS852S47BN:00000005, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:34:26.849 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1680 application/json; charset=utf-8 49.1988ms
+2025-11-05 17:34:26.861 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:34:26.864 +07:00 [INF] requestId: 0HNGS852S47BN:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:34:26.865 +07:00 [INF] requestId: 0HNGS852S47BN:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:34:26.867 +07:00 [INF] requestId: 0HNGS852S47BN:00000006, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:34:26.899 +07:00 [INF] requestId: 0HNGS852S47BN:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:34:26.901 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 39.9968ms
+2025-11-05 17:34:40.819 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment/2 - null null
+2025-11-05 17:34:40.823 +07:00 [INF] requestId: 0HNGS852S47BN:00000007, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment/{everything}'
+2025-11-05 17:34:40.824 +07:00 [INF] requestId: 0HNGS852S47BN:00000007, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment/2'
+2025-11-05 17:34:40.825 +07:00 [INF] requestId: 0HNGS852S47BN:00000007, previousRequestId: No PreviousRequestId, message: '/api/Payment/{everything} route does not require user to be authorized'
+2025-11-05 17:34:40.874 +07:00 [INF] requestId: 0HNGS852S47BN:00000007, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment/2'
+2025-11-05 17:34:40.875 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment/2 - 200 285 application/json; charset=utf-8 55.9592ms
+2025-11-05 17:34:43.851 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment/1 - null null
+2025-11-05 17:34:43.854 +07:00 [INF] requestId: 0HNGS852S47BN:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment/{everything}'
+2025-11-05 17:34:43.855 +07:00 [INF] requestId: 0HNGS852S47BN:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment/1'
+2025-11-05 17:34:43.857 +07:00 [INF] requestId: 0HNGS852S47BN:00000008, previousRequestId: No PreviousRequestId, message: '/api/Payment/{everything} route does not require user to be authorized'
+2025-11-05 17:34:43.899 +07:00 [INF] requestId: 0HNGS852S47BN:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment/1'
+2025-11-05 17:34:43.903 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment/1 - 200 285 application/json; charset=utf-8 52.5506ms
+2025-11-05 17:34:49.138 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:34:49.140 +07:00 [INF] requestId: 0HNGS852S47BN:00000009, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:34:49.142 +07:00 [INF] requestId: 0HNGS852S47BN:00000009, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:34:49.144 +07:00 [INF] requestId: 0HNGS852S47BN:00000009, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:34:49.182 +07:00 [INF] requestId: 0HNGS852S47BN:00000009, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:34:49.184 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1680 application/json; charset=utf-8 45.8383ms
+2025-11-05 17:34:49.195 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:34:49.198 +07:00 [INF] requestId: 0HNGS852S47BN:0000000A, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:34:49.199 +07:00 [INF] requestId: 0HNGS852S47BN:0000000A, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:34:49.201 +07:00 [INF] requestId: 0HNGS852S47BN:0000000A, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:34:49.235 +07:00 [INF] requestId: 0HNGS852S47BN:0000000A, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:34:49.237 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 41.745ms
+2025-11-05 17:35:22.425 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 53
+2025-11-05 17:35:22.428 +07:00 [INF] requestId: 0HNGS852S47BN:0000000B, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 17:35:22.436 +07:00 [INF] requestId: 0HNGS852S47BN:0000000B, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 17:35:22.438 +07:00 [INF] requestId: 0HNGS852S47BN:0000000B, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 17:35:22.606 +07:00 [INF] requestId: 0HNGS852S47BN:0000000B, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 17:35:22.609 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1051 application/json; charset=utf-8 183.4334ms
+2025-11-05 17:35:24.415 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:35:24.420 +07:00 [INF] requestId: 0HNGS852S47BN:0000000C, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:35:24.424 +07:00 [INF] requestId: 0HNGS852S47BN:0000000C, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:35:24.426 +07:00 [INF] requestId: 0HNGS852S47BN:0000000C, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:35:24.454 +07:00 [INF] requestId: 0HNGS852S47BN:0000000C, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:35:24.457 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 41.9143ms
+2025-11-05 17:36:00.738 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:36:00.741 +07:00 [INF] requestId: 0HNGS852S47BN:0000000D, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:36:00.742 +07:00 [INF] requestId: 0HNGS852S47BN:0000000D, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:36:00.743 +07:00 [INF] requestId: 0HNGS852S47BN:0000000D, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:36:00.785 +07:00 [INF] requestId: 0HNGS852S47BN:0000000D, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:36:00.786 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 48.424ms
+2025-11-05 17:36:15.073 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:36:15.076 +07:00 [INF] requestId: 0HNGS852S47BN:0000000E, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:36:15.077 +07:00 [INF] requestId: 0HNGS852S47BN:0000000E, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:36:15.078 +07:00 [INF] requestId: 0HNGS852S47BN:0000000E, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:36:15.123 +07:00 [INF] requestId: 0HNGS852S47BN:0000000E, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:36:15.124 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 51.8831ms
+2025-11-05 17:36:21.352 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:36:21.356 +07:00 [INF] requestId: 0HNGS852S47BO:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:36:21.358 +07:00 [INF] requestId: 0HNGS852S47BO:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:36:21.359 +07:00 [INF] requestId: 0HNGS852S47BO:00000001, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:36:21.398 +07:00 [INF] requestId: 0HNGS852S47BO:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:36:21.400 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1680 application/json; charset=utf-8 48.2035ms
+2025-11-05 17:36:21.411 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:36:21.413 +07:00 [INF] requestId: 0HNGS852S47BO:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:36:21.418 +07:00 [INF] requestId: 0HNGS852S47BO:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:36:21.420 +07:00 [INF] requestId: 0HNGS852S47BO:00000002, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:36:21.451 +07:00 [INF] requestId: 0HNGS852S47BO:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:36:21.453 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 41.7059ms
+2025-11-05 17:36:21.462 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:36:21.465 +07:00 [INF] requestId: 0HNGS852S47BO:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:36:21.466 +07:00 [INF] requestId: 0HNGS852S47BO:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:36:21.468 +07:00 [INF] requestId: 0HNGS852S47BO:00000003, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:36:21.500 +07:00 [INF] requestId: 0HNGS852S47BO:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:36:21.502 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 40.1095ms
+2025-11-05 17:36:45.574 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5000/api/booking/14 - application/json; charset=utf-8 19
+2025-11-05 17:36:45.577 +07:00 [INF] requestId: 0HNGS852S47BO:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:36:45.583 +07:00 [INF] requestId: 0HNGS852S47BO:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/14'
+2025-11-05 17:36:45.585 +07:00 [INF] requestId: 0HNGS852S47BO:00000004, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:36:45.663 +07:00 [INF] requestId: 0HNGS852S47BO:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/14'
+2025-11-05 17:36:45.665 +07:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5000/api/booking/14 - 200 426 application/json; charset=utf-8 91.8017ms
+2025-11-05 17:36:45.706 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:36:45.710 +07:00 [INF] requestId: 0HNGS852S47BO:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:36:45.711 +07:00 [INF] requestId: 0HNGS852S47BO:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:36:45.713 +07:00 [INF] requestId: 0HNGS852S47BO:00000005, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:36:45.749 +07:00 [INF] requestId: 0HNGS852S47BO:00000005, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:36:45.750 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1704 application/json; charset=utf-8 44.0037ms
+2025-11-05 17:36:45.763 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:36:45.768 +07:00 [INF] requestId: 0HNGS852S47BO:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:36:45.778 +07:00 [INF] requestId: 0HNGS852S47BO:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:36:45.781 +07:00 [INF] requestId: 0HNGS852S47BO:00000006, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:36:45.820 +07:00 [INF] requestId: 0HNGS852S47BO:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:36:45.823 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 59.3555ms
+2025-11-05 17:36:45.837 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:36:45.841 +07:00 [INF] requestId: 0HNGS852S47BO:00000007, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:36:45.843 +07:00 [INF] requestId: 0HNGS852S47BO:00000007, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:36:45.847 +07:00 [INF] requestId: 0HNGS852S47BO:00000007, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:36:45.884 +07:00 [INF] requestId: 0HNGS852S47BO:00000007, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:36:45.885 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 48.6032ms
+2025-11-05 17:36:52.111 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:36:52.115 +07:00 [INF] requestId: 0HNGS852S47BO:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:36:52.125 +07:00 [INF] requestId: 0HNGS852S47BO:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:36:52.127 +07:00 [INF] requestId: 0HNGS852S47BO:00000008, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:36:52.163 +07:00 [INF] requestId: 0HNGS852S47BO:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:36:52.170 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 58.804ms
+2025-11-05 17:37:08.496 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 66
+2025-11-05 17:37:08.498 +07:00 [INF] requestId: 0HNGS852S47BO:00000009, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 17:37:08.501 +07:00 [INF] requestId: 0HNGS852S47BO:00000009, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 17:37:08.503 +07:00 [INF] requestId: 0HNGS852S47BO:00000009, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 17:37:08.676 +07:00 [INF] requestId: 0HNGS852S47BO:00000009, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 17:37:08.678 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 182.6031ms
+2025-11-05 17:37:11.268 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:37:11.273 +07:00 [INF] requestId: 0HNGS852S47BO:0000000A, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:37:11.275 +07:00 [INF] requestId: 0HNGS852S47BO:0000000A, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:37:11.276 +07:00 [INF] requestId: 0HNGS852S47BO:0000000A, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:37:11.316 +07:00 [INF] requestId: 0HNGS852S47BO:0000000A, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:37:11.318 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1704 application/json; charset=utf-8 49.7341ms
+2025-11-05 17:37:11.325 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:37:11.328 +07:00 [INF] requestId: 0HNGS852S47BO:0000000B, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:37:11.329 +07:00 [INF] requestId: 0HNGS852S47BO:0000000B, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:37:11.330 +07:00 [INF] requestId: 0HNGS852S47BO:0000000B, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:37:11.363 +07:00 [INF] requestId: 0HNGS852S47BO:0000000B, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:37:11.365 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 39.5552ms
+2025-11-05 17:37:44.148 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:37:44.151 +07:00 [INF] requestId: 0HNGS852S47BO:0000000C, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:37:44.152 +07:00 [INF] requestId: 0HNGS852S47BO:0000000C, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:37:44.156 +07:00 [INF] requestId: 0HNGS852S47BO:0000000C, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:37:44.199 +07:00 [INF] requestId: 0HNGS852S47BO:0000000C, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:37:44.202 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1704 application/json; charset=utf-8 54.177ms
+2025-11-05 17:37:44.224 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:37:44.226 +07:00 [INF] requestId: 0HNGS852S47BO:0000000D, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:37:44.235 +07:00 [INF] requestId: 0HNGS852S47BO:0000000D, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:37:44.243 +07:00 [INF] requestId: 0HNGS852S47BO:0000000D, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:37:44.276 +07:00 [INF] requestId: 0HNGS852S47BO:0000000D, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:37:44.277 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 53.7556ms
+2025-11-05 17:37:44.287 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:37:44.289 +07:00 [INF] requestId: 0HNGS852S47BO:0000000E, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:37:44.290 +07:00 [INF] requestId: 0HNGS852S47BO:0000000E, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:37:44.292 +07:00 [INF] requestId: 0HNGS852S47BO:0000000E, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:37:44.313 +07:00 [WRN] requestId: 0HNGS852S47BO:0000000E, previousRequestId: No PreviousRequestId, message: '403 (Forbidden) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:37:44.316 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 403 0 null 29.6256ms
+2025-11-05 17:38:49.161 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 57
+2025-11-05 17:38:49.165 +07:00 [INF] requestId: 0HNGS852S47BP:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 17:38:49.167 +07:00 [INF] requestId: 0HNGS852S47BP:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 17:38:49.168 +07:00 [INF] requestId: 0HNGS852S47BP:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 17:38:49.332 +07:00 [INF] requestId: 0HNGS852S47BP:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 17:38:49.334 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1058 application/json; charset=utf-8 173.1264ms
+2025-11-05 17:38:53.649 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:38:53.651 +07:00 [INF] requestId: 0HNGS852S47BP:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:38:53.653 +07:00 [INF] requestId: 0HNGS852S47BP:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:38:53.654 +07:00 [INF] requestId: 0HNGS852S47BP:00000002, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:38:53.696 +07:00 [INF] requestId: 0HNGS852S47BP:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:38:53.697 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1704 application/json; charset=utf-8 48.4671ms
+2025-11-05 17:38:53.708 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:38:53.711 +07:00 [INF] requestId: 0HNGS852S47BP:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:38:53.713 +07:00 [INF] requestId: 0HNGS852S47BP:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:38:53.715 +07:00 [INF] requestId: 0HNGS852S47BP:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:38:53.755 +07:00 [INF] requestId: 0HNGS852S47BP:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:38:53.757 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 49.4398ms
+2025-11-05 17:38:53.774 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:38:53.777 +07:00 [INF] requestId: 0HNGS852S47BP:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:38:53.778 +07:00 [INF] requestId: 0HNGS852S47BP:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:38:53.780 +07:00 [INF] requestId: 0HNGS852S47BP:00000004, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:38:53.817 +07:00 [INF] requestId: 0HNGS852S47BP:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:38:53.818 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 44.393ms
+2025-11-05 17:39:13.986 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5000/api/booking/14 - application/json; charset=utf-8 19
+2025-11-05 17:39:13.989 +07:00 [INF] requestId: 0HNGS852S47BP:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:39:13.992 +07:00 [INF] requestId: 0HNGS852S47BP:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/14'
+2025-11-05 17:39:13.994 +07:00 [INF] requestId: 0HNGS852S47BP:00000005, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:39:14.048 +07:00 [INF] requestId: 0HNGS852S47BP:00000005, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/14'
+2025-11-05 17:39:14.049 +07:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5000/api/booking/14 - 200 427 application/json; charset=utf-8 62.8348ms
+2025-11-05 17:39:14.092 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:39:14.094 +07:00 [INF] requestId: 0HNGS852S47BP:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:39:14.096 +07:00 [INF] requestId: 0HNGS852S47BP:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:39:14.107 +07:00 [INF] requestId: 0HNGS852S47BP:00000006, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:39:14.141 +07:00 [INF] requestId: 0HNGS852S47BP:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:39:14.143 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1704 application/json; charset=utf-8 50.9776ms
+2025-11-05 17:39:14.155 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:39:14.158 +07:00 [INF] requestId: 0HNGS852S47BP:00000007, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:39:14.163 +07:00 [INF] requestId: 0HNGS852S47BP:00000007, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:39:14.176 +07:00 [INF] requestId: 0HNGS852S47BP:00000007, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:39:14.211 +07:00 [INF] requestId: 0HNGS852S47BP:00000007, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:39:14.212 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 56.8523ms
+2025-11-05 17:39:14.229 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:39:14.232 +07:00 [INF] requestId: 0HNGS852S47BP:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:39:14.233 +07:00 [INF] requestId: 0HNGS852S47BP:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:39:14.235 +07:00 [INF] requestId: 0HNGS852S47BP:00000008, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:39:14.273 +07:00 [INF] requestId: 0HNGS852S47BP:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:39:14.275 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 45.4672ms
+2025-11-05 17:39:29.554 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/14 - null null
+2025-11-05 17:39:29.557 +07:00 [INF] requestId: 0HNGS852S47BP:00000009, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:39:29.559 +07:00 [INF] requestId: 0HNGS852S47BP:00000009, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/14'
+2025-11-05 17:39:29.565 +07:00 [INF] requestId: 0HNGS852S47BP:00000009, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:39:29.618 +07:00 [INF] requestId: 0HNGS852S47BP:00000009, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/14'
+2025-11-05 17:39:29.620 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/14 - 200 425 application/json; charset=utf-8 65.7933ms
+2025-11-05 17:39:29.656 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/payment - application/json; charset=utf-8 147
+2025-11-05 17:39:29.659 +07:00 [INF] requestId: 0HNGS852S47BP:0000000A, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 17:39:29.664 +07:00 [INF] requestId: 0HNGS852S47BP:0000000A, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 17:39:29.665 +07:00 [INF] requestId: 0HNGS852S47BP:0000000A, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 17:39:29.859 +07:00 [INF] requestId: 0HNGS852S47BP:0000000A, previousRequestId: No PreviousRequestId, message: '201 (Created) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 17:39:29.861 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/payment - 201 284 application/json; charset=utf-8 204.7408ms
+2025-11-05 17:39:29.905 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:39:29.908 +07:00 [INF] requestId: 0HNGS852S47BP:0000000B, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:39:29.909 +07:00 [INF] requestId: 0HNGS852S47BP:0000000B, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:39:29.911 +07:00 [INF] requestId: 0HNGS852S47BP:0000000B, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:39:29.950 +07:00 [INF] requestId: 0HNGS852S47BP:0000000B, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:39:29.951 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1704 application/json; charset=utf-8 45.6661ms
+2025-11-05 17:39:29.962 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:39:29.964 +07:00 [INF] requestId: 0HNGS852S47BP:0000000C, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:39:29.965 +07:00 [INF] requestId: 0HNGS852S47BP:0000000C, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:39:29.967 +07:00 [INF] requestId: 0HNGS852S47BP:0000000C, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:39:29.996 +07:00 [INF] requestId: 0HNGS852S47BP:0000000C, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:39:29.998 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 35.6459ms
+2025-11-05 17:39:30.009 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:39:30.011 +07:00 [INF] requestId: 0HNGS852S47BP:0000000D, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:39:30.013 +07:00 [INF] requestId: 0HNGS852S47BP:0000000D, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:39:30.015 +07:00 [INF] requestId: 0HNGS852S47BP:0000000D, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:39:30.047 +07:00 [INF] requestId: 0HNGS852S47BP:0000000D, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:39:30.050 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 40.772ms
+2025-11-05 17:39:36.074 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 17:39:36.078 +07:00 [INF] requestId: 0HNGS852S47BP:0000000E, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 17:39:36.087 +07:00 [INF] requestId: 0HNGS852S47BP:0000000E, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 17:39:36.097 +07:00 [INF] requestId: 0HNGS852S47BP:0000000E, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 17:39:36.125 +07:00 [INF] requestId: 0HNGS852S47BP:0000000E, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 17:39:36.128 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 858 application/json; charset=utf-8 53.5392ms
+2025-11-05 17:39:36.140 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-11-05 17:39:36.142 +07:00 [INF] requestId: 0HNGS852S47BP:0000000F, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/User'
+2025-11-05 17:39:36.144 +07:00 [INF] requestId: 0HNGS852S47BP:0000000F, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/user'
+2025-11-05 17:39:36.146 +07:00 [INF] requestId: 0HNGS852S47BP:0000000F, previousRequestId: No PreviousRequestId, message: '/api/User route does not require user to be authorized'
+2025-11-05 17:39:36.184 +07:00 [INF] requestId: 0HNGS852S47BP:0000000F, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/User'
+2025-11-05 17:39:36.186 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 200 2735 application/json; charset=utf-8 46.4635ms
+2025-11-05 17:39:56.762 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:39:56.765 +07:00 [INF] requestId: 0HNGS852S47BP:00000010, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:39:56.773 +07:00 [INF] requestId: 0HNGS852S47BP:00000010, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:39:56.775 +07:00 [INF] requestId: 0HNGS852S47BP:00000010, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:39:56.806 +07:00 [INF] requestId: 0HNGS852S47BP:00000010, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:39:56.808 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1704 application/json; charset=utf-8 46.3479ms
+2025-11-05 17:39:56.822 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 17:39:56.824 +07:00 [INF] requestId: 0HNGS852S47BP:00000011, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 17:39:56.829 +07:00 [INF] requestId: 0HNGS852S47BP:00000011, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 17:39:56.841 +07:00 [INF] requestId: 0HNGS852S47BP:00000011, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 17:39:56.881 +07:00 [INF] requestId: 0HNGS852S47BP:00000011, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 17:39:56.885 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 858 application/json; charset=utf-8 63.0041ms
+2025-11-05 17:40:17.819 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30 - null null
+2025-11-05 17:40:17.823 +07:00 [INF] requestId: 0HNGS852S47BP:00000012, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Report/{everything}'
+2025-11-05 17:40:17.827 +07:00 [INF] requestId: 0HNGS852S47BP:00000012, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/report/revenue/export'
+2025-11-05 17:40:17.829 +07:00 [INF] requestId: 0HNGS852S47BP:00000012, previousRequestId: No PreviousRequestId, message: '/api/Report/{everything} route does not require user to be authorized'
+2025-11-05 17:40:17.845 +07:00 [WRN] requestId: 0HNGS852S47BP:00000012, previousRequestId: No PreviousRequestId, message: '403 (Forbidden) status code, request uri: https://localhost:5006/api/Report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30'
+2025-11-05 17:40:17.847 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/report/revenue/export?fromDate=2025-11-01&toDate=2025-11-30 - 403 0 null 27.8344ms
+2025-11-05 17:40:23.748 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking - null null
+2025-11-05 17:40:23.751 +07:00 [INF] requestId: 0HNGS852S47BP:00000013, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking'
+2025-11-05 17:40:23.752 +07:00 [INF] requestId: 0HNGS852S47BP:00000013, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking'
+2025-11-05 17:40:23.754 +07:00 [INF] requestId: 0HNGS852S47BP:00000013, previousRequestId: No PreviousRequestId, message: '/api/booking route does not require user to be authorized'
+2025-11-05 17:40:23.796 +07:00 [INF] requestId: 0HNGS852S47BP:00000013, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking'
+2025-11-05 17:40:23.798 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking - 200 1704 application/json; charset=utf-8 49.7242ms
+2025-11-05 17:40:23.809 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/payment - null null
+2025-11-05 17:40:23.813 +07:00 [INF] requestId: 0HNGS852S47BP:00000014, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Payment'
+2025-11-05 17:40:23.816 +07:00 [INF] requestId: 0HNGS852S47BP:00000014, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/payment'
+2025-11-05 17:40:23.818 +07:00 [INF] requestId: 0HNGS852S47BP:00000014, previousRequestId: No PreviousRequestId, message: '/api/Payment route does not require user to be authorized'
+2025-11-05 17:40:23.849 +07:00 [INF] requestId: 0HNGS852S47BP:00000014, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5004/api/Payment'
+2025-11-05 17:40:23.852 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/payment - 200 858 application/json; charset=utf-8 42.7672ms
+2025-11-05 17:43:39.616 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:43:39.620 +07:00 [INF] requestId: 0HNGS852S47BQ:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:43:39.622 +07:00 [INF] requestId: 0HNGS852S47BQ:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:43:39.627 +07:00 [INF] requestId: 0HNGS852S47BQ:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:43:39.683 +07:00 [INF] requestId: 0HNGS852S47BQ:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:43:39.684 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 68.4629ms
+2025-11-05 17:43:46.816 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 66
+2025-11-05 17:43:46.819 +07:00 [INF] requestId: 0HNGS852S47BQ:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 17:43:46.822 +07:00 [INF] requestId: 0HNGS852S47BQ:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 17:43:46.824 +07:00 [INF] requestId: 0HNGS852S47BQ:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 17:43:46.996 +07:00 [INF] requestId: 0HNGS852S47BQ:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 17:43:46.998 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 182.3085ms
+2025-11-05 17:44:14.153 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:44:14.156 +07:00 [INF] requestId: 0HNGS852S47BR:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:44:14.158 +07:00 [INF] requestId: 0HNGS852S47BR:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:44:14.162 +07:00 [INF] requestId: 0HNGS852S47BR:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:44:14.182 +07:00 [INF] requestId: 0HNGS852S47BR:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:44:14.184 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 31.0817ms
+2025-11-05 17:44:17.016 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:44:17.020 +07:00 [INF] requestId: 0HNGS852S47BR:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:44:17.023 +07:00 [INF] requestId: 0HNGS852S47BR:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:44:17.024 +07:00 [INF] requestId: 0HNGS852S47BR:00000002, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:44:17.067 +07:00 [INF] requestId: 0HNGS852S47BR:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:44:17.069 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1704 application/json; charset=utf-8 53.0774ms
+2025-11-05 17:44:17.081 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:44:17.083 +07:00 [INF] requestId: 0HNGS852S47BR:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:44:17.084 +07:00 [INF] requestId: 0HNGS852S47BR:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:44:17.088 +07:00 [INF] requestId: 0HNGS852S47BR:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:44:17.124 +07:00 [INF] requestId: 0HNGS852S47BR:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:44:17.126 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 45.4488ms
+2025-11-05 17:44:18.913 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:44:18.921 +07:00 [INF] requestId: 0HNGS852S47BR:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:44:18.926 +07:00 [INF] requestId: 0HNGS852S47BR:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:44:18.929 +07:00 [INF] requestId: 0HNGS852S47BR:00000004, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:44:18.994 +07:00 [INF] requestId: 0HNGS852S47BR:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:44:18.996 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 83.1706ms
+2025-11-05 17:44:20.616 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:44:20.623 +07:00 [INF] requestId: 0HNGS852S47BR:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:44:20.627 +07:00 [INF] requestId: 0HNGS852S47BR:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:44:20.633 +07:00 [INF] requestId: 0HNGS852S47BR:00000005, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:44:20.684 +07:00 [INF] requestId: 0HNGS852S47BR:00000005, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:44:20.686 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1704 application/json; charset=utf-8 69.6853ms
+2025-11-05 17:44:20.697 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:44:20.700 +07:00 [INF] requestId: 0HNGS852S47BR:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:44:20.701 +07:00 [INF] requestId: 0HNGS852S47BR:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:44:20.703 +07:00 [INF] requestId: 0HNGS852S47BR:00000006, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:44:20.736 +07:00 [INF] requestId: 0HNGS852S47BR:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:44:20.738 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 40.4758ms
+2025-11-05 17:44:22.602 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:44:22.605 +07:00 [INF] requestId: 0HNGS852S47BR:00000007, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:44:22.611 +07:00 [INF] requestId: 0HNGS852S47BR:00000007, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:44:22.613 +07:00 [INF] requestId: 0HNGS852S47BR:00000007, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:44:22.662 +07:00 [INF] requestId: 0HNGS852S47BR:00000007, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:44:22.664 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 62.4598ms
+2025-11-05 17:44:40.244 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 53
+2025-11-05 17:44:40.246 +07:00 [INF] requestId: 0HNGS852S47BR:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-11-05 17:44:40.250 +07:00 [INF] requestId: 0HNGS852S47BR:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-11-05 17:44:40.251 +07:00 [INF] requestId: 0HNGS852S47BR:00000008, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-11-05 17:44:40.433 +07:00 [INF] requestId: 0HNGS852S47BR:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-11-05 17:44:40.435 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1051 application/json; charset=utf-8 191.6223ms
+2025-11-05 17:44:42.240 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:44:42.242 +07:00 [INF] requestId: 0HNGS852S47BR:00000009, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:44:42.244 +07:00 [INF] requestId: 0HNGS852S47BR:00000009, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:44:42.253 +07:00 [INF] requestId: 0HNGS852S47BR:00000009, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:44:42.286 +07:00 [INF] requestId: 0HNGS852S47BR:00000009, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:44:42.288 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 970 application/json; charset=utf-8 48.0185ms
+2025-11-05 17:45:12.470 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/station - application/json; charset=utf-8 136
+2025-11-05 17:45:12.474 +07:00 [INF] requestId: 0HNGS852S47BR:0000000A, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:45:12.475 +07:00 [INF] requestId: 0HNGS852S47BR:0000000A, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:45:12.476 +07:00 [INF] requestId: 0HNGS852S47BR:0000000A, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:45:12.690 +07:00 [INF] requestId: 0HNGS852S47BR:0000000A, previousRequestId: No PreviousRequestId, message: '201 (Created) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:45:12.692 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/station - 201 231 application/json; charset=utf-8 222.1341ms
+2025-11-05 17:45:12.735 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:45:12.737 +07:00 [INF] requestId: 0HNGS852S47BR:0000000B, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:45:12.739 +07:00 [INF] requestId: 0HNGS852S47BR:0000000B, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:45:12.741 +07:00 [INF] requestId: 0HNGS852S47BR:0000000B, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:45:12.774 +07:00 [INF] requestId: 0HNGS852S47BR:0000000B, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:45:12.776 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 1201 application/json; charset=utf-8 41.3816ms
+2025-11-05 17:45:22.049 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-11-05 17:45:22.053 +07:00 [INF] requestId: 0HNGS852S47BR:0000000C, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/booking/{everything}'
+2025-11-05 17:45:22.055 +07:00 [INF] requestId: 0HNGS852S47BR:0000000C, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-11-05 17:45:22.062 +07:00 [INF] requestId: 0HNGS852S47BR:0000000C, previousRequestId: No PreviousRequestId, message: '/api/booking/{everything} route does not require user to be authorized'
+2025-11-05 17:45:22.115 +07:00 [INF] requestId: 0HNGS852S47BR:0000000C, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5003/api/booking/user/5'
+2025-11-05 17:45:22.117 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 200 1704 application/json; charset=utf-8 68.6996ms
+2025-11-05 17:45:22.131 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:45:22.133 +07:00 [INF] requestId: 0HNGS852S47BR:0000000D, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:45:22.135 +07:00 [INF] requestId: 0HNGS852S47BR:0000000D, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:45:22.136 +07:00 [INF] requestId: 0HNGS852S47BR:0000000D, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:45:22.169 +07:00 [INF] requestId: 0HNGS852S47BR:0000000D, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:45:22.170 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 1201 application/json; charset=utf-8 39.1555ms
+2025-11-05 17:45:24.482 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-11-05 17:45:24.486 +07:00 [INF] requestId: 0HNGS852S47BR:0000000E, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-11-05 17:45:24.487 +07:00 [INF] requestId: 0HNGS852S47BR:0000000E, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-11-05 17:45:24.488 +07:00 [INF] requestId: 0HNGS852S47BR:0000000E, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-11-05 17:45:24.525 +07:00 [INF] requestId: 0HNGS852S47BR:0000000E, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-11-05 17:45:24.528 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 1201 application/json; charset=utf-8 45.908ms

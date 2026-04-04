@@ -1,0 +1,28 @@
+2025-10-28 18:16:37.486 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-28 18:18:08.166 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-28 18:18:08.225 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-28 18:18:08.405 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-28 18:18:08.415 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:18:08.417 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:18:08.418 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-28 18:27:52.327 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-28 18:27:52.380 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-28 18:27:52.479 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-28 18:27:52.481 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:27:52.482 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:27:52.483 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService
+2025-10-28 18:30:26.063 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-28 18:30:26.110 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-28 18:30:26.184 +07:00 [INF] Now listening on: https://localhost:5006
+2025-10-28 18:30:26.187 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-28 18:30:26.188 +07:00 [INF] Hosting environment: Development
+2025-10-28 18:30:26.188 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\ReportService

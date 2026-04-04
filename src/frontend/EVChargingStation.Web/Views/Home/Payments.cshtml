@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Lịch sử thanh toán";
     var payments = ViewBag.Payments as List<PaymentDto> ?? new List<PaymentDto>();
+    var payableBookings = ViewBag.PayableBookings as List<EVChargingStation.Web.Models.BookingDto> ?? new List<EVChargingStation.Web.Models.BookingDto>();
 }
 
 <div class="container py-4">
@@ -11,6 +12,64 @@
         </h4>
         <span class="badge bg-info">Tổng: @payments.Count giao dịch</span>
     </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+
+    @if (payableBookings.Any())
+    {
+        <div class="card mb-3 border-warning">
+            <div class="card-header bg-warning-subtle">
+                <strong><i class="fa fa-file-invoice-dollar me-2"></i>Đơn hàng chờ thanh toán</strong>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Booking</th>
+                                <th>Trạm sạc</th>
+                                <th>Số tiền</th>
+                                <th class="text-end">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var booking in payableBookings)
+                            {
+                                <tr>
+                                    <td>@booking.BookingNumber</td>
+                                    <td>@booking.StationName</td>
+                                    <td>@((booking.TotalAmount ?? 0).ToString("N0")) đ</td>
+                                    <td class="text-end">
+                                        <form method="post" action="@Url.Action("CreatePaymentForBooking", "Home")" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="bookingId" value="@booking.Id" />
+                                            <input type="hidden" name="method" value="1" />
+                                            <button class="btn btn-sm btn-primary" type="submit" @(booking.TotalAmount.GetValueOrDefault() <= 0 ? "disabled" : null)>
+                                                <i class="fa fa-credit-card me-1"></i>Thanh toán
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                @if (payableBookings.Any(b => b.TotalAmount.GetValueOrDefault() <= 0))
+                {
+                    <div class="small text-muted mt-2">
+                        Một số booking chưa có tổng tiền nên chưa thể tạo thanh toán.
+                    </div>
+                }
+            </div>
+        </div>
+    }
 
     @if (!payments.Any())
     {
@@ -28,18 +87,21 @@
                     <div class="col-md-4">
                         <select class="form-select form-select-sm" id="filterStatus">
                             <option value="">Tất cả trạng thái</option>
-                            <option value="0">Chờ xử lý</option>
-                            <option value="1">Hoàn thành</option>
-                            <option value="2">Thất bại</option>
-                            <option value="3">Hoàn tiền</option>
+                            <option value="1">Chờ xử lý</option>
+                            <option value="2">Đang xử lý</option>
+                            <option value="3">Hoàn thành</option>
+                            <option value="4">Thất bại</option>
+                            <option value="5">Hoàn tiền</option>
                         </select>
                     </div>
                     <div class="col-md-4">
                         <select class="form-select form-select-sm" id="filterMethod">
                             <option value="">Tất cả phương thức</option>
-                            <option value="0">Tiền mặt</option>
-                            <option value="1">Thẻ ngân hàng</option>
-                            <option value="2">Ví điện tử</option>
+                            <option value="1">Thẻ tín dụng</option>
+                            <option value="2">Thẻ ghi nợ</option>
+                            <option value="3">Ví điện tử</option>
+                            <option value="4">Chuyển khoản</option>
+                            <option value="5">Tiền mặt</option>
                         </select>
                     </div>
                     <div class="col-md-4">
@@ -107,14 +169,20 @@
                             <div class="fw-semibold">
                                 @switch(payment.Method)
                                 {
-                                    case 0:
-                                        <i class="fa fa-money-bill me-1"></i>
-                                        break;
                                     case 1:
                                         <i class="fa fa-credit-card me-1"></i>
                                         break;
                                     case 2:
+                                        <i class="fa fa-credit-card me-1"></i>
+                                        break;
+                                    case 3:
                                         <i class="fa fa-wallet me-1"></i>
+                                        break;
+                                    case 4:
+                                        <i class="fa fa-building-columns me-1"></i>
+                                        break;
+                                    case 5:
+                                        <i class="fa fa-money-bill me-1"></i>
                                         break;
                                 }
                                 @payment.MethodName
@@ -164,25 +232,25 @@
                     <div class="col-md-3">
                         <div class="text-muted small">Tổng chi tiêu</div>
                         <div class="h5 text-primary">
-                            @payments.Where(p => p.Status == 1).Sum(p => p.Amount).ToString("N0") đ
+                            @payments.Where(p => p.Status == 3 || p.Status == 1).Sum(p => p.Amount).ToString("N0") đ
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="text-muted small">Hoàn thành</div>
                         <div class="h5 text-success">
-                            @payments.Count(p => p.Status == 1)
+                            @payments.Count(p => p.Status == 3)
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="text-muted small">Chờ xử lý</div>
                         <div class="h5 text-warning">
-                            @payments.Count(p => p.Status == 0)
+                            @payments.Count(p => p.Status == 1 || p.Status == 2)
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="text-muted small">Thất bại</div>
                         <div class="h5 text-danger">
-                            @payments.Count(p => p.Status == 2)
+                            @payments.Count(p => p.Status == 4)
                         </div>
                     </div>
                 </div>
@@ -259,11 +327,14 @@
             fetch(`/Home/GetPaymentDetail?id=${paymentId}`)
                 .then(response => response.json())
                 .then(data => {
-                    const methodIcon = data.method === 0 ? 'fa-money-bill' : 
-                                     data.method === 1 ? 'fa-credit-card' : 'fa-wallet';
-                    const statusClass = data.status === 0 ? 'warning' : 
-                                      data.status === 1 ? 'success' : 
-                                      data.status === 2 ? 'danger' : 'info';
+                    const methodIcon = data.method === 5 ? 'fa-money-bill'
+                                     : data.method === 4 ? 'fa-building-columns'
+                                     : data.method === 3 ? 'fa-wallet'
+                                     : 'fa-credit-card';
+                    const statusClass = data.status === 1 ? 'warning' :
+                                      data.status === 2 ? 'primary' :
+                                      data.status === 3 ? 'success' :
+                                      data.status === 4 ? 'danger' : 'info';
                     
                     document.getElementById('detailContent').innerHTML = `
                         <div class="mb-3 text-center">

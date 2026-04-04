@@ -1,0 +1,9 @@
+2025-10-23 09:00:46.107 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-23 09:00:47.568 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-23 09:00:48.019 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-23 09:00:48.814 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-23 09:00:49.151 +07:00 [INF] Hosting environment: Development
+2025-10-23 09:00:49.902 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\NotificationService

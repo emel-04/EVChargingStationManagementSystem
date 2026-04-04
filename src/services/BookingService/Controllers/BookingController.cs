@@ -14,7 +14,7 @@ public class BookingController : ControllerBase
     private readonly IBookingService _bookingService;
     private readonly ILogger<BookingController> _logger;
 
-   
+    // CHỈ GIỮ 1 CONSTRUCTOR
     public BookingController(IBookingService bookingService, ILogger<BookingController> logger)
     {
         _bookingService = bookingService;

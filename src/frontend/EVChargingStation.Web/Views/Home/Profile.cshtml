@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Hồ sơ";
+    var user = ViewBag.User as EVChargingStation.Web.Models.UserDto;
+    var roleNames = new Dictionary<int, string>
+    {
+        { 1, "Người dùng" },
+        { 2, "Nhân viên" },
+        { 3, "Quản trị viên" }
+    };
+}
+<div class="container py-3">
+    <h4 class="mb-3 text-primary"><i class="fa fa-user me-2"></i>Hồ sơ</h4>
+    <div class="card">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Họ</label>
+                    <input class="form-control" value="@user?.FirstName" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tên</label>
+                    <input class="form-control" value="@user?.LastName" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input class="form-control" value="@user?.Email" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Điện thoại</label>
+                    <input class="form-control" value="@user?.PhoneNumber" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Vai trò</label>
+                    <input class="form-control" value="@(roleNames.ContainsKey(user?.Role ?? 0) ? roleNames[user.Role] : "Không xác định")" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Trạng thái</label>
+                    <input class="form-control" value="@(user?.IsActive == true ? "Hoạt động" : "Không hoạt động")" readonly />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

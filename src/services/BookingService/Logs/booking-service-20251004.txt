@@ -1,0 +1,28 @@
+2025-10-04 07:56:17.109 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-04 07:56:17.362 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 07:56:17.571 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-04 07:56:17.616 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 07:56:17.625 +07:00 [INF] Hosting environment: Development
+2025-10-04 07:56:17.630 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-04 09:30:59.240 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-04 09:30:59.318 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 09:30:59.427 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-04 09:30:59.431 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 09:30:59.433 +07:00 [INF] Hosting environment: Development
+2025-10-04 09:30:59.434 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-04 14:46:43.827 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-04 14:48:13.658 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-04 14:48:13.714 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 14:48:13.791 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-04 14:48:13.795 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 14:48:13.796 +07:00 [INF] Hosting environment: Development
+2025-10-04 14:48:13.798 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\BookingService

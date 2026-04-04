@@ -1,0 +1,1257 @@
+2025-11-04 00:00:08.380 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 00:00:08.384 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 00:00:08.386 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 00:00:08.393 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 00:00:08.532 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 00:00:08.535 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 145.0695ms
+2025-11-04 00:00:08.537 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 00:00:08.545 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 164.889ms
+2025-11-04 00:00:13.586 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 00:00:13.589 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-11-04 00:00:13.590 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-11-04 00:00:13.591 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 403 0 null 5.199ms
+2025-11-04 00:03:47.209 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 00:03:47.267 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 00:03:47.335 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 00:03:47.338 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 00:03:47.339 +07:00 [INF] Hosting environment: Development
+2025-11-04 00:03:47.340 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 00:04:24.731 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 00:04:24.769 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 00:04:24.786 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 00:04:25.074 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 00:04:25.452 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 00:04:25.509 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 717.4353ms
+2025-11-04 00:04:25.514 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 00:04:25.519 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 788.8623ms
+2025-11-04 00:04:29.752 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 00:04:29.796 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 00:04:29.801 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 00:04:29.867 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 00:04:29.873 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 00:04:29.877 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 72.9194ms
+2025-11-04 00:04:29.879 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 00:04:29.881 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 128.7269ms
+2025-11-04 00:04:47.732 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 00:04:47.739 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 00:04:47.740 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 00:04:47.752 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 00:04:47.761 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 00:04:47.763 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 15.5304ms
+2025-11-04 00:04:47.764 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 00:04:47.766 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 33.7876ms
+2025-11-04 00:08:02.171 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 00:08:02.176 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 00:08:02.177 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 00:08:02.184 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 00:08:02.467 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 00:08:02.470 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 289.508ms
+2025-11-04 00:08:02.471 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 00:08:02.472 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 301.9128ms
+2025-11-04 00:08:07.854 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 00:08:07.860 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 00:08:07.862 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 00:08:07.868 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 00:08:07.875 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 00:08:07.877 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 11.6555ms
+2025-11-04 00:08:07.879 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 00:08:07.880 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 26.6732ms
+2025-11-04 02:48:31.056 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 02:48:31.113 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 02:48:31.213 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 02:48:31.216 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 02:48:31.217 +07:00 [INF] Hosting environment: Development
+2025-11-04 02:48:31.218 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 02:49:26.941 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 02:49:26.990 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 02:49:27.005 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 02:49:27.316 +07:00 [INF] Executed DbCommand (25ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 02:49:27.706 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 02:49:27.764 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 754.4538ms
+2025-11-04 02:49:27.768 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 02:49:27.774 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 833.9747ms
+2025-11-04 02:49:37.058 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 02:49:37.102 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:49:37.108 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 02:49:37.168 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 02:49:37.174 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 02:49:37.178 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 67.1602ms
+2025-11-04 02:49:37.179 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:49:37.181 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 122.9503ms
+2025-11-04 02:50:19.761 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 02:50:19.769 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:50:19.770 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 02:50:19.782 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 02:50:19.787 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 02:50:19.788 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 12.7883ms
+2025-11-04 02:50:19.792 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:50:19.794 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 32.8861ms
+2025-11-04 02:58:18.796 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 02:58:18.842 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 02:58:18.903 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 02:58:18.906 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 02:58:18.907 +07:00 [INF] Hosting environment: Development
+2025-11-04 02:58:18.908 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 02:59:05.193 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 02:59:05.232 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 02:59:05.247 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 02:59:05.539 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 02:59:05.916 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 02:59:05.973 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 721.1275ms
+2025-11-04 02:59:05.977 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 02:59:05.983 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 790.6688ms
+2025-11-04 02:59:12.740 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 02:59:12.785 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:59:12.789 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 02:59:12.850 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 02:59:12.856 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 02:59:12.859 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 66.169ms
+2025-11-04 02:59:12.863 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:59:12.866 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 125.8852ms
+2025-11-04 02:59:28.461 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 02:59:28.468 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:59:28.470 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 02:59:28.482 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 02:59:28.488 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 02:59:28.490 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 12.9279ms
+2025-11-04 02:59:28.492 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 02:59:28.493 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 31.401ms
+2025-11-04 03:02:22.317 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 03:02:22.322 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:02:22.323 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 03:02:22.328 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 03:02:22.634 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 03:02:22.636 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 311.2504ms
+2025-11-04 03:02:22.638 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:02:22.639 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 322.6178ms
+2025-11-04 03:02:26.579 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:02:26.584 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:02:26.585 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:02:26.591 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:02:26.595 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:02:26.598 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 10.5332ms
+2025-11-04 03:02:26.601 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:02:26.603 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 23.7016ms
+2025-11-04 03:02:41.188 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:02:41.191 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:02:41.193 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:02:41.201 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:02:41.205 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:02:41.206 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.7393ms
+2025-11-04 03:02:41.208 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:02:41.213 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 24.7053ms
+2025-11-04 03:06:27.844 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 03:06:27.890 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 03:06:27.951 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 03:06:27.954 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 03:06:27.955 +07:00 [INF] Hosting environment: Development
+2025-11-04 03:06:27.956 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 03:06:57.781 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 03:06:57.824 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:06:57.838 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 03:06:58.120 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 03:06:58.499 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 03:06:58.556 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 712.462ms
+2025-11-04 03:06:58.559 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:06:58.565 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 785.3329ms
+2025-11-04 03:07:02.682 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:07:02.727 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:07:02.732 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:07:02.792 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:07:02.798 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:07:02.801 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 65.7892ms
+2025-11-04 03:07:02.802 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:07:02.804 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 121.9915ms
+2025-11-04 03:07:17.645 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:07:17.652 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:07:17.654 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:07:17.666 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:07:17.676 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:07:17.678 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 16.2449ms
+2025-11-04 03:07:17.680 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:07:17.682 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 36.5885ms
+2025-11-04 03:18:00.117 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 03:18:00.164 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 03:18:00.224 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 03:18:00.228 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 03:18:00.229 +07:00 [INF] Hosting environment: Development
+2025-11-04 03:18:00.231 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 03:18:28.936 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 03:18:28.973 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:18:28.988 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 03:18:29.269 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 03:18:29.647 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 03:18:29.704 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 711.4482ms
+2025-11-04 03:18:29.708 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:18:29.713 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 777.8675ms
+2025-11-04 03:18:33.898 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:18:33.944 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:18:33.949 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:18:34.012 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:18:34.017 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:18:34.021 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 68.4803ms
+2025-11-04 03:18:34.023 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:18:34.025 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 126.7472ms
+2025-11-04 03:18:57.445 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:18:57.451 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:18:57.453 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:18:57.465 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:18:57.474 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:18:57.477 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 16.3743ms
+2025-11-04 03:18:57.479 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:18:57.480 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 35.3693ms
+2025-11-04 03:49:11.063 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 03:49:11.109 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 03:49:11.170 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 03:49:11.173 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 03:49:11.174 +07:00 [INF] Hosting environment: Development
+2025-11-04 03:49:11.175 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 03:49:50.848 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 03:49:50.887 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:49:50.902 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 03:49:51.194 +07:00 [INF] Executed DbCommand (26ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 03:49:51.578 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 03:49:51.639 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 732.7664ms
+2025-11-04 03:49:51.644 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 03:49:51.649 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 802.2623ms
+2025-11-04 03:49:56.023 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:49:56.087 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:49:56.092 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:49:56.156 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:49:56.162 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:49:56.166 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 69.7884ms
+2025-11-04 03:49:56.168 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:49:56.171 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 148.5884ms
+2025-11-04 03:50:06.594 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:50:06.600 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:06.602 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:50:06.611 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:50:06.618 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:50:06.620 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 13.0778ms
+2025-11-04 03:50:06.622 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:06.623 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 29.2477ms
+2025-11-04 03:50:12.123 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:50:12.127 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:12.129 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:50:12.139 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:50:12.146 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:50:12.148 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 13.0619ms
+2025-11-04 03:50:12.150 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:12.153 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 30.0954ms
+2025-11-04 03:50:16.056 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:50:16.060 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:16.062 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:50:16.066 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:50:16.071 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:50:16.076 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 11.4628ms
+2025-11-04 03:50:16.077 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:16.079 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 22.7436ms
+2025-11-04 03:50:18.818 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:50:18.822 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:18.823 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:50:18.829 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:50:18.832 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:50:18.837 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 9.4913ms
+2025-11-04 03:50:18.839 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:50:18.840 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 22.4841ms
+2025-11-04 03:52:20.495 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:52:20.498 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:52:20.500 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:52:20.512 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:52:20.515 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:52:20.517 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.5227ms
+2025-11-04 03:52:20.519 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:52:20.520 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 24.9964ms
+2025-11-04 03:52:42.099 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:52:42.102 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:52:42.103 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:52:42.108 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:52:42.111 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:52:42.113 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.9317ms
+2025-11-04 03:52:42.117 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:52:42.123 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 23.6272ms
+2025-11-04 03:54:56.915 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:54:56.919 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:54:56.920 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:54:56.937 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:54:56.940 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:54:56.945 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 9.6569ms
+2025-11-04 03:54:56.947 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:54:56.949 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 33.538ms
+2025-11-04 03:55:00.095 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:55:00.099 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:55:00.101 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:55:00.108 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:55:00.114 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:55:00.119 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 12.5241ms
+2025-11-04 03:55:00.122 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:55:00.123 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 27.7048ms
+2025-11-04 03:56:54.481 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:56:54.484 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:56:54.486 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:56:54.500 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:56:54.504 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:56:54.509 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 10.4306ms
+2025-11-04 03:56:54.512 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:56:54.513 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 32.3371ms
+2025-11-04 03:57:01.851 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:57:01.855 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:57:01.856 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:57:01.864 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:57:01.867 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:57:01.869 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.9592ms
+2025-11-04 03:57:01.874 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:57:01.876 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 25.0762ms
+2025-11-04 03:57:09.021 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:57:09.024 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:57:09.025 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:57:09.032 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:57:09.036 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:57:09.037 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.3878ms
+2025-11-04 03:57:09.039 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:57:09.040 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 19.7297ms
+2025-11-04 03:58:03.537 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:58:03.540 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:58:03.541 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:58:03.550 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:58:03.554 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:58:03.555 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.8946ms
+2025-11-04 03:58:03.560 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:58:03.561 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 24.1281ms
+2025-11-04 03:58:05.705 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:58:05.707 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:58:05.709 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:58:05.716 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:58:05.719 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:58:05.720 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.3679ms
+2025-11-04 03:58:05.722 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:58:05.723 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 18.62ms
+2025-11-04 03:59:57.637 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 03:59:57.642 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:59:57.645 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 03:59:57.649 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 03:59:57.652 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 03:59:57.654 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.1579ms
+2025-11-04 03:59:57.659 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 03:59:57.660 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 23.4549ms
+2025-11-04 04:01:42.728 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:01:42.733 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:01:42.738 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:01:42.746 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:01:42.751 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:01:42.753 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 8.6877ms
+2025-11-04 04:01:42.757 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:01:42.761 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 33.3347ms
+2025-11-04 04:03:01.218 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:03:01.221 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:03:01.222 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:03:01.227 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:03:01.234 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:03:01.236 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 10.1734ms
+2025-11-04 04:03:01.238 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:03:01.239 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 21.312ms
+2025-11-04 04:03:59.028 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:03:59.031 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:03:59.032 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:03:59.040 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:03:59.044 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:03:59.047 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 7.8778ms
+2025-11-04 04:03:59.052 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:03:59.054 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 25.6155ms
+2025-11-04 04:04:55.010 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:04:55.013 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:04:55.014 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:04:55.020 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:04:55.024 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:04:55.026 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.8892ms
+2025-11-04 04:04:55.027 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:04:55.031 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 20.8825ms
+2025-11-04 04:05:05.837 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:05:05.840 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:05:05.841 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:05:05.849 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:05:05.853 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:05:05.854 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 6.9286ms
+2025-11-04 04:05:05.856 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:05:05.857 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 20.2102ms
+2025-11-04 04:08:04.478 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:08:04.482 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:08:04.483 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:08:04.488 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:08:04.491 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:08:04.495 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 8.8041ms
+2025-11-04 04:08:04.497 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:08:04.498 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 19.734ms
+2025-11-04 04:09:40.332 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:09:40.336 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:09:40.337 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:09:40.343 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:09:40.351 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:09:40.353 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 10.6077ms
+2025-11-04 04:09:40.354 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:09:40.355 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 23.0654ms
+2025-11-04 04:22:39.416 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:22:39.419 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:22:39.421 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:22:39.442 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:22:39.449 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:22:39.451 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 17.7974ms
+2025-11-04 04:22:39.453 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:22:39.454 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 38.144ms
+2025-11-04 04:22:59.931 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 04:22:59.934 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:22:59.936 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 04:22:59.944 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 04:22:59.948 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 04:22:59.950 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 7.6292ms
+2025-11-04 04:22:59.955 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 04:22:59.957 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 25.5344ms
+2025-11-04 09:41:52.184 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 09:41:52.245 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 09:41:52.324 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 09:41:52.328 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 09:41:52.330 +07:00 [INF] Hosting environment: Development
+2025-11-04 09:41:52.332 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 09:42:58.402 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 66
+2025-11-04 09:42:58.531 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 09:42:58.571 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 09:42:59.381 +07:00 [INF] Executed DbCommand (67ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 09:43:00.452 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 09:43:00.545 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 1963.73ms
+2025-11-04 09:43:00.548 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 09:43:00.557 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 2157.5269ms
+2025-11-04 09:43:54.246 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 53
+2025-11-04 09:43:54.339 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 09:43:54.341 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 09:43:54.460 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 09:43:55.134 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 09:43:55.139 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 792.6575ms
+2025-11-04 09:43:55.144 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 09:43:55.150 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 904.0179ms
+2025-11-04 09:43:57.511 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 09:43:57.563 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:43:57.583 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 09:43:57.656 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 09:43:57.671 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 09:43:57.679 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 75.0172ms
+2025-11-04 09:43:57.693 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:43:57.699 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 188.1098ms
+2025-11-04 09:44:09.037 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 09:44:09.048 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:44:09.051 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 09:44:09.066 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 09:44:09.080 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 09:44:09.085 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 23.7957ms
+2025-11-04 09:44:09.088 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:44:09.096 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 58.9781ms
+2025-11-04 09:44:23.782 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 09:44:23.791 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:44:23.795 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 09:44:23.812 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 09:44:23.821 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 09:44:23.829 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 22.7183ms
+2025-11-04 09:44:23.836 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:44:23.839 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 56.5158ms
+2025-11-04 09:44:51.184 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 09:44:51.193 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 09:44:51.196 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 09:44:51.212 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 09:44:51.566 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 09:44:51.571 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 364.1032ms
+2025-11-04 09:44:51.575 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 09:44:51.578 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 393.9603ms
+2025-11-04 09:45:07.054 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 09:45:07.062 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:45:07.066 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 09:45:07.080 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 09:45:07.092 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 09:45:07.099 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 22.0778ms
+2025-11-04 09:45:07.103 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 09:45:07.107 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 53.0516ms
+2025-11-04 10:03:50.802 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 10:03:50.863 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:03:50.941 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 10:03:50.944 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 10:03:50.946 +07:00 [INF] Hosting environment: Development
+2025-11-04 10:03:50.947 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 10:05:16.997 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 10:05:17.056 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:05:17.133 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 10:05:17.137 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 10:05:17.139 +07:00 [INF] Hosting environment: Development
+2025-11-04 10:05:17.140 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 10:09:57.794 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 10:09:57.853 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:09:57.910 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:10:59.964 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 10:11:00.025 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:11:00.092 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:12:23.815 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 10:12:23.872 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:12:23.923 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:16:26.827 +07:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 10:16:26.885 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:16:26.946 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-04 10:19:44.878 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 10:19:44.933 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 10:19:45.024 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 10:19:45.027 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 10:19:45.029 +07:00 [INF] Hosting environment: Development
+2025-11-04 10:19:45.030 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 10:20:33.923 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 10:20:34.059 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 10:20:34.099 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 10:20:35.078 +07:00 [INF] Executed DbCommand (97ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 10:20:36.231 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 10:20:36.435 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 2324.5566ms
+2025-11-04 10:20:36.444 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 10:20:36.456 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 2537.0071ms
+2025-11-04 10:20:42.944 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:20:43.108 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:20:43.119 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:20:43.304 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:20:43.317 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:20:43.327 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 200.5985ms
+2025-11-04 10:20:43.331 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:20:43.336 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 392.2173ms
+2025-11-04 10:24:01.433 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:24:01.463 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:01.471 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:24:01.541 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:24:01.564 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:24:01.574 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 86.0901ms
+2025-11-04 10:24:01.592 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:01.598 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 164.8124ms
+2025-11-04 10:24:10.217 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:24:10.228 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:10.231 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:24:10.248 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:24:10.256 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:24:10.261 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 20.2374ms
+2025-11-04 10:24:10.270 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:10.274 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 57.5639ms
+2025-11-04 10:24:13.365 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:24:13.372 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:13.375 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:24:13.387 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:24:13.398 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:24:13.401 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 17.6518ms
+2025-11-04 10:24:13.405 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:13.408 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 42.4968ms
+2025-11-04 10:24:17.273 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:24:17.283 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:17.290 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:24:17.309 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:24:17.325 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:24:17.331 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 26.0229ms
+2025-11-04 10:24:17.341 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:17.345 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 72.7223ms
+2025-11-04 10:24:41.825 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:24:41.834 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:41.839 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:24:41.848 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:24:41.861 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:24:41.869 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 22.8354ms
+2025-11-04 10:24:41.873 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:24:41.876 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 51.311ms
+2025-11-04 10:25:03.134 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:25:03.140 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:25:03.143 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:25:03.155 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:25:03.170 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:25:03.177 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 23.9944ms
+2025-11-04 10:25:03.181 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:25:03.184 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 49.9496ms
+2025-11-04 10:27:57.578 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 10:27:57.591 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 10:27:57.596 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 10:27:57.626 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 10:27:58.128 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 10:27:58.133 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 525.3099ms
+2025-11-04 10:27:58.137 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 10:27:58.140 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 562.3102ms
+2025-11-04 10:28:07.059 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:28:07.067 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:28:07.070 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:28:07.083 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:28:07.091 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:28:07.095 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 14.6424ms
+2025-11-04 10:28:07.106 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:28:07.108 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 49.231ms
+2025-11-04 10:31:39.659 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 10:31:39.668 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:31:39.671 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 10:31:39.689 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 10:31:39.698 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 10:31:39.705 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 19.6275ms
+2025-11-04 10:31:39.710 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 10:31:39.714 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 54.8084ms
+2025-11-04 10:32:30.625 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 66
+2025-11-04 10:32:30.634 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 10:32:30.638 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 10:32:30.649 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 10:32:31.045 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 10:32:31.049 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 404.5385ms
+2025-11-04 10:32:31.053 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 10:32:31.057 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 431.3107ms
+2025-11-04 15:24:36.549 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 15:24:36.602 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 15:24:36.675 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 15:24:36.677 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 15:24:36.678 +07:00 [INF] Hosting environment: Development
+2025-11-04 15:24:36.679 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 15:25:24.740 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 66
+2025-11-04 15:25:24.794 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 15:25:24.809 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 15:25:25.125 +07:00 [INF] Executed DbCommand (29ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 15:25:25.512 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 15:25:25.570 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 756.027ms
+2025-11-04 15:25:25.573 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 15:25:25.578 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 838.7889ms
+2025-11-04 16:19:14.979 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 66
+2025-11-04 16:19:14.993 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:19:14.996 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 16:19:15.079 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 16:19:15.396 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 16:19:15.399 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 399.5502ms
+2025-11-04 16:19:15.401 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:19:15.404 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 424.8693ms
+2025-11-04 16:21:10.970 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 53
+2025-11-04 16:21:11.029 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:21:11.032 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 16:21:11.041 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 16:21:11.180 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 16:21:11.183 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 147.8481ms
+2025-11-04 16:21:11.185 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:21:11.186 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 216.1268ms
+2025-11-04 16:21:17.920 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 16:21:17.931 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:21:17.940 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 16:21:17.965 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 16:21:17.970 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 16:21:17.974 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 30.7747ms
+2025-11-04 16:21:17.978 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:21:17.979 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 58.7751ms
+2025-11-04 16:21:51.379 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 16:21:51.385 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:21:51.386 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 16:21:51.391 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 16:21:51.396 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 16:21:51.401 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 11.0334ms
+2025-11-04 16:21:51.403 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:21:51.404 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 25.0441ms
+2025-11-04 16:22:58.730 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 57
+2025-11-04 16:22:58.734 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:22:58.735 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 16:22:58.745 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 16:22:58.885 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 16:22:58.888 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 144.7457ms
+2025-11-04 16:22:58.890 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:22:58.891 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 160.9902ms
+2025-11-04 16:23:31.497 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 16:23:31.501 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:23:31.503 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 16:23:31.516 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 16:23:31.520 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 16:23:31.522 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 9.9741ms
+2025-11-04 16:23:31.524 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:23:31.525 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 28.1918ms
+2025-11-04 16:24:09.636 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/User - null 0
+2025-11-04 16:24:09.639 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:24:09.641 +07:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.User]]] GetAllUsers() on controller EVChargingStation.UserService.Controllers.UserController (UserService).
+2025-11-04 16:24:09.645 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM `Users` AS `u`
+LEFT JOIN `Vehicles` AS `v` ON `u`.`Id` = `v`.`UserId`
+WHERE `u`.`IsActive`
+ORDER BY `u`.`Id`
+2025-11-04 16:24:09.652 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.User, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-04 16:24:09.655 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService) in 11.2149ms
+2025-11-04 16:24:09.657 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.UserController.GetAllUsers (UserService)'
+2025-11-04 16:24:09.658 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/User - 200 null application/json; charset=utf-8 21.8183ms
+2025-11-04 16:25:10.315 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 66
+2025-11-04 16:25:10.319 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:25:10.320 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 16:25:10.326 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 16:25:10.465 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 16:25:10.468 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 143.5456ms
+2025-11-04 16:25:10.469 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 16:25:10.471 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 156.0342ms
+2025-11-04 19:14:21.079 +07:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_User'
+2025-11-04 19:14:24.653 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-04 19:14:25.983 +07:00 [INF] Now listening on: https://localhost:5001
+2025-11-04 19:14:26.621 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 19:14:27.414 +07:00 [INF] Hosting environment: Development
+2025-11-04 19:14:28.023 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\HeThongQuanLyTramSac\src\services\UserService
+2025-11-04 19:15:41.279 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 66
+2025-11-04 19:15:43.851 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 19:15:43.884 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 19:15:44.814 +07:00 [INF] Executed DbCommand (67ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 19:15:46.008 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 19:15:46.221 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 2324.6915ms
+2025-11-04 19:15:46.229 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 19:15:46.246 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 4970.0425ms
+2025-11-04 20:01:02.165 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Auth/login - application/json; charset=utf-8 66
+2025-11-04 20:01:02.172 +07:00 [INF] Executing endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 20:01:02.179 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EVChargingStation.UserService.Models.AuthResult]] Login(EVChargingStation.UserService.Models.LoginRequest) on controller EVChargingStation.UserService.Controllers.AuthController (UserService).
+2025-11-04 20:01:02.255 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CreatedAt`, `t`.`Email`, `t`.`FirstName`, `t`.`IsActive`, `t`.`LastName`, `t`.`PasswordHash`, `t`.`PhoneNumber`, `t`.`Role`, `t`.`UpdatedAt`, `v`.`Id`, `v`.`BatteryCapacity`, `v`.`Brand`, `v`.`ConnectorType`, `v`.`CreatedAt`, `v`.`IsActive`, `v`.`LicensePlate`, `v`.`Model`, `v`.`UserId`
+FROM (
+    SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Email`, `u`.`FirstName`, `u`.`IsActive`, `u`.`LastName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`Role`, `u`.`UpdatedAt`
+    FROM `Users` AS `u`
+    WHERE (`u`.`Email` = @__request_Email_0) AND `u`.`IsActive`
+    LIMIT 1
+) AS `t`
+LEFT JOIN `Vehicles` AS `v` ON `t`.`Id` = `v`.`UserId`
+ORDER BY `t`.`Id`
+2025-11-04 20:01:02.440 +07:00 [INF] Executing OkObjectResult, writing value of type 'EVChargingStation.UserService.Models.AuthResult'.
+2025-11-04 20:01:02.444 +07:00 [INF] Executed action EVChargingStation.UserService.Controllers.AuthController.Login (UserService) in 261.7187ms
+2025-11-04 20:01:02.446 +07:00 [INF] Executed endpoint 'EVChargingStation.UserService.Controllers.AuthController.Login (UserService)'
+2025-11-04 20:01:02.449 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 283.3829ms

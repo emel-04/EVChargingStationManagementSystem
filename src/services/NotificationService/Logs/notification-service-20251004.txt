@@ -1,0 +1,27 @@
+2025-10-04 07:56:22.233 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-04 07:56:22.352 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 07:56:22.556 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-04 07:56:22.581 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 07:56:22.583 +07:00 [INF] Hosting environment: Development
+2025-10-04 07:56:22.601 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-04 09:31:05.516 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-04 09:31:05.576 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 09:31:05.655 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-04 09:31:05.659 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 09:31:05.660 +07:00 [INF] Hosting environment: Development
+2025-10-04 09:31:05.661 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\NotificationService
+2025-10-04 14:48:19.907 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Report'
+2025-10-04 14:48:19.962 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 14:48:20.039 +07:00 [INF] Now listening on: https://localhost:5005
+2025-10-04 14:48:20.042 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 14:48:20.043 +07:00 [INF] Hosting environment: Development
+2025-10-04 14:48:20.044 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\NotificationService

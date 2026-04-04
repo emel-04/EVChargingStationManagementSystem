@@ -1,0 +1,63 @@
+2025-10-03 14:05:49.760 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Station'
+2025-10-03 14:05:49.868 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 14:05:50.239 +07:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5002: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-10-03 22:20:02.036 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Station'
+2025-10-03 22:20:02.092 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-03 22:20:02.171 +07:00 [INF] Now listening on: https://localhost:5002
+2025-10-03 22:20:02.173 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-03 22:20:02.175 +07:00 [INF] Hosting environment: Development
+2025-10-03 22:20:02.175 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\StationService
+2025-10-03 22:26:07.175 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2025-10-03 22:26:07.252 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 78.4384ms
+2025-10-03 22:26:07.430 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2025-10-03 22:26:07.564 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.9961ms
+2025-10-03 22:28:05.929 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/api/station - null null
+2025-10-03 22:28:05.963 +07:00 [INF] Executing endpoint 'EVChargingStation.StationService.Controllers.StationController.GetAllStations (StationService)'
+2025-10-03 22:28:05.977 +07:00 [INF] Route matched with {action = "GetAllStations", controller = "Station"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.ChargingStation]]] GetAllStations() on controller EVChargingStation.StationService.Controllers.StationController (StationService).
+2025-10-03 22:28:06.256 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`Latitude`, `c`.`Longitude`, `c`.`Name`, `c`.`Province`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`ConnectorType`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`MaxPower`, `c0`.`PointNumber`, `c0`.`PricePerHour`, `c0`.`PricePerKwh`, `c0`.`StationId`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `ChargingStations` AS `c`
+LEFT JOIN `ChargingPoints` AS `c0` ON `c`.`Id` = `c0`.`StationId`
+WHERE `c`.`IsActive`
+ORDER BY `c`.`Id`
+2025-10-03 22:28:06.275 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.ChargingStation, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-03 22:28:06.307 +07:00 [INF] Executed action EVChargingStation.StationService.Controllers.StationController.GetAllStations (StationService) in 324.8659ms
+2025-10-03 22:28:06.311 +07:00 [INF] Executed endpoint 'EVChargingStation.StationService.Controllers.StationController.GetAllStations (StationService)'
+2025-10-03 22:28:06.318 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/api/station - 200 null application/json; charset=utf-8 389.2082ms
+2025-10-03 22:28:06.340 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/favicon.ico - null null
+2025-10-03 22:28:06.346 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/favicon.ico - 404 0 null 5.6726ms
+2025-10-03 22:28:06.351 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5002/favicon.ico, Response status code: 404
+2025-10-03 22:38:08.527 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-03 22:38:08.533 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 5.8146ms
+2025-10-03 22:38:08.537 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5002/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404

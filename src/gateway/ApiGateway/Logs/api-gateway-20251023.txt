@@ -1,0 +1,11 @@
+2025-10-23 09:01:00.663 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-23 09:01:01.273 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-23 09:01:01.613 +07:00 [INF] Hosting environment: Development
+2025-10-23 09:01:02.005 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-23 09:01:55.489 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2025-10-23 09:01:55.812 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 319.3746ms
+2025-10-23 09:01:56.086 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2025-10-23 09:01:56.130 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/favicon-32x32.png - null null
+2025-10-23 09:01:56.144 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-23 09:01:56.146 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 16.6694ms
+2025-10-23 09:01:56.213 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.6486ms

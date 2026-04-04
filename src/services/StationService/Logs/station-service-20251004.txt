@@ -1,0 +1,48 @@
+2025-10-04 07:56:14.804 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Station'
+2025-10-04 07:56:14.878 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 07:56:14.962 +07:00 [INF] Now listening on: https://localhost:5002
+2025-10-04 07:56:14.965 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 07:56:14.966 +07:00 [INF] Hosting environment: Development
+2025-10-04 07:56:14.967 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\StationService
+2025-10-04 07:59:26.404 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/index.html - null null
+2025-10-04 07:59:26.476 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 72.1321ms
+2025-10-04 07:59:26.620 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - null null
+2025-10-04 07:59:26.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.9261ms
+2025-10-04 08:14:19.179 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/api/station - null null
+2025-10-04 08:14:19.218 +07:00 [INF] Executing endpoint 'EVChargingStation.StationService.Controllers.StationController.GetAllStations (StationService)'
+2025-10-04 08:14:19.230 +07:00 [INF] Route matched with {action = "GetAllStations", controller = "Station"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.ChargingStation]]] GetAllStations() on controller EVChargingStation.StationService.Controllers.StationController (StationService).
+2025-10-04 08:14:19.502 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`CreatedAt`, `c`.`IsActive`, `c`.`Latitude`, `c`.`Longitude`, `c`.`Name`, `c`.`Province`, `c`.`Status`, `c`.`UpdatedAt`, `c0`.`Id`, `c0`.`ConnectorType`, `c0`.`CreatedAt`, `c0`.`IsActive`, `c0`.`MaxPower`, `c0`.`PointNumber`, `c0`.`PricePerHour`, `c0`.`PricePerKwh`, `c0`.`StationId`, `c0`.`Status`, `c0`.`UpdatedAt`
+FROM `ChargingStations` AS `c`
+LEFT JOIN `ChargingPoints` AS `c0` ON `c`.`Id` = `c0`.`StationId`
+WHERE `c`.`IsActive`
+ORDER BY `c`.`Id`
+2025-10-04 08:14:19.520 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.ChargingStation, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-04 08:14:19.553 +07:00 [INF] Executed action EVChargingStation.StationService.Controllers.StationController.GetAllStations (StationService) in 315.1675ms
+2025-10-04 08:14:19.557 +07:00 [INF] Executed endpoint 'EVChargingStation.StationService.Controllers.StationController.GetAllStations (StationService)'
+2025-10-04 08:14:19.563 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/api/station - 200 null application/json; charset=utf-8 383.7738ms
+2025-10-04 08:14:19.576 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5002/favicon.ico - null null
+2025-10-04 08:14:19.581 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5002/favicon.ico - 404 0 null 5.1919ms
+2025-10-04 08:14:19.586 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5002/favicon.ico, Response status code: 404
+2025-10-04 09:30:56.420 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Station'
+2025-10-04 09:30:56.478 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 09:30:56.554 +07:00 [INF] Now listening on: https://localhost:5002
+2025-10-04 09:30:56.557 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 09:30:56.559 +07:00 [INF] Hosting environment: Development
+2025-10-04 09:30:56.560 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\StationService
+2025-10-04 14:46:40.771 +07:00 [ERR] An error occurred using the connection to database '' on server 'localhost'.
+2025-10-04 14:48:10.429 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Station'
+2025-10-04 14:48:10.513 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 14:48:10.645 +07:00 [INF] Now listening on: https://localhost:5002
+2025-10-04 14:48:10.649 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 14:48:10.650 +07:00 [INF] Hosting environment: Development
+2025-10-04 14:48:10.651 +07:00 [INF] Content root path: D:\HeThongQuanLyTramSac\src\services\StationService

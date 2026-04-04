@@ -1,0 +1,197 @@
+2025-10-31 00:10:47.180 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 00:10:47.230 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 00:10:47.315 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 00:10:47.317 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 00:10:47.319 +07:00 [INF] Hosting environment: Development
+2025-10-31 00:10:47.322 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 00:11:14.218 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/0 - null 0
+2025-10-31 00:11:14.258 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-31 00:11:14.262 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-31 00:11:14.266 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/0 - 401 0 null 49.4261ms
+2025-10-31 00:11:25.323 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - null 0
+2025-10-31 00:11:25.394 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 00:11:25.409 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-10-31 00:11:25.656 +07:00 [INF] Executed DbCommand (48ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-10-31 00:11:25.670 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-31 00:11:25.725 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 311.1652ms
+2025-10-31 00:11:25.728 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 00:11:25.733 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - 200 null application/json; charset=utf-8 409.8224ms
+2025-10-31 00:22:51.789 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 00:22:51.835 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 00:22:51.895 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 00:22:51.898 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 00:22:51.899 +07:00 [INF] Hosting environment: Development
+2025-10-31 00:22:51.900 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 00:27:24.845 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 00:27:24.911 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 00:27:24.972 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 00:27:24.975 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 00:27:24.976 +07:00 [INF] Hosting environment: Development
+2025-10-31 00:27:24.977 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 00:36:43.737 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 00:36:43.784 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 00:36:43.844 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 00:36:43.847 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 00:36:43.848 +07:00 [INF] Hosting environment: Development
+2025-10-31 00:36:43.849 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 00:37:50.715 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - null 0
+2025-10-31 00:37:50.798 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 00:37:50.813 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-10-31 00:37:51.034 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-10-31 00:37:51.049 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-31 00:37:51.110 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 292.7054ms
+2025-10-31 00:37:51.114 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 00:37:51.120 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - 200 null application/json; charset=utf-8 406.445ms
+2025-10-31 00:40:40.620 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/0 - null 0
+2025-10-31 00:40:40.628 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-31 00:40:40.633 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-31 00:40:40.634 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/0 - 401 0 null 14.0785ms
+2025-10-31 00:59:21.084 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - null 0
+2025-10-31 00:59:21.092 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 00:59:21.095 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-10-31 00:59:21.156 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-10-31 00:59:21.161 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-31 00:59:21.163 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 64.9736ms
+2025-10-31 00:59:21.165 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 00:59:21.166 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - 200 null application/json; charset=utf-8 82.9006ms
+2025-10-31 01:09:20.024 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - null 0
+2025-10-31 01:09:20.031 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 01:09:20.034 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-10-31 01:09:20.054 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-10-31 01:09:20.061 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-31 01:09:20.068 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 28.8174ms
+2025-10-31 01:09:20.071 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 01:09:20.075 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - 200 null application/json; charset=utf-8 50.7167ms
+2025-10-31 13:10:44.650 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 13:10:44.724 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 13:10:44.812 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 13:10:44.815 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 13:10:44.816 +07:00 [INF] Hosting environment: Development
+2025-10-31 13:10:44.817 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 13:21:23.529 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - null 0
+2025-10-31 13:21:23.783 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 13:21:23.829 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-10-31 13:21:24.436 +07:00 [INF] Executed DbCommand (52ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-10-31 13:21:24.469 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-31 13:21:24.685 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 843.4829ms
+2025-10-31 13:21:24.696 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 13:21:24.716 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - 200 null application/json; charset=utf-8 1189.4489ms
+2025-10-31 15:42:25.461 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 15:42:25.519 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 15:42:25.589 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 15:42:25.592 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 15:42:25.593 +07:00 [INF] Hosting environment: Development
+2025-10-31 15:42:25.594 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 16:10:56.095 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 16:10:56.168 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 16:10:56.343 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 16:10:56.373 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 16:10:56.385 +07:00 [INF] Hosting environment: Development
+2025-10-31 16:10:56.395 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 16:27:07.942 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 16:27:07.988 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 16:27:08.047 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 16:27:08.050 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 16:27:08.051 +07:00 [INF] Hosting environment: Development
+2025-10-31 16:27:08.052 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 17:10:09.912 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 17:10:09.958 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 17:10:10.017 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 17:10:10.020 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 17:10:10.021 +07:00 [INF] Hosting environment: Development
+2025-10-31 17:10:10.022 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 17:20:53.750 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 17:20:53.795 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 17:20:53.853 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 17:20:53.856 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 17:20:53.857 +07:00 [INF] Hosting environment: Development
+2025-10-31 17:20:53.858 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 17:37:14.124 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/index.html - null null
+2025-10-31 17:37:14.197 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/index.html - 200 null text/html;charset=utf-8 73.5397ms
+2025-10-31 17:37:14.367 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5003/swagger/v1/swagger.json - null null
+2025-10-31 17:37:14.481 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5003/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.5663ms
+2025-10-31 18:18:59.334 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - null 0
+2025-10-31 18:19:00.377 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 18:19:00.394 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-10-31 18:19:00.627 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-10-31 18:19:00.641 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-31 18:19:00.674 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 271.468ms
+2025-10-31 18:19:00.677 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 18:19:00.681 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - 200 null application/json; charset=utf-8 1347.4025ms
+2025-10-31 22:45:48.099 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'EVChargingStation_Booking'
+2025-10-31 22:45:48.146 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-31 22:45:48.215 +07:00 [INF] Now listening on: https://localhost:5003
+2025-10-31 22:45:48.219 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-31 22:45:48.220 +07:00 [INF] Hosting environment: Development
+2025-10-31 22:45:48.221 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\services\BookingService
+2025-10-31 22:53:36.864 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - null 0
+2025-10-31 22:53:36.950 +07:00 [INF] Executing endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 22:53:36.965 +07:00 [INF] Route matched with {action = "GetUserBookings", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[EVChargingStation.Shared.Models.Booking]]] GetUserBookings(Int32) on controller EVChargingStation.BookingService.Controllers.BookingController (BookingService).
+2025-10-31 22:53:37.194 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`ActualEndTime`, `b`.`ActualStartTime`, `b`.`BookingNumber`, `b`.`ChargingPointId`, `b`.`CreatedAt`, `b`.`EndTime`, `b`.`EnergyConsumed`, `b`.`QRCode`, `b`.`StartTime`, `b`.`Status`, `b`.`TotalCost`, `b`.`UpdatedAt`, `b`.`UserId`
+FROM `Bookings` AS `b`
+WHERE `b`.`UserId` = @__userId_0
+ORDER BY `b`.`CreatedAt` DESC
+2025-10-31 22:53:37.208 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EVChargingStation.Shared.Models.Booking, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-31 22:53:37.290 +07:00 [INF] Executed action EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService) in 319.8694ms
+2025-10-31 22:53:37.294 +07:00 [INF] Executed endpoint 'EVChargingStation.BookingService.Controllers.BookingController.GetUserBookings (BookingService)'
+2025-10-31 22:53:37.300 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5003/api/Booking/user/5 - 200 null application/json; charset=utf-8 436.3161ms

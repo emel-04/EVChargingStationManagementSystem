@@ -1,0 +1,612 @@
+2025-10-30 09:36:10.607 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 09:36:10.648 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 09:36:10.652 +07:00 [INF] Hosting environment: Development
+2025-10-30 09:36:10.653 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 09:58:29.970 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 09:58:30.005 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 09:58:30.007 +07:00 [INF] Hosting environment: Development
+2025-10-30 09:58:30.009 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 10:02:25.186 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 10:02:25.342 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:02:25.508 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:02:25.540 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 10:13:23.256 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:13:23.309 +07:00 [WRN] requestId: 0HNGNC38JMFPT:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:13:23.313 +07:00 [WRN] requestId: 0HNGNC38JMFPT:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:13:23.318 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 63.1675ms
+2025-10-30 10:19:33.393 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:19:33.402 +07:00 [WRN] requestId: 0HNGNC38JMFPV:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:19:33.405 +07:00 [WRN] requestId: 0HNGNC38JMFPV:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:19:33.408 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 15.4794ms
+2025-10-30 10:21:50.138 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:50.156 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:50.159 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:50.163 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 24.2494ms
+2025-10-30 10:21:51.102 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:51.115 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000003, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:51.120 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000003, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:51.125 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 22.996ms
+2025-10-30 10:21:51.233 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:51.239 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000005, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:51.243 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000005, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:51.246 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 13.5661ms
+2025-10-30 10:21:51.389 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:51.395 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000007, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:51.399 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000007, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:51.401 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 12.2798ms
+2025-10-30 10:21:51.595 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:51.606 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000009, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:51.611 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:00000009, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:51.618 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 22.4845ms
+2025-10-30 10:21:51.717 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:51.723 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:0000000B, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:51.726 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:0000000B, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:51.729 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 11.7105ms
+2025-10-30 10:21:51.874 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:51.885 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:0000000D, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:51.891 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:0000000D, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:51.896 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 22.2885ms
+2025-10-30 10:21:52.005 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 10:21:52.012 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:0000000F, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 10:21:52.015 +07:00 [WRN] requestId: 0HNGNC38JMFQ0:0000000F, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 10:21:52.018 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 13.0046ms
+2025-10-30 10:22:13.856 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2025-10-30 10:22:13.939 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 82.8132ms
+2025-10-30 10:22:14.068 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2025-10-30 10:22:14.118 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/favicon-32x32.png - null null
+2025-10-30 10:22:14.134 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-30 10:22:14.137 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 19.9312ms
+2025-10-30 10:22:14.182 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.0149ms
+2025-10-30 10:29:29.993 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2025-10-30 10:29:30.016 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 23.3868ms
+2025-10-30 10:29:30.274 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2025-10-30 10:29:30.288 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.8017ms
+2025-10-30 10:31:52.692 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 10:31:52.727 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:31:52.729 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:31:52.730 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 10:32:37.765 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 10:32:37.876 +07:00 [WRN] requestId: 0HNGNCJSHGRN1:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 10:32:37.880 +07:00 [WRN] requestId: 0HNGNCJSHGRN1:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 10:32:37.893 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 130.3003ms
+2025-10-30 10:32:48.678 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 120
+2025-10-30 10:32:48.702 +07:00 [WRN] requestId: 0HNGNCJSHGRN1:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 10:32:48.708 +07:00 [WRN] requestId: 0HNGNCJSHGRN1:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 10:32:48.716 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 38.6802ms
+2025-10-30 10:38:11.610 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 10:38:11.633 +07:00 [WRN] requestId: 0HNGNCJSHGRN2:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 10:38:11.639 +07:00 [WRN] requestId: 0HNGNCJSHGRN2:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 10:38:11.647 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 36.8667ms
+2025-10-30 10:40:50.387 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 10:40:50.448 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:40:50.452 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:40:50.454 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 10:41:17.833 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 10:41:17.876 +07:00 [WRN] requestId: 0HNGNCONHC5MK:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 10:41:17.879 +07:00 [WRN] requestId: 0HNGNCONHC5MK:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 10:41:17.885 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 53.7493ms
+2025-10-30 10:41:29.632 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 120
+2025-10-30 10:41:29.647 +07:00 [WRN] requestId: 0HNGNCONHC5MK:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 10:41:29.651 +07:00 [WRN] requestId: 0HNGNCONHC5MK:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 10:41:29.655 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 23.1215ms
+2025-10-30 10:43:51.267 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2025-10-30 10:43:51.426 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 158.5683ms
+2025-10-30 10:43:51.527 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2025-10-30 10:43:51.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 250.3333ms
+2025-10-30 10:50:11.786 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 10:50:11.821 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 10:50:11.823 +07:00 [INF] Hosting environment: Development
+2025-10-30 10:50:11.824 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 10:50:31.689 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 10:50:31.771 +07:00 [WRN] requestId: 0HNGNCTSIVM6V:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 10:50:31.774 +07:00 [WRN] requestId: 0HNGNCTSIVM6V:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 10:50:31.786 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 99.5827ms
+2025-10-30 10:50:41.160 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 117
+2025-10-30 10:50:41.183 +07:00 [WRN] requestId: 0HNGNCTSIVM6V:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 10:50:41.189 +07:00 [WRN] requestId: 0HNGNCTSIVM6V:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 10:50:41.197 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 37.3976ms
+2025-10-30 16:15:03.444 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 16:15:03.473 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 16:15:03.475 +07:00 [INF] Hosting environment: Development
+2025-10-30 16:15:03.476 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 16:16:15.913 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 16:16:15.941 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 16:16:15.944 +07:00 [INF] Hosting environment: Development
+2025-10-30 16:16:15.948 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 16:17:20.634 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 16:17:20.671 +07:00 [WRN] requestId: 0HNGNIKGGVDMV:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 16:17:20.673 +07:00 [WRN] requestId: 0HNGNIKGGVDMV:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 16:17:20.684 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 50.8721ms
+2025-10-30 16:17:35.564 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 128
+2025-10-30 16:17:35.568 +07:00 [WRN] requestId: 0HNGNIKGGVDMV:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 16:17:35.569 +07:00 [WRN] requestId: 0HNGNIKGGVDMV:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 16:17:35.571 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 6.4522ms
+2025-10-30 16:32:46.117 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 16:32:46.150 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 16:32:46.152 +07:00 [INF] Hosting environment: Development
+2025-10-30 16:32:46.153 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 20:49:08.190 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 20:49:08.220 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 20:49:08.222 +07:00 [INF] Hosting environment: Development
+2025-10-30 20:49:08.223 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 20:49:37.150 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 20:49:37.184 +07:00 [WRN] requestId: 0HNGNNCL6BJGC:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 20:49:37.186 +07:00 [WRN] requestId: 0HNGNNCL6BJGC:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 20:49:37.193 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 43.8397ms
+2025-10-30 20:49:49.357 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 121
+2025-10-30 20:49:49.362 +07:00 [WRN] requestId: 0HNGNNCL6BJGC:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 20:49:49.363 +07:00 [WRN] requestId: 0HNGNNCL6BJGC:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 20:49:49.364 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 7.2297ms
+2025-10-30 21:05:34.033 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 21:05:34.062 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:05:34.065 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:05:34.066 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 21:06:04.641 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 121
+2025-10-30 21:06:04.674 +07:00 [WRN] requestId: 0HNGNNLRFRDQI:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 21:06:04.676 +07:00 [WRN] requestId: 0HNGNNLRFRDQI:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 21:06:04.682 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 41.2575ms
+2025-10-30 21:06:17.864 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 120
+2025-10-30 21:06:17.869 +07:00 [WRN] requestId: 0HNGNNLRFRDQI:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 21:06:17.870 +07:00 [WRN] requestId: 0HNGNNLRFRDQI:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 21:06:17.872 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 7.1382ms
+2025-10-30 21:10:07.090 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 21:10:07.119 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:10:07.120 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:10:07.121 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 21:10:26.809 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 21:10:26.847 +07:00 [WRN] requestId: 0HNGNNO9JVS6M:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 21:10:26.849 +07:00 [WRN] requestId: 0HNGNNO9JVS6M:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 21:10:26.854 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 46.0985ms
+2025-10-30 21:10:36.712 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 117
+2025-10-30 21:10:36.717 +07:00 [WRN] requestId: 0HNGNNO9JVS6M:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 21:10:36.719 +07:00 [WRN] requestId: 0HNGNNO9JVS6M:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 21:10:36.720 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 8.2963ms
+2025-10-30 21:16:18.202 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 21:16:18.231 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:16:18.233 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:16:18.234 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 21:18:27.970 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/auth/register - null null
+2025-10-30 21:18:28.003 +07:00 [WRN] requestId: 0HNGNNSP0RANO:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET.'
+2025-10-30 21:18:28.006 +07:00 [WRN] requestId: 0HNGNNSP0RANO:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: GET'
+2025-10-30 21:18:28.009 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/api/auth/register - 404 0 null 40.2845ms
+2025-10-30 21:24:23.369 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 117
+2025-10-30 21:24:23.374 +07:00 [WRN] requestId: 0HNGNNSP0RANP:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 21:24:23.375 +07:00 [WRN] requestId: 0HNGNNSP0RANP:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 21:24:23.377 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 8.084ms
+2025-10-30 21:47:40.097 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 21:47:40.146 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:47:40.149 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:47:40.150 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 21:48:03.138 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 21:48:03.172 +07:00 [WRN] requestId: 0HNGNODA23LR2:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 21:48:03.175 +07:00 [WRN] requestId: 0HNGNODA23LR2:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 21:48:03.180 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 43.7191ms
+2025-10-30 21:48:13.884 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 117
+2025-10-30 21:48:13.888 +07:00 [WRN] requestId: 0HNGNODA23LR2:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST.'
+2025-10-30 21:48:13.889 +07:00 [WRN] requestId: 0HNGNODA23LR2:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/auth/register, verb: POST. errors found in ResponderMiddleware. Setting error response for request path:/api/auth/register, request method: POST'
+2025-10-30 21:48:13.890 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 404 0 null 5.8991ms
+2025-10-30 21:54:09.231 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 21:54:09.260 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 21:54:09.262 +07:00 [INF] Hosting environment: Development
+2025-10-30 21:54:09.264 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 21:54:30.419 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 21:54:30.471 +07:00 [WRN] requestId: 0HNGNOGTFH03D:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 21:54:30.474 +07:00 [WRN] requestId: 0HNGNOGTFH03D:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 21:54:30.479 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 60.4395ms
+2025-10-30 21:54:42.039 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 117
+2025-10-30 21:54:42.066 +07:00 [INF] requestId: 0HNGNOGTFH03D:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 21:54:42.070 +07:00 [INF] requestId: 0HNGNOGTFH03D:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/register'
+2025-10-30 21:54:42.072 +07:00 [INF] requestId: 0HNGNOGTFH03D:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 21:54:42.083 +07:00 [WRN] requestId: 0HNGNOGTFH03D:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 21:54:43.030 +07:00 [INF] requestId: 0HNGNOGTFH03D:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/register'
+2025-10-30 21:54:43.042 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 200 1061 application/json; charset=utf-8 1002.293ms
+2025-10-30 22:02:40.054 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 22:02:40.084 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:02:40.086 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:02:40.087 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 22:03:01.179 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:03:01.228 +07:00 [WRN] requestId: 0HNGNOLLMFI93:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:03:01.231 +07:00 [WRN] requestId: 0HNGNOLLMFI93:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:03:01.236 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 57.6949ms
+2025-10-30 22:03:15.071 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 131
+2025-10-30 22:03:15.098 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:03:15.101 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/register'
+2025-10-30 22:03:15.103 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:03:15.115 +07:00 [WRN] requestId: 0HNGNOLLMFI93:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:03:16.082 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/register'
+2025-10-30 22:03:16.095 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 200 1094 application/json; charset=utf-8 1023.268ms
+2025-10-30 22:03:40.773 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 115
+2025-10-30 22:03:40.779 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:03:40.780 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/register'
+2025-10-30 22:03:40.782 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000003, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:03:40.833 +07:00 [INF] requestId: 0HNGNOLLMFI93:00000003, previousRequestId: No PreviousRequestId, message: '400 (Bad Request) status code, request uri: https://localhost:5001/api/Auth/register'
+2025-10-30 22:03:40.837 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 400 352 application/problem+json; charset=utf-8 64.0931ms
+2025-10-30 22:10:09.095 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 128
+2025-10-30 22:10:09.099 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:10:09.101 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/register'
+2025-10-30 22:10:09.103 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:10:09.495 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/register'
+2025-10-30 22:10:09.499 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 200 1095 application/json; charset=utf-8 403.9035ms
+2025-10-30 22:10:18.566 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/register - application/json; charset=utf-8 109
+2025-10-30 22:10:18.572 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:10:18.575 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/register'
+2025-10-30 22:10:18.577 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:10:18.596 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000002, previousRequestId: No PreviousRequestId, message: '400 (Bad Request) status code, request uri: https://localhost:5001/api/Auth/register'
+2025-10-30 22:10:18.598 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/register - 400 352 application/problem+json; charset=utf-8 32.5962ms
+2025-10-30 22:10:35.539 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:10:35.547 +07:00 [WRN] requestId: 0HNGNOLLMFI94:00000003, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:10:35.550 +07:00 [WRN] requestId: 0HNGNOLLMFI94:00000003, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:10:35.554 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 14.8429ms
+2025-10-30 22:10:44.732 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 48
+2025-10-30 22:10:44.735 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:10:44.737 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:10:44.738 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000004, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:10:44.968 +07:00 [INF] requestId: 0HNGNOLLMFI94:00000004, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:10:44.970 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1086 application/json; charset=utf-8 238.3624ms
+2025-10-30 22:16:16.859 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 48
+2025-10-30 22:16:16.863 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:16:16.864 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:16:16.869 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:16:17.042 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:16:17.044 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1086 application/json; charset=utf-8 185.367ms
+2025-10-30 22:16:20.699 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 48
+2025-10-30 22:16:20.703 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:16:20.704 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:16:20.706 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:16:20.867 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:16:20.869 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1086 application/json; charset=utf-8 169.5ms
+2025-10-30 22:16:27.621 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 48
+2025-10-30 22:16:27.624 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:16:27.625 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:16:27.626 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000003, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:16:27.793 +07:00 [INF] requestId: 0HNGNOLLMFI95:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:16:27.795 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1086 application/json; charset=utf-8 174.1272ms
+2025-10-30 22:16:56.052 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 22:16:56.081 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:16:56.083 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:16:56.084 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 22:17:15.341 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 48
+2025-10-30 22:17:15.408 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:17:15.411 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:17:15.413 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000001, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:17:15.423 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000001, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:17:16.341 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:17:16.357 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1086 application/json; charset=utf-8 1016.6357ms
+2025-10-30 22:17:57.639 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:17:57.653 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:17:57.657 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:17:57.662 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 22.7773ms
+2025-10-30 22:18:01.383 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:18:01.389 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000003, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:18:01.390 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000003, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:18:01.392 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 8.4193ms
+2025-10-30 22:18:08.809 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:18:08.813 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000004, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:18:08.815 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000004, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:18:08.818 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 9.4796ms
+2025-10-30 22:18:10.703 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - null null
+2025-10-30 22:18:10.708 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000005, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 22:18:10.709 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000005, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/6'
+2025-10-30 22:18:10.711 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000005, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 22:18:10.713 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000005, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:18:10.738 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000005, previousRequestId: No PreviousRequestId, message: 'Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(HttpContext httpContext) errors found in ResponderMiddleware. Setting error response for request path:/api/booking/user/6, request method: GET'
+2025-10-30 22:18:10.742 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - 502 0 null 39.3913ms
+2025-10-30 22:18:15.328 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - null null
+2025-10-30 22:18:15.337 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 22:18:15.341 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/6'
+2025-10-30 22:18:15.344 +07:00 [INF] requestId: 0HNGNOTK8D1EU:00000006, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 22:18:15.354 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000006, previousRequestId: No PreviousRequestId, message: 'Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(HttpContext httpContext) errors found in ResponderMiddleware. Setting error response for request path:/api/booking/user/6, request method: GET'
+2025-10-30 22:18:15.362 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - 502 0 null 33.8556ms
+2025-10-30 22:18:16.580 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/wallet/balance/6 - null null
+2025-10-30 22:18:16.591 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000007, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/balance/6, verb: GET.'
+2025-10-30 22:18:16.595 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000007, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/balance/6, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/wallet/balance/6, request method: GET'
+2025-10-30 22:18:16.600 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/wallet/balance/6 - 404 0 null 19.7087ms
+2025-10-30 22:18:16.627 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/wallet/transactions/6 - null null
+2025-10-30 22:18:16.630 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000008, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/transactions/6, verb: GET.'
+2025-10-30 22:18:16.632 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000008, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/transactions/6, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/wallet/transactions/6, request method: GET'
+2025-10-30 22:18:16.634 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/wallet/transactions/6 - 404 0 null 6.2656ms
+2025-10-30 22:18:41.436 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:18:41.440 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000009, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:18:41.445 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:00000009, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:18:41.449 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 12.7163ms
+2025-10-30 22:18:48.258 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:18:48.261 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:0000000A, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:18:48.262 +07:00 [WRN] requestId: 0HNGNOTK8D1EU:0000000A, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:18:48.265 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 6.532ms
+2025-10-30 22:18:58.261 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 48
+2025-10-30 22:18:58.264 +07:00 [INF] requestId: 0HNGNOTK8D1EU:0000000B, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:18:58.265 +07:00 [INF] requestId: 0HNGNOTK8D1EU:0000000B, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:18:58.270 +07:00 [INF] requestId: 0HNGNOTK8D1EU:0000000B, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:18:58.626 +07:00 [INF] requestId: 0HNGNOTK8D1EU:0000000B, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:18:58.629 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1086 application/json; charset=utf-8 367.6119ms
+2025-10-30 22:19:22.786 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:19:22.792 +07:00 [WRN] requestId: 0HNGNOTK8D1EV:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:19:22.795 +07:00 [WRN] requestId: 0HNGNOTK8D1EV:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:19:22.802 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 15.9239ms
+2025-10-30 22:19:28.241 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:19:28.251 +07:00 [WRN] requestId: 0HNGNOTK8D1EV:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:19:28.257 +07:00 [WRN] requestId: 0HNGNOTK8D1EV:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:19:28.262 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 20.6601ms
+2025-10-30 22:19:30.543 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:19:30.549 +07:00 [WRN] requestId: 0HNGNOTK8D1EV:00000003, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:19:30.553 +07:00 [WRN] requestId: 0HNGNOTK8D1EV:00000003, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:19:30.555 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 11.9167ms
+2025-10-30 22:19:37.925 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - null null
+2025-10-30 22:19:37.928 +07:00 [INF] requestId: 0HNGNOTK8D1EV:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 22:19:37.930 +07:00 [INF] requestId: 0HNGNOTK8D1EV:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/6'
+2025-10-30 22:19:37.935 +07:00 [INF] requestId: 0HNGNOTK8D1EV:00000004, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 22:19:37.939 +07:00 [WRN] requestId: 0HNGNOTK8D1EV:00000004, previousRequestId: No PreviousRequestId, message: 'Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(HttpContext httpContext) errors found in ResponderMiddleware. Setting error response for request path:/api/booking/user/6, request method: GET'
+2025-10-30 22:19:37.942 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - 502 0 null 17.3483ms
+2025-10-30 22:26:34.360 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:26:34.364 +07:00 [WRN] requestId: 0HNGNOTK8D1F0:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:26:34.368 +07:00 [WRN] requestId: 0HNGNOTK8D1F0:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:26:34.373 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 13.3574ms
+2025-10-30 22:26:37.098 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2025-10-30 22:26:37.148 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 50.685ms
+2025-10-30 22:26:37.248 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2025-10-30 22:26:37.316 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.9277ms
+2025-10-30 22:30:00.145 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:30:00.148 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:30:00.149 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:30:00.151 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 5.5963ms
+2025-10-30 22:30:02.828 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:30:02.834 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000002, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:30:02.835 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000002, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:30:02.836 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 8.702ms
+2025-10-30 22:30:12.530 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - null null
+2025-10-30 22:30:12.537 +07:00 [INF] requestId: 0HNGNOTK8D1F2:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 22:30:12.539 +07:00 [INF] requestId: 0HNGNOTK8D1F2:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/6'
+2025-10-30 22:30:12.541 +07:00 [INF] requestId: 0HNGNOTK8D1F2:00000003, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 22:30:12.557 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000003, previousRequestId: No PreviousRequestId, message: 'Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(HttpContext httpContext) errors found in ResponderMiddleware. Setting error response for request path:/api/booking/user/6, request method: GET'
+2025-10-30 22:30:12.568 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/6 - 502 0 null 37.3809ms
+2025-10-30 22:30:22.455 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/wallet/balance/6 - null null
+2025-10-30 22:30:22.458 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000004, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/balance/6, verb: GET.'
+2025-10-30 22:30:22.460 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000004, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/balance/6, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/wallet/balance/6, request method: GET'
+2025-10-30 22:30:22.462 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/wallet/balance/6 - 404 0 null 7.1804ms
+2025-10-30 22:30:22.474 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/wallet/transactions/6 - null null
+2025-10-30 22:30:22.476 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000005, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/transactions/6, verb: GET.'
+2025-10-30 22:30:22.477 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000005, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/wallet/transactions/6, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/wallet/transactions/6, request method: GET'
+2025-10-30 22:30:22.483 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/wallet/transactions/6 - 404 0 null 8.8993ms
+2025-10-30 22:31:02.270 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:31:02.273 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000006, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:31:02.275 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000006, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:31:02.276 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 5.8107ms
+2025-10-30 22:31:45.076 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:31:45.085 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000007, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:31:45.087 +07:00 [WRN] requestId: 0HNGNOTK8D1F2:00000007, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:31:45.088 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 12.2349ms
+2025-10-30 22:31:53.404 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 54
+2025-10-30 22:31:53.410 +07:00 [INF] requestId: 0HNGNOTK8D1F2:00000008, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:31:53.412 +07:00 [INF] requestId: 0HNGNOTK8D1F2:00000008, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:31:53.419 +07:00 [INF] requestId: 0HNGNOTK8D1F2:00000008, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:31:53.600 +07:00 [INF] requestId: 0HNGNOTK8D1F2:00000008, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:31:53.602 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 197.9378ms
+2025-10-30 22:32:21.674 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:32:21.679 +07:00 [WRN] requestId: 0HNGNOTK8D1F3:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:32:21.681 +07:00 [WRN] requestId: 0HNGNOTK8D1F3:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:32:21.682 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 7.9228ms
+2025-10-30 22:35:18.092 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 22:35:18.121 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:35:18.123 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:35:18.124 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 22:36:04.525 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:36:04.576 +07:00 [WRN] requestId: 0HNGNP84P5OLA:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:36:04.578 +07:00 [WRN] requestId: 0HNGNP84P5OLA:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:36:04.584 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 59.741ms
+2025-10-30 22:36:14.489 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 54
+2025-10-30 22:36:14.514 +07:00 [INF] requestId: 0HNGNP84P5OLA:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:36:14.519 +07:00 [INF] requestId: 0HNGNP84P5OLA:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:36:14.522 +07:00 [INF] requestId: 0HNGNP84P5OLA:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:36:14.533 +07:00 [WRN] requestId: 0HNGNP84P5OLA:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:36:15.397 +07:00 [INF] requestId: 0HNGNP84P5OLA:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:36:15.409 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 920.1106ms
+2025-10-30 22:36:17.443 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:36:17.449 +07:00 [WRN] requestId: 0HNGNP84P5OLA:00000003, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:36:17.451 +07:00 [WRN] requestId: 0HNGNP84P5OLA:00000003, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:36:17.453 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 9.4476ms
+2025-10-30 22:37:14.280 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:37:14.284 +07:00 [WRN] requestId: 0HNGNP84P5OLA:00000004, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:37:14.286 +07:00 [WRN] requestId: 0HNGNP84P5OLA:00000004, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:37:14.288 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 7.3963ms
+2025-10-30 22:50:35.096 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 22:50:35.125 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:50:35.127 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:50:35.128 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 22:50:48.808 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:50:48.856 +07:00 [WRN] requestId: 0HNGNPGCAA5HJ:00000001, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:50:48.859 +07:00 [WRN] requestId: 0HNGNPGCAA5HJ:00000001, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:50:48.863 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 56.4287ms
+2025-10-30 22:50:57.050 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 54
+2025-10-30 22:50:57.077 +07:00 [INF] requestId: 0HNGNPGCAA5HJ:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:50:57.080 +07:00 [INF] requestId: 0HNGNPGCAA5HJ:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:50:57.082 +07:00 [INF] requestId: 0HNGNPGCAA5HJ:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:50:57.094 +07:00 [WRN] requestId: 0HNGNPGCAA5HJ:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:50:57.949 +07:00 [INF] requestId: 0HNGNPGCAA5HJ:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:50:57.960 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 910.2998ms
+2025-10-30 22:51:00.808 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:51:00.821 +07:00 [WRN] requestId: 0HNGNPGCAA5HJ:00000003, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET.'
+2025-10-30 22:51:00.828 +07:00 [WRN] requestId: 0HNGNPGCAA5HJ:00000003, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/station, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/station, request method: GET'
+2025-10-30 22:51:00.842 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 404 0 null 33.8801ms
+2025-10-30 22:53:59.053 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 22:53:59.083 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 22:53:59.085 +07:00 [INF] Hosting environment: Development
+2025-10-30 22:53:59.086 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 22:54:14.604 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:54:14.667 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 22:54:14.671 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 22:54:14.673 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 22:54:14.683 +07:00 [WRN] requestId: 0HNGNPI9KV0HE:00000001, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:54:15.129 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 22:54:15.144 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 540.7452ms
+2025-10-30 22:54:23.988 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 54
+2025-10-30 22:54:23.996 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 22:54:24.000 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 22:54:24.001 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 22:54:24.002 +07:00 [WRN] requestId: 0HNGNPI9KV0HE:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:54:24.837 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 22:54:24.839 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 851.0416ms
+2025-10-30 22:54:27.968 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:54:27.972 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 22:54:27.973 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 22:54:27.976 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 22:54:28.131 +07:00 [INF] requestId: 0HNGNPI9KV0HE:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 22:54:28.134 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 165.8402ms
+2025-10-30 22:55:40.209 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-10-30 22:55:40.227 +07:00 [INF] requestId: 0HNGNPI9KV0HF:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 22:55:40.232 +07:00 [INF] requestId: 0HNGNPI9KV0HF:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-10-30 22:55:40.240 +07:00 [INF] requestId: 0HNGNPI9KV0HF:00000001, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 22:55:40.245 +07:00 [WRN] requestId: 0HNGNPI9KV0HF:00000001, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 22:55:41.350 +07:00 [WRN] requestId: 0HNGNPI9KV0HF:00000001, previousRequestId: No PreviousRequestId, message: '404 (Not Found) status code, request uri: https://localhost:5003/api/user/5'
+2025-10-30 22:55:41.353 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 404 0 null 1143.2842ms
+2025-10-30 22:56:13.683 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 22:56:13.687 +07:00 [INF] requestId: 0HNGNPI9KV0HF:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 22:56:13.689 +07:00 [INF] requestId: 0HNGNPI9KV0HF:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 22:56:13.695 +07:00 [INF] requestId: 0HNGNPI9KV0HF:00000002, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 22:56:13.732 +07:00 [INF] requestId: 0HNGNPI9KV0HF:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 22:56:13.734 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 51.4198ms
+2025-10-30 23:03:02.377 +07:00 [INF] Now listening on: https://localhost:5000
+2025-10-30 23:03:02.406 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-30 23:03:02.407 +07:00 [INF] Hosting environment: Development
+2025-10-30 23:03:02.408 +07:00 [INF] Content root path: D:\Download\HeThongQuanLyTramSac\src\gateway\ApiGateway
+2025-10-30 23:03:23.087 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/0 - null null
+2025-10-30 23:03:23.156 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 23:03:23.160 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/0'
+2025-10-30 23:03:23.162 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000001, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 23:03:23.173 +07:00 [WRN] requestId: 0HNGNPND3N7GH:00000001, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 23:03:23.284 +07:00 [WRN] requestId: 0HNGNPND3N7GH:00000001, previousRequestId: No PreviousRequestId, message: '404 (Not Found) status code, request uri: https://localhost:5003/api/user/0'
+2025-10-30 23:03:23.297 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/0 - 404 0 null 211.469ms
+2025-10-30 23:03:32.201 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5000/api/auth/login - application/json; charset=utf-8 54
+2025-10-30 23:03:32.207 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/Auth/{everything}'
+2025-10-30 23:03:32.209 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/auth/login'
+2025-10-30 23:03:32.211 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000002, previousRequestId: No PreviousRequestId, message: '/api/Auth/{everything} route does not require user to be authorized'
+2025-10-30 23:03:32.212 +07:00 [WRN] requestId: 0HNGNPND3N7GH:00000002, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 23:03:33.055 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5001/api/Auth/login'
+2025-10-30 23:03:33.058 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5000/api/auth/login - 200 1084 application/json; charset=utf-8 856.2603ms
+2025-10-30 23:03:34.691 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:03:34.707 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:03:34.714 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:03:34.721 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:03:34.726 +07:00 [WRN] requestId: 0HNGNPND3N7GH:00000003, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 23:03:35.205 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:03:35.207 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 516.325ms
+2025-10-30 23:04:04.358 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-10-30 23:04:04.361 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 23:04:04.363 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-10-30 23:04:04.364 +07:00 [INF] requestId: 0HNGNPND3N7GH:00000004, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 23:04:04.418 +07:00 [WRN] requestId: 0HNGNPND3N7GH:00000004, previousRequestId: No PreviousRequestId, message: '404 (Not Found) status code, request uri: https://localhost:5003/api/user/5'
+2025-10-30 23:04:04.420 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 404 0 null 62.7601ms
+2025-10-30 23:12:22.674 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:12:22.683 +07:00 [INF] requestId: 0HNGNPND3N7GI:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:12:22.684 +07:00 [INF] requestId: 0HNGNPND3N7GI:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:12:22.686 +07:00 [INF] requestId: 0HNGNPND3N7GI:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:12:22.774 +07:00 [INF] requestId: 0HNGNPND3N7GI:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:12:22.776 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 101.3794ms
+2025-10-30 23:14:12.628 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:14:12.636 +07:00 [INF] requestId: 0HNGNPND3N7GJ:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:14:12.642 +07:00 [INF] requestId: 0HNGNPND3N7GJ:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:14:12.646 +07:00 [INF] requestId: 0HNGNPND3N7GJ:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:14:12.734 +07:00 [INF] requestId: 0HNGNPND3N7GJ:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:14:12.740 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 111.3575ms
+2025-10-30 23:19:21.828 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:19:21.832 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:19:21.834 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:19:21.836 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:19:21.865 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:19:21.868 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 39.5376ms
+2025-10-30 23:19:24.067 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:19:24.070 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:19:24.071 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:19:24.075 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000002, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:19:24.098 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:19:24.099 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 31.9367ms
+2025-10-30 23:19:31.491 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:19:31.501 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:19:31.503 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:19:31.507 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:19:31.552 +07:00 [INF] requestId: 0HNGNPND3N7GK:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:19:31.554 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 63.0372ms
+2025-10-30 23:27:47.324 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:27:47.328 +07:00 [INF] requestId: 0HNGNPND3N7GL:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:27:47.333 +07:00 [INF] requestId: 0HNGNPND3N7GL:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:27:47.335 +07:00 [INF] requestId: 0HNGNPND3N7GL:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:27:47.375 +07:00 [INF] requestId: 0HNGNPND3N7GL:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:27:47.379 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 54.9864ms
+2025-10-30 23:44:58.973 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/report/summary - null null
+2025-10-30 23:44:58.977 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 23:44:58.981 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/report/summary'
+2025-10-30 23:44:58.984 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000001, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 23:44:58.985 +07:00 [WRN] requestId: 0HNGNPND3N7GM:00000001, previousRequestId: No PreviousRequestId, message: 'Route Ocelot.Values.UpstreamPathTemplate specifies use QoS but no QosHandler found in DI container. Will use not use a QosHandler, please check your setup!'
+2025-10-30 23:45:00.104 +07:00 [WRN] requestId: 0HNGNPND3N7GM:00000001, previousRequestId: No PreviousRequestId, message: '404 (Not Found) status code, request uri: https://localhost:5006/api/summary'
+2025-10-30 23:45:00.106 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/report/summary - 404 0 null 1132.7088ms
+2025-10-30 23:45:26.081 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:45:26.084 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:45:26.086 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:45:26.091 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000002, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:45:26.133 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000002, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:45:26.135 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 53.3435ms
+2025-10-30 23:45:45.486 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:45:45.489 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000003, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:45:45.491 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000003, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:45:45.492 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000003, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:45:45.520 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000003, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:45:45.522 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 35.2244ms
+2025-10-30 23:45:51.833 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/report/summary - null null
+2025-10-30 23:45:51.838 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000004, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 23:45:51.842 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000004, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/report/summary'
+2025-10-30 23:45:51.843 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000004, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 23:45:51.854 +07:00 [WRN] requestId: 0HNGNPND3N7GM:00000004, previousRequestId: No PreviousRequestId, message: '404 (Not Found) status code, request uri: https://localhost:5006/api/summary'
+2025-10-30 23:45:51.855 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/report/summary - 404 0 null 22.0103ms
+2025-10-30 23:46:06.068 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/user - null null
+2025-10-30 23:46:06.072 +07:00 [WRN] requestId: 0HNGNPND3N7GM:00000005, previousRequestId: No PreviousRequestId, message: 'DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/user, verb: GET.'
+2025-10-30 23:46:06.075 +07:00 [WRN] requestId: 0HNGNPND3N7GM:00000005, previousRequestId: No PreviousRequestId, message: 'Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/user, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/user, request method: GET'
+2025-10-30 23:46:06.077 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/user - 404 0 null 9.3767ms
+2025-10-30 23:46:14.465 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:46:14.474 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000006, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:46:14.482 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000006, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:46:14.491 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000006, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:46:14.537 +07:00 [INF] requestId: 0HNGNPND3N7GM:00000006, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:46:14.540 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 74.5896ms
+2025-10-30 23:48:03.489 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/station - null null
+2025-10-30 23:48:03.491 +07:00 [INF] requestId: 0HNGNPND3N7GN:00000001, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/station'
+2025-10-30 23:48:03.493 +07:00 [INF] requestId: 0HNGNPND3N7GN:00000001, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/station'
+2025-10-30 23:48:03.494 +07:00 [INF] requestId: 0HNGNPND3N7GN:00000001, previousRequestId: No PreviousRequestId, message: '/api/station route does not require user to be authorized'
+2025-10-30 23:48:03.522 +07:00 [INF] requestId: 0HNGNPND3N7GN:00000001, previousRequestId: No PreviousRequestId, message: '200 (OK) status code, request uri: https://localhost:5002/api/station'
+2025-10-30 23:48:03.524 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/station - 200 2 application/json; charset=utf-8 35.1088ms
+2025-10-30 23:48:19.184 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - null null
+2025-10-30 23:48:19.188 +07:00 [INF] requestId: 0HNGNPND3N7GN:00000002, previousRequestId: No PreviousRequestId, message: 'EndpointRateLimiting is not enabled for /api/{everything}'
+2025-10-30 23:48:19.190 +07:00 [INF] requestId: 0HNGNPND3N7GN:00000002, previousRequestId: No PreviousRequestId, message: 'No authentication needed for /api/booking/user/5'
+2025-10-30 23:48:19.192 +07:00 [INF] requestId: 0HNGNPND3N7GN:00000002, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2025-10-30 23:48:19.208 +07:00 [WRN] requestId: 0HNGNPND3N7GN:00000002, previousRequestId: No PreviousRequestId, message: '404 (Not Found) status code, request uri: https://localhost:5003/api/user/5'
+2025-10-30 23:48:19.209 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5000/api/booking/user/5 - 404 0 null 25.6995ms

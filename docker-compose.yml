@@ -1,22 +1,21 @@
 version: '3.8'
 
 services:
-  # Database
+
   mysql:
     image: mysql:8.0
     container_name: evcharging-mysql
+    restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=root123
-      - MYSQL_ALLOW_EMPTY_PASSWORD=true
-      - MYSQL_DATABASE=EVChargingStation
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - evcharging-network
 
-  # API Gateway
   api-gateway:
     build:
       context: .
@@ -26,7 +25,7 @@ services:
       - "5000:80"
       - "5001:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
+      ASPNETCORE_URLS: http://+:80
     depends_on:
       - user-service
       - station-service
@@ -37,109 +36,104 @@ services:
     networks:
       - evcharging-network
 
-  # User Service
   user-service:
     build:
       context: .
       dockerfile: src/services/UserService/Dockerfile
     container_name: evcharging-user-service
+    restart: always
     ports:
       - "5002:80"
-      - "5003:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_User;Uid=root;Pwd=root123;CharSet=utf8mb4;
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__DefaultConnection: Server=mysql;Port=3306;Database=EVChargingStation_User;Uid=root;Pwd=root;
     depends_on:
       - mysql
     networks:
       - evcharging-network
 
-  # Station Service
   station-service:
     build:
       context: .
       dockerfile: src/services/StationService/Dockerfile
     container_name: evcharging-station-service
+    restart: always
     ports:
       - "5004:80"
-      - "5005:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Station;Uid=root;Pwd=root123;CharSet=utf8mb4;
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__DefaultConnection: Server=mysql;Port=3306;Database=EVChargingStation_Station;Uid=root;Pwd=root;
     depends_on:
       - mysql
     networks:
       - evcharging-network
 
-  # Booking Service
   booking-service:
     build:
       context: .
       dockerfile: src/services/BookingService/Dockerfile
     container_name: evcharging-booking-service
+    restart: always
     ports:
       - "5006:80"
-      - "5007:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Booking;Uid=root;Pwd=root123;CharSet=utf8mb4;
+      ASPNETCORE_URLS: http://+:80
+      # Swagger chỉ bật khi Development (Program.cs); mặc định Docker = Production → /swagger 404
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Server=mysql;Port=3306;Database=EVChargingStation_Booking;Uid=root;Pwd=root;
     depends_on:
       - mysql
     networks:
       - evcharging-network
 
-  # Payment Service
   payment-service:
     build:
       context: .
       dockerfile: src/services/PaymentService/Dockerfile
     container_name: evcharging-payment-service
+    restart: always
     ports:
       - "5008:80"
-      - "5009:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Payment;Uid=root;Pwd=root123;CharSet=utf8mb4;
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__DefaultConnection: Server=mysql;Port=3306;Database=EVChargingStation_Payment;Uid=root;Pwd=root;
     depends_on:
       - mysql
     networks:
       - evcharging-network
 
-  # Notification Service
   notification-service:
     build:
       context: .
       dockerfile: src/services/NotificationService/Dockerfile
     container_name: evcharging-notification-service
+    restart: always
     ports:
       - "5010:80"
-      - "5011:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Notification;Uid=root;Pwd=root123;CharSet=utf8mb4;
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__DefaultConnection: Server=mysql;Port=3306;Database=EVChargingStation_Notification;Uid=root;Pwd=root;
     depends_on:
       - mysql
     networks:
       - evcharging-network
 
-  # Report Service
   report-service:
     build:
       context: .
       dockerfile: src/services/ReportService/Dockerfile
     container_name: evcharging-report-service
+    restart: always
     ports:
       - "5012:80"
-      - "5013:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=EVChargingStation_Report;Uid=root;Pwd=root123;CharSet=utf8mb4;
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__DefaultConnection: Server=mysql;Port=3306;Database=EVChargingStation_Report;Uid=root;Pwd=root;
     depends_on:
       - mysql
     networks:
       - evcharging-network
 
-  # Frontend Web Application
   web-app:
     build:
       context: .
@@ -147,10 +141,9 @@ services:
     container_name: evcharging-web-app
     ports:
       - "5014:80"
-      - "5015:443"
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ApiSettings__BaseUrl=http://api-gateway:80
+      ASPNETCORE_URLS: http://+:80
+      ApiSettings__BaseUrl: http://api-gateway:80
     depends_on:
       - api-gateway
     networks:

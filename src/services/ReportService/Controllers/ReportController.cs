@@ -52,6 +52,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var reports = await _reportService.GetReportsByDateRangeAsync(fromDate, toDate);
         return Ok(reports);
     }
@@ -78,6 +83,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var report = await _reportService.GenerateStationUsageReportAsync(stationId, fromDate, toDate);
         return Ok(report);
     }
@@ -89,6 +99,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var report = await _reportService.GenerateUserUsageReportAsync(userId, fromDate, toDate);
         return Ok(report);
     }
@@ -99,6 +114,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var report = await _reportService.GenerateRevenueReportAsync(fromDate, toDate);
         return Ok(report);
     }
@@ -109,6 +129,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var reports = await _reportService.GenerateAllStationsUsageReportAsync(fromDate, toDate);
         return Ok(reports);
     }
@@ -119,6 +144,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var reports = await _reportService.GenerateAllUsersUsageReportAsync(fromDate, toDate);
         return Ok(reports);
     }
@@ -130,6 +160,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var report = await _reportService.GenerateStationUsageReportAsync(stationId, fromDate, toDate);
         var reports = new[] { report };
         var excelData = await _excelExportService.ExportStationUsageReportToExcelAsync(reports);
@@ -144,6 +179,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var reports = await _reportService.GenerateAllStationsUsageReportAsync(fromDate, toDate);
         var excelData = await _excelExportService.ExportStationUsageReportToExcelAsync(reports);
         
@@ -157,6 +197,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var reports = await _reportService.GenerateAllUsersUsageReportAsync(fromDate, toDate);
         var excelData = await _excelExportService.ExportUserUsageReportToExcelAsync(reports);
         
@@ -170,6 +215,11 @@ public class ReportController : ControllerBase
         [FromQuery] DateTime fromDate, 
         [FromQuery] DateTime toDate)
     {
+        if (fromDate == default || toDate == default)
+        {
+            return BadRequest("fromDate and toDate parameters are required.");
+        }
+        
         var report = await _reportService.GenerateRevenueReportAsync(fromDate, toDate);
         var excelData = await _excelExportService.ExportRevenueReportToExcelAsync(report);
         
@@ -177,8 +227,3 @@ public class ReportController : ControllerBase
         return File(excelData, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
     }
 }
-
-
-
-
-

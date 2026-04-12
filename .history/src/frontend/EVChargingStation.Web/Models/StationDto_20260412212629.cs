@@ -16,13 +16,8 @@ namespace EVChargingStation.Web.Models
         public bool IsActive { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
-    }
+
         // Nếu API trả về mảng charging points
-         public class ChargingPointDto
-    {
-        public int Id { get; set; }
-        public int StationId { get; set; }
-        public string PointNumber { get; set; } = string.Empty;
-        public int Status { get; set; }
+        public List<object>? ChargingPoints { get; set; } 
     }
 }

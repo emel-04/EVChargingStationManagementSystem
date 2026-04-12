@@ -218,7 +218,7 @@ public class HomeController : Controller
                 role = 1 // EVDriver
             };
 
-            _logger.LogInformation(" Register data: FirstName={FirstName}, LastName={LastName}, Email={Email}, PhoneNumber={PhoneNumber}", 
+            _logger.LogInformation("📤 Register data: FirstName={FirstName}, LastName={LastName}, Email={Email}, PhoneNumber={PhoneNumber}", 
                 firstName, lastName, email, phoneNumber);
 
             var result = await _apiService.PostAsync<object>("api/auth/register", registerData);
@@ -258,43 +258,24 @@ public class HomeController : Controller
             var sessionId = HttpContext.Session.Id;
             var sessionKeys = HttpContext.Session.Keys.ToList();
 
-            _logger.LogInformation($" Session ID: {sessionId}");
-            _logger.LogInformation($" Session Keys: {string.Join(", ", sessionKeys)}");
-            _logger.LogInformation($" Token exists: {!string.IsNullOrEmpty(token)}");
-            _logger.LogInformation($" Token length: {token?.Length ?? 0}");
+            _logger.LogInformation($"🔍 Session ID: {sessionId}");
+            _logger.LogInformation($"🔍 Session Keys: {string.Join(", ", sessionKeys)}");
+            _logger.LogInformation($"🔍 Token exists: {!string.IsNullOrEmpty(token)}");
+            _logger.LogInformation($"🔍 Token length: {token?.Length ?? 0}");
 
             // Kiểm tra token - nếu null thì chuyển về login với thông báo
             if (string.IsNullOrEmpty(token))
             {
-                _logger.LogWarning(" Token not found when creating booking. Redirecting to login.");
+                _logger.LogWarning("⚠️ Token not found when creating booking. Redirecting to login.");
                 TempData["ErrorMessage"] = "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.";
                 return RedirectToAction("Login");
             }
 
-            _logger.LogInformation($" Creating booking: StationId={stationId}, StartTime={startTime}, EndTime={endTime}");
-
-            int? chargingPointId = null;
-            try
-            {
-                var station = await _apiService.GetAsync<StationDto>($"api/station/{stationId}");
-                if (station != null && station.ChargingPoints != null && station.ChargingPoints.Any())
-                {
-                    // Ưu tiên chọn trụ đang rảnh (Status = 1), nếu không thì lấy trụ đầu tiên
-                    chargingPointId = station.ChargingPoints.FirstOrDefault(p => p.Status == 1)?.Id 
-                                      ?? station.ChargingPoints.First().Id;
-                    
-                    _logger.LogInformation($"🔌 Automatically selected ChargingPointId={chargingPointId} for StationId={stationId}");
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogWarning(ex, " Could not fetch charging points for StationId={StationId}", stationId);
-            }
+            _logger.LogInformation($"📤 Creating booking: StationId={stationId}, StartTime={startTime}, EndTime={endTime}");
 
             var bookingData = new
             {
                 stationId = stationId,
-                chargingPointId = chargingPointId,
                 startTime = startTime,
                 endTime = endTime
             };
@@ -306,7 +287,7 @@ public class HomeController : Controller
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, " Lỗi tạo booking");
+            _logger.LogError(ex, "❌ Lỗi tạo booking");
             TempData["ErrorMessage"] = $"Lỗi: {ex.Message}";
             return RedirectToAction("Bookings");
         }
@@ -327,7 +308,7 @@ public class HomeController : Controller
         }
     }
 
-    // ==========  Profile ==========
+    // ========== 🔹 Profile ==========
     [HttpGet]
     public async Task<IActionResult> Profile()
     {
@@ -357,7 +338,7 @@ public class HomeController : Controller
         }
     }
 
-    // ==========  Logout ==========
+    // ========== 🔹 Logout ==========
     [HttpPost]
     public IActionResult Logout()
     {

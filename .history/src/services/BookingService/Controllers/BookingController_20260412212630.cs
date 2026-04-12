@@ -39,8 +39,8 @@ public class BookingController : ControllerBase
         return Ok(booking);
     }
 
-     [HttpGet]
-    [Authorize(Roles = "Admin,CSStaff")]
+    [HttpGet]
+    [Authorize]
     public async Task<ActionResult<IEnumerable<Booking>>> GetAllBookings()
     {
         var bookings = await _bookingService.GetAllBookingsAsync();

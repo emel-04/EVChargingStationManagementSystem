@@ -141,9 +141,9 @@ public async Task<IActionResult> CreateBooking([FromBody] CreateBookingRequestDt
         // Map từ DTO frontend sang CreateBookingRequest của service
         var bookingRequest = new EVChargingStation.BookingService.Services.CreateBookingRequest
         {
-            UserId = userId.Value,
+            UserId = userId.Value, // Tự động lấy từ token
             StationId = request.StationId,
-            ChargingPointId = request.ChargingPointId,
+            ChargingPointId = null, // Hoặc null nếu bạn muốn
             StartTime = request.StartTime,
             EndTime = request.EndTime
         };
@@ -268,7 +268,6 @@ public async Task<ActionResult<Booking>> UpdateBooking(int id, UpdateBookingRequ
 public class CreateBookingRequestDto
 {
     public int StationId { get; set; }
-    public int? ChargingPointId { get; set; }
     public DateTime StartTime { get; set; }
-    public DateTime? EndTime { get; set; }
+    public DateTime EndTime { get; set; }
 }

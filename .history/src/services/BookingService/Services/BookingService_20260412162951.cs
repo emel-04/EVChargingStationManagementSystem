@@ -72,22 +72,29 @@ public class BookingService : IBookingService
             .ToListAsync();
     }
 
-  public async Task<Booking> CreateBookingAsync(CreateBookingRequest request)
+   public async Task<Booking> CreateBookingAsync(CreateBookingRequest request)
 {
-    
-    var activeBooking = await GetActiveBookingByUserIdAsync(request.UserId);
-    if (activeBooking != null)
-    {
-        throw new InvalidOperationException("User already has an active booking");
-    }
+    // Validate UserId exists in User Service (optional - JWT token already validates user)
+    // Uncomment the following lines if you want strict validation
+    // if (_userValidationService != null)
+    // {
+    //     var isValidUser = await _userValidationService.ValidateUserIdAsync(request.UserId);
+    //     if (!isValidUser)
+    //     {
+    //         throw new ArgumentException($"User with ID {request.UserId} does not exist in User Service");
+    //     }
+    // }
 
-    if (request.ChargingPointId.HasValue)
-    {
-        if (request.ChargingPointId.Value <= 0)
-        {
-            throw new ArgumentException("ChargingPointId must be a positive integer.");
-        }
+    // Check if user has an active booking
+   // var activeBooking = await GetActiveBookingByUserIdAsync(request.UserId);
+   // if (activeBooking != null)
+   // {
+      //  throw new InvalidOperationException("User already has an active booking");
+   // }
 
+    // Check if charging point is available (chỉ check nếu có ChargingPointId)
+    if (request.ChargingPointId.HasValue && request.ChargingPointId.Value > 0)
+    {
         var activeChargingPointBooking = await GetActiveBookingByChargingPointIdAsync(request.ChargingPointId.Value);
         if (activeChargingPointBooking != null)
         {
@@ -105,7 +112,7 @@ public class BookingService : IBookingService
         ChargingPointId = request.ChargingPointId,
         BookingNumber = bookingNumber,
         StartTime = request.StartTime,
-        EndTime = request.EndTime ?? request.StartTime.AddHours(2),
+        EndTime = request.EndTime ?? DateTime.UtcNow.AddHours(2), // Default 2 hours nếu null
         Status = BookingStatus.Pending,
         QRCode = qrCode,
         CreatedAt = DateTime.UtcNow
@@ -122,7 +129,6 @@ public class BookingService : IBookingService
 
     return booking;
 }
-
 
     public async Task<Booking> UpdateBookingAsync(int id, UpdateBookingRequest request)
     {

@@ -39,48 +39,68 @@ public class UserService : IUserService
     }
 
     public async Task<User> CreateUserAsync(CreateUserRequest request)
+{
+    // 🔴 Validate password
+    if (string.IsNullOrEmpty(request.Password) || request.Password.Length <= 3)
     {
-        // Check if user already exists
-       // var existingUser = await GetUserByEmailAsync(request.Email);
-       // if (existingUser != null)
-        //{
-        //    throw new InvalidOperationException("User with this email already exists");
-        //}
-
-        // Hash password
-        var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
-
-        var user = new User
-        {
-            FirstName = request.FirstName,
-            LastName = request.LastName,
-            Email = request.Email,
-            PhoneNumber = request.PhoneNumber,
-            PasswordHash = passwordHash,
-            Role = request.Role,
-            IsActive = true,
-            CreatedAt = DateTime.UtcNow
-        };
-
-        _context.Users.Add(user);
-        await _context.SaveChangesAsync();
-
-        // Create wallet for the user
-        var wallet = new Wallet
-        {
-            UserId = user.Id,
-            Balance = 0,
-            IsActive = true,
-            CreatedAt = DateTime.UtcNow
-        };
-
-        _context.Wallets.Add(wallet);
-        await _context.SaveChangesAsync();
-
-        _logger.LogInformation("User created successfully: {Email}", user.Email);
-
-        return user;
+        throw new InvalidOperationException("Password phải lớn hơn 3 ký tự");
     }
+
+    // 🔴 Validate email format
+    var emailRegex = new System.Text.RegularExpressions.Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+    if (string.IsNullOrEmpty(request.Email) || !emailRegex.IsMatch(request.Email))
+    {
+        throw new InvalidOperationException("Email không đúng định dạng");
+    }
+
+    // 🔴 Check email trùng
+    var existingUser = await GetUserByEmailAsync(request.Email);
+    if (existingUser != null)
+    {
+        throw new InvalidOperationException("Email đã tồn tại");
+    }
+
+    if (string.IsNullOrEmpty(request.PhoneNumber) || 
+    !System.Text.RegularExpressions.Regex.IsMatch(request.PhoneNumber, @"^\d{10}$"))
+{
+    throw new InvalidOperationException("Số điện thoại phải đúng 10 chữ số");
+}
+
+    // 🔐 Hash password
+    var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+
+    var user = new User
+    {
+        FirstName = request.FirstName,
+        LastName = request.LastName,
+        Email = request.Email,
+        PhoneNumber = request.PhoneNumber,
+        PasswordHash = passwordHash,
+        Role = request.Role,
+        IsActive = true,
+        CreatedAt = DateTime.UtcNow
+    };
+
+    _context.Users.Add(user);
+    await _context.SaveChangesAsync();
+
+    // 💰 Create wallet
+    var wallet = new Wallet
+    {
+        UserId = user.Id,
+        Balance = 0,
+        IsActive = true,
+        CreatedAt = DateTime.UtcNow
+    };
+
+    _context.Wallets.Add(wallet);
+    await _context.SaveChangesAsync();
+
+    _logger.LogInformation("User created successfully: {Email}", user.Email);
+
+    return user;
+}
+
 
     public async Task<User> UpdateUserAsync(int id, UpdateUserRequest request)
     {

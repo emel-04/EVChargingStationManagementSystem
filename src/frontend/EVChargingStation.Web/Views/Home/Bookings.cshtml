@@ -13,21 +13,6 @@
         </button>
     </div>
 
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success alert-dismissible fade show">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            @TempData["SuccessMessage"]
-        </div>
-    }
-    @if (TempData["ErrorMessage"] != null)
-    {
-        <div class="alert alert-danger alert-dismissible fade show">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            @TempData["ErrorMessage"]
-        </div>
-    }
-
     <div class="card shadow-sm">
         <div class="card-body">
             <div class="table-responsive">
@@ -39,7 +24,7 @@
                             <th>Thời gian bắt đầu</th>
                             <th>Thời gian kết thúc</th>
                             <th>Trạng thái</th>
-                           
+                            <th class="text-end">Tùy chọn</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,7 +59,11 @@
                                             default: <span class="badge bg-dark">Không xác định</span>; break;
                                         }
                                     </td>
-                                    
+                                    <td class="text-end">
+                                        <a href="@Url.Action("Payments", "Home")" class="btn btn-sm btn-outline-primary">
+                                            <i class="fa fa-wallet me-1"></i>Thanh toán
+                                        </a>
+                                    </td>
                                 </tr>
                             }
                         }
@@ -89,7 +78,7 @@
 <div class="modal fade" id="createBookingModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form method="post" action="/Home/CreateBooking">
+            <form method="post" action="/Home/CreateBooking" id="createBookingForm">
                 @Html.AntiForgeryToken()
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title"><i class="fa fa-plus me-2"></i>Tạo đặt chỗ mới</h5>
@@ -104,11 +93,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Thời gian bắt đầu</label>
-                        <input type="datetime-local" name="startTime" class="form-control" required />
+                        <input type="datetime-local" name="startTime" class="form-control" id="startTimeInput" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Thời gian kết thúc</label>
-                        <input type="datetime-local" name="endTime" class="form-control" required />
+                        <input type="datetime-local" name="endTime" class="form-control" id="endTimeInput" required />
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -128,6 +117,26 @@
             const createModal = document.getElementById("createBookingModal");
             createModal.addEventListener("show.bs.modal", async () => {
                 await loadStations();
+            });
+
+            document.getElementById("createBookingForm").addEventListener("submit", (event) => {
+                const start = new Date(document.getElementById("startTimeInput").value);
+                const end = new Date(document.getElementById("endTimeInput").value);
+                if (!document.getElementById("selectStation").value) {
+                    event.preventDefault();
+                    showInlineToast("Vui lòng chọn trạm sạc.", "danger");
+                    return;
+                }
+                if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) {
+                    event.preventDefault();
+                    showInlineToast("Thời gian booking không hợp lệ.", "danger");
+                    return;
+                }
+                if (end <= start) {
+                    event.preventDefault();
+                    showInlineToast("Thời gian kết thúc phải sau thời gian bắt đầu.", "danger");
+                    return;
+                }
             });
         });
 
@@ -149,8 +158,19 @@
         });
     } catch (err) {
         console.error("Lỗi load stations:", err);
-        alert("Không thể tải danh sách trạm sạc");
+        showInlineToast("Không thể tải danh sách trạm sạc", "danger");
     }
+}
+
+function showInlineToast(message, type) {
+    const toast = document.createElement("div");
+    toast.className = `alert alert-${type} position-fixed shadow`;
+    toast.style.top = "20px";
+    toast.style.right = "20px";
+    toast.style.zIndex = "2000";
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2500);
 }
 
     </script>

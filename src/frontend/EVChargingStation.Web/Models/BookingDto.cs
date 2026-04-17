@@ -17,12 +17,8 @@ namespace EVChargingStation.Web.Models
         public bool HasPayment { get; set; }
         public decimal? PaymentAmount { get; set; }
         public decimal? TotalAmount { get; set; }
+        public decimal? EnergyConsumed { get; set; }
+        public decimal? TotalCost { get; set; }
     }
 
-    public class ChargingPointDto
-    {
-        public int Id { get; set; }
-        public int StationId { get; set; }
-        public string Status { get; set; } = "";
-    }
 }

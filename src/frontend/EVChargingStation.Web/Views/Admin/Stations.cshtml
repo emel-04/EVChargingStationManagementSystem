@@ -1,6 +1,4 @@
- @model EVChargingStation.Web.Models.StationDto
-
- @{
+@{
     ViewData["Title"] = "Quản lý trạm sạc";
     
     var stations = ViewBag.Stations as List<EVChargingStation.Web.Models.StationDto> ?? new();
@@ -18,27 +16,66 @@
     </div>
 </div>
 
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
 <table class="table table-bordered table-striped">
     <thead class="table-dark">
         <tr>
             <th>ID</th>
             <th>Tên trạm</th>
             <th>Địa chỉ</th>
-            <th>Công suất (kW)</th>
+            <th>Thành phố</th>
+            <th>Trạng thái</th>
+            <th>Số trụ sạc</th>
             <th>Thao tác</th>
         </tr>
     </thead>
     <tbody>
+        @if (stations.Count == 0)
+        {
+            <tr>
+                <td colspan="7" class="text-center text-muted py-4">
+                    <i class="fa fa-info-circle me-1"></i>Chưa có trạm sạc nào. Bấm "Thêm trạm mới" để tạo.
+                </td>
+            </tr>
+        }
         @foreach (var s in stations)
         {
             <tr>
                 <td>@s.Id</td>
                 <td>@s.Name</td>
                 <td>@s.Address</td>
-                <td>@s.PowerKW</td>
+                <td>@(s.City ?? "—")</td>
                 <td>
-    
-
+                    @switch (s.Status)
+                    {
+                        case 1:
+                            <span class="badge bg-success">Online</span>
+                            break;
+                        case 2:
+                            <span class="badge bg-secondary">Offline</span>
+                            break;
+                        case 3:
+                            <span class="badge bg-warning text-dark">Maintenance</span>
+                            break;
+                        default:
+                            <span class="badge bg-light text-dark">@s.Status</span>
+                            break;
+                    }
+                </td>
+                <td>@(s.ChargingPoints?.Count ?? 0)</td>
+                <td>
+                    <a href="@Url.Action("EditStation", "Admin", new { id = s.Id })" class="btn btn-primary btn-sm me-1">
+                        <i class="fa fa-edit"></i> Sửa
+                    </a>
                     <form method="post" action="@Url.Action("DeleteStation", "Admin", new { id = s.Id })"
                           style="display:inline;" onsubmit="return confirm('Bạn có chắc muốn xóa trạm này không?');">
                         <button type="submit" class="btn btn-danger btn-sm">
@@ -50,13 +87,3 @@
         }
     </tbody>
 </table>
-
-@if (TempData["Message"] != null)
-{
-    <div class="alert alert-success mt-3">@TempData["Message"]</div>
-}
-
-@if (TempData["Error"] != null)
-{
-    <div class="alert alert-danger mt-3">@TempData["Error"]</div>
-}

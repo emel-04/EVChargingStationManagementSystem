@@ -11,6 +11,8 @@ public class HomeController : Controller
 {
     private readonly ApiService _apiService;
     private readonly ILogger<HomeController> _logger;
+    private const decimal VinFastUnitPricePerKwh = 3858m;
+    private const decimal PartnerRevenuePerKwh = 750m;
 
     public HomeController(ApiService apiService, ILogger<HomeController> logger)
     {
@@ -19,7 +21,8 @@ public class HomeController : Controller
     }
 
     private static bool IsCompletedBookingStatus(int status) => status == 3 || status == 4;
-    private static bool IsCompletedPaymentStatus(int status) => status == 1 || status == 3;
+    private static bool IsCompletedPaymentStatus(int status) => status == 3;
+    private static string GetChargeWindowLabel(DateTime time) => (time.Hour < 6 || time.Hour >= 22) ? "Khung giờ thấp điểm" : "Khung giờ bình thường";
 
     public async Task<IActionResult> Index()
     {
@@ -218,7 +221,7 @@ public class HomeController : Controller
                 role = 1 // EVDriver
             };
 
-            _logger.LogInformation(" Register data: FirstName={FirstName}, LastName={LastName}, Email={Email}, PhoneNumber={PhoneNumber}", 
+            _logger.LogInformation("📤 Register data: FirstName={FirstName}, LastName={LastName}, Email={Email}, PhoneNumber={PhoneNumber}", 
                 firstName, lastName, email, phoneNumber);
 
             var result = await _apiService.PostAsync<object>("api/auth/register", registerData);
@@ -258,10 +261,10 @@ public class HomeController : Controller
             var sessionId = HttpContext.Session.Id;
             var sessionKeys = HttpContext.Session.Keys.ToList();
 
-            _logger.LogInformation($" Session ID: {sessionId}");
-            _logger.LogInformation($" Session Keys: {string.Join(", ", sessionKeys)}");
-            _logger.LogInformation($" Token exists: {!string.IsNullOrEmpty(token)}");
-            _logger.LogInformation($" Token length: {token?.Length ?? 0}");
+            _logger.LogInformation($"🔍 Session ID: {sessionId}");
+            _logger.LogInformation($"🔍 Session Keys: {string.Join(", ", sessionKeys)}");
+            _logger.LogInformation($"🔍 Token exists: {!string.IsNullOrEmpty(token)}");
+            _logger.LogInformation($"🔍 Token length: {token?.Length ?? 0}");
 
             // Kiểm tra token - nếu null thì chuyển về login với thông báo
             if (string.IsNullOrEmpty(token))
@@ -271,7 +274,7 @@ public class HomeController : Controller
                 return RedirectToAction("Login");
             }
 
-            _logger.LogInformation($" Creating booking: StationId={stationId}, StartTime={startTime}, EndTime={endTime}");
+            _logger.LogInformation($"📤 Creating booking: StationId={stationId}, StartTime={startTime}, EndTime={endTime}");
 
             int? chargingPointId = null;
             try
@@ -327,7 +330,7 @@ public class HomeController : Controller
         }
     }
 
-    // ==========  Profile ==========
+    // ========== 🔹 Profile ==========
     [HttpGet]
     public async Task<IActionResult> Profile()
     {
@@ -357,7 +360,61 @@ public class HomeController : Controller
         }
     }
 
-    // ==========  Logout ==========
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> UpdateProfile(string firstName, string lastName, string email, string phoneNumber)
+    {
+        var userId = HttpContext.Session.GetString("UserId");
+        if (string.IsNullOrEmpty(userId))
+            return RedirectToAction("Login");
+
+        firstName = firstName?.Trim() ?? string.Empty;
+        lastName = lastName?.Trim() ?? string.Empty;
+        email = email?.Trim() ?? string.Empty;
+        phoneNumber = phoneNumber?.Trim() ?? string.Empty;
+
+        if (string.IsNullOrWhiteSpace(firstName) ||
+            string.IsNullOrWhiteSpace(lastName) ||
+            string.IsNullOrWhiteSpace(email) ||
+            string.IsNullOrWhiteSpace(phoneNumber))
+        {
+            TempData["ErrorMessage"] = "Vui lòng nhập đầy đủ thông tin hồ sơ, không để trống.";
+            return RedirectToAction("Profile");
+        }
+
+        try
+        {
+            var currentUser = await _apiService.GetAsync<UserDto>($"api/user/{userId}");
+            if (currentUser == null)
+            {
+                TempData["ErrorMessage"] = "Không tìm thấy hồ sơ để cập nhật.";
+                return RedirectToAction("Profile");
+            }
+
+            var payload = new
+            {
+                firstName,
+                lastName,
+                email,
+                phoneNumber,
+                role = currentUser.Role,
+                isActive = currentUser.IsActive
+            };
+
+            await _apiService.PutAsync<object>($"api/user/{userId}", payload);
+            HttpContext.Session.SetString("UserName", firstName);
+            TempData["SuccessMessage"] = "Cập nhật hồ sơ thành công.";
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error updating profile");
+            TempData["ErrorMessage"] = "Không thể cập nhật hồ sơ, vui lòng thử lại.";
+        }
+
+        return RedirectToAction("Profile");
+    }
+
+    // ========== 🔹 Logout ==========
     [HttpPost]
     public IActionResult Logout()
     {
@@ -442,17 +499,22 @@ public class HomeController : Controller
                 {
                     var station = stations?.FirstOrDefault(s => s.Id == booking.StationId);
                     booking.StationName = station?.Name ?? $"Trạm #{booking.StationId}";
+                    booking.TotalCost = CalculateChargeCost(booking);
                 }
             }
 
             ViewBag.Payments = payments ?? new List<PaymentDto>();
             ViewBag.PayableBookings = payableBookings;
+            ViewBag.UnitPricePerKwh = VinFastUnitPricePerKwh;
+            ViewBag.PartnerRevenuePerKwh = PartnerRevenuePerKwh;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error loading payments");
             ViewBag.Payments = new List<PaymentDto>();
             ViewBag.PayableBookings = new List<BookingDto>();
+            ViewBag.UnitPricePerKwh = VinFastUnitPricePerKwh;
+            ViewBag.PartnerRevenuePerKwh = PartnerRevenuePerKwh;
         }
 
         return View();
@@ -486,6 +548,10 @@ public class HomeController : Controller
             var amount = booking.TotalAmount ?? 0m;
             if (amount <= 0)
             {
+                amount = CalculateChargeCost(booking);
+            }
+            if (amount <= 0)
+            {
                 TempData["ErrorMessage"] = "Booking chưa có số tiền hợp lệ để thanh toán.";
                 return RedirectToAction("Payments");
             }
@@ -496,7 +562,7 @@ public class HomeController : Controller
                 bookingId = bookingId,
                 amount = amount,
                 method = method,
-                description = $"Thanh toán booking #{booking.BookingNumber}"
+                description = $"Thanh toán booking #{booking.BookingNumber} - {GetChargeWindowLabel(booking.StartTime)}"
             };
 
             await _apiService.PostWithAuthAsync<object>("api/payment", paymentData, token);
@@ -509,6 +575,13 @@ public class HomeController : Controller
         }
 
         return RedirectToAction("Payments");
+    }
+
+    private static decimal CalculateChargeCost(BookingDto booking)
+    {
+        var energy = booking.EnergyConsumed.GetValueOrDefault();
+        if (energy <= 0) return 0m;
+        return Math.Round(energy * VinFastUnitPricePerKwh, 0, MidpointRounding.AwayFromZero);
     }
 
     

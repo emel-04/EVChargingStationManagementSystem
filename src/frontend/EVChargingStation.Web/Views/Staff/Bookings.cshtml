@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Quản lý Booking - Nhân viên";
+    var unitPricePerKwh = (decimal?)ViewBag.UnitPricePerKwh ?? 3858m;
+    var partnerRevenuePerKwh = (decimal?)ViewBag.PartnerRevenuePerKwh ?? 750m;
 }
 
 <div class="container-fluid py-4">
@@ -16,21 +18,10 @@
             </a>
         </div>
     </div>
-
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success alert-dismissible fade show">
-            <i class="fa fa-check-circle me-1"></i>@TempData["SuccessMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-    }
-    @if (TempData["ErrorMessage"] != null)
-    {
-        <div class="alert alert-danger alert-dismissible fade show">
-            <i class="fa fa-exclamation-triangle me-1"></i>@TempData["ErrorMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-    }
+    <div class="small text-muted mb-3">
+        Đơn giá VINFAST: <strong>@unitPricePerKwh.ToString("N0") VNĐ/kWh</strong>,
+        doanh thu hưởng: <strong>@partnerRevenuePerKwh.ToString("N0") VNĐ/kWh</strong>.
+    </div>
 
     <!-- Filter Section -->
     <div class="card shadow-sm mb-3">
@@ -41,10 +32,11 @@
                     <select id="filterStatus" class="form-select">
                         <option value="">Tất cả</option>
                         <option value="0">Chờ xác nhận</option>
-                        <option value="1">Đã xác nhận</option>
-                        <option value="2">Đang sạc</option>
-                        <option value="3">Hoàn thành</option>
-                        <option value="4">Đã hủy</option>
+                        <option value="1">Chờ xác nhận</option>
+                        <option value="2">Đã xác nhận</option>
+                        <option value="3">Đang sạc</option>
+                        <option value="4">Hoàn thành</option>
+                        <option value="5">Đã hủy</option>
                     </select>
                 </div>
                 <div class="col-md-3">
@@ -94,7 +86,7 @@
                         {
                             @foreach (var b in Model)
                             {
-                                <tr>
+                                <tr data-status="@b.Status">
                                     <td><strong class="text-success">@b.BookingNumber</strong></td>
                                     <td>
                                         <i class="fa fa-user me-1"></i>@b.UserName
@@ -114,14 +106,16 @@
                                         @switch (b.Status)
                                         {
                                             case 0: <span class="badge bg-warning text-dark">Chờ xác nhận</span>; break;
-                                            case 1: <span class="badge bg-info">Đã xác nhận</span>; break;
-                                            case 2: <span class="badge bg-primary">Đang sạc</span>; break;
-                                            case 3: <span class="badge bg-success">Hoàn thành</span>; break;
-                                            case 4: <span class="badge bg-danger">Đã hủy</span>; break;
+                                            case 1: <span class="badge bg-warning text-dark">Chờ xác nhận</span>; break;
+                                            case 2: <span class="badge bg-info">Đã xác nhận</span>; break;
+                                            case 3: <span class="badge bg-primary">Đang sạc</span>; break;
+                                            case 4: <span class="badge bg-success">Hoàn thành</span>; break;
+                                            case 5: <span class="badge bg-danger">Đã hủy</span>; break;
+                                            default: <span class="badge bg-secondary">Không xác định</span>; break;
                                         }
                                     </td>
                                     <td>
-                                        @if (b.Status == 3 && !b.HasPayment)
+                                        @if ((b.Status == 3 || b.Status == 4) && !b.HasPayment)
                                         {
                                             <button class="btn btn-warning btn-sm" 
                                                     data-bs-toggle="modal" 
@@ -130,6 +124,8 @@
                                                     data-booking-number="@b.BookingNumber"
                                                     data-station-name="@b.StationName"
                                                     data-user-name="@b.UserName"
+                                                    data-energy="@b.EnergyConsumed.GetValueOrDefault()"
+                                                    data-cost="@((b.TotalCost ?? b.TotalAmount).GetValueOrDefault())"
                                                     title="Tạo thanh toán">
                                                 <i class="fa fa-dollar-sign me-1"></i>Tạo TT
                                             </button>
@@ -140,7 +136,7 @@
                                                 <i class="fa fa-check-circle"></i> Đã TT
                                             </span>
                                         }
-                                        else if (b.Status == 3)
+                                        else if (b.Status == 3 || b.Status == 4)
                                         {
                                             <span class="text-muted small">Chưa TT</span>
                                         }
@@ -187,10 +183,11 @@
                         <label class="form-label">Trạng thái</label>
                         <select name="status" class="form-select" id="editStatus">
                             <option value="0">Chờ xác nhận</option>
-                            <option value="1">Đã xác nhận</option>
-                            <option value="2">Đang sạc</option>
-                            <option value="3">Hoàn thành</option>
-                            <option value="4">Đã hủy</option>
+                            <option value="1">Chờ xác nhận</option>
+                            <option value="2">Đã xác nhận</option>
+                            <option value="3">Đang sạc</option>
+                            <option value="4">Hoàn thành</option>
+                            <option value="5">Đã hủy</option>
                         </select>
                     </div>
                 </div>
@@ -231,6 +228,7 @@
                             <div class="col-md-6">
                                 <p class="mb-1"><strong>Mã booking:</strong> <span id="infoBookingNumber"></span></p>
                                 <p class="mb-1"><strong>Khách hàng:</strong> <span id="infoUserName"></span></p>
+                                <p class="mb-1"><strong>Sản lượng:</strong> <span id="infoEnergy"></span></p>
                             </div>
                             <div class="col-md-6">
                                 <p class="mb-1"><strong>Trạm sạc:</strong> <span id="infoStationName"></span></p>
@@ -264,9 +262,11 @@
                             </label>
                             <select class="form-select form-select-lg" name="method" required>
                                 <option value="">-- Chọn phương thức --</option>
-                                <option value="0">💵 Tiền mặt</option>
-                                <option value="1">💳 Thẻ ngân hàng</option>
-                                <option value="2">📱 Ví điện tử</option>
+                                <option value="1">💳 Thẻ tín dụng</option>
+                                <option value="2">💳 Thẻ ghi nợ</option>
+                                <option value="3">📱 Ví điện tử</option>
+                                <option value="4">🏦 Chuyển khoản</option>
+                                <option value="5">💵 Tiền mặt</option>
                             </select>
                         </div>
 
@@ -329,16 +329,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const bookingNumber = button.dataset.bookingNumber;
         const stationName = button.dataset.stationName;
         const userName = button.dataset.userName;
+        const energy = Number(button.dataset.energy || 0);
+        const cost = Number(button.dataset.cost || 0);
         
         // Điền thông tin vào modal
         document.getElementById("paymentBookingId").value = bookingId;
         document.getElementById("infoBookingNumber").textContent = bookingNumber;
         document.getElementById("infoStationName").textContent = stationName;
         document.getElementById("infoUserName").textContent = userName;
+        document.getElementById("infoEnergy").textContent = `${energy.toLocaleString('vi-VN')} kWh`;
         
         // Reset form
-        document.getElementById("paymentAmount").value = "";
-        document.getElementById("totalAmount").textContent = "0 VNĐ";
+        document.getElementById("paymentAmount").value = cost > 0 ? Math.round(cost) : "";
+        document.getElementById("totalAmount").textContent = `${Math.round(cost).toLocaleString('vi-VN')} VNĐ`;
     });
 
     // Cập nhật tổng tiền khi nhập số tiền
@@ -347,6 +350,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const amount = parseFloat(this.value) || 0;
         const formatted = amount.toLocaleString('vi-VN') + ' VNĐ';
         document.getElementById("totalAmount").textContent = formatted;
+    });
+
+    const paymentForm = document.querySelector('#paymentModal form');
+    paymentForm.addEventListener("submit", function (event) {
+        const amount = parseFloat(document.getElementById("paymentAmount").value) || 0;
+        if (amount <= 0) {
+            event.preventDefault();
+            showInlineToast("Số tiền thanh toán phải lớn hơn 0.", "danger");
+        }
     });
 
     // Filter functionality
@@ -371,22 +383,12 @@ function filterTable() {
 
         const bookingNumber = row.cells[0].textContent.toLowerCase();
         const userName = row.cells[1].textContent.toLowerCase();
-        const statusBadge = row.cells[5].querySelector(".badge");
+        const rowStatus = row.dataset.status;
 
         let showRow = true;
 
-        if (statusFilter && statusBadge) {
-            const rowStatus = statusBadge.textContent.trim();
-            const filterMap = {
-                "0": "Chờ xác nhận",
-                "1": "Đã xác nhận",
-                "2": "Đang sạc",
-                "3": "Hoàn thành",
-                "4": "Đã hủy"
-            };
-            if (rowStatus !== filterMap[statusFilter]) {
-                showRow = false;
-            }
+        if (statusFilter && rowStatus !== statusFilter) {
+            showRow = false;
         }
 
         if (searchText && !bookingNumber.includes(searchText) && !userName.includes(searchText)) {
@@ -395,6 +397,17 @@ function filterTable() {
 
         row.style.display = showRow ? "" : "none";
     });
+}
+
+function showInlineToast(message, type) {
+    const toast = document.createElement("div");
+    toast.className = `alert alert-${type} position-fixed shadow`;
+    toast.style.top = "20px";
+    toast.style.right = "20px";
+    toast.style.zIndex = "2000";
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2500);
 }
 </script>
 }

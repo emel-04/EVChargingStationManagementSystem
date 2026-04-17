@@ -78,9 +78,11 @@
                                     </td>
                                     <td>
                                         <span class="badge @(payment.Method switch {
-                                            0 => "bg-secondary",
                                             1 => "bg-primary",
-                                            2 => "bg-warning",
+                                            2 => "bg-info",
+                                            3 => "bg-warning text-dark",
+                                            4 => "bg-secondary",
+                                            5 => "bg-dark",
                                             _ => "bg-dark"
                                         })">
                                             @payment.MethodName
@@ -88,10 +90,12 @@
                                     </td>
                                     <td>
                                         <span class="badge @(payment.Status switch {
-                                            0 => "bg-warning",
-                                            1 => "bg-success",
-                                            2 => "bg-danger",
-                                            3 => "bg-info",
+                                            1 => "bg-warning text-dark",
+                                            2 => "bg-info",
+                                            3 => "bg-success",
+                                            4 => "bg-danger",
+                                            5 => "bg-primary",
+                                            6 => "bg-secondary",
                                             _ => "bg-dark"
                                         })">
                                             @payment.StatusName
@@ -99,7 +103,7 @@
                                     </td>
                                     <td>@payment.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
                                     <td>
-                                        @if (payment.Status == 0)
+                                        @if (payment.Status == 1 || payment.Status == 2)
                                         {
                                             <div class="btn-group" role="group">
                                                 <button type="button" class="btn btn-success btn-sm"
@@ -107,7 +111,7 @@
                                                         data-bs-target="#processModal"
                                                         data-payment-id="@payment.Id"
                                                         data-payment-number="@payment.PaymentNumber"
-                                                        data-status="1">
+                                                        data-status="3">
                                                     <i class="fa fa-check"></i>
                                                 </button>
                                                 <button type="button" class="btn btn-danger btn-sm"
@@ -115,7 +119,7 @@
                                                         data-bs-target="#processModal"
                                                         data-payment-id="@payment.Id"
                                                         data-payment-number="@payment.PaymentNumber"
-                                                        data-status="2">
+                                                        data-status="4">
                                                     <i class="fa fa-times"></i>
                                                 </button>
                                             </div>
@@ -155,7 +159,7 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <form asp-action="ProcessPayment" method="post">
+            <form id="processPaymentForm" action="@Url.Action("ProcessPaymentStatus", "Admin")" method="post">
                 @Html.AntiForgeryToken()
                 <div class="modal-body">
                     <input type="hidden" id="processPaymentId" name="id" />
@@ -187,24 +191,63 @@
 
 @section Scripts {
 <script>
-    // Xử lý modal
-    $('#processModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
-        var paymentId = button.data('payment-id');
-        var paymentNumber = button.data('payment-number');
-        var status = button.data('status');
-        
-        $('#processPaymentId').val(paymentId);
-        $('#processStatus').val(status);
-        $('#processPaymentNumber').text('Thanh toán: ' + paymentNumber);
-        
-        if (status == 1) {
-            $('#statusMessage').html('<div class="alert alert-success"><i class="fa fa-check-circle me-2"></i>Xác nhận thanh toán thành công?</div>');
-            $('#confirmProcessBtn').removeClass('btn-danger').addClass('btn-success');
+    const processModal = document.getElementById('processModal');
+    const processForm = document.getElementById('processPaymentForm');
+
+    processModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        if (!button) return;
+        const paymentId = button.getAttribute('data-payment-id');
+        const paymentNumber = button.getAttribute('data-payment-number');
+        const status = button.getAttribute('data-status');
+
+        document.getElementById('processPaymentId').value = paymentId || '';
+        document.getElementById('processStatus').value = status || '';
+        document.getElementById('processPaymentNumber').textContent = `Thanh toán: ${paymentNumber ?? ''}`;
+
+        const statusMessage = document.getElementById('statusMessage');
+        const confirmBtn = document.getElementById('confirmProcessBtn');
+        if (status === '3') {
+            statusMessage.innerHTML = '<div class="alert alert-success mb-0"><i class="fa fa-check-circle me-2"></i>Xác nhận thanh toán hoàn thành?</div>';
+            confirmBtn.classList.remove('btn-danger');
+            confirmBtn.classList.add('btn-success');
         } else {
-            $('#statusMessage').html('<div class="alert alert-danger"><i class="fa fa-times-circle me-2"></i>Đánh dấu thanh toán thất bại?</div>');
-            $('#confirmProcessBtn').removeClass('btn-success').addClass('btn-danger');
+            statusMessage.innerHTML = '<div class="alert alert-danger mb-0"><i class="fa fa-times-circle me-2"></i>Xác nhận từ chối thanh toán?</div>';
+            confirmBtn.classList.remove('btn-success');
+            confirmBtn.classList.add('btn-danger');
         }
     });
+
+    processForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const formData = new FormData(processForm);
+        const payload = new URLSearchParams();
+        formData.forEach((value, key) => payload.append(key, value.toString()));
+
+        try {
+            const response = await fetch(processForm.action, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                body: payload.toString()
+            });
+            const data = await response.json();
+            showInlineToast(data.message || (response.ok ? 'Cập nhật thành công' : 'Cập nhật thất bại'), response.ok ? 'success' : 'danger');
+            if (!response.ok || !data.success) return;
+            setTimeout(() => window.location.reload(), 500);
+        } catch {
+            showInlineToast('Không thể cập nhật trạng thái thanh toán.', 'danger');
+        }
+    });
+
+    function showInlineToast(message, type) {
+        const toast = document.createElement('div');
+        toast.className = `alert alert-${type} position-fixed shadow`;
+        toast.style.top = '20px';
+        toast.style.right = '20px';
+        toast.style.zIndex = '2000';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 2500);
+    }
 </script>
 }

@@ -17,7 +17,7 @@ namespace EVChargingStation.Web.Controllers
             _logger = logger;
         }
 
-        // ==========  Đăng nhập ==========
+        // ========== 🔹 Đăng nhập ==========
         [HttpGet]
         public IActionResult Login() => View();
 
@@ -69,7 +69,7 @@ namespace EVChargingStation.Web.Controllers
             }
         }
 
-        // ==========  Dashboard ==========
+        // ========== 🔹 Dashboard ==========
         public IActionResult Index()
         {
             var token = HttpContext.Session.GetString("Token");
@@ -89,7 +89,7 @@ namespace EVChargingStation.Web.Controllers
             return View();
         }
 
-        // ==========  Danh sách trạm ==========
+        // ========== 🔹 Danh sách trạm ==========
         public async Task<IActionResult> Stations()
         {
             if (!IsAdminLoggedIn())
@@ -100,7 +100,7 @@ namespace EVChargingStation.Web.Controllers
             return View();
         }
 
-        // ==========  Thêm trạm ==========
+        // ========== 🔹 Thêm trạm ==========
         [HttpGet]
         public IActionResult CreateStation()
         {
@@ -112,7 +112,7 @@ namespace EVChargingStation.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateStation(string name, string address, int numberOfPorts, double powerKW)
+        public async Task<IActionResult> CreateStation(string name, string address, double latitude, double longitude, string? city, string? province, int status = 1)
         {
             if (!IsAdminLoggedIn())
                 return RedirectToAction("Login");
@@ -123,23 +123,26 @@ namespace EVChargingStation.Web.Controllers
                 {
                     name,
                     address,
-                    numberOfPorts,
-                    powerKW
+                    latitude,
+                    longitude,
+                    city,
+                    province,
+                    status
                 };
 
                 await _apiService.PostAsync<object>("api/station", newStation);
-                TempData["Message"] = " Thêm trạm sạc thành công!";
+                TempData["Message"] = "✅ Thêm trạm sạc thành công!";
             }
             catch (HttpRequestException ex)
             {
                 _logger.LogError(ex, "Failed to create station");
-                TempData["Error"] = $" Không thể thêm trạm: {ex.Message}";
+                TempData["Error"] = $"❌ Không thể thêm trạm: {ex.Message}";
             }
 
             return RedirectToAction("Stations");
         }
 
-        // ==========  Sửa trạm ==========
+        // ========== 🔹 Sửa trạm ==========
         [HttpGet]
         public async Task<IActionResult> EditStation(int id)
         {
@@ -168,12 +171,12 @@ namespace EVChargingStation.Web.Controllers
             try
             {
                 await _apiService.PutAsync<object>($"api/station/{station.Id}", station);
-                TempData["Message"] = " Cập nhật trạm sạc thành công!";
+                TempData["Message"] = "✅ Cập nhật trạm sạc thành công!";
             }
             catch (HttpRequestException ex)
             {
                 _logger.LogError(ex, "Failed to update station {Id}", station.Id);
-                TempData["Error"] = $" Cập nhật thất bại: {ex.Message}";
+                TempData["Error"] = $"❌ Cập nhật thất bại: {ex.Message}";
             }
 
             return RedirectToAction("Stations");
@@ -187,13 +190,13 @@ namespace EVChargingStation.Web.Controllers
 
             bool deleted = await _apiService.DeleteAsync($"api/station/{id}");
             TempData[deleted ? "Message" : "Error"] = deleted
-                ? " Xóa trạm sạc thành công!"
+                ? "✅ Xóa trạm sạc thành công!"
                 : "⚠️ Xóa trạm sạc thất bại.";
 
             return RedirectToAction("Stations");
         }
 
-        // ==========  Danh sách người dùng ==========
+        // ========== 🔹 Danh sách người dùng ==========
         public async Task<IActionResult> Users()
         {
             if (!IsAdminLoggedIn())
@@ -204,7 +207,7 @@ namespace EVChargingStation.Web.Controllers
             return View();
         }
 
-        // ==========  Thêm người dùng ==========
+        // ========== 🔹 Thêm người dùng ==========
         [HttpGet]
         public IActionResult CreateUser()
         {
@@ -228,7 +231,7 @@ namespace EVChargingStation.Web.Controllers
             if (!IsAdminLoggedIn())
                 return RedirectToAction("Login");
 
-            _logger.LogInformation(" Creating user: Email={Email}, Role={Role}", Email, Role);
+            _logger.LogInformation("🔄 Creating user: Email={Email}, Role={Role}", Email, Role);
 
             try
             {
@@ -245,18 +248,18 @@ namespace EVChargingStation.Web.Controllers
 
                 await _apiService.PostAsync<object>("api/user", model);
 
-                TempData["Message"] = " Thêm người dùng thành công!";
+                TempData["Message"] = "✅ Thêm người dùng thành công!";
                 return RedirectToAction("Users");
             }
             catch (HttpRequestException ex)
             {
-                _logger.LogError(ex, " Failed to create user");
-                TempData["Error"] = $" Lỗi: {ex.Message}";
+                _logger.LogError(ex, "❌ Failed to create user");
+                TempData["Error"] = $"❌ Lỗi: {ex.Message}";
                 return View();
             }
         }
 
-        // ==========  Sửa người dùng ==========
+        // ========== 🔹 Sửa người dùng ==========
         [HttpGet]
         public async Task<IActionResult> EditUser(int id)
         {
@@ -299,12 +302,12 @@ namespace EVChargingStation.Web.Controllers
                 };
 
                 await _apiService.PutAsync<object>($"api/user/{user.Id}", payload);
-                TempData["Message"] = " Cập nhật người dùng thành công!";
+                TempData["Message"] = "✅ Cập nhật người dùng thành công!";
             }
             catch (HttpRequestException ex)
             {
                 _logger.LogError(ex, "Failed to update user {Id}", user.Id);
-                TempData["Error"] = $" Cập nhật thất bại: {ex.Message}";
+                TempData["Error"] = $"❌ Cập nhật thất bại: {ex.Message}";
             }
 
             return RedirectToAction("Users");
@@ -318,20 +321,20 @@ namespace EVChargingStation.Web.Controllers
 
             bool deleted = await _apiService.DeleteAsync($"api/user/{id}");
             TempData[deleted ? "Message" : "Error"] = deleted
-                ? " Xóa người dùng thành công!"
+                ? "✅ Xóa người dùng thành công!"
                 : "⚠️ Xóa thất bại!";
 
             return RedirectToAction("Users");
         }
 
-        // ==========  Đăng xuất ==========
+        // ========== 🔹 Đăng xuất ==========
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Login");
         }
 
-        // ==========  Kiểm tra quyền Admin ==========
+        // ========== 🔹 Kiểm tra quyền Admin ==========
         private bool IsAdminLoggedIn()
         {
             var token = HttpContext.Session.GetString("Token");
@@ -351,7 +354,7 @@ namespace EVChargingStation.Web.Controllers
             return false;
         }
 
-        // ==========  Danh sách booking ========== 
+        // ========== 🔹 Danh sách booking ========== 
         [HttpGet]
         public async Task<IActionResult> Bookings()
         {
@@ -360,9 +363,9 @@ namespace EVChargingStation.Web.Controllers
 
             try
             {
-                //  Gọi API để lấy danh sách booking
+                // 🔹 Gọi API để lấy danh sách booking
                 var bookings = await _apiService.GetAsync<List<BookingDto>>("api/booking") ?? new List<BookingDto>();
-                _logger.LogInformation($" Số lượng booking: {bookings.Count}");
+                _logger.LogInformation($"📊 Số lượng booking: {bookings.Count}");
                   if (bookings.Count == 0)
         {
             _logger.LogWarning("⚠️ API trả về 0 booking nhưng DB có dữ liệu!");
@@ -370,16 +373,16 @@ namespace EVChargingStation.Web.Controllers
         }
         else
         {
-            _logger.LogInformation($" Danh sách booking: {string.Join(", ", bookings.Select(b => b.BookingNumber))}");
+            _logger.LogInformation($"✅ Danh sách booking: {string.Join(", ", bookings.Select(b => b.BookingNumber))}");
         }
 
-                //  Gọi API lấy danh sách trạm sạc
+                // 🔹 Gọi API lấy danh sách trạm sạc
                 var stations = await _apiService.GetAsync<List<StationDto>>("api/station") ?? new List<StationDto>();
 
-                //  Gọi API lấy danh sách người dùng
+                // 🔹 Gọi API lấy danh sách người dùng
                 var users = await _apiService.GetAsync<List<UserDto>>("api/user") ?? new List<UserDto>();
 
-                //  Ghép dữ liệu để hiển thị tên người dùng và tên trạm
+                // 🔹 Ghép dữ liệu để hiển thị tên người dùng và tên trạm
                 foreach (var booking in bookings)
                 {
                     var station = stations.FirstOrDefault(s => s.Id == booking.StationId);
@@ -389,18 +392,18 @@ namespace EVChargingStation.Web.Controllers
                     booking.UserName = user?.FullName ?? $"Người dùng #{booking.UserId}";
                 }
 
-                //  Truyền model sang View
+                // 🔹 Truyền model sang View
                 return View(bookings);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, " Lỗi khi tải danh sách booking.");
+                _logger.LogError(ex, "❌ Lỗi khi tải danh sách booking.");
                 TempData["ErrorMessage"] = "Không thể tải danh sách đặt chỗ.";
                 return View(new List<BookingDto>());
             }
         }
-        // ==========  Tạo booking mới ==========
-        // ==========  Tạo booking mới (CHỈ CHỌN TRẠM) ==========
+        // ========== 🔹 Tạo booking mới ==========
+        // ========== 🔹 Tạo booking mới (CHỈ CHỌN TRẠM) ==========
         [HttpPost]
         public async Task<IActionResult> CreateBooking(int stationId, DateTime startTime, DateTime endTime)
         {
@@ -456,7 +459,7 @@ namespace EVChargingStation.Web.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, " Lỗi tạo booking");
+                _logger.LogError(ex, "❌ Lỗi tạo booking");
                 TempData["ErrorMessage"] = $"Lỗi: {ex.Message}";
                 return RedirectToAction("Bookings");
             }
@@ -472,7 +475,7 @@ public async Task<IActionResult> EditBooking(int id, int status)
 
     try
     {
-        _logger.LogInformation($" Updating booking {id} to status {status}");
+        _logger.LogInformation($"🔄 Updating booking {id} to status {status}");
 
         var updateData = new
         {
@@ -482,49 +485,18 @@ public async Task<IActionResult> EditBooking(int id, int status)
         var token = HttpContext.Session.GetString("Token");
         await _apiService.PutAsync<object>($"api/booking/{id}", updateData);
 
-        TempData["SuccessMessage"] = " Cập nhật trạng thái booking thành công!";
+        TempData["SuccessMessage"] = "✅ Cập nhật trạng thái booking thành công!";
     }
     catch (HttpRequestException ex)
     {
-        _logger.LogError(ex, " Lỗi cập nhật booking");
-        TempData["ErrorMessage"] = $" Không thể cập nhật: {ex.Message}";
+        _logger.LogError(ex, "❌ Lỗi cập nhật booking");
+        TempData["ErrorMessage"] = $"❌ Không thể cập nhật: {ex.Message}";
     }
 
     return RedirectToAction("Bookings");
 }
 
-        // ==========  Chỉnh sửa booking ==========
-        [HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> EditBooking(int id, int status)
-{
-    if (!IsAdminLoggedIn())
-        return RedirectToAction("Login");
-
-    try
-    {
-        _logger.LogInformation($" Updating booking {id} to status {status}");
-
-        var updateData = new
-        {
-            status = status  // Chỉ cập nhật status
-        };
-
-        var token = HttpContext.Session.GetString("Token");
-        await _apiService.PutAsync<object>($"api/booking/{id}", updateData);
-
-        TempData["SuccessMessage"] = " Cập nhật trạng thái booking thành công!";
-    }
-    catch (HttpRequestException ex)
-    {
-        _logger.LogError(ex, " Lỗi cập nhật booking");
-        TempData["ErrorMessage"] = $" Không thể cập nhật: {ex.Message}";
-    }
-
-    return RedirectToAction("Bookings");
-}
-
-        // ==========  Hủy booking ==========
+        // ========== 🔹 Hủy booking ==========
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CancelBooking(int id)
@@ -537,18 +509,18 @@ public async Task<IActionResult> EditBooking(int id, int status)
                 var token = HttpContext.Session.GetString("Token");
                 await _apiService.PostWithAuthAsync<object>($"api/booking/{id}/cancel", new { }, token ?? "");
 
-                TempData["Message"] = " Hủy đặt chỗ thành công!";
+                TempData["Message"] = "✅ Hủy đặt chỗ thành công!";
             }
             catch (HttpRequestException ex)
             {
-                _logger.LogError(ex, " Lỗi hủy booking");
-                TempData["Error"] = $" Không thể hủy: {ex.Message}";
+                _logger.LogError(ex, "❌ Lỗi hủy booking");
+                TempData["Error"] = $"❌ Không thể hủy: {ex.Message}";
             }
 
             return RedirectToAction("Bookings");
         }
 
-        // ==========  API lấy danh sách users (JSON) ==========
+        // ========== 🔹 API lấy danh sách users (JSON) ==========
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -559,7 +531,7 @@ public async Task<IActionResult> EditBooking(int id, int status)
             return Json(users ?? new List<UserDto>());
         }
 
-        // ==========  API lấy danh sách stations (JSON) ==========
+        // ========== 🔹 API lấy danh sách stations (JSON) ==========
         [HttpGet]
         public async Task<IActionResult> GetStations()
         {
@@ -570,7 +542,7 @@ public async Task<IActionResult> EditBooking(int id, int status)
             return Json(stations ?? new List<StationDto>());
         }
 
-        // ==========  API lấy charging points theo station ==========
+        // ========== 🔹 API lấy charging points theo station ==========
         [HttpGet]
         public async Task<IActionResult> GetChargingPoints(int stationId)
         {
@@ -588,7 +560,7 @@ public async Task<IActionResult> EditBooking(int id, int status)
             }
         }
 
-        // ==========  Kiểm tra trụ sạc có đang bận không ==========
+        // ========== 🔹 Kiểm tra trụ sạc có đang bận không ==========
         [HttpGet]
         public async Task<IActionResult> CheckChargingPoint(int chargingPointId)
         {
@@ -612,7 +584,7 @@ public async Task<IActionResult> EditBooking(int id, int status)
             }
         }
 
-        // ==========  Báo cáo với biểu đồ ==========
+        // ========== 🔹 Báo cáo với biểu đồ ==========
 [HttpGet]
 public async Task<IActionResult> Reports()
 {
@@ -633,13 +605,13 @@ public async Task<IActionResult> Reports()
     }
     catch (Exception ex)
     {
-        _logger.LogError(ex, " Lỗi khi tải trang báo cáo.");
+        _logger.LogError(ex, "❌ Lỗi khi tải trang báo cáo.");
         TempData["ErrorMessage"] = "Không thể tải trang báo cáo.";
         return RedirectToAction("Index");
     }
 }
 
-        // ==========  API lấy dữ liệu biểu đồ ==========
+        // ========== 🔹 API lấy dữ liệu biểu đồ ==========
         [HttpGet]
         public async Task<IActionResult> GetChartData(DateTime fromDate, DateTime toDate)
         {
@@ -648,30 +620,30 @@ public async Task<IActionResult> Reports()
 
             try
             {
-                _logger.LogInformation($" Tạo báo cáo biểu đồ từ {fromDate:yyyy-MM-dd} đến {toDate:yyyy-MM-dd}");
+                _logger.LogInformation($"📊 Tạo báo cáo biểu đồ từ {fromDate:yyyy-MM-dd} đến {toDate:yyyy-MM-dd}");
 
                 // Lấy tất cả bookings
                 var allBookings = await _apiService.GetAsync<List<BookingDto>>("api/booking") ?? new List<BookingDto>();
 
-                _logger.LogInformation($" Tổng số booking trong hệ thống: {allBookings.Count}");
+                _logger.LogInformation($"📋 Tổng số booking trong hệ thống: {allBookings.Count}");
 
                 // Lọc bookings trong khoảng thời gian
                 var bookingsInRange = allBookings
                     .Where(b => b.StartTime >= fromDate && b.StartTime <= toDate)
                     .ToList();
 
-                _logger.LogInformation($" Booking trong khoảng thời gian: {bookingsInRange.Count}");
+                _logger.LogInformation($"📋 Booking trong khoảng thời gian: {bookingsInRange.Count}");
 
                 // Lấy payments
                 var payments = await _apiService.GetAsync<List<PaymentDto>>("api/payment") ?? new List<PaymentDto>();
 
-                _logger.LogInformation($" Tổng số payment trong hệ thống: {payments.Count}");
+                _logger.LogInformation($"💰 Tổng số payment trong hệ thống: {payments.Count}");
 
                 var paymentsInRange = payments
                     .Where(p => p.CreatedAt >= fromDate && p.CreatedAt <= toDate && p.Status == 1)
                     .ToList();
 
-                _logger.LogInformation($" Payment trong khoảng thời gian (status=1): {paymentsInRange.Count}");
+                _logger.LogInformation($"💰 Payment trong khoảng thời gian (status=1): {paymentsInRange.Count}");
 
                 // Thống kê theo ngày
                 var dailyStats = new List<object>();
@@ -737,7 +709,7 @@ public async Task<IActionResult> Reports()
                     avgRevenuePerDay = dailyStats.Count > 0 ? paymentsInRange.Sum(p => p.Amount) / dailyStats.Count : 0
                 };
 
-                _logger.LogInformation($" Báo cáo: {overview.totalBookings} bookings, {overview.totalUsers} users, {overview.totalRevenue:N0} VNĐ");
+                _logger.LogInformation($"✅ Báo cáo: {overview.totalBookings} bookings, {overview.totalUsers} users, {overview.totalRevenue:N0} VNĐ");
 
                 return Json(new
                 {
@@ -750,12 +722,12 @@ public async Task<IActionResult> Reports()
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, " Lỗi khi lấy dữ liệu biểu đồ.");
+                _logger.LogError(ex, "❌ Lỗi khi lấy dữ liệu biểu đồ.");
                 return Json(new { success = false, message = ex.Message });
             }
         }
 
-        // ==========  Danh sách Payments ==========
+        // ========== 🔹 Danh sách Payments ==========
         [HttpGet]
         public async Task<IActionResult> Payments()
         {
@@ -797,13 +769,13 @@ public async Task<IActionResult> Reports()
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, " Lỗi khi tải danh sách thanh toán.");
+                _logger.LogError(ex, "❌ Lỗi khi tải danh sách thanh toán.");
                 TempData["ErrorMessage"] = "Không thể tải danh sách thanh toán.";
                 return View(new List<PaymentDto>());
             }
         }
 
-        // ==========  Xử lý Payment ==========
+        // ========== 🔹 Xử lý Payment ==========
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ProcessPayment(int id, int status, string? transactionId)
@@ -811,28 +783,65 @@ public async Task<IActionResult> Reports()
             if (!IsAdminLoggedIn())
                 return RedirectToAction("Login");
 
+            var (success, message) = await ProcessPaymentInternal(id, status, transactionId);
+            TempData[success ? "SuccessMessage" : "ErrorMessage"] = message;
+            return RedirectToAction("Payments");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProcessPaymentStatus(int id, int status, string? transactionId)
+        {
+            if (!IsAdminLoggedIn())
+                return Unauthorized(new { success = false, message = "Phiên đăng nhập không hợp lệ." });
+
+            var (success, message) = await ProcessPaymentInternal(id, status, transactionId);
+            if (!success)
+            {
+                return BadRequest(new { success = false, message });
+            }
+
+            return Ok(new { success = true, message, status });
+        }
+
+        private async Task<(bool Success, string Message)> ProcessPaymentInternal(int id, int status, string? transactionId)
+        {
             try
             {
                 var token = HttpContext.Session.GetString("Token");
+
+                var payment = await _apiService.GetAsync<PaymentDto>($"api/payment/{id}");
+                if (payment == null)
+                {
+                    return (false, "Không tìm thấy thanh toán để xử lý.");
+                }
+
+                if (payment.Status != 1 && payment.Status != 2)
+                {
+                    return (false, "Không thể thay đổi trạng thái bất thường.");
+                }
+
+                if (status != 3 && status != 4)
+                {
+                    return (false, "Trạng thái xử lý không hợp lệ.");
+                }
 
                 var processData = new
                 {
                     status = status,
                     transactionId = transactionId ?? "",
-                    description = status == 1 ? "Thanh toán thành công" : "Thanh toán thất bại"
+                    description = status == 3 ? "Thanh toán hoàn thành" : "Thanh toán thất bại"
                 };
 
                 await _apiService.PostWithAuthAsync<object>($"api/payment/{id}/process", processData, token ?? "");
 
-                TempData["SuccessMessage"] = " Xử lý thanh toán thành công!";
+                return (true, "Cập nhật trạng thái thanh toán thành công.");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, " Lỗi xử lý thanh toán");
-                TempData["ErrorMessage"] = $" Không thể xử lý: {ex.Message}";
+                _logger.LogError(ex, "❌ Lỗi xử lý thanh toán");
+                return (false, $"Không thể xử lý: {ex.Message}");
             }
-
-            return RedirectToAction("Payments");
         }
 
 

@@ -18,6 +18,14 @@
         <div class="alert alert-danger">@TempData["Error"]</div>
     }
 
+    @if (stations.Count == 0)
+    {
+        <div class="text-center text-muted py-5">
+            <i class="fa fa-info-circle fa-2x mb-2"></i>
+            <p>Hiện chưa có trạm sạc nào.</p>
+        </div>
+    }
+
     <div class="row g-3">
         @foreach (var s in stations)
         {
@@ -28,14 +36,48 @@
                             <div>
                                 <div class="fw-bold fs-5">@s.Name</div>
                                 <div class="small text-muted">@s.Address</div>
+                                @if (!string.IsNullOrEmpty(s.City))
+                                {
+                                    <div class="small text-muted">@s.City @(!string.IsNullOrEmpty(s.Province) ? $", {s.Province}" : "")</div>
+                                }
                             </div>
-                            <span class="badge bg-success">Hoạt động</span>
+                            @switch (s.Status)
+                            {
+                                case 1:
+                                    <span class="badge bg-success">Online</span>
+                                    break;
+                                case 2:
+                                    <span class="badge bg-secondary">Offline</span>
+                                    break;
+                                case 3:
+                                    <span class="badge bg-warning text-dark">Bảo trì</span>
+                                    break;
+                                default:
+                                    <span class="badge bg-light text-dark">@s.Status</span>
+                                    break;
+                            }
                         </div>
 
+                        @if (s.ChargingPoints != null && s.ChargingPoints.Any())
+                        {
+                            <div class="mt-2 small text-muted">
+                                <i class="fa fa-plug me-1"></i>@s.ChargingPoints.Count trụ sạc
+                            </div>
+                        }
+
                         <div class="mt-3 d-flex gap-2">
-                            <a href="https://www.google.com/maps/search/@s.Address" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fa fa-map-marker-alt me-1"></i>Chỉ đường
-                            </a>
+                            @if (s.Latitude != 0 && s.Longitude != 0)
+                            {
+                                <a href="https://www.google.com/maps?q=@s.Latitude,@s.Longitude" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <i class="fa fa-map-marker-alt me-1"></i>Chỉ đường
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="https://www.google.com/maps/search/@s.Address" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <i class="fa fa-map-marker-alt me-1"></i>Chỉ đường
+                                </a>
+                            }
 
                             <!-- Nút đặt chỗ -->
                             
@@ -46,22 +88,6 @@
         }
     </div>
 </div>
-
-
-
-<!-- Script xử lý modal -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("bookingModal");
-    modal.addEventListener("show.bs.modal", function (event) {
-        const button = event.relatedTarget;
-        const stationId = button.getAttribute("data-station-id");
-        const stationName = button.getAttribute("data-station-name");
-        modal.querySelector("#stationId").value = stationId;
-        modal.querySelector("#stationName").value = stationName;
-    });
-});
-</script>
 
 <style>
 .station-card {

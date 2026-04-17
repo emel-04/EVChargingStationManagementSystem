@@ -10,6 +10,8 @@ namespace EVChargingStation.Web.Controllers
     {
         private readonly ApiService _apiService;
         private readonly ILogger<StaffController> _logger;
+        private const decimal VinFastUnitPricePerKwh = 3858m;
+        private const decimal PartnerRevenuePerKwh = 750m;
 
         public StaffController(ApiService apiService, ILogger<StaffController> logger)
         {
@@ -105,7 +107,7 @@ namespace EVChargingStation.Web.Controllers
         }
 
         // ========== 🔹 Dashboard Staff ==========
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var token = HttpContext.Session.GetString("Token");
             var role = HttpContext.Session.GetString("Role");
@@ -122,6 +124,32 @@ namespace EVChargingStation.Web.Controllers
                 return RedirectToAction("Login");
 
             ViewBag.StaffName = HttpContext.Session.GetString("StaffName");
+
+            try
+            {
+                var bookings = await _apiService.GetAsync<List<BookingDto>>("api/booking") ?? new List<BookingDto>();
+                var payments = await _apiService.GetAsync<List<PaymentDto>>("api/payment") ?? new List<PaymentDto>();
+
+                ViewBag.TotalBookings = bookings.Count;
+                ViewBag.PendingBookings = bookings.Count(b => b.Status == 0 || b.Status == 1 || b.Status == 2);
+                ViewBag.CompletedBookings = bookings.Count(b => b.Status == 3 || b.Status == 4);
+                ViewBag.PendingPayments = payments.Count(p => p.Status == 0 || p.Status == 1 || p.Status == 2);
+                ViewBag.CompletedPayments = payments.Count(p => p.Status == 3);
+                ViewBag.TodayRevenue = payments
+                    .Where(p => p.CreatedAt.Date == DateTime.UtcNow.Date && (p.Status == 1 || p.Status == 3))
+                    .Sum(p => p.Amount);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Không thể tải dữ liệu tổng quan dashboard staff");
+                ViewBag.TotalBookings = 0;
+                ViewBag.PendingBookings = 0;
+                ViewBag.CompletedBookings = 0;
+                ViewBag.PendingPayments = 0;
+                ViewBag.CompletedPayments = 0;
+                ViewBag.TodayRevenue = 0m;
+            }
+
             return View();
         }
 
@@ -144,9 +172,11 @@ namespace EVChargingStation.Web.Controllers
                 // Lấy danh sách người dùng
                 var users = await _apiService.GetAsync<List<UserDto>>("api/user") ?? new List<UserDto>();
 
-                // THAY ĐỔI: Không gọi API payment/status/0 nữa
-                // Thay vào đó, để HasPayment = false cho tất cả
-                // Hoặc gọi API khác nếu cần
+                var payments = await _apiService.GetAsync<List<PaymentDto>>("api/payment") ?? new List<PaymentDto>();
+                var paidBookingIds = payments
+                    .Where(p => p.BookingId.HasValue)
+                    .Select(p => p.BookingId!.Value)
+                    .ToHashSet();
 
                 // Ghép dữ liệu
                 foreach (var booking in bookings)
@@ -164,18 +194,21 @@ namespace EVChargingStation.Web.Controllers
                         booking.UserName = $"Người dùng #{booking.UserId}";
                     }
 
-                    // TẠM THỜI: Set HasPayment = false
-                    // Sau này có thể thêm API riêng để check payment của booking
-                    booking.HasPayment = false;
+                    booking.HasPayment = paidBookingIds.Contains(booking.Id);
+                    booking.TotalCost = CalculateChargeCost(booking);
                 }
 
                 ViewBag.Stations = stations;
+                ViewBag.UnitPricePerKwh = VinFastUnitPricePerKwh;
+                ViewBag.PartnerRevenuePerKwh = PartnerRevenuePerKwh;
                 return View(bookings);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "❌ Lỗi khi tải danh sách booking.");
                 TempData["ErrorMessage"] = "Không thể tải danh sách đặt chỗ.";
+                ViewBag.UnitPricePerKwh = VinFastUnitPricePerKwh;
+                ViewBag.PartnerRevenuePerKwh = PartnerRevenuePerKwh;
                 return View(new List<BookingDto>());
             }
         }
@@ -356,8 +389,11 @@ namespace EVChargingStation.Web.Controllers
                     }
                 }
 
-                // Chỉ lấy payments có status = 0 (Pending) để hiển thị
-                var pendingPayments = payments.Where(p => p.Status == 1).ToList();
+                // Chỉ lấy payments chưa hoàn tất để staff xử lý
+                var pendingPayments = payments
+                    .Where(p => p.Status == 0 || p.Status == 1 || p.Status == 2)
+                    .OrderByDescending(p => p.CreatedAt)
+                    .ToList();
 
                 return View(pendingPayments);
             }
@@ -379,6 +415,29 @@ namespace EVChargingStation.Web.Controllers
             if (!IsStaffLoggedIn())
                 return RedirectToAction("Login");
 
+            var (success, message) = await ProcessPaymentInternal(id, status, transactionId);
+            TempData[success ? "SuccessMessage" : "ErrorMessage"] = message;
+            return RedirectToAction("Payments");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProcessPaymentStatus(int id, int status, string? transactionId)
+        {
+            if (!IsStaffLoggedIn())
+                return Unauthorized(new { success = false, message = "Phiên đăng nhập không hợp lệ." });
+
+            var (success, message) = await ProcessPaymentInternal(id, status, transactionId);
+            if (!success)
+            {
+                return BadRequest(new { success = false, message });
+            }
+
+            return Ok(new { success = true, message, status });
+        }
+
+        private async Task<(bool Success, string Message)> ProcessPaymentInternal(int id, int status, string? transactionId)
+        {
             try
             {
                 var token = HttpContext.Session.GetString("Token");
@@ -387,20 +446,34 @@ namespace EVChargingStation.Web.Controllers
                 {
                     status = status,
                     transactionId = transactionId ?? "",
-                    description = status == 1 ? "Thanh toán thành công" : "Thanh toán thất bại"
+                    description = status == 3 ? "Thanh toán hoàn thành" : "Thanh toán thất bại"
                 };
+
+                var payment = await _apiService.GetAsync<PaymentDto>($"api/payment/{id}");
+                if (payment == null)
+                {
+                    return (false, "Không tìm thấy thanh toán để xử lý.");
+                }
+
+                if (payment.Status != 1 && payment.Status != 2)
+                {
+                    return (false, "Không thể thay đổi trạng thái bất thường.");
+                }
+
+                if (status != 3 && status != 4)
+                {
+                    return (false, "Trạng thái xử lý không hợp lệ.");
+                }
 
                 await _apiService.PostWithAuthAsync<object>($"api/payment/{id}/process", processData, token ?? "");
 
-                TempData["SuccessMessage"] = "✅ Xử lý thanh toán thành công!";
+                return (true, "Cập nhật trạng thái thanh toán thành công.");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "❌ Lỗi xử lý thanh toán");
-                TempData["ErrorMessage"] = $"❌ Không thể xử lý: {ex.Message}";
+                return (false, $"Không thể xử lý: {ex.Message}");
             }
-
-            return RedirectToAction("Payments");
         }
 
         // ========== 🔹 Tạo thanh toán cho booking hoàn thành ==========
@@ -433,9 +506,19 @@ namespace EVChargingStation.Web.Controllers
                 }
 
                 // Kiểm tra booking đã hoàn thành chưa
-                if (booking.Status != 3)
+                if (booking.Status != 3 && booking.Status != 4)
                 {
                     TempData["ErrorMessage"] = "❌ Chỉ có thể tạo thanh toán cho booking đã hoàn thành.";
+                    return RedirectToAction("Bookings");
+                }
+
+                if (amount <= 0)
+                {
+                    amount = CalculateChargeCost(booking);
+                }
+                if (amount <= 0)
+                {
+                    TempData["ErrorMessage"] = "❌ Booking chưa có sản lượng kWh hợp lệ để tính tiền.";
                     return RedirectToAction("Bookings");
                 }
 
@@ -463,6 +546,13 @@ namespace EVChargingStation.Web.Controllers
             }
 
             return RedirectToAction("Bookings");
+        }
+
+        private static decimal CalculateChargeCost(BookingDto booking)
+        {
+            var energy = booking.EnergyConsumed.GetValueOrDefault();
+            if (energy <= 0) return 0m;
+            return Math.Round(energy * VinFastUnitPricePerKwh, 0, MidpointRounding.AwayFromZero);
         }
 
         // ========== 🔹 Báo cáo tháng ==========

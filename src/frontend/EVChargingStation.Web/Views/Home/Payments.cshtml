@@ -3,6 +3,8 @@
     ViewData["Title"] = "Lịch sử thanh toán";
     var payments = ViewBag.Payments as List<PaymentDto> ?? new List<PaymentDto>();
     var payableBookings = ViewBag.PayableBookings as List<EVChargingStation.Web.Models.BookingDto> ?? new List<EVChargingStation.Web.Models.BookingDto>();
+    var unitPricePerKwh = (decimal?)ViewBag.UnitPricePerKwh ?? 3858m;
+    var partnerRevenuePerKwh = (decimal?)ViewBag.PartnerRevenuePerKwh ?? 750m;
 }
 
 <div class="container py-4">
@@ -10,17 +12,26 @@
         <h4 class="text-primary mb-0">
             <i class="fa fa-credit-card me-2"></i>Lịch sử thanh toán
         </h4>
-        <span class="badge bg-info">Tổng: @payments.Count giao dịch</span>
+        <div class="d-flex gap-2 align-items-center">
+            <a href="@Url.Action("Bookings", "Home")" class="btn btn-sm btn-outline-primary">
+                <i class="fa fa-calendar-check me-1"></i>Quản lý booking
+            </a>
+            <a href="@Url.Action("Profile", "Home")" class="btn btn-sm btn-outline-secondary">
+                <i class="fa fa-user me-1"></i>Hồ sơ
+            </a>
+            <span class="badge bg-info">Tổng: @payments.Count giao dịch</span>
+        </div>
     </div>
 
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
-    }
-    @if (TempData["ErrorMessage"] != null)
-    {
-        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
-    }
+    <div class="card mb-3 border-primary-subtle">
+        <div class="card-body py-2">
+            <div class="small text-muted">
+                Đơn giá sạc VINFAST: <strong>@unitPricePerKwh.ToString("N0") VNĐ/kWh</strong> (áp dụng 19/03/2024) -
+                Doanh thu hưởng: <strong>@partnerRevenuePerKwh.ToString("N0") VNĐ/kWh</strong> -
+                Khuyến nghị vận hành: khung giờ bình thường và thấp điểm.
+            </div>
+        </div>
+    </div>
 
     @if (payableBookings.Any())
     {
@@ -45,13 +56,22 @@
                                 <tr>
                                     <td>@booking.BookingNumber</td>
                                     <td>@booking.StationName</td>
-                                    <td>@((booking.TotalAmount ?? 0).ToString("N0")) đ</td>
+                                    <td>
+                                        @{
+                                            var energy = booking.EnergyConsumed.GetValueOrDefault();
+                                            var cost = booking.TotalCost ?? booking.TotalAmount ?? 0m;
+                                            var revenue = Math.Round(energy * partnerRevenuePerKwh, 0);
+                                        }
+                                        <div><strong>@cost.ToString("N0") đ</strong></div>
+                                        <div class="small text-muted">@energy.ToString("N2") kWh</div>
+                                        <div class="small text-success">DT hưởng: @revenue.ToString("N0") đ</div>
+                                    </td>
                                     <td class="text-end">
                                         <form method="post" action="@Url.Action("CreatePaymentForBooking", "Home")" class="d-inline">
                                             @Html.AntiForgeryToken()
                                             <input type="hidden" name="bookingId" value="@booking.Id" />
                                             <input type="hidden" name="method" value="1" />
-                                            <button class="btn btn-sm btn-primary" type="submit" @(booking.TotalAmount.GetValueOrDefault() <= 0 ? "disabled" : null)>
+                                            <button class="btn btn-sm btn-primary" type="submit" @((booking.TotalCost ?? booking.TotalAmount).GetValueOrDefault() <= 0 ? "disabled" : null)>
                                                 <i class="fa fa-credit-card me-1"></i>Thanh toán
                                             </button>
                                         </form>
@@ -61,10 +81,10 @@
                         </tbody>
                     </table>
                 </div>
-                @if (payableBookings.Any(b => b.TotalAmount.GetValueOrDefault() <= 0))
+                @if (payableBookings.Any(b => (b.TotalCost ?? b.TotalAmount).GetValueOrDefault() <= 0))
                 {
                     <div class="small text-muted mt-2">
-                        Một số booking chưa có tổng tiền nên chưa thể tạo thanh toán.
+                        Một số booking chưa có dữ liệu kWh/tổng tiền nên chưa thể tạo thanh toán.
                     </div>
                 }
             </div>
@@ -232,7 +252,7 @@
                     <div class="col-md-3">
                         <div class="text-muted small">Tổng chi tiêu</div>
                         <div class="h5 text-primary">
-                            @payments.Where(p => p.Status == 3 || p.Status == 1).Sum(p => p.Amount).ToString("N0") đ
+                            @payments.Where(p => p.Status == 3).Sum(p => p.Amount).ToString("N0") đ
                         </div>
                     </div>
                     <div class="col-md-3">

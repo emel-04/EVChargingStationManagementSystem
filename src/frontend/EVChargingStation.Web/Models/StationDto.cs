@@ -7,7 +7,6 @@ namespace EVChargingStation.Web.Models
         public string Address { get; set; } = string.Empty;
         public int NumberOfPorts { get; set; }
         public double PowerKW { get; set; }
-        // Các thuộc tính API trả về nhưng bạn chưa khai báo
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string? City { get; set; }
@@ -16,9 +15,11 @@ namespace EVChargingStation.Web.Models
         public bool IsActive { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
+
+        public List<ChargingPointDto>? ChargingPoints { get; set; } 
     }
-        // Nếu API trả về mảng charging points
-         public class ChargingPointDto
+
+    public class ChargingPointDto
     {
         public int Id { get; set; }
         public int StationId { get; set; }

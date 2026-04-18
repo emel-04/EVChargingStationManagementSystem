@@ -472,6 +472,17 @@ namespace EVChargingStation.Web.Controllers
             if (!IsStaffLoggedIn())
                 return RedirectToAction("Login");
 
+            
+            // fix validation MonthlyReport
+            if (fromDate > toDate)
+            {
+                _logger.LogWarning("⚠️ Validation failed: fromDate > toDate");
+                TempData["ErrorMessage"] = "Ngày bắt đầu không được lớn hơn ngày kết thúc.";
+                ViewBag.FromDate = fromDate.Value.ToString("yyyy-MM-dd");
+                ViewBag.ToDate = toDate.Value.ToString("yyyy-MM-dd");
+                return View("MonthlyReport");
+            }
+
             try
             {
                 // Nếu không có tham số, dùng tháng hiện tại
@@ -501,6 +512,16 @@ namespace EVChargingStation.Web.Controllers
         {
             if (!IsStaffLoggedIn())
                 return RedirectToAction("Login");
+
+            // fix validation MonthlyReport
+            if (fromDate > toDate)
+            {
+                _logger.LogWarning("⚠️ Validation failed: fromDate > toDate");
+                TempData["ErrorMessage"] = "Ngày bắt đầu không được lớn hơn ngày kết thúc.";
+                ViewBag.FromDate = fromDate.ToString("yyyy-MM-dd");
+                ViewBag.ToDate = toDate.ToString("yyyy-MM-dd");
+                return View("MonthlyReport");
+            }
 
             try
             {

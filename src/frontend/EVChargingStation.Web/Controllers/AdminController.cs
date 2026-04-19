@@ -613,15 +613,22 @@ public async Task<IActionResult> Reports()
 
         // ========== 🔹 API lấy dữ liệu biểu đồ ==========
         [HttpGet]
-        public async Task<IActionResult> GetChartData(DateTime fromDate, DateTime toDate)
+        public async Task<IActionResult> GetChartData(DateTime? fromDate, DateTime? toDate)
         {
             if (!IsAdminLoggedIn())
                 return Unauthorized();
 
+            // fix Admin Report: thêm validation
+            if (!fromDate.HasValue || !toDate.HasValue)
+            {
+                return BadRequest(new { success = false, message = "Vui lòng cung cấp đầy đủ tham số fromDate và toDate." });
+            }
+
             try
             {
-                _logger.LogInformation($"📊 Tạo báo cáo biểu đồ từ {fromDate:yyyy-MM-dd} đến {toDate:yyyy-MM-dd}");
-
+                // fix Admin Report: gọi .value
+                _logger.LogInformation($"📊 Tạo báo cáo biểu đồ từ {fromDate.Value:yyyy-MM-dd} đến {toDate.Value:yyyy-MM-dd}");
+                
                 // Lấy tất cả bookings
                 var allBookings = await _apiService.GetAsync<List<BookingDto>>("api/booking") ?? new List<BookingDto>();
 
@@ -647,7 +654,7 @@ public async Task<IActionResult> Reports()
 
                 // Thống kê theo ngày
                 var dailyStats = new List<object>();
-                for (var date = fromDate.Date; date <= toDate.Date; date = date.AddDays(1))
+                for (var date = fromDate.Value.Date; date <= toDate.Value.Date; date = date.AddDays(1)) // fix AdminReport: gọi .value
                 {
                     var dayBookings = bookingsInRange.Where(b => b.StartTime.Date == date).Count();
                     var dayRevenue = paymentsInRange

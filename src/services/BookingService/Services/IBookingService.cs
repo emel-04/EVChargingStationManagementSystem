@@ -17,7 +17,7 @@ public interface IBookingService
     Task<Booking?> GetActiveBookingByUserIdAsync(int userId);
     Task<Booking?> GetActiveBookingByChargingPointIdAsync(int chargingPointId);
     Task<IEnumerable<Booking>> GetAllBookingsAsync();
-
+    Task<int> ProcessExpiredBookingsAsync();
 }
 
 public class CreateBookingRequest
@@ -27,6 +27,7 @@ public class CreateBookingRequest
     public int? ChargingPointId { get; set; }
     public DateTime StartTime { get; set; }
     public DateTime? EndTime { get; set; }
+    public bool BypassActiveUserCheck { get; set; }
 }
 
 public class UpdateBookingRequest

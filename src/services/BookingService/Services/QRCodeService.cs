@@ -17,8 +17,12 @@ public class QRCodeService : IQRCodeService
     {
         try
         {
-            // Create simple text-based QR code for now
-            var base64String = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(data));
+            var qrGenerator = new QRCodeGenerator();
+            var qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
+            var qrCode = new PngByteQRCode(qrCodeData);
+            var qrCodeImage = qrCode.GetGraphic(20);
+            var base64String = Convert.ToBase64String(qrCodeImage);
+
             _logger.LogInformation("QR Code generated successfully for data: {Data}", data);
             return Task.FromResult(base64String);
         }
@@ -33,7 +37,11 @@ public class QRCodeService : IQRCodeService
     {
         try
         {
-            var bytes = System.Text.Encoding.UTF8.GetBytes(data);
+            var qrGenerator = new QRCodeGenerator();
+            var qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
+            var qrCode = new PngByteQRCode(qrCodeData);
+            var bytes = qrCode.GetGraphic(20);
+
             _logger.LogInformation("QR Code bytes generated successfully for data: {Data}", data);
             return Task.FromResult(bytes);
         }

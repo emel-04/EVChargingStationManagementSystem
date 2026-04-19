@@ -28,6 +28,10 @@
     <ProjectReference Include="..\..\shared\Shared\Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="BookingService.IntegrationTests" />
+  </ItemGroup>
+
 </Project>
 
 

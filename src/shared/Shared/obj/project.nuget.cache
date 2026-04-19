@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lxvttpE0Flo=",
+  "dgSpecHash": "VOvup4rlHek=",
   "success": true,
-  "projectFilePath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\Shared.csproj",
+  "projectFilePath": "D:\\HH\\EVChargingStationManagementSystemver45\\src\\shared\\Shared\\Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
@@ -53,9 +53,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'AutoMapper' 12.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
-      "projectPath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\Shared.csproj",
+      "projectPath": "D:\\HH\\EVChargingStationManagementSystemver45\\src\\shared\\Shared\\Shared.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\Shared.csproj",
+      "filePath": "D:\\HH\\EVChargingStationManagementSystemver45\\src\\shared\\Shared\\Shared.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net8.0"

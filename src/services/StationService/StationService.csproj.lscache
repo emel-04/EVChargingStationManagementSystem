@@ -58,7 +58,6 @@ TemporaryDependencyNodeTargetIdentifier=net8.0
 Controllers/
  ChargingPointController.cs
  StationController.cs
- StationController_Ver2.cs
 obj/Debug/net8.0/
  .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
  StationService.AssemblyInfo.cs
@@ -69,7 +68,6 @@ Services/
  IChargingPointService.cs
  IStationService.cs
  StationService.cs
- StationService_Ver2.cs
 
 [metadataReferences]
 ../../shared/Shared/obj/Debug/net8.0/ref/Shared.dll

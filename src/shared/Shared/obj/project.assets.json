@@ -2018,11 +2018,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\Shared.csproj",
+      "projectUniqueName": "D:\\HH\\EVChargingStationManagementSystemver45\\src\\shared\\Shared\\Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\Shared.csproj",
+      "projectPath": "D:\\HH\\EVChargingStationManagementSystemver45\\src\\shared\\Shared\\Shared.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\KCPM\\HeThongQuanLyTramSac\\src\\shared\\Shared\\obj\\",
+      "outputPath": "D:\\HH\\EVChargingStationManagementSystemver45\\src\\shared\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EVChargingStation.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea7d73b10cc8630a4a9e1cf8a71b1e5f6af37cc4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc407117b75f747b60dfbed4b8ca79423c074048")]
 [assembly: System.Reflection.AssemblyProductAttribute("EVChargingStation.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EVChargingStation.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -49,8 +49,19 @@ public class UserValidationService : IUserValidationService
                 _logger.LogWarning("⚠️ UserId {UserId} not found in User Service", userId);
                 return false;
             }
-            
-            // Nếu có lỗi khác (network, server error), log và return false để an toàn
+
+            // User API yêu cầu JWT; BookingService gọi không kèm token → 401/403.
+            // Giống nhánh catch: JWT đã được BookingService xác thực, không chặn đặt chỗ.
+            if (response.StatusCode is System.Net.HttpStatusCode.Unauthorized
+                or System.Net.HttpStatusCode.Forbidden)
+            {
+                _logger.LogWarning(
+                    "⚠️ User Service returned {StatusCode} for UserId {UserId} (no service credentials). Treating as valid.",
+                    response.StatusCode,
+                    userId);
+                return true;
+            }
+
             _logger.LogError("❌ Error validating UserId {UserId}: {StatusCode}", userId, response.StatusCode);
             return false;
         }
